@@ -14,11 +14,13 @@
         return;
     }
 
-    async function loadGallery() {
+    function loadGallery() {
         try {
-            const response = await fetch('data/gallery.json');
-            if (!response.ok) throw new Error('Network response was not ok');
-            const data = await response.json();
+            const data = typeof galleryData !== 'undefined' ? galleryData : [];
+            if (!data.length) {
+                console.warn('A galeria está vazia ou gallery-data.js não foi carregado corretamente.');
+                return;
+            }
             
             const fragment = document.createDocumentFragment();
             data.forEach(item => {
