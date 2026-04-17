@@ -963,10 +963,10 @@ ul, ol { list-style: none; }
    GALERY CAROUSEL
 ═════════════════════════════════════════════════════ */
 .gallery-carousel {
-   position: relative;
-   overflow: hidden; /* Hidden to prevent seeing adjacent slides */
-   margin: var(--sp-xl) 0;
-   cursor: grab;
+    position: relative;
+    overflow: visible; /* Visible to show arrows outside */
+    margin: var(--sp-xl) 0;
+    cursor: grab;
 }
 
 .gallery-carousel:active {
@@ -974,18 +974,18 @@ ul, ol { list-style: none; }
 }
 
 .gallery-controls {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-between;
-  transform: translateY(-50%);
-  padding: 0 var(--sp-lg);
-  gap: 0;
-  margin: 0;
-  pointer-events: all;
-  z-index: 20;
+   position: absolute;
+   top: 50%;
+   left: -60px;
+   right: -60px;
+   display: flex;
+   justify-content: space-between;
+   transform: translateY(-50%);
+   padding: 0;
+   gap: 0;
+   margin: 0;
+   pointer-events: all;
+   z-index: 20;
 }
 
 .gallery-btn {
