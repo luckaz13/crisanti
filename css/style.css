@@ -1025,26 +1025,7 @@ ul, ol { list-style: none; }
   transform: none;
 }
 
-.gallery-btn {
-  background: transparent;
-  border: none;
-  padding: var(--sp-xs);
-  cursor: pointer;
-  color: var(--c-ink);
-  transition: opacity var(--dur) var(--ease);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.gallery-btn:hover {
-  opacity: 0.8;
-}
-
-.gallery-btn:disabled {
-  opacity: 0.3;
-  cursor: not-allowed;
-}
 
 .gallery-viewport {
   overflow: hidden;
@@ -1114,9 +1095,27 @@ ul, ol { list-style: none; }
     width: calc(100% - 2rem);
     margin: 0 1rem;
   }
-  
+
+  .gallery-carousel {
+    overflow: visible;
+  }
+
   .gallery-controls {
-    gap: var(--sp-sm);
+    left: 0;
+    right: 0;
+    padding: 0 0.5rem;
+  }
+
+  .gallery-btn {
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .gallery-btn svg {
+    width: 28px;
+    height: 28px;
   }
 }
 
@@ -1125,7 +1124,23 @@ ul, ol { list-style: none; }
     width: calc(100% - 1rem);
     margin: 0 0.5rem;
   }
-  
+
+  .gallery-controls {
+    left: 0;
+    right: 0;
+    padding: 0 0.25rem;
+  }
+
+  .gallery-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .gallery-btn svg {
+    width: 24px;
+    height: 24px;
+  }
+
   .gallery-title {
     font-size: 1.125rem;
   }
