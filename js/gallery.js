@@ -2,7 +2,6 @@
     9. GALERY CAROUSEL
 ══════════════════════════════════════════════════════ */
 (function initGalleryCarousel() {
-    console.log('Gallery carousel initializing with JSON...');
     const carousel = $('#gallery-carousel');
     const prevBtn = $('#gallery-prev');
     const nextBtn = $('#gallery-next');
@@ -129,6 +128,31 @@
             if (currentIndex < slideCount - 1) {
                 currentIndex++;
                 updateCarousel();
+            }
+        });
+
+        // Touch support for swipe navigation
+        let startX = 0;
+        let startY = 0;
+        
+        track.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+            startY = e.touches[0].clientY;
+        }, { passive: true });
+        
+        track.addEventListener('touchend', (e) => {
+            const dx = e.changedTouches[0].clientX - startX;
+            const dy = e.changedTouches[0].clientY - startY;
+            
+            // Trigger swipe only if horizontal delta is larger than vertical and meets threshold
+            if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 50) {
+                if (dx > 0 && currentIndex > 0) {
+                    currentIndex--;
+                    updateCarousel();
+                } else if (dx < 0 && currentIndex < slideCount - 1) {
+                    currentIndex++;
+                    updateCarousel();
+                }
             }
         });
     }

@@ -213,26 +213,7 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 })();
 
 /* ═══════════════════════════════════════════════════
-   6. SCROLL REVEAL
-═══════════════════════════════════════════════════ */
-(function initReveal() {
-  const revealEls = $$('.reveal');
-  if (!revealEls.length) return;
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-  revealEls.forEach(el => observer.observe(el));
-})();
-
-/* ═══════════════════════════════════════════════════
-   7. ADD REVEAL TO SECTIONS ON LOAD
+   6. ADD REVEAL TO SECTIONS ON LOAD
 ═══════════════════════════════════════════════════ */
 document.addEventListener('DOMContentLoaded', () => {
   // Hero content already animated via CSS
