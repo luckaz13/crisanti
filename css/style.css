@@ -1091,11 +1091,6 @@ ul, ol { list-style: none; }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .gallery-slide {
-    width: calc(100% - 2rem);
-    margin: 0 1rem;
-  }
-
   .gallery-carousel {
     overflow: visible;
   }
@@ -1124,11 +1119,6 @@ ul, ol { list-style: none; }
 }
 
 @media (max-width: 480px) {
-  .gallery-slide {
-    width: calc(100% - 1rem);
-    margin: 0 0.5rem;
-  }
-
   .gallery-btn {
     width: 40px;
     height: 40px;
