@@ -1,164 +1,128 @@
-# 🔍 ANÁLISE TÉCNICA SÊNIOR — Portfólio Fabio Crisanti (Atualização Abril 2026)
+# 🔍 ANÁLISE TÉCNICA SÊNIOR — Portfólio Fabio Crisanti 
 
-> **Autor:** Analista Sênior em HTML5 Semântico, CSS3 e JavaScript Vanilla  
+> [!NOTE]
 > **Data:** Abril 2026  
-> **Escopo:** Auditoria de qualidade, performance e manutenibilidade após a refatoração e otimização do sistema de galerias.  
+> **Escopo:** Auditoria de infraestrutura front-end, performance, responsividade e manutenibilidade após os ciclos recentes de refatoração do sistema de galerias e limpezas no JavaScript.
 
 ---
 
-## 📋 Índice
+## 📋 Índice Inicial
 
-1. [Visão Geral do Projeto (Pós-Refatoração)](#1-visão-geral-do-projeto-pós-refatoração)
-2. [Estado Resolvido — Vitórias Recentes](#2-estado-resolvido--vitórias-recentes)
-3. [HTML5 — Semântica e Estrutura](#3-html5--semântica-e-estrutura)
+1. [Visão Geral do Projeto](#1-visão-geral-do-projeto)
+2. [Vitórias Recentes — O que foi corrigido?](#2-vitórias-recentes--o-que-foi-corrigido)
+3. [HTML5 — Semântica, Acessibilidade e SEO](#3-html5--semântica-acessibilidade-e-seo)
 4. [CSS3 — Estilização e Arquitetura](#4-css3--estilização-e-arquitetura)
-5. [JavaScript — Funcionalidade e Qualidade](#5-javascript--funcionalidade-e-qualidade)
-6. [Performance e Otimização](#6-performance-e-otimização)
-7. [Acessibilidade (A11y)](#7-acessibilidade-a11y)
-8. [SEO e Boas Práticas](#8-seo-e-boas-práticas)
-9. [Matriz de Impacto e Próximos Passos](#9-matriz-de-impacto-e-próximos-passos)
+5. [JavaScript — Funcionalidade e Otimização](#5-javascript--funcionalidade-e-otimização)
+6. [Matriz de Risco e Próximos Passos](#6-matriz-de-risco-e-próximos-passos)
 
 ---
 
-## 1. Visão Geral do Projeto (Pós-Refatoração)
+## 1. Visão Geral do Projeto
 
-O repositório sofreu uma restruturação fundamental, focado em estabilidade, simplicidade de UI ("Obras" voltando a ser um grid clássico) e otimização radical na "Galeria". O uso de WebGL temporário e múltiplos modos visuais foram abandonados em favor da experiência raiz.
+A evolução estrutural do portfólio alcançou um nível de maturidade técnica notável. O abandono do 3D experimental e o foco no desenvolvimento Vanilla focado em alta performance provou ser a decisão arquitetural correta.
 
-| Item | Status Atual | Detalhes |
-|---|---|---|
-| **Tipo** | Site-catálogo (híbrido dinâmico) | HTML nativo com Injeção Dinâmica via JS |
-| **Peso do `index.html`** | **~48 KB** (Vitória Histórica) | Reduzido massivamente dos antigos 530 KB |
-| **Páginas** | 4 principais | Menus fluitrâneos, navegação sticky |
-| **CSS** | 1 arquivo principal | Design system elegante via custom props |
-| **Nós do DOM Base** | **Reduzidos em ~85%** | Fim do parse engasgado na carga inicial |
-| **Galeria (`#galeria`)**| Carrossel Dinâmico | Renderizado exclusivamente sob-demanda em ES6+ |
-| **Obras (`#obras`)** | 29 Cards embedados | Carregamento rápido em DOM para SEO |
+> [!TIP]
+> **Payload e DOM:** O tamanho do index.html de ~48 KB é excelente, evitando que a main thread seja travada no carregamento inicial.
 
-### Diagnóstico Resumido
-O projeto deu um enorme salto tracionando a **manutenibilidade estática e a performance natural de payload**. A separação das obras pesadas para base de dados local via JS configurou a estabilização real. O foco agora muda para **Micro-otimizações, Acessibilidade fina e SEO Orgânico**.
+### Arquitetura Atual
+| Contexto | Tecnologia & Prática | Status de Qualidade |
+|:---|:---|:---|
+| **Motor** | HTML/CSS/JS Estático + Injeção Dinâmica (ES6) | ✅ Excelente Relação Custo/Benefício |
+| **Galeria**| JavaScript (`galleryData`) para lazy-injection | ✅ Escalável & Leve |
+| **Styling**| CSS com Design Tokens Custom Properties | ✅ UI Premium / Museológica |
+| **Mobile** | Nav Menu e Swipes Nativos | ✅ Aprovado em fluidez |
 
 ---
 
-## 2. Estado Resolvido — Vitórias Recentes
+## 2. Vitórias Recentes — O que foi corrigido?
 
-A arquitetura do projeto avançou nas seguintes frentes analisadas anteriormente:
+A revisão aprofundada da base de código confirma que muitos de nossos Sprints anteriores já foram devidamente atacados pela engenharia.
 
-- ✅ **Gargalo Absurdo de DOM de Meio Mega:** Resolvido! O HTML inicial não contém mais as 396 divisões condensadas e ilegíveis da galeria. Agora pesa escassos 48 KB.
-- ✅ **Poluição de Headings (`<h3>` Vazios):** Corrigido de modo dinâmico. O `gallery.js` agora renderiza as tags *somente* se existir conteúdo em `galleryData` (`if(item.title) ...`), sanando falhas de marcação estrutural.
-- ✅ **Atributos `alt` Sem Valor e Vazios:** Corrigidos durante a geração da string no `gallery.js`. Elementos caem naturalmente para usar `alt=item.title` impedindo strings decorativas burras e nulas.
-- ✅ **Vazamentos e Regressões WebGL (Memória):** Neutralizado por completo. O desapego a funcionalidades 3D mal isoladas previne as antigas crash-loops em devices low-end.
-- ✅ **Conflitos Categóricos de KeyEvent:** A galeria obteve salvos-condutos (`if (!lb.hidden) return;`) para colisão na tecla *ArrowRight/Left* entre Lightbox nativas e o modo tela-cheia.
+- ✅ **Memória e Conflitos WebGL:** A remoção do escopo 3D instável finalizou os crash-loops detectados anteriormente em aparelhos móveis.
+- ✅ **IntersectionObserver Duplicado (`main.js`):** O código foi polido. Agora possuímos apenas uma inicialização elegante via evento `DOMContentLoaded`, encerrando duplas chamadas que sobrecarregavam a thread.
+- ✅ **Falta de Touch/Swipe na Galeria (`gallery.js`):** Suporte nativo para interações *Touch* implementado com eficiência (listeners `touchstart` e `touchend` baseados em vetores de distância horizontal). O carrossel está fluido em celulares.
+- ✅ **Logs e Restos de Debug (`gallery.js`):** A verificação constata a extirpação dos `console.log()`. Os únicos apontadores ativos são `console.warn` e `console.error` saudáveis para monitoramento.
+- ✅ **Conflito Keys ArrowRight/ArrowLeft:** A navegação lightbox e de carrossel não entram mais em colisão. O código restringe assertivamente a execução.
 
 ---
 
-## 3. HTML5 — Semântica e Estrutura
+## 3. HTML5 — Semântica, Acessibilidade e SEO
 
-### 🟡 Melhorias Sugeridas
+### 🟡 Oportunidades Em Aberto
 
-#### 3.1 — Meta Tags Sociais / Open Graph
-As tags Open Graph ausentes no Header deixam a representação em aplicativos de rede social bastante rasa (WhatsApp, Meta). 
-**Ação Necessária:** Implementar as marcas de capa, preview e autor no `<head>`.
+> [!WARNING]
+> Sem SEO moderno social, o esforço em polir as imagens da galeria pode se perder na distribuição da obra em portais de terceiros (WhatsApp, Instagram, curadorias).
 
-#### 3.2 — Atributo `lang` Estendido
-As tags em língua estrangeira (*"Addis Ababa"*, *"Der Elefant"*) não possuem um `lang` discriminando as origens.
-**Ação Necessária:** Para acessibilidade estendida, utilizar `<i lang="de">...</i>` para que o tts-reader evite pronúncias falhas.
+1. **Meta Tags Sociais / Open Graph**
+   - **Problema:** A representação do link na internet não está ancorando as meta-tags.
+   - **Solução:** Inserir marcas `og:image`, `twitter:card`, `og:description` e `og:title` em um `<head>` rico para atrair colecionadores ou exibições curtas.
+
+2. **Atributos Lingüísticos Específicos**
+   - **Problema:** Séries nomeadas como *"Addis Ababa"*, *"Der Elefant"*, entre outras não trazem a flag `lang=""` específica.
+   - **Solução:** Aplicar `<i lang="de">Der Elefant</i>` melhora imensamente a pronúncia dos leitores de tela em Acessibilidade (A11y).
+
+3. **Schema.org Estrutural (JSON-LD)**
+   - **Solução:** Implantação de tag `application/ld+json` do tipo *VisualArtwork* na montagem das rotas garante que o Google Imagens indexe perfeitamente com os "Rich Snippets" atribuídos a Fabio Crisanti.
 
 ---
 
 ## 4. CSS3 — Estilização e Arquitetura
 
-O sistema visual continua operando admiravelmente.
+O sistema de tokens nativo (`--sp-md`, `--c-accent`, etc) entrega uma experiência primorosa e editorial. Contudo, há micro-falhas que precisam de atenção.
 
-### 🟡 Bug Visual Restante
+### 🟡 Refinamentos Críticos
 
-#### 4.1 — Duplicação de Seletor `.gallery-btn`
-Permanece no arquivo `style.css` repasses idênticos, de onde um rescreve o outro e perdem-se atributos de design (shadows/backgrounds). Precisam ser enxugados ou unificados num único seletor limpo.
+1. **Repasse Dinâmico `@media (prefers-reduced-motion)`**
+   - **Problema:** Os *reveals* em massa (e animações de scroll da Hero) não observam regras de desligamento sistêmico.
+   - **Solução:** Introduzir uma query com neutralização universal para melhorar o A11Y de usuários neurossensíveis:
+   ```css
+   @media (prefers-reduced-motion: reduce) {
+     *, *::before, *::after {
+       animation-duration: 0.01ms !important;
+       transition-duration: 0.01ms !important;
+     }
+   }
+   ```
 
-### 🟢 Refinamentos Futuros
-
-#### 4.2 — Tokenização Incompleta de Whitespaces
-Valores baseados em `--sp-md` se fundem com `margin-bottom: 1.25rem` magic numbers.
-
-#### 4.3 — Preferências de Movimento (A11y)
-Como as transições de aparição da galeria (`reveal`) e fade ups tomam o viewport, usar `@media (prefers-reduced-motion: reduce)` é ético para acomodar patologias neurológicas e visuais.
-
----
-
-## 5. JavaScript — Funcionalidade e Qualidade
-
-O isolamento em módulos (`main.js` / `gallery.js` e payload passiva de dados em `gallery-data.js`) evitou a dependência de Bundlers e NPM massivo, porém mantém alguns ruídos.
-
-### 🔴 Problemas Restitucionais (Bugs Ativos)
-
-#### 5.1 — Observer de Scroll Reveal Duplicado no `main.js`
-Módulos 6 e 7 contêm lógica duplicada sobre IntersectionObserver. A função inicial (`initReveal()`) tenta atachar os nós num contexto precoce enquanto a classe `DOMContentLoaded` faz o mesmo serviço empilhando novas referências de instâncias. Isso gera custo duplo de CPU na scrollada.
-**Correção:** Apagar a função Módulo 6, o DOMContentLoaded com Observer novo é suficiente e funcional.
-
-#### 5.2 — Restos de Debugging (`console.log`)
-No início do lifecycle em `gallery.js`:
-```javascript
-  console.log('Gallery carousel initializing with JSON...');
-```
-**Correção:** É imperativo extirpar os logs base enraizados. Em deploy/produção eles evidenciam baixa polidez técnica.
-
-### 🟡 Melhorias Sugeridas
-
-#### 5.3 — Carrossel Sem Suporte em Touch/Swipe Nativo
-No `gallery.js`, os handlers são puramente atrelados a clicks nos prevBtn/nextBtn ou KeyDowns. Entrando num iPhone ou Android, o carrossel fica duro de transicionar lateralmente, forçando dependência de botões minúsculos.
-**Correção:** Implementar o track `touchstart` -> `touchend` medindo o `changedTouches` delta para forçar navegação visual e semântica natural no mobile.
+2. **Otimização de Imagens para Next-Gen (`<picture>`)**
+   - **Problema:** Imobilizado dentro do CSS e injetado pelo `<img src="...">`, servimos recursos gigantes e originais. Em `3G` ou `Low-End`, compromete o *Lighthouse*.
+   - **Solução:** Servir porções `.webp` por `<picture> <source.../>`.
 
 ---
 
-## 6. Performance e Otimização
+## 5. JavaScript — Funcionalidade e Otimização
 
-A purga do HTML inline para um motor de dados reabilitou totalmente o TTI (Time to Interactive). 
+### 🔴 Divida Técnica Restante (Bugs Latentes)
 
-#### 6.1 — Geração Massiva de Imagens Reais
-As imagens brutas permanecem uncompressed ou sem suporte hierarquizado (ausência de `<picture>` targetizado). Solução mandatória se quisermos zerar os alertas no Google Lighthouse. Embutir os sets WebP + Thumbnails de `350w`.
+> [!CAUTION]
+> As pendências abaixo afetam o consumo de CPU em navegadores menos eficientes (ex. Safari Mobile) e Acessibilidade Legal em Modais.
 
-#### 6.2 — `requestAnimationFrame` Ausente no Parallax
-Embora resolvido para o resize da galeria (onde debounce substituiu timeouts agressivos), o Header Parallax continua atado a um scroll cru, ocasionando repaint triggers a cada delta pixel.
+1. **Evento Parallax Atrelado ao Scroll Cru (Sem limitador)**
+   - **Arquivo:** `js/main.js` (Módulo 3 - Hero Image)
+   - **Sintoma:** O código recalcula o estilo dinâmico de parallax inline `heroBg.style.transform` à cada disparo de delta em *Scroll*. Isso desencadeia múltiplos reflows da DOM sem limitação por FPS de tela.
+   - **Solução:** Substituir pela mecânica nativa assíncrona do `window.requestAnimationFrame`.
 
----
-
-## 7. Acessibilidade (A11y)
-
-| Padrão | Avaliação Base | Observação |
-|---|---|---|
-| **Contraste** | ✅ Excelente | A paleta terra/escuro resolve as WCAG Level AA |
-| **Aria Labels** | ✅ Bom | Presentes em navegações principais |
-| **ARIA Focus Trap**| ❌ Ausente | Lightboxes sem Focus Trap permitem tab-away (cego sai do modal sem fechar) |
-| **Skip Links**| ❌ Ausente | Indisponível o `skip-to-content` global inicial |
+2. **Ausência de *Focus Trap* na Lightbox Modal**
+   - **Arquivo:** `js/main.js` (Módulo 5)
+   - **Sintoma:** Ao acionar uma imagem inteira, usuários com teclado ou deficiência visual contornam a UI da Lightbox pressionando *TAB*, conseguindo focar em botões escondidos atrás dela ("skip background constraint").
+   - **Solução:** Travar a rotina de KeyDown "TAB" e interligá-la num circuito fechado dentro dos botões do array de navegação ativa da `.lightbox`.
 
 ---
 
-## 8. SEO e Boas Práticas
+## 6. Matriz de Impacto e Próximos Passos (Plano de Trabalho)
 
-#### 8.1 — Schema.org Estrutural (JSON-LD)
-A galeria apresenta imagens espetaculares perdendos espaço no Google Imagens (VisualArtwork). Estruturação com JS in-DOM via scripts tipo `application/ld+json` gerariam backlinks diretos ricos (Rich Snippets). 
+Com base no relatório, a saúde geral do projeto está avaliada em **Nota B+**. Com pouquíssimas horas de lapidação seremos classificados como **A+ (Standard-Grade)**.
 
-#### 8.2 — Arquitetura Robots e Sitemap
-Resta o pilar global em site orgânicos `.xml` indicando os paths cruciais (Ensaios, Projetos e Obras completas) atados no diretório base.
-
----
-
-## 9. Matriz de Impacto e Próximos Passos (Ação Imediata)
-
-### Prioridade Alta (Sprint 1)
-| Item | Esforço e Local | Objetivo |
+### Prioridade Alta (Sprint Atual)
+| Tarefa | Local / Contexto | Objetivo Tático |
 |:---|:---|:---|
-| Remover IntersectionObserver do script base (Módulo 6) | `js/main.js` (Baixo) | Evitar Memory leaks em scrolls nativos |
-| Remover `console.log` de debug base | `js/gallery.js` (Mínimo) | Código nivelado em produção plena |
-| Meta e OpenGraph | `index.html` (Baixo) | Link preview limpo do Portfólio (social) |
+| Implementar *requestAnimationFrame* no herói | `js/main.js` | Performance, evitar super-aquecimento da CPU Mobile |
+| Focus Trap Modular em Modal Lightbox | `js/main.js` | Compliance com Acessibilidade Avançada WCAG |
+| Meta Tags (Open Graph e Twitter Cards) | `index.html` | Apresentação premium quando os links são compartilhados nas Redes Sociais. |
 
-### Prioridade Média (Sprint 2)
-| Item | Esforço e Local | Objetivo |
+### Prioridade Baixa/Média (Refinamento Próximo Trimestre)
+| Tarefa | Local / Contexto | Objetivo Tático |
 |:---|:---|:---|
-| Touch/Swipe listeners | `js/gallery.js` (Médio) | Acabamento UX de alta gama para displays Mobile |
-| Limpeza da dualidade de .gallery-btn | `css/style.css` (Mínimo) | Resolução de Regressões CSS e conflito no parser |
-| Parallax animado com `requestAnimationFrame` | `js/main.js` (Baixo) | Reduzir gargalo e GPU stress no hero loading |
-| Trap de Foco em Modais e Lightbox | `js/main.js` (Médio) | Aprovação absoluta nos parsers WCAG de leitores screen readers |
-
----
-
-*Fim da auditoria técnica atualizada. Toda a transição refatorada resultou num ambiente altamente responsivo, escalável e propício para experimentações limpas sem onerar o cliente.*
+| Adoção de `<picture>` e formato WebP | Global Assets | Finalizar score Google Chrome Lighthouse em 100/100 |
+| Snippets JSON-LD de VisualArtwork | `<head>` / `index.html`| SEO Ativo para motores de busca de imagem. |
+| Inserir tags `lang` | `index.html` | Polimento semântico em A11y para VoiceOver/TalkBack |

@@ -1,161 +1,148 @@
 /* ═════════════════════════════════════════════════════
-    9. GALERY CAROUSEL
-══════════════════════════════════════════════════════ */
-(function initGalleryCarousel() {
-    const carousel = $('#gallery-carousel');
-    const prevBtn = $('#gallery-prev');
-    const nextBtn = $('#gallery-next');
-    const track = $('#gallery-track');
-    
-    // Assegura que todos os containers existam antes de continuar
-    if (!carousel || !prevBtn || !nextBtn || !track) {
-        console.warn('Gallery carousel elements not found. Stopping setup.');
-        return;
-    }
+    9. GALLERY CAROUSELS
+   ══════════════════════════════════════════════════════ */
+(function initGalleryCarousels() {
+    const $ = (sel, ctx = document) => ctx.querySelector(sel);
+    const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
-    function loadGallery() {
-        try {
-            const data = typeof galleryData !== 'undefined' ? galleryData : [];
-            if (!data.length) {
-                console.warn('A galeria está vazia ou gallery-data.js não foi carregado corretamente.');
-                return;
-            }
-            
-            const fragment = document.createDocumentFragment();
-            data.forEach(item => {
-                const slide = document.createElement('div');
-                slide.className = 'gallery-slide';
-                if (item.idx !== undefined) slide.dataset.index = item.idx;
-                if (item.date) slide.dataset.date = item.date;
-                
-                let fp = `<figure class="gallery-figure">`;
-                
-                // Tratar alt para não exibir placeholder 'arte' sem valor e vazio
-                let altAttr = item.alt;
-                if (altAttr === 'arte' || !altAttr) altAttr = item.title || 'Obra de arte';
-                fp += `<img src="${item.src}" alt="${altAttr}" class="gallery-img" loading="lazy" />`;
-                
-                fp += `<figcaption class="gallery-caption">`;
-                
-                // Renderização condicional do h3 (corrigindo heading vazio reclamado na analise)
-                if (item.title) {
-                    fp += `<h3 class="gallery-title">${item.title}</h3>`;
-                }
-                
-                if (item.meta) {
-                    fp += `<p class="gallery-meta">${item.meta}</p>`;
-                }
-                
-                if (item.desc) {
-                    fp += `<p class="gallery-desc">${item.desc}</p>`;
-                }
-                
-                fp += `</figcaption></figure>`;
-                
-                slide.innerHTML = fp;
-                fragment.appendChild(slide);
-            });
-            track.appendChild(fragment);
-            
-            // Só inicializa o carrossel em si após a renderização ter sido completada
-            setupCarousel();
-        } catch (error) {
-            console.error('Error loading gallery details:', error);
-        }
-    }
+    function setupCarousel(carouselEl) {
+        const track = carouselEl.querySelector('.gallery-track');
+        const prevBtn = carouselEl.querySelector('.gallery-btn--prev');
+        const nextBtn = carouselEl.querySelector('.gallery-btn--next');
 
-    function setupCarousel() {
-        // Agora que estamos montados dinamicamente, buscamos de volta as slides
-        const slides = $$('.gallery-slide');
-        if (!slides || !slides.length) return;
+        if (!carouselEl || !track || !prevBtn || !nextBtn) return;
+
+        const slides = carouselEl.querySelectorAll('.gallery-slide');
+        if (!slides.length) return;
 
         let currentIndex = 0;
         const slideCount = slides.length;
 
-        // Function to update carousel position
         function updateCarousel() {
             const slideWidth = slides[0].getBoundingClientRect().width;
-            const moveAmount = -(currentIndex * slideWidth);
-            track.style.transform = `translateX(${moveAmount}px)`;
-            
-            // Update button states
+            track.style.transform = `translateX(${-(currentIndex * slideWidth)}px)`;
             prevBtn.disabled = currentIndex === 0;
             nextBtn.disabled = currentIndex === slideCount - 1;
-            
-            // For accessibility
             prevBtn.setAttribute('aria-disabled', currentIndex === 0);
             nextBtn.setAttribute('aria-disabled', currentIndex === slideCount - 1);
         }
 
-        // Initialize display
         updateCarousel();
-        carousel.style.cursor = 'grab';
+        carouselEl.style.cursor = 'grab';
 
-        // Handle window resize debounce request
         let resizeTimeout;
         window.addEventListener('resize', () => {
             clearTimeout(resizeTimeout);
-            resizeTimeout = setTimeout(() => {
-                updateCarousel();
-            }, 250);
+            resizeTimeout = setTimeout(updateCarousel, 250);
         });
 
-        // Button event listeners for arrow keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            // Prevenir execução caso as setas precisem ser usadas do Lightbox (conflito resolvido) ou em inputs
-            const lb = document.getElementById('lightbox');
-            if (lb && !lb.hidden) return;
-            if (['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName)) return;
-            
-            if (e.key === 'ArrowLeft' && currentIndex > 0) {
-                currentIndex--;
-                updateCarousel();
-            } else if (e.key === 'ArrowRight' && currentIndex < slideCount - 1) {
-                currentIndex++;
-                updateCarousel();
-            }
-        });
-
-        // Button click events for mouse interaction
         prevBtn.addEventListener('click', () => {
-            if (currentIndex > 0) {
-                currentIndex--;
-                updateCarousel();
-            }
-        });
-        
-        nextBtn.addEventListener('click', () => {
-            if (currentIndex < slideCount - 1) {
-                currentIndex++;
-                updateCarousel();
-            }
+            if (currentIndex > 0) { currentIndex--; updateCarousel(); }
         });
 
-        // Touch support for swipe navigation
+        nextBtn.addEventListener('click', () => {
+            if (currentIndex < slideCount - 1) { currentIndex++; updateCarousel(); }
+        });
+
         let startX = 0;
         let startY = 0;
-        
         track.addEventListener('touchstart', (e) => {
             startX = e.touches[0].clientX;
             startY = e.touches[0].clientY;
         }, { passive: true });
-        
+
         track.addEventListener('touchend', (e) => {
             const dx = e.changedTouches[0].clientX - startX;
             const dy = e.changedTouches[0].clientY - startY;
-            
-            // Trigger swipe only if horizontal delta is larger than vertical and meets threshold
             if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 50) {
-                if (dx > 0 && currentIndex > 0) {
-                    currentIndex--;
-                    updateCarousel();
-                } else if (dx < 0 && currentIndex < slideCount - 1) {
-                    currentIndex++;
-                    updateCarousel();
-                }
+                if (dx > 0 && currentIndex > 0) { currentIndex--; updateCarousel(); }
+                else if (dx < 0 && currentIndex < slideCount - 1) { currentIndex++; updateCarousel(); }
             }
         });
     }
 
-    loadGallery();
+    function generateJSONLD(data) {
+        try {
+            const baseUrl = window.location.origin + window.location.pathname.replace(/\/$/, "");
+            const schemas = data.filter(item => item.src).map(item => {
+                const title = (item.title && item.title.trim().toLowerCase() !== 'arte') ? item.title : `Obra de Arte (Acervo ${item.idx})`;
+                return {
+                    "@context": "https://schema.org",
+                    "@type": "VisualArtwork",
+                    "name": title.trim(),
+                    "image": `${baseUrl}/${item.src}`,
+                    "creator": { "@type": "Person", "name": "Fabio Crisanti" },
+                    "description": item.desc || item.meta || "Catálogo online Fabio Crisanti"
+                };
+            });
+            const staticCards = document.querySelectorAll('.obra-card');
+            staticCards.forEach((card) => {
+                const img = card.querySelector('.obra-img');
+                const titleEl = card.querySelector('.obra-title');
+                if (img && titleEl) {
+                    schemas.push({
+                        "@context": "https://schema.org",
+                        "@type": "VisualArtwork",
+                        "name": titleEl.textContent.trim().replace(/\s+/g, ' '),
+                        "image": `${baseUrl}/${img.getAttribute('src')}`,
+                        "creator": { "@type": "Person", "name": "Fabio Crisanti" },
+                        "artMedium": card.querySelector('.obra-serie')?.textContent.trim() || undefined
+                    });
+                }
+            });
+            if (schemas.length === 0) return;
+            const script = document.createElement('script');
+            script.type = 'application/ld+json';
+            script.text = JSON.stringify(schemas);
+            document.head.appendChild(script);
+        } catch (e) {
+            console.error('Failed to generate VisualArtwork JSON-LD schema', e);
+        }
+    }
+
+    // --- Main gallery (dynamic from galleryData) ---
+    const mainCarousel = document.getElementById('gallery-carousel');
+    const mainTrack = document.getElementById('gallery-track');
+
+    if (mainCarousel && mainTrack) {
+        function loadMainGallery() {
+            try {
+                const data = typeof galleryData !== 'undefined' ? galleryData : [];
+                if (!data.length) {
+                    console.warn('Main gallery data not loaded.');
+                    return;
+                }
+                const fragment = document.createDocumentFragment();
+                data.forEach(item => {
+                    const slide = document.createElement('div');
+                    slide.className = 'gallery-slide';
+                    if (item.idx !== undefined) slide.dataset.index = item.idx;
+                    if (item.date) slide.dataset.date = item.date;
+                    let altAttr = item.alt;
+                    if (altAttr === 'arte' || !altAttr) altAttr = item.title || 'Obra de arte';
+                    let fp = `<figure class="gallery-figure">`;
+                    fp += `<img src="${item.src}" alt="${altAttr}" class="gallery-img" loading="lazy" />`;
+                    fp += `<figcaption class="gallery-caption">`;
+                    if (item.title) fp += `<h3 class="gallery-title">${item.title}</h3>`;
+                    if (item.meta) fp += `<p class="gallery-meta">${item.meta}</p>`;
+                    if (item.desc) fp += `<p class="gallery-desc">${item.desc}</p>`;
+                    fp += `</figcaption></figure>`;
+                    slide.innerHTML = fp;
+                    fragment.appendChild(slide);
+                });
+                mainTrack.appendChild(fragment);
+                setupCarousel(mainCarousel);
+                generateJSONLD(data);
+            } catch (error) {
+                console.error('Error loading main gallery:', error);
+            }
+        }
+        loadMainGallery();
+    }
+
+    // --- High-res carousels (slides already in HTML) ---
+    document.querySelectorAll('.series .gallery-carousel').forEach(carousel => {
+        if (carousel.id === 'gallery-carousel') return;
+        setupCarousel(carousel);
+    });
 })();

@@ -131,79 +131,102 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
   if (!lightbox || !lbImg) return;
 
-  // Collect all obra images
-  const cards = $$('.obra-card:not(.hidden)');
   let currentIndex = 0;
-
-  const getImages = () => {
-    return $$('.obra-card').filter(c => !c.classList.contains('hidden')).map(card => ({
-      src:     card.querySelector('.obra-img')?.src     || '',
-      alt:     card.querySelector('.obra-img')?.alt     || '',
-      title:   card.querySelector('.obra-title')?.textContent?.trim() || '',
-      serie:   card.querySelector('.obra-serie')?.textContent?.trim() || '',
-      dims:    card.querySelector('.obra-dims')?.textContent?.trim()  || '',
-    }));
-  };
-
-  const open = (index) => {
-    const imgs = getImages();
-    if (!imgs.length) return;
-    currentIndex = ((index % imgs.length) + imgs.length) % imgs.length;
-    const item = imgs[currentIndex];
-
-    lbImg.src = item.src;
-    lbImg.alt = item.alt;
-    lbCaption.textContent = [item.title, item.serie, item.dims].filter(Boolean).join(' · ');
-
-    lightbox.hidden = false;
-    document.body.style.overflow = 'hidden';
-    lbClose.focus();
-  };
+  let currentItems = [];
 
   const close = () => {
     lightbox.hidden = true;
     document.body.style.overflow = '';
     lbImg.src = '';
+    currentItems = [];
+  };
+
+  const open = (index) => {
+    if (!currentItems.length) return;
+    const len = currentItems.length;
+    currentIndex = ((index % len) + len) % len;
+    const item = currentItems[currentIndex];
+    lbImg.src = item.src;
+    lbImg.alt = item.alt;
+    lbCaption.textContent = [item.title, item.serie, item.dims].filter(Boolean).join(' · ');
+    lightbox.hidden = false;
+    document.body.style.overflow = 'hidden';
+    lbClose.focus();
   };
 
   const navigate = (dir) => {
-    const imgs = getImages();
-    open((currentIndex + dir + imgs.length) % imgs.length);
+    open(currentIndex + dir);
   };
 
-  // Attach zoom buttons
-  $$('.obra-zoom').forEach((btn, i) => {
+  // ── Obra cards ──
+  const getObraItems = () =>
+    $$('.obra-card').filter(c => !c.classList.contains('hidden')).map(card => ({
+      src:   card.querySelector('.obra-img')?.src     || '',
+      alt:   card.querySelector('.obra-img')?.alt     || '',
+      title: card.querySelector('.obra-title')?.textContent?.trim() || '',
+      serie: card.querySelector('.obra-serie')?.textContent?.trim() || '',
+      dims:  card.querySelector('.obra-dims')?.textContent?.trim()  || '',
+    }));
+
+  const openObra = (index) => {
+    currentItems = getObraItems();
+    open(index);
+  };
+
+  $$('.obra-zoom').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
-      const allCards = $$('.obra-card');
       const card = btn.closest('.obra-card');
-      const visibleCards = $$('.obra-card').filter(c => !c.classList.contains('hidden'));
-      const idx = visibleCards.indexOf(card);
-      open(idx >= 0 ? idx : 0);
+      const visible = $$('.obra-card').filter(c => !c.classList.contains('hidden'));
+      openObra(visible.indexOf(card));
     });
   });
 
-  // Also open on card image click
-  $$('.obra-img').forEach((img, i) => {
+  $$('.obra-img').forEach(img => {
     img.style.cursor = 'zoom-in';
     img.addEventListener('click', () => {
       const card = img.closest('.obra-card');
-      const visibleCards = $$('.obra-card').filter(c => !c.classList.contains('hidden'));
-      const idx = visibleCards.indexOf(card);
-      open(idx >= 0 ? idx : 0);
+      const visible = $$('.obra-card').filter(c => !c.classList.contains('hidden'));
+      openObra(visible.indexOf(card));
     });
   });
 
+  // ── High-res carousel images ──
+  const getCarouselItems = (carouselEl) =>
+    $$('.gallery-slide', carouselEl).map(slide => ({
+      src:   slide.querySelector('.gallery-img')?.src || '',
+      alt:   slide.querySelector('.gallery-img')?.alt || '',
+      title: '',
+      serie: '',
+      dims:  '',
+    }));
+
+  const openCarousel = (carouselEl, index) => {
+    currentItems = getCarouselItems(carouselEl);
+    open(index);
+  };
+
+  $$('.series .gallery-carousel .gallery-img').forEach(img => {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', () => {
+      const carousel = img.closest('.gallery-carousel');
+      if (!carousel) return;
+      const slides = $$('.gallery-slide', carousel);
+      const slide = img.closest('.gallery-slide');
+      const idx = slides.indexOf(slide);
+      openCarousel(carousel, idx);
+    });
+  });
+
+  // ── Controls ──
   lbClose.addEventListener('click', close);
   lbPrev.addEventListener('click', () => navigate(-1));
   lbNext.addEventListener('click', () => navigate(1));
 
-  // Click outside to close
   lightbox.addEventListener('click', e => {
     if (e.target === lightbox) close();
   });
 
-  // Keyboard
   document.addEventListener('keydown', e => {
     if (lightbox.hidden) return;
     if (e.key === 'Escape')     close();
