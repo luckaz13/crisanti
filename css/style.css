@@ -641,11 +641,12 @@ ul, ol { list-style: none; }
    SÉRIE — SEDA
 ════════════════════════════════════════════════════ */
 .series {
-  background: var(--c-bg-dark);
-  color: rgba(255,255,255,0.87);
+  background: #B4B4A8;
+  color: #2B2723;
+  font-weight: 400;
 }
-.series .section-label { color: var(--c-accent-lt); }
-.series .section-title { color: #fff; }
+.series .section-label { color: #5E5952; }
+.series .section-title { color: #1E1B18; }
 
 .series-grid {
   display: grid;
@@ -654,33 +655,28 @@ ul, ol { list-style: none; }
   align-items: center;
 }
 
-.series-lead {
-  font-family: var(--f-serif);
-  font-size: var(--sp-base);
-  font-weight: 400;
-  font-style: italic;
-  line-height: 1.6;
-  color: rgba(255,255,255,0.9);
-  margin-bottom: var(--sp-base);
-}
+.series-lead,
 .series-text p {
   font-size: 0.9375rem;
-  color: rgba(255,255,255,0.65);
+  font-weight: 400;
+  font-style: normal;
+  color: #2B2723;
+  line-height: 1.75;
   margin-bottom: 1rem;
   max-width: 54ch;
 }
-.series-text strong { color: rgba(255,255,255,0.85); font-weight: 400; }
+.series-text strong { color: #1E1B18; font-weight: 500; }
 
 .series-credit {
   margin-top: 2rem;
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid #9B958D;
   padding-top: 1rem;
 }
 .series-credit p {
   font-size: var(--sp-sm-minus);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--c-accent-lt) !important;
+  color: #5E5952 !important;
   margin: 0 !important;
 }
 
@@ -717,28 +713,35 @@ ul, ol { list-style: none; }
   direction: ltr;
 }
 
-/* Carrosséis dentro de seções series (fundo escuro) */
+/* Carrosséis dentro de seções series */
 .series .gallery-carousel {
   margin: 0;
 }
 
 .series .gallery-controls {
-  left: -16px;
-  right: -16px;
+  left: 0;
+  right: 0;
+  padding: 0 0.25rem;
 }
 
 .series .gallery-btn {
-  background: rgba(26, 23, 20, 0.7);
-  color: rgba(255,255,255,0.9);
-  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  background: rgba(30, 27, 24, 0.7);
+  backdrop-filter: blur(2px);
+  color: #EBE8E2;
+  box-shadow: none;
+  width: 36px;
+  height: 36px;
 }
 
 .series .gallery-btn svg {
-  stroke: rgba(255,255,255,0.9);
+  stroke: #EBE8E2;
+  width: 20px;
+  height: 20px;
 }
 
 .series .gallery-btn:hover {
-  background: rgba(26, 23, 20, 0.9);
+  background: rgba(30, 27, 24, 0.9);
+  transform: scale(1.08);
 }
 
 .series .gallery-btn:disabled {
