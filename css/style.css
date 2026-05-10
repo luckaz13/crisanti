@@ -702,9 +702,7 @@ ul, ol { list-style: none; }
   overflow: hidden;
 }
 
-#juego-del-tren .series-gallery {
-  padding-top: 40%;
-}
+
 
 .series-grid--reverse {
   direction: rtl;
