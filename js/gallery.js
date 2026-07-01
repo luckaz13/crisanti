@@ -7,41 +7,98 @@
 
     function setupCarousel(carouselEl) {
         const track = carouselEl.querySelector('.gallery-track');
+        const viewport = carouselEl.querySelector('.gallery-viewport');
         const prevBtn = carouselEl.querySelector('.gallery-btn--prev');
         const nextBtn = carouselEl.querySelector('.gallery-btn--next');
 
-        if (!carouselEl || !track || !prevBtn || !nextBtn) return;
+        if (!carouselEl || !track || !viewport || !prevBtn || !nextBtn) return;
 
         const slides = carouselEl.querySelectorAll('.gallery-slide');
         if (!slides.length) return;
 
         let currentIndex = 0;
         const slideCount = slides.length;
+        const preloadRadius = 4;
+
+        function preloadImage(img) {
+            if (!img || img.dataset.preloaded === 'true') return;
+            img.loading = 'eager';
+            img.decoding = 'async';
+            img.dataset.preloaded = 'true';
+            const src = img.currentSrc || img.src;
+            if (!src) return;
+            const probe = new Image();
+            probe.decoding = 'async';
+            probe.src = src;
+        }
+
+        function preloadAround(index, direction = 1) {
+            const start = Math.max(0, index - 1);
+            const end = Math.min(slideCount - 1, index + preloadRadius);
+            for (let i = start; i <= end; i++) {
+                preloadImage(slides[i].querySelector('.gallery-img'));
+            }
+            for (let step = 1; step <= preloadRadius; step++) {
+                const target = index + (direction * step);
+                if (target >= 0 && target < slideCount) {
+                    preloadImage(slides[target].querySelector('.gallery-img'));
+                }
+            }
+        }
 
         function updateCarousel() {
-            const slideWidth = slides[0].getBoundingClientRect().width;
-            track.style.transform = `translateX(${-(currentIndex * slideWidth)}px)`;
+            track.style.transform = `translateX(${-currentIndex * 100}%)`;
+            updateViewportHeight();
             prevBtn.disabled = currentIndex === 0;
             nextBtn.disabled = currentIndex === slideCount - 1;
             prevBtn.setAttribute('aria-disabled', currentIndex === 0);
             nextBtn.setAttribute('aria-disabled', currentIndex === slideCount - 1);
         }
 
+        function updateViewportHeight() {
+            const activeSlide = slides[currentIndex];
+            if (!activeSlide) return;
+            window.requestAnimationFrame(() => {
+                const height = activeSlide.getBoundingClientRect().height;
+                if (height > 0) {
+                    viewport.style.height = `${Math.ceil(height)}px`;
+                }
+            });
+        }
+
         updateCarousel();
+        preloadAround(0, 1);
         carouselEl.style.cursor = 'grab';
 
-        let resizeTimeout;
-        window.addEventListener('resize', () => {
-            clearTimeout(resizeTimeout);
-            resizeTimeout = setTimeout(updateCarousel, 250);
+        slides.forEach(slide => {
+            const img = slide.querySelector('.gallery-img');
+            if (!img) return;
+            if (img.complete) return;
+            img.addEventListener('load', updateCarousel, { once: true });
+            img.addEventListener('error', updateCarousel, { once: true });
         });
 
+        if ('ResizeObserver' in window) {
+            const resizeObserver = new ResizeObserver(updateCarousel);
+            resizeObserver.observe(carouselEl);
+        } else {
+            window.addEventListener('resize', updateCarousel);
+        }
+
         prevBtn.addEventListener('click', () => {
-            if (currentIndex > 0) { currentIndex--; updateCarousel(); }
+            if (currentIndex > 0) {
+                currentIndex--;
+                preloadAround(currentIndex, -1);
+                updateCarousel();
+            }
         });
 
         nextBtn.addEventListener('click', () => {
-            if (currentIndex < slideCount - 1) { currentIndex++; updateCarousel(); }
+            if (currentIndex < slideCount - 1) {
+                currentIndex++;
+                preloadAround(currentIndex, 1);
+                updateCarousel();
+            }
         });
 
         let startX = 0;
@@ -55,8 +112,16 @@
             const dx = e.changedTouches[0].clientX - startX;
             const dy = e.changedTouches[0].clientY - startY;
             if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 50) {
-                if (dx > 0 && currentIndex > 0) { currentIndex--; updateCarousel(); }
-                else if (dx < 0 && currentIndex < slideCount - 1) { currentIndex++; updateCarousel(); }
+                if (dx > 0 && currentIndex > 0) {
+                    currentIndex--;
+                    preloadAround(currentIndex, -1);
+                    updateCarousel();
+                }
+                else if (dx < 0 && currentIndex < slideCount - 1) {
+                    currentIndex++;
+                    preloadAround(currentIndex, 1);
+                    updateCarousel();
+                }
             }
         });
     }
@@ -145,4 +210,29 @@
         if (carousel.id === 'gallery-carousel') return;
         setupCarousel(carousel);
     });
+
+    // --- Instagram preview from local exported Instagram gallery data ---
+    const instagramGrid = document.getElementById('instagram-grid');
+    if (instagramGrid) {
+        const data = typeof galleryData !== 'undefined' ? galleryData : [];
+        const latest = data
+            .filter(item => item.src && item.date)
+            .slice()
+            .sort((a, b) => String(b.date).localeCompare(String(a.date)))
+            .slice(0, 9);
+
+        const fragment = document.createDocumentFragment();
+        latest.forEach(item => {
+            const link = document.createElement('a');
+            link.href = 'https://www.instagram.com/fabio.crisanti.artes.plasticas/';
+            link.target = '_blank';
+            link.rel = 'noopener';
+            link.className = 'instagram-card';
+            const label = item.title || item.meta || item.desc || item.date || 'Instagram';
+            link.setAttribute('aria-label', `Abrir Instagram: ${label}`);
+            link.innerHTML = `<img src="${item.src}" alt="${item.alt || label}" loading="lazy" /><span>${label}</span>`;
+            fragment.appendChild(link);
+        });
+        instagramGrid.appendChild(fragment);
+    }
 })();

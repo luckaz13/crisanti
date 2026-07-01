@@ -251,6 +251,8 @@ document.addEventListener('DOMContentLoaded', () => {
     '.series-text > *',
     '.series-figure',
     '.traj-col',
+    '.literatura-card',
+    '.instagram-card',
     '.contato-text',
     '.contato-visual',
   ];
@@ -259,6 +261,8 @@ document.addEventListener('DOMContentLoaded', () => {
     '.obra-card': true,
     '.traj-col': true,
     '.series-text > *': true,
+    '.literatura-card': true,
+    '.instagram-card': true,
   };
 
   toReveal.forEach(sel => {
