@@ -2,3 +2,15 @@ __pycache__/
 *.pyc
 .DS_Store
 Thumbs.db
+.ruff_cache/
+
+# Videos removidos do controle de versao (historico limpo)
+*.mp4
+
+# Acervo local: planos, scripts de build, dumps e ferramentas
+# Permanece no disco, fora do repositorio publico / GitHub Pages
+legado/
+
+# Rede de seguranca caso artefatos voltem a ser gerados na raiz
+generated_*.html
+*.bak

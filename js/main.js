@@ -206,7 +206,7 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
     open(index);
   };
 
-  $$('.series .gallery-carousel .gallery-img').forEach(img => {
+  $$('.gallery-carousel .gallery-img').forEach(img => {
     img.style.cursor = 'zoom-in';
     img.addEventListener('click', () => {
       const carousel = img.closest('.gallery-carousel');
@@ -283,9 +283,20 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+  }, { threshold: 0.04, rootMargin: '100px 0px 100px 0px' });
 
   revealEls.forEach(el => observer.observe(el));
+
+  // Scroll progress indicator
+  const progressEl = document.getElementById('scroll-progress');
+  if (progressEl) {
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+      progressEl.style.width = scrolled + '%';
+    }, { passive: true });
+  }
 });
 
 /* ═══════════════════════════════════════════════════
@@ -308,4 +319,127 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { rootMargin: '-40% 0px -55% 0px' });
 
   sections.forEach(s => observer.observe(s));
+})();
+
+/* ═══════════════════════════════════════════════════
+   TIMELINE — Reveal on scroll
+═══════════════════════════════════════════════════ */
+(function initTimeline() {
+  const items = $$('.timeline-item');
+  if (!items.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  items.forEach(item => observer.observe(item));
+})();
+
+/* ═══════════════════════════════════════════════════
+   LIGHTBOX ENHANCEMENTS — Zoom, Counter, WhatsApp, Swipe
+═══════════════════════════════════════════════════ */
+(function initLightboxEnhancements() {
+  const lightbox = $('#lightbox');
+  if (!lightbox) return;
+
+  const img = $('#lightbox-img');
+  const counter = $('#lightbox-counter');
+  const zoomBtn = $('#lightbox-zoom');
+  const consultBtn = $('#lightbox-consult');
+
+  // Zoom toggle
+  if (zoomBtn && img) {
+    const toggleZoom = () => {
+      img.classList.toggle('zoomed');
+    };
+    zoomBtn.addEventListener('click', toggleZoom);
+    img.addEventListener('click', toggleZoom);
+  }
+
+  // Reset zoom on navigation
+  const resetZoom = () => {
+    if (img) img.classList.remove('zoomed');
+  };
+  const prevBtn = $('#lightbox-prev');
+  const nextBtn = $('#lightbox-next');
+  if (prevBtn) prevBtn.addEventListener('click', resetZoom);
+  if (nextBtn) nextBtn.addEventListener('click', resetZoom);
+
+  // Touch swipe for mobile
+  let touchStartX = 0;
+  let touchEndX = 0;
+  const minSwipe = 50;
+
+  lightbox.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  lightbox.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    const diff = touchStartX - touchEndX;
+    if (Math.abs(diff) > minSwipe) {
+      if (diff > 0 && nextBtn) {
+        nextBtn.click();
+      } else if (diff < 0 && prevBtn) {
+        prevBtn.click();
+      }
+    }
+  }, { passive: true });
+
+  // Update counter and consult button whenever lightbox image changes
+  const updateLightboxMeta = () => {
+    // Counter
+    if (counter) {
+      const slides = document.querySelectorAll('.gallery-slide');
+      const currentSrc = img ? img.src : '';
+      let currentIdx = -1;
+      let total = 0;
+      // Find the active carousel
+      const activeCarousels = document.querySelectorAll('.gallery-carousel:not([hidden])');
+      activeCarousels.forEach(c => {
+        const cSlides = c.querySelectorAll('.gallery-slide');
+        cSlides.forEach((s, i) => {
+          const sImg = s.querySelector('.gallery-img');
+          if (sImg && currentSrc.includes(sImg.getAttribute('src'))) {
+            currentIdx = i;
+            total = cSlides.length;
+          }
+        });
+      });
+      if (currentIdx >= 0) {
+        counter.textContent = (currentIdx + 1) + ' / ' + total;
+      }
+    }
+
+    // WhatsApp consult button
+    if (consultBtn && img) {
+      const alt = img.alt || 'uma obra';
+      const msg = 'Olá, tenho interesse na obra "' + alt + '". Está disponível?';
+      consultBtn.href = 'https://wa.me/5548991155260?text=' + encodeURIComponent(msg);
+    }
+  };
+
+  // Observe lightbox image src changes
+  if (img) {
+    const srcObserver = new MutationObserver(updateLightboxMeta);
+    srcObserver.observe(img, { attributes: true, attributeFilter: ['src'] });
+  }
+
+  // Also update on lightbox show
+  if (lightbox) {
+    const showObserver = new MutationObserver((mutations) => {
+      mutations.forEach(m => {
+        if (m.attributeName === 'hidden' && !lightbox.hidden) {
+          resetZoom();
+          updateLightboxMeta();
+        }
+      });
+    });
+    showObserver.observe(lightbox, { attributes: true, attributeFilter: ['hidden'] });
+  }
 })();

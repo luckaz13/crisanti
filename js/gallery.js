@@ -126,6 +126,9 @@
         });
     }
 
+    // Expose for lazy initialization from gallery tabs
+    window.initSingleCarousel = setupCarousel;
+
     function generateJSONLD(data) {
         try {
             const baseUrl = window.location.origin + window.location.pathname.replace(/\/$/, "");
@@ -206,7 +209,7 @@
     }
 
     // --- High-res carousels (slides already in HTML) ---
-    document.querySelectorAll('.series .gallery-carousel').forEach(carousel => {
+    document.querySelectorAll('.gallery-carousel').forEach(carousel => {
         if (carousel.id === 'gallery-carousel') return;
         setupCarousel(carousel);
     });
