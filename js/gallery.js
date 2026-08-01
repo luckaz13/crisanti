@@ -227,12 +227,11 @@
         const fragment = document.createDocumentFragment();
         latest.forEach(item => {
             const link = document.createElement('a');
-            link.href = 'https://www.instagram.com/fabio.crisanti.artes.plasticas/';
-            link.target = '_blank';
-            link.rel = 'noopener';
+            link.href = '#instagram';
             link.className = 'instagram-card';
+            link.setAttribute('data-ig-card', '');
             const label = item.title || item.meta || item.desc || item.date || 'Instagram';
-            link.setAttribute('aria-label', `Abrir Instagram: ${label}`);
+            link.setAttribute('aria-label', `Ver em tela cheia: ${label}`);
             link.innerHTML = `<img src="${item.src}" alt="${item.alt || label}" loading="lazy" /><span>${label}</span>`;
             fragment.appendChild(link);
         });

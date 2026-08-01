@@ -79,47 +79,7 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 })();
 
 /* ═══════════════════════════════════════════════════
-   4. OBRA FILTER
-═══════════════════════════════════════════════════ */
-(function initFilter() {
-  const filterBtns = $$('.filter-btn');
-  const cards      = $$('.obra-card');
-  if (!filterBtns.length || !cards.length) return;
-
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const filter = btn.dataset.filter;
-
-      // Update button states
-      filterBtns.forEach(b => {
-        b.classList.remove('active');
-        b.setAttribute('aria-selected', 'false');
-      });
-      btn.classList.add('active');
-      btn.setAttribute('aria-selected', 'true');
-
-      // Show/hide cards with stagger
-      let visibleIndex = 0;
-      cards.forEach(card => {
-        const matches = filter === 'all' || card.dataset.series === filter;
-        if (matches) {
-          card.classList.remove('hidden');
-          card.style.animationDelay = `${visibleIndex * 0.07}s`;
-          card.style.animation = 'none';
-          // Force reflow
-          void card.offsetWidth;
-          card.style.animation = '';
-          visibleIndex++;
-        } else {
-          card.classList.add('hidden');
-        }
-      });
-    });
-  });
-})();
-
-/* ═══════════════════════════════════════════════════
-   5. LIGHTBOX
+   4. LIGHTBOX
 ═══════════════════════════════════════════════════ */
 (function initLightbox() {
   const lightbox  = $('#lightbox');
@@ -139,6 +99,7 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
     document.body.style.overflow = '';
     lbImg.src = '';
     currentItems = [];
+    lbImg.classList.remove('zoomed');
   };
 
   const open = (index) => {
@@ -152,70 +113,95 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
     lightbox.hidden = false;
     document.body.style.overflow = 'hidden';
     lbClose.focus();
+    // Expose meta for counter enhancements
+    lightbox.dataset.lbIndex = String(currentIndex + 1);
+    lightbox.dataset.lbTotal = String(len);
+    const counter = $('#lightbox-counter');
+    if (counter) counter.textContent = `${currentIndex + 1} / ${len}`;
   };
 
   const navigate = (dir) => {
     open(currentIndex + dir);
   };
 
-  // ── Obra cards ──
   const getObraItems = () =>
-    $$('.obra-card').filter(c => !c.classList.contains('hidden')).map(card => ({
+    $$('.obra-card').map(card => ({
       src:   card.querySelector('.obra-img')?.src     || '',
       alt:   card.querySelector('.obra-img')?.alt     || '',
       title: card.querySelector('.obra-title')?.textContent?.trim() || '',
       serie: card.querySelector('.obra-serie')?.textContent?.trim() || '',
       dims:  card.querySelector('.obra-dims')?.textContent?.trim()  || '',
-    }));
+    })).filter(item => item.src);
 
-  const openObra = (index) => {
-    currentItems = getObraItems();
-    open(index);
-  };
-
-  $$('.obra-zoom').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const card = btn.closest('.obra-card');
-      const visible = $$('.obra-card').filter(c => !c.classList.contains('hidden'));
-      openObra(visible.indexOf(card));
-    });
-  });
-
-  $$('.obra-img').forEach(img => {
-    img.style.cursor = 'zoom-in';
-    img.addEventListener('click', () => {
-      const card = img.closest('.obra-card');
-      const visible = $$('.obra-card').filter(c => !c.classList.contains('hidden'));
-      openObra(visible.indexOf(card));
-    });
-  });
-
-  // ── High-res carousel images ──
   const getCarouselItems = (carouselEl) =>
     $$('.gallery-slide', carouselEl).map(slide => ({
       src:   slide.querySelector('.gallery-img')?.src || '',
       alt:   slide.querySelector('.gallery-img')?.alt || '',
-      title: '',
+      title: slide.querySelector('.gallery-title')?.textContent?.trim() || '',
       serie: '',
       dims:  '',
-    }));
+    })).filter(item => item.src);
 
-  const openCarousel = (carouselEl, index) => {
-    currentItems = getCarouselItems(carouselEl);
-    open(index);
-  };
+  const getInstagramItems = () =>
+    $$('#instagram-grid img').map(img => ({
+      src: img.src || '',
+      alt: img.alt || '',
+      title: img.closest('a,button,[data-ig-card]')?.getAttribute('aria-label') || img.alt || '',
+      serie: '',
+      dims: '',
+    })).filter(item => item.src);
 
-  $$('.gallery-carousel .gallery-img').forEach(img => {
-    img.style.cursor = 'zoom-in';
-    img.addEventListener('click', () => {
-      const carousel = img.closest('.gallery-carousel');
+  // Event delegation so every gallery works (including late/tab-hidden panels)
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('#lightbox')) return;
+
+    const zoomBtn = e.target.closest('.obra-zoom');
+    if (zoomBtn) {
+      e.preventDefault();
+      e.stopPropagation();
+      const card = zoomBtn.closest('.obra-card');
+      const items = getObraItems();
+      const src = card?.querySelector('.obra-img')?.src;
+      const idx = items.findIndex(i => i.src === src);
+      currentItems = items;
+      open(idx >= 0 ? idx : 0);
+      return;
+    }
+
+    const obraImg = e.target.closest('.obra-img');
+    if (obraImg) {
+      e.preventDefault();
+      const items = getObraItems();
+      const idx = items.findIndex(i => i.src === obraImg.src);
+      currentItems = items;
+      open(idx >= 0 ? idx : 0);
+      return;
+    }
+
+    const galleryImg = e.target.closest('.gallery-img');
+    if (galleryImg) {
+      const carousel = galleryImg.closest('.gallery-carousel');
       if (!carousel) return;
+      if (e.target.closest('.gallery-btn')) return;
+      e.preventDefault();
       const slides = $$('.gallery-slide', carousel);
-      const slide = img.closest('.gallery-slide');
+      const slide = galleryImg.closest('.gallery-slide');
       const idx = slides.indexOf(slide);
-      openCarousel(carousel, idx);
-    });
+      currentItems = getCarouselItems(carousel);
+      open(idx >= 0 ? idx : 0);
+      return;
+    }
+
+    const igCard = e.target.closest('#instagram-grid a.instagram-card, #instagram-grid [data-ig-card]');
+    if (igCard) {
+      const img = igCard.querySelector('img');
+      if (!img) return;
+      e.preventDefault();
+      const items = getInstagramItems();
+      const idx = items.findIndex(i => i.src === img.src);
+      currentItems = items;
+      open(idx >= 0 ? idx : 0);
+    }
   });
 
   // ── Controls ──
@@ -233,6 +219,12 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
     if (e.key === 'ArrowLeft')  navigate(-1);
     if (e.key === 'ArrowRight') navigate(1);
   });
+
+  // Public API for other scripts if needed
+  window.fcLightbox = { openItems: (items, index = 0) => {
+    currentItems = (items || []).filter(i => i && i.src);
+    open(index);
+  }};
 })();
 
 /* ═══════════════════════════════════════════════════
@@ -294,7 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
-      progressEl.style.width = scrolled + '%';
+      progressEl.style.transform = `scaleX(${scrolled / 100})`;
     }, { passive: true });
   }
 });
@@ -393,26 +385,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Update counter and consult button whenever lightbox image changes
   const updateLightboxMeta = () => {
-    // Counter
     if (counter) {
-      const slides = document.querySelectorAll('.gallery-slide');
-      const currentSrc = img ? img.src : '';
-      let currentIdx = -1;
-      let total = 0;
-      // Find the active carousel
-      const activeCarousels = document.querySelectorAll('.gallery-carousel:not([hidden])');
-      activeCarousels.forEach(c => {
-        const cSlides = c.querySelectorAll('.gallery-slide');
-        cSlides.forEach((s, i) => {
-          const sImg = s.querySelector('.gallery-img');
-          if (sImg && currentSrc.includes(sImg.getAttribute('src'))) {
-            currentIdx = i;
-            total = cSlides.length;
-          }
-        });
-      });
-      if (currentIdx >= 0) {
-        counter.textContent = (currentIdx + 1) + ' / ' + total;
+      const idx = lightbox.dataset.lbIndex;
+      const total = lightbox.dataset.lbTotal;
+      if (idx && total) {
+        counter.textContent = idx + ' / ' + total;
       }
     }
 
