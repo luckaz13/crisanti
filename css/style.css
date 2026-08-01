@@ -779,13 +779,19 @@ ul, ol { list-style: none; }
   font-weight: 400;
 }
 
-/* Consecutive series share one visual band — don't stack full section padding */
-.series + .series {
-  padding-top: var(--sp-md); /* 2rem instead of 6rem */
+/* Consecutive series share one visual band — collapse stacked section padding */
+.section.series + .section.series {
+  padding-block-start: var(--sp-sm); /* 1rem */
+  padding-top: var(--sp-sm);
 }
 
-.series:has(+ .series) {
-  padding-bottom: var(--sp-md);
+.section.series:has(+ .section.series) {
+  padding-block-end: var(--sp-sm);
+  padding-bottom: var(--sp-sm);
+}
+
+.section.series + .section.series .section-header {
+  margin-bottom: var(--sp-md);
 }
 
 .series .section-label { color: #282420; }
@@ -795,7 +801,7 @@ ul, ol { list-style: none; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--sp-lg);
-  align-items: center;
+  align-items: start; /* center created large empty bands under shorter column */
 }
 
 .series-lead,
@@ -1301,11 +1307,13 @@ ul, ol { list-style: none; }
    Contato, Obras, Instagram e figuras de série.
 ════════════════════════════════════════════════════ */
 @media (max-width: 768px) {
-  .series + .series {
-    padding-top: var(--sp-base); /* 1.25rem */
+  .section.series + .section.series {
+    padding-block-start: var(--sp-xs);
+    padding-top: var(--sp-xs);
   }
-  .series:has(+ .series) {
-    padding-bottom: var(--sp-base);
+  .section.series:has(+ .section.series) {
+    padding-block-end: var(--sp-xs);
+    padding-bottom: var(--sp-xs);
   }
 
   .sobre-img,
@@ -1367,13 +1375,6 @@ ul, ol { list-style: none; }
     transform: none;
   }
 
-  /* Hero: mostra a obra inteira no mobile */
-  .hero-bg {
-    object-fit: contain;
-    object-position: center center;
-    background: #0a0806;
-  }
-
   .gallery-img {
     max-height: min(70vh, 100%);
     width: 100%;
@@ -1397,6 +1398,12 @@ ul, ol { list-style: none; }
     margin: var(--sp-xl) 0;
     cursor: grab;
 }
+
+/* series carousels: no extra vertical margin (after global rule) */
+.section.series .gallery-carousel {
+  margin: 0;
+}
+
 
 .gallery-carousel:active {
   cursor: grabbing;
