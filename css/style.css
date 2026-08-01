@@ -779,15 +779,17 @@ ul, ol { list-style: none; }
   font-weight: 400;
 }
 
-/* Consecutive series share one visual band — collapse stacked section padding */
-.section.series + .section.series {
-  padding-block-start: var(--sp-sm); /* 1rem */
-  padding-top: var(--sp-sm);
+/* Consecutive series: um único respiro fixo (não soma padding cima+baixo).
+   Evita o vai-e-vem “colado / muito largo” entre Seda, Bahia, etc. */
+.section.series:has(+ .section.series) {
+  padding-block-end: 0;
+  padding-bottom: 0;
 }
 
-.section.series:has(+ .section.series) {
-  padding-block-end: var(--sp-sm);
-  padding-bottom: var(--sp-sm);
+.section.series + .section.series {
+  padding-block-start: 4.5rem;
+  padding-top: 4.5rem;
+  border-top: 1px solid rgba(30, 27, 24, 0.14);
 }
 
 .section.series + .section.series .section-header {
@@ -1307,13 +1309,13 @@ ul, ol { list-style: none; }
    Contato, Obras, Instagram e figuras de série.
 ════════════════════════════════════════════════════ */
 @media (max-width: 768px) {
-  .section.series + .section.series {
-    padding-block-start: var(--sp-xs);
-    padding-top: var(--sp-xs);
-  }
   .section.series:has(+ .section.series) {
-    padding-block-end: var(--sp-xs);
-    padding-bottom: var(--sp-xs);
+    padding-block-end: 0;
+    padding-bottom: 0;
+  }
+  .section.series + .section.series {
+    padding-block-start: 3rem;
+    padding-top: 3rem;
   }
 
   .sobre-img,
