@@ -84,7 +84,8 @@ from pathlib import Path
 
 for name in ("index.html", "es/index.html"):
     html = Path(name).read_text()
-    start = html.index('aria-label="Sub-galerias de Ensayos"')
+    crema = html.index('data-target="ensayos-crema"')
+    start = html.rfind('<section', 0, crema)
     end = html.index('</section>', start)
     section = html[start:end]
     tabs = set(re.findall(r'data-target="(ensayos-[^"]+)"', section))
