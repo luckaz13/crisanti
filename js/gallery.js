@@ -217,27 +217,4 @@
         setupCarousel(carousel);
     });
 
-    // --- Instagram preview from local exported Instagram gallery data ---
-    const instagramGrid = document.getElementById('instagram-grid');
-    if (instagramGrid) {
-        const data = typeof galleryData !== 'undefined' ? galleryData : [];
-        const latest = data
-            .filter(item => item.src && item.date)
-            .slice()
-            .sort((a, b) => String(b.date).localeCompare(String(a.date)))
-            .slice(0, 9);
-
-        const fragment = document.createDocumentFragment();
-        latest.forEach(item => {
-            const link = document.createElement('a');
-            link.href = '#instagram';
-            link.className = 'instagram-card';
-            link.setAttribute('data-ig-card', '');
-            const label = item.title || item.meta || item.desc || item.date || 'Instagram';
-            link.setAttribute('aria-label', `Ver em tela cheia: ${label}`);
-            link.innerHTML = `<img src="${item.src}" alt="${item.alt || label}" loading="lazy" /><span>${label}</span>`;
-            fragment.appendChild(link);
-        });
-        instagramGrid.appendChild(fragment);
-    }
 })();

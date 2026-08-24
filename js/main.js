@@ -142,15 +142,6 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
       dims:  '',
     })).filter(item => item.src);
 
-  const getInstagramItems = () =>
-    $$('#instagram-grid img').map(img => ({
-      src: img.src || '',
-      alt: img.alt || '',
-      title: img.closest('a,button,[data-ig-card]')?.getAttribute('aria-label') || img.alt || '',
-      serie: '',
-      dims: '',
-    })).filter(item => item.src);
-
   // Event delegation so every gallery works (including late/tab-hidden panels)
   document.addEventListener('click', (e) => {
     if (e.target.closest('#lightbox')) return;
@@ -192,16 +183,6 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
       return;
     }
 
-    const igCard = e.target.closest('#instagram-grid a.instagram-card, #instagram-grid [data-ig-card]');
-    if (igCard) {
-      const img = igCard.querySelector('img');
-      if (!img) return;
-      e.preventDefault();
-      const items = getInstagramItems();
-      const idx = items.findIndex(i => i.src === img.src);
-      currentItems = items;
-      open(idx >= 0 ? idx : 0);
-    }
   });
 
   // ── Controls ──
@@ -244,7 +225,6 @@ document.addEventListener('DOMContentLoaded', () => {
     '.series-figure',
     '.traj-col',
     '.literatura-card',
-    '.instagram-card',
     '.contato-text',
     '.contato-visual',
   ];
@@ -254,7 +234,6 @@ document.addEventListener('DOMContentLoaded', () => {
     '.traj-col': true,
     '.series-text > *': true,
     '.literatura-card': true,
-    '.instagram-card': true,
   };
 
   toReveal.forEach(sel => {
