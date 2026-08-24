@@ -664,6 +664,21 @@ ul, ol { list-style: none; }
 /* ════════════════════════════════════════════════════
    OBRAS
 ════════════════════════════════════════════════════ */
+/* ── Universal artwork surface ────────────────────── */
+:root {
+  --artwork-outline: rgba(255, 255, 255, 0.96);
+  --artwork-shadow: 0 5px 14px rgba(26, 23, 20, 0.1);
+}
+
+.obra-img,
+.gallery-img,
+.instagram-card img,
+.lightbox-img {
+  outline: 1px solid var(--artwork-outline);
+  outline-offset: -1px;
+  box-shadow: var(--artwork-shadow);
+}
+
 .obras { background: var(--c-bg-warm); }
 
 /* Obra grid */
