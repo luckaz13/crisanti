@@ -61,7 +61,7 @@
             window.requestAnimationFrame(() => {
                 const img = activeSlide.querySelector('.gallery-img');
                 const figure = activeSlide.querySelector('.gallery-figure');
-                const target = img || figure || activeSlide;
+                const target = figure || img || activeSlide;
                 const height = target.getBoundingClientRect().height;
                 if (height > 0) {
                     viewport.style.height = `${Math.ceil(height)}px`;
