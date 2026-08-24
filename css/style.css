@@ -1977,6 +1977,24 @@ ul, ol { list-style: none; }
   font-size: 0.95rem;
 }
 
+.tabbed-series-intro {
+  max-width: 68ch;
+  margin: 0 auto var(--sp-md);
+  text-align: center;
+}
+
+.tabbed-series-intro h3 {
+  margin-bottom: var(--sp-xs);
+  font-family: var(--f-serif);
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  font-weight: 400;
+}
+
+.tabbed-series-intro p {
+  margin-bottom: var(--sp-xs);
+  color: var(--c-ink-mid);
+}
+
 .gallery-empty {
   text-align: center;
   padding: 3rem;
