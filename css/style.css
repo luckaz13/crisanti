@@ -1995,6 +1995,74 @@ ul, ol { list-style: none; }
   color: var(--c-ink-mid);
 }
 
+.project-documents {
+  width: min(100%, 980px);
+  margin: var(--sp-lg) auto 0;
+}
+
+.project-documents__title {
+  margin-bottom: var(--sp-base);
+  font-family: var(--f-serif);
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-weight: 400;
+  text-align: center;
+}
+
+.project-documents__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--sp-base);
+}
+
+.project-document {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--sp-base);
+  padding: var(--sp-base);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.28);
+  box-shadow: 0 5px 16px rgba(26, 23, 20, 0.07);
+}
+
+.project-document__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.project-document__name {
+  font-family: var(--f-serif);
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.project-document__type {
+  color: var(--c-ink-mid);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.project-document__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.project-document__actions .btn-outline {
+  justify-content: center;
+  padding: 0.55rem 0.85rem;
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+}
+
+.project-document__actions .btn-outline:focus-visible {
+  outline: 2px solid var(--c-ink);
+  outline-offset: 3px;
+}
+
 .gallery-empty {
   text-align: center;
   padding: 3rem;
@@ -2006,6 +2074,12 @@ ul, ol { list-style: none; }
    RESPONSIVE: GALLERY TABS & TIMELINE
    ═══════════════════════════════════════════════════ */
 @media (max-width: 600px) {
+  .project-documents__list {
+    grid-template-columns: 1fr;
+  }
+  .project-document__actions .btn-outline {
+    flex: 1 1 100%;
+  }
   .gallery-tabs {
     gap: 0.35rem;
   }
