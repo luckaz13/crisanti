@@ -203,6 +203,9 @@ ul, ol { list-style: none; }
 }
 
 .nav-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   font-family: var(--f-serif);
   font-size: 1.35rem;
   font-weight: 500;
@@ -210,6 +213,24 @@ ul, ol { list-style: none; }
   color: var(--c-ink);
   transition: color var(--dur) var(--ease);
 }
+
+.nav-logo-text {
+  line-height: 1;
+}
+
+.nav-logo-mark {
+  display: block;
+  width: 1.8rem;
+  height: auto;
+  filter: brightness(0);
+  transition: filter var(--dur) var(--ease);
+}
+
+.site-header:not(.scrolled) .nav-logo-mark {
+  width: 2.45rem;
+  filter: brightness(0) invert(1);
+}
+
 .site-header:not(.scrolled) .nav-inner {
   max-width: none;
 }
@@ -330,6 +351,9 @@ ul, ol { list-style: none; }
   }
   .site-header:not(.scrolled) .nav-logo {
     font-size: clamp(2.1rem, 12vw, 3.375rem);
+  }
+  .site-header:not(.scrolled) .nav-logo-mark {
+    width: clamp(2rem, 10vw, 2.45rem);
   }
   .nav-links {
     position: fixed;
