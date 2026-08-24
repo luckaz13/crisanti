@@ -1151,6 +1151,41 @@ ul, ol { list-style: none; }
   color: rgba(255,255,255,0.85);
 }
 
+.footer-brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  max-width: 100%;
+  color: #fff;
+  opacity: 0.86;
+  transition: opacity var(--dur) var(--ease);
+}
+
+.footer-brand-mark:hover {
+  opacity: 1;
+}
+
+.footer-brand-mark:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+
+.footer-brand-mark__text {
+  font-family: var(--f-serif);
+  font-size: clamp(1.45rem, 3vw, 1.8rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.08em;
+}
+
+.footer-brand-mark__fish {
+  display: block;
+  width: 2.2rem;
+  height: auto;
+  filter: brightness(0) invert(1);
+}
+
 .footer-sub {
   font-size: 0.6875rem;
   letter-spacing: 0.18em;
