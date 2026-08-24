@@ -3,6 +3,7 @@ __pycache__/
 .DS_Store
 Thumbs.db
 .ruff_cache/
+.worktrees/
 
 # Videos removidos do controle de versao (historico limpo)
 *.mp4
