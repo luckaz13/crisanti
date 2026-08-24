@@ -12,6 +12,12 @@
         const nextBtn = carouselEl.querySelector('.gallery-btn--next');
 
         if (!carouselEl || !track || !viewport || !prevBtn || !nextBtn) return;
+        if (carouselEl.dataset.carouselInitialized === 'true') {
+            if (typeof carouselEl._updateCarousel === 'function') {
+                carouselEl._updateCarousel();
+            }
+            return;
+        }
 
         const slides = carouselEl.querySelectorAll('.gallery-slide');
         if (!slides.length) return;
@@ -19,6 +25,11 @@
         let currentIndex = 0;
         const slideCount = slides.length;
         const preloadRadius = 4;
+        const autoplayDelay = Number.parseInt(carouselEl.dataset.autoplay || '', 10);
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+        let autoplayTimer = null;
+        let pointerPaused = false;
+        let focusPaused = false;
 
         function preloadImage(img) {
             if (!img || img.dataset.preloaded === 'true') return;
@@ -53,6 +64,33 @@
             nextBtn.disabled = currentIndex === slideCount - 1;
             prevBtn.setAttribute('aria-disabled', currentIndex === 0);
             nextBtn.setAttribute('aria-disabled', currentIndex === slideCount - 1);
+        }
+
+        carouselEl._updateCarousel = updateCarousel;
+        carouselEl.dataset.carouselInitialized = 'true';
+
+        function canAutoplay() {
+            return Number.isFinite(autoplayDelay) && autoplayDelay > 0 && slideCount > 1 &&
+                !pointerPaused && !focusPaused && !reducedMotion.matches &&
+                document.visibilityState === 'visible';
+        }
+
+        function stopAutoplay() {
+            if (autoplayTimer !== null) {
+                window.clearTimeout(autoplayTimer);
+                autoplayTimer = null;
+            }
+        }
+
+        function scheduleAutoplay() {
+            stopAutoplay();
+            if (!canAutoplay()) return;
+            autoplayTimer = window.setTimeout(() => {
+                currentIndex = (currentIndex + 1) % slideCount;
+                preloadAround(currentIndex, 1);
+                updateCarousel();
+                scheduleAutoplay();
+            }, autoplayDelay);
         }
 
         function updateViewportHeight() {
@@ -93,6 +131,7 @@
                 currentIndex--;
                 preloadAround(currentIndex, -1);
                 updateCarousel();
+                scheduleAutoplay();
             }
         });
 
@@ -101,6 +140,7 @@
                 currentIndex++;
                 preloadAround(currentIndex, 1);
                 updateCarousel();
+                scheduleAutoplay();
             }
         });
 
@@ -119,14 +159,42 @@
                     currentIndex--;
                     preloadAround(currentIndex, -1);
                     updateCarousel();
+                    scheduleAutoplay();
                 }
                 else if (dx < 0 && currentIndex < slideCount - 1) {
                     currentIndex++;
                     preloadAround(currentIndex, 1);
                     updateCarousel();
+                    scheduleAutoplay();
                 }
             }
         });
+
+        carouselEl.addEventListener('pointerenter', () => {
+            pointerPaused = true;
+            stopAutoplay();
+        });
+        carouselEl.addEventListener('pointerleave', () => {
+            pointerPaused = false;
+            scheduleAutoplay();
+        });
+        carouselEl.addEventListener('focusin', () => {
+            focusPaused = true;
+            stopAutoplay();
+        });
+        carouselEl.addEventListener('focusout', () => {
+            window.setTimeout(() => {
+                focusPaused = carouselEl.contains(document.activeElement);
+                scheduleAutoplay();
+            }, 0);
+        });
+        document.addEventListener('visibilitychange', scheduleAutoplay);
+        if (typeof reducedMotion.addEventListener === 'function') {
+            reducedMotion.addEventListener('change', scheduleAutoplay);
+        } else if (typeof reducedMotion.addListener === 'function') {
+            reducedMotion.addListener(scheduleAutoplay);
+        }
+        scheduleAutoplay();
     }
 
     // Expose for lazy initialization from gallery tabs
