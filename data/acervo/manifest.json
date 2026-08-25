@@ -5416,7 +5416,7 @@
           "year": "2024"
         },
         "source": {
-          "details": "Playa central de Garopaba, Brasil. Fotos: Rena Blah",
+          "details": "Playa central de Garopaba, Brasil. Fotos: Rena Blah 11 a",
           "title": "Pez IV",
           "year": "2024"
         }
@@ -5527,7 +5527,7 @@
           "year": "2024"
         },
         "source": {
-          "details": "Playa central de Garopaba, Brasil. Fotos: Mitsue Yanai",
+          "details": "Playa central de Garopaba, Brasil. Fotos: Mitsue Yanai 14 a",
           "title": "Pez IV",
           "year": "2024"
         }
@@ -5749,9 +5749,9 @@
           "year": "2024"
         },
         "source": {
-          "details": "Fotos: Cora",
+          "details": "2024 Fotos: Cora",
           "title": "Pez IV",
-          "year": "2024"
+          "year": null
         }
       },
       "classification": "atual",
@@ -7674,7 +7674,7 @@
           "year": "2024"
         },
         "source": {
-          "details": "Materiales: Algodón. Lino. Raso",
+          "details": "Materiales:AlgodónLinoRaso",
           "title": "Chaleco",
           "year": "2024"
         }
@@ -7693,13 +7693,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Tapa — Fabio Crisanti",
+        "pt": "Tapa — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Tapa",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Tapa",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Tapa",
@@ -7723,15 +7731,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Esquema narrativo (boceto) — Fabio Crisanti",
+        "pt": "Esquema narrativo (boceto) — Fabio Crisanti"
       },
       "candidate_matches": [
         "images/galerias/Literatura/Ficción/El Nombre/20260607_022237.jpg"
       ],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Esquema narrativo (boceto)",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Esquema narrativo (boceto)",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Esquema narrativo (boceto)",
@@ -7752,13 +7768,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Esque líneas narrativas 06 a — Fabio Crisanti",
+        "pt": "Esque líneas narrativas 06 a — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Esque líneas narrativas 06 a",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Esque líneas narrativas 06 a",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Esque líneas narrativas 06 a",
@@ -7782,14 +7806,26 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Gráficos descriptivos — Elementos del universo del cuento — Fabio Crisanti",
+        "pt": "Gráficos descriptivos — Elementos del universo del cuento — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
-        "source": null
+        "es": {
+          "details": "Elementos del universo del cuento",
+          "title": "Gráficos descriptivos",
+          "year": null
+        },
+        "pt": {
+          "details": "Elementos del universo del cuento",
+          "title": "Gráficos descriptivos",
+          "year": null
+        },
+        "source": {
+          "details": "Elementos del universo del cuento",
+          "title": "Gráficos descriptivos",
+          "year": null
+        }
       },
       "classification": "atual",
       "filename": "06.jpg",
@@ -7808,14 +7844,26 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Gráficos descriptivos — Elementos del universo del cuento — Fabio Crisanti",
+        "pt": "Gráficos descriptivos — Elementos del universo del cuento — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
-        "source": null
+        "es": {
+          "details": "Elementos del universo del cuento",
+          "title": "Gráficos descriptivos",
+          "year": null
+        },
+        "pt": {
+          "details": "Elementos del universo del cuento",
+          "title": "Gráficos descriptivos",
+          "year": null
+        },
+        "source": {
+          "details": "Elementos del universo del cuento",
+          "title": "Gráficos descriptivos",
+          "year": null
+        }
       },
       "classification": "atual",
       "filename": "07.jpg",
@@ -7834,16 +7882,24 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Gráficos descriptivos — Elementos del universo del cuento — Fabio Crisanti",
+        "pt": "Gráficos descriptivos — Elementos del universo del cuento — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Elementos del universo del cuento",
+          "title": "Gráficos descriptivos",
+          "year": null
+        },
+        "pt": {
+          "details": "Elementos del universo del cuento",
+          "title": "Gráficos descriptivos",
+          "year": null
+        },
         "source": {
-          "details": null,
-          "title": "Gráficos descriptivos de elementos del universo del cuento.",
+          "details": "Elementos del universo del cuento",
+          "title": "Gráficos descriptivos",
           "year": null
         }
       },
@@ -7864,13 +7920,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Tapas de \"Flores\" y \"El Nombre\" — Fabio Crisanti",
+        "pt": "Tapas de \"Flores\" y \"El Nombre\" — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Tapas de \"Flores\" y \"El Nombre\"",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Tapas de \"Flores\" y \"El Nombre\"",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Tapas de \"Flores\" y \"El Nombre\"",
@@ -7891,13 +7955,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Ejemplares de \"Flores\" y \"El Nombre\" — Fabio Crisanti",
+        "pt": "Ejemplares de \"Flores\" y \"El Nombre\" — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Ejemplares de \"Flores\" y \"El Nombre\"",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Ejemplares de \"Flores\" y \"El Nombre\"",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Ejemplares de \"Flores\" y \"El Nombre\"",
@@ -7918,13 +7990,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Páginas 102 y 103 de \"Flores\" — Fabio Crisanti",
+        "pt": "Páginas 102 y 103 de \"Flores\" — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Páginas 102 y 103 de \"Flores\"",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Páginas 102 y 103 de \"Flores\"",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Páginas 102 y 103 de \"Flores\"",
@@ -7945,13 +8025,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Encuadernación \"Flores\" — Fabio Crisanti",
+        "pt": "Encuadernación \"Flores\" — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Encuadernación \"Flores\"",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Encuadernación \"Flores\"",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Encuadernación \"Flores\"",
@@ -7972,13 +8060,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Página 39 de \"Flores\" — Fabio Crisanti",
+        "pt": "Página 39 de \"Flores\" — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Página 39 de \"Flores\"",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Página 39 de \"Flores\"",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Página 39 de \"Flores\"",
@@ -7999,15 +8095,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Contratapa de \"Flores\" — Fabio Crisanti",
+        "pt": "Contratapa de \"Flores\" — Fabio Crisanti"
       },
       "candidate_matches": [
         "images/galerias/La Escultura/Verde/14.jpg"
       ],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Contratapa de \"Flores\"",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Contratapa de \"Flores\"",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Contratapa de \"Flores\"",
@@ -8028,13 +8132,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Cadaver exquisito I — 2012 — Bolígrafo sobre papel y cromía digital — Fabio Crisanti",
+        "pt": "Cadaver exquisito I — 2012 — Caneta sobre papel y cromía digital — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Bolígrafo sobre papel y cromía digital",
+          "title": "Cadaver exquisito I",
+          "year": "2012"
+        },
+        "pt": {
+          "details": "Caneta sobre papel y cromía digital",
+          "title": "Cadaver exquisito I",
+          "year": "2012"
+        },
         "source": {
           "details": "Caneta sobre papel y cromía digital",
           "title": "Cadaver exquisito I",
@@ -8057,13 +8169,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Cadaver exquisito II — 2012 — Bolígrafo sobre papel y cromía digital — Fabio Crisanti",
+        "pt": "Cadaver exquisito II — 2012 — Caneta sobre papel y cromía digital — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Bolígrafo sobre papel y cromía digital",
+          "title": "Cadaver exquisito II",
+          "year": "2012"
+        },
+        "pt": {
+          "details": "Caneta sobre papel y cromía digital",
+          "title": "Cadaver exquisito II",
+          "year": "2012"
+        },
         "source": {
           "details": "Caneta sobre papel y cromía digital",
           "title": "Cadaver exquisito II",
@@ -8086,13 +8206,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Cadaver exquisito III — 2012 — Bolígrafo sobre papel y cromía digital — Fabio Crisanti",
+        "pt": "Cadaver exquisito III — 2012 — Caneta sobre papel y cromía digital — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Bolígrafo sobre papel y cromía digital",
+          "title": "Cadaver exquisito III",
+          "year": "2012"
+        },
+        "pt": {
+          "details": "Caneta sobre papel y cromía digital",
+          "title": "Cadaver exquisito III",
+          "year": "2012"
+        },
         "source": {
           "details": "Caneta sobre papel y cromía digital",
           "title": "Cadaver exquisito III",
@@ -8115,8 +8243,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Cadaver Exquisito — imagen 05 — Fabio Crisanti",
+        "pt": "Cadaver Exquisito — imagem 05 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -8140,13 +8268,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Tapa del \"Calendario — 2006 — \"Motivo: Detalle del personaje de candombe uruguayo \"Mamá Vieja\" — Fabio Crisanti",
+        "pt": "Tapa del \"Calendario — 2006 — \"Motivo: Detalle del personaje de candombe uruguayo \"Mamá Vieja\" — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "\"Motivo: Detalle del personaje de candombe uruguayo \"Mamá Vieja\"",
+          "title": "Tapa del \"Calendario",
+          "year": "2006"
+        },
+        "pt": {
+          "details": "\"Motivo: Detalle del personaje de candombe uruguayo \"Mamá Vieja\"",
+          "title": "Tapa del \"Calendario",
+          "year": "2006"
+        },
         "source": {
           "details": "\"Motivo: Detalle del personaje de candombe uruguayo \"Mamá Vieja\"",
           "title": "Tapa del \"Calendario",
@@ -8169,13 +8305,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Imágenes del \"Calendario — 2006 — \" Las fotografía fueron tomadas de la serie del autor \"Hay agua caliente\" expuesta en el Consulado de la República Argentina en Colonia del Sacramento Uruguay en 2005. — Fabio Crisanti",
+        "pt": "Imágenes del \"Calendario — 2006 — \" Las fotografía fueron tomadas de la serie del autor \"Hay agua caliente\" expuesta en el Consulado de la República Argentina en Colonia del Sacramento Uruguay en 2005. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "\" Las fotografía fueron tomadas de la serie del autor \"Hay agua caliente\" expuesta en el Consulado de la República Argentina en Colonia del Sacramento Uruguay en 2005.",
+          "title": "Imágenes del \"Calendario",
+          "year": "2006"
+        },
+        "pt": {
+          "details": "\" Las fotografía fueron tomadas de la serie del autor \"Hay agua caliente\" expuesta en el Consulado de la República Argentina en Colonia del Sacramento Uruguay en 2005.",
+          "title": "Imágenes del \"Calendario",
+          "year": "2006"
+        },
         "source": {
           "details": "\" Las fotografía fueron tomadas de la serie del autor \"Hay agua caliente\" expuesta en el Consulado de la República Argentina en Colonia del Sacramento Uruguay en 2005.",
           "title": "Imágenes del \"Calendario",
@@ -8198,13 +8342,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Puzzle 2007 — 0.15m x 0.15m x 0.15mMateriales:MaderaCartónCopias fotográficas tomadas de la serie \"Exilio\". Acrílicos — Fabio Crisanti",
+        "pt": "Puzzle 2007 — 0.15m x 0.15m x 0.15mMateriais:MaderaCartónCopias fotográficas tomadas de la serie \"Exilio\". Acrílicos — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.15m x 0.15m x 0.15mMateriales:MaderaCartónCopias fotográficas tomadas de la serie \"Exilio\". Acrílicos",
+          "title": "Puzzle 2007",
+          "year": null
+        },
+        "pt": {
+          "details": "0.15m x 0.15m x 0.15mMateriais:MaderaCartónCopias fotográficas tomadas de la serie \"Exilio\". Acrílicos",
+          "title": "Puzzle 2007",
+          "year": null
+        },
         "source": {
           "details": "0.15m x 0.15m x 0.15mMateriales:MaderaCartónCopias fotográficas tomadas de la serie \"Exilio\". Acrílicos",
           "title": "Puzzle 2007",
@@ -8227,13 +8379,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Tapa — Fabio Crisanti",
+        "pt": "Tapa — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Tapa",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Tapa",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Tapa",
@@ -8254,13 +8414,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Retiro de tapa y página 1 — Fabio Crisanti",
+        "pt": "Retiro de tapa y página 1 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Retiro de tapa y página 1",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Retiro de tapa y página 1",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Retiro de tapa y página 1",
@@ -8281,13 +8449,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Páginas 2 y 3 — Fabio Crisanti",
+        "pt": "Páginas 2 y 3 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Páginas 2 y 3",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Páginas 2 y 3",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Páginas 2 y 3",
@@ -8308,13 +8484,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Páginas 4 y 5 — Fabio Crisanti",
+        "pt": "Páginas 4 y 5 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Páginas 4 y 5",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Páginas 4 y 5",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Páginas 4 y 5",
@@ -8335,13 +8519,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Páginas centrales — Fabio Crisanti",
+        "pt": "Páginas centrales — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Páginas centrales",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Páginas centrales",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Páginas centrales",
@@ -8362,13 +8554,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Páginas 8 y 9 — Fabio Crisanti",
+        "pt": "Páginas 8 y 9 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Páginas 8 y 9",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Páginas 8 y 9",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Páginas 8 y 9",
@@ -8389,13 +8589,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Páginas 10 y 11 — Fabio Crisanti",
+        "pt": "Páginas 10 y 11 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Páginas 10 y 11",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Páginas 10 y 11",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Páginas 10 y 11",
@@ -8416,13 +8624,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Página 12 y retiro de contratapa — Fabio Crisanti",
+        "pt": "Página 12 y retiro de contratapa — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Página 12 y retiro de contratapa",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Página 12 y retiro de contratapa",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Página 12 y retiro de contratapa",
@@ -8443,13 +8659,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Contratapa — Fabio Crisanti",
+        "pt": "Contratapa — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Contratapa",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Contratapa",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Contratapa",
@@ -8470,13 +8694,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Etiquetas I — 2019 — Diseño digital — Fabio Crisanti",
+        "pt": "Etiquetas I — 2019 — Design digital — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Diseño digital",
+          "title": "Etiquetas I",
+          "year": "2019"
+        },
+        "pt": {
+          "details": "Design digital",
+          "title": "Etiquetas I",
+          "year": "2019"
+        },
         "source": {
           "details": "Diseño digital",
           "title": "Etiquetas I",
@@ -8499,13 +8731,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Etiquetas II — 2019 — Diseño digital — Fabio Crisanti",
+        "pt": "Etiquetas II — 2019 — Design digital — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Diseño digital",
+          "title": "Etiquetas II",
+          "year": "2019"
+        },
+        "pt": {
+          "details": "Design digital",
+          "title": "Etiquetas II",
+          "year": "2019"
+        },
         "source": {
           "details": "Diseño digital",
           "title": "Etiquetas II",
@@ -8528,13 +8768,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Etiquetas IIi — 2019 — Diseño digital — Fabio Crisanti",
+        "pt": "Etiquetas IIi — 2019 — Design digital — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Diseño digital",
+          "title": "Etiquetas IIi",
+          "year": "2019"
+        },
+        "pt": {
+          "details": "Design digital",
+          "title": "Etiquetas IIi",
+          "year": "2019"
+        },
         "source": {
           "details": "Diseño digital",
           "title": "Etiquetas IIi",
@@ -8557,13 +8805,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Etiquetas IV — 2019 — Diseño digital — Fabio Crisanti",
+        "pt": "Etiquetas IV — 2019 — Design digital — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Diseño digital",
+          "title": "Etiquetas IV",
+          "year": "2019"
+        },
+        "pt": {
+          "details": "Design digital",
+          "title": "Etiquetas IV",
+          "year": "2019"
+        },
         "source": {
           "details": "Diseño digital",
           "title": "Etiquetas IV",
@@ -8586,13 +8842,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Memory 2018 — 0.10m x 0.10m x 0.20mMateriales:CartónShifónAcero. Acrílicos. Bambú. AlgodónPoliéster — Fabio Crisanti",
+        "pt": "Memory 2018 — 0.10m x 0.10m x 0.20mMateriais:CartónShifónAço. Acrílicos. Bambu. AlgodãoPoliéster — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.10m x 0.10m x 0.20mMateriales:CartónShifónAcero. Acrílicos. Bambú. AlgodónPoliéster",
+          "title": "Memory 2018",
+          "year": null
+        },
+        "pt": {
+          "details": "0.10m x 0.10m x 0.20mMateriais:CartónShifónAço. Acrílicos. Bambu. AlgodãoPoliéster",
+          "title": "Memory 2018",
+          "year": null
+        },
         "source": {
           "details": "0.10m x 0.10m x 0.20mMateriales:CartónShifónAcero. Acrílicos. Bambú. AlgodónPoliester",
           "title": "Memory 2018",
@@ -8615,13 +8879,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Memory 2018 — Fabio Crisanti",
+        "pt": "Memory 2018 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Memory 2018",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Memory 2018",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Memory 2018",
@@ -8644,13 +8916,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Memory 2018 — Fichas — Fabio Crisanti",
+        "pt": "Memory 2018 — Fichas — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Fichas",
+          "title": "Memory 2018",
+          "year": null
+        },
+        "pt": {
+          "details": "Fichas",
+          "title": "Memory 2018",
+          "year": null
+        },
         "source": {
           "details": "Fichas",
           "title": "Memory 2018",
@@ -8673,13 +8953,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Memory 2018 — Caja — Fabio Crisanti",
+        "pt": "Memory 2018 — Caja — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Caja",
+          "title": "Memory 2018",
+          "year": null
+        },
+        "pt": {
+          "details": "Caja",
+          "title": "Memory 2018",
+          "year": null
+        },
         "source": {
           "details": "Caja",
           "title": "Memory 2018",
@@ -8702,13 +8990,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Memory 2018 — Fichas (detalle) — Fabio Crisanti",
+        "pt": "Memory 2018 — Fichas (detalle) — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Fichas (detalle)",
+          "title": "Memory 2018",
+          "year": null
+        },
+        "pt": {
+          "details": "Fichas (detalle)",
+          "title": "Memory 2018",
+          "year": null
+        },
         "source": {
           "details": "Fichas (detalle)",
           "title": "Memory 2018",
@@ -8731,13 +9027,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Memory 2018 — Fichas (detalle) — Fabio Crisanti",
+        "pt": "Memory 2018 — Fichas (detalle) — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Fichas (detalle)",
+          "title": "Memory 2018",
+          "year": null
+        },
+        "pt": {
+          "details": "Fichas (detalle)",
+          "title": "Memory 2018",
+          "year": null
+        },
         "source": {
           "details": "Fichas (detalle)",
           "title": "Memory 2018",
@@ -8760,13 +9064,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Memory 2018 — Ilustraciones de las fichas — Fabio Crisanti",
+        "pt": "Memory 2018 — Ilustraciones de las fichas — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Ilustraciones de las fichas",
+          "title": "Memory 2018",
+          "year": null
+        },
+        "pt": {
+          "details": "Ilustraciones de las fichas",
+          "title": "Memory 2018",
+          "year": null
+        },
         "source": {
           "details": "Ilustraciones de las fichas",
           "title": "Memory 2018",
@@ -8789,13 +9101,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Cósimo — Marioneta para TVBuenos Aires 1998Altura: 0.40mMateriales:ParsecAlambrePielCueroTelasAerógrafo. Acrílicos Foto: Guadalupe Miles — Fabio Crisanti",
+        "pt": "Cósimo — Marioneta para TVBuenos Aires 1998Altura: 0.40mMateriais:ParsecAlambrePielCueroTelasAerógrafo. Acrílicos Foto: Guadalupe Miles — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Marioneta para TVBuenos Aires 1998Altura: 0.40mMateriales:ParsecAlambrePielCueroTelasAerógrafo. Acrílicos Foto: Guadalupe Miles",
+          "title": "Cósimo",
+          "year": null
+        },
+        "pt": {
+          "details": "Marioneta para TVBuenos Aires 1998Altura: 0.40mMateriais:ParsecAlambrePielCueroTelasAerógrafo. Acrílicos Foto: Guadalupe Miles",
+          "title": "Cósimo",
+          "year": null
+        },
         "source": {
           "details": "Marioneta para TVBuenos Aires 1998Altura: 0.40mMateriales:ParsecAlambrePielCueroTelasAerógrafo. Acrílicos Foto: Guadalupe Miles",
           "title": "Cósimo",
@@ -8818,13 +9138,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Ilustración página 6Acrílicos sobre papel de seda y collage — Fabio Crisanti",
+        "pt": "Ilustração página 6Acrílicos sobre papel de seda y collage — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Ilustración página 6Acrílicos sobre papel de seda y collage",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Ilustração página 6Acrílicos sobre papel de seda y collage",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Ilustración página 6Acrílicos sobre papel de seda y collage",
@@ -8845,13 +9173,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Retiro de tapa y página 1Acrílicos sobre papel de seda y collage — Fabio Crisanti",
+        "pt": "Retiro de tapa y página 1Acrílicos sobre papel de seda y collage — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Retiro de tapa y página 1Acrílicos sobre papel de seda y collage",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Retiro de tapa y página 1Acrílicos sobre papel de seda y collage",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Retiro de tapa y página 1Acrílicos sobre papel de seda y collage",
@@ -8874,13 +9210,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Páginas 2 y 3Acrílicos sobre papel de seda y collage — Fabio Crisanti",
+        "pt": "Páginas 2 y 3Acrílicos sobre papel de seda y collage — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Páginas 2 y 3Acrílicos sobre papel de seda y collage",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Páginas 2 y 3Acrílicos sobre papel de seda y collage",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Páginas 2 y 3Acrílicos sobre papel de seda y collage",
@@ -8903,13 +9247,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Páginas 4 y 5 — Fabio Crisanti",
+        "pt": "Páginas 4 y 5 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Páginas 4 y 5",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Páginas 4 y 5",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Páginas 4 y 5",
@@ -8932,13 +9284,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Páginas 6 y 7Acrílicos sobre papel de seda y collage — Fabio Crisanti",
+        "pt": "Páginas 6 y 7Acrílicos sobre papel de seda y collage — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Páginas 6 y 7Acrílicos sobre papel de seda y collage",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Páginas 6 y 7Acrílicos sobre papel de seda y collage",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Páginas 6 y 7Acrílicos sobre papel de seda y collage",
@@ -8961,13 +9321,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Páginas 8 y 9Acrílicos sobre papel de seda y collage — Fabio Crisanti",
+        "pt": "Páginas 8 y 9Acrílicos sobre papel de seda y collage — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Páginas 8 y 9Acrílicos sobre papel de seda y collage",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Páginas 8 y 9Acrílicos sobre papel de seda y collage",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Páginas 8 y 9Acrílicos sobre papel de seda y collage",
@@ -8990,13 +9358,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Páginas 10 y — Fabio Crisanti",
+        "pt": "Páginas 10 y — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Páginas 10 y",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Páginas 10 y",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Páginas 10 y",
@@ -9019,13 +9395,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Páginas 12 y — Fabio Crisanti",
+        "pt": "Páginas 12 y — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Páginas 12 y",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Páginas 12 y",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Páginas 12 y",
@@ -9048,13 +9432,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Páginas 14 y — Fabio Crisanti",
+        "pt": "Páginas 14 y — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Páginas 14 y",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Páginas 14 y",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Páginas 14 y",
@@ -9077,13 +9469,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Páginas 16 y — Fabio Crisanti",
+        "pt": "Páginas 16 y — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Páginas 16 y",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Páginas 16 y",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Páginas 16 y",
@@ -9106,13 +9506,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Páginas 18 y — Fabio Crisanti",
+        "pt": "Páginas 18 y — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Páginas 18 y",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Páginas 18 y",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Páginas 18 y",
@@ -9135,13 +9543,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Páginas 20 y — Fabio Crisanti",
+        "pt": "Páginas 20 y — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Páginas 20 y",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Páginas 20 y",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Páginas 20 y",
@@ -9164,13 +9580,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Páginas 22 y — Fabio Crisanti",
+        "pt": "Páginas 22 y — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Páginas 22 y",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Páginas 22 y",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Páginas 22 y",
@@ -9193,13 +9617,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Páginas 24 y — Fabio Crisanti",
+        "pt": "Páginas 24 y — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Páginas 24 y",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Páginas 24 y",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Páginas 24 y",
@@ -9222,13 +9654,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Páginas 26 y — Fabio Crisanti",
+        "pt": "Páginas 26 y — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Páginas 26 y",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Páginas 26 y",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Páginas 26 y",
@@ -9251,13 +9691,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Páginas 28 y 29 — Fabio Crisanti",
+        "pt": "Páginas 28 y 29 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Páginas 28 y 29",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Páginas 28 y 29",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Páginas 28 y 29",
@@ -9280,13 +9728,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Página 30 y retiro de cpntratapaAcrílicos sobre papel de seda y collage — Fabio Crisanti",
+        "pt": "Página 30 y retiro de cpntratapaAcrílicos sobre papel de seda y collage — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Página 30 y retiro de cpntratapaAcrílicos sobre papel de seda y collage",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Página 30 y retiro de cpntratapaAcrílicos sobre papel de seda y collage",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Página 30 y retiro de cpntratapaAcrílicos sobre papel de seda y collage",
@@ -9309,13 +9765,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "ContratapaAcrílicos sobre papel de seda y collageDiseño digital — Fabio Crisanti",
+        "pt": "ContratapaAcrílicos sobre papel de seda y collageDiseño digital — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "ContratapaAcrílicos sobre papel de seda y collageDiseño digital",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "ContratapaAcrílicos sobre papel de seda y collageDiseño digital",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "ContratapaAcrílicos sobre papel de seda y collageDiseño digital",
@@ -9338,13 +9802,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "TapaAcrílicos sobre papel de seda y collageDiseño digital 20 a — Fabio Crisanti",
+        "pt": "TapaAcrílicos sobre papel de seda y collageDiseño digital 20 a — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "TapaAcrílicos sobre papel de seda y collageDiseño digital 20 a",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "TapaAcrílicos sobre papel de seda y collageDiseño digital 20 a",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "TapaAcrílicos sobre papel de seda y collageDiseño digital 20 a",
@@ -9367,14 +9839,26 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Bocetos — Carbón sobre papel — Fabio Crisanti",
+        "pt": "Esboços — Carvão sobre papel — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
-        "source": null
+        "es": {
+          "details": "Carbón sobre papel",
+          "title": "Bocetos",
+          "year": null
+        },
+        "pt": {
+          "details": "Carvão sobre papel",
+          "title": "Esboços",
+          "year": null
+        },
+        "source": {
+          "details": "Carbón sobre papel",
+          "title": "Bocetos",
+          "year": null
+        }
       },
       "classification": "atual",
       "filename": "20.jpg",
@@ -9392,13 +9876,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Acrílicos sobre papel de seda y collage — Fabio Crisanti",
+        "pt": "Acrílicos sobre papel de seda y collage — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Acrílicos sobre papel de seda y collage",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Acrílicos sobre papel de seda y collage",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Acrílicos sobre papel de seda y collage",
@@ -9421,14 +9913,26 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Bocetos — Carbón sobre papel — Fabio Crisanti",
+        "pt": "Esboços — Carvão sobre papel — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
-        "source": null
+        "es": {
+          "details": "Carbón sobre papel",
+          "title": "Bocetos",
+          "year": null
+        },
+        "pt": {
+          "details": "Carvão sobre papel",
+          "title": "Esboços",
+          "year": null
+        },
+        "source": {
+          "details": "Carbón sobre papel",
+          "title": "Bocetos",
+          "year": null
+        }
       },
       "classification": "atual",
       "filename": "22.jpg",
@@ -9446,16 +9950,24 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Bocetos — Carbón sobre papel — Fabio Crisanti",
+        "pt": "Esboços — Carvão sobre papel — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Carbón sobre papel",
+          "title": "Bocetos",
+          "year": null
+        },
+        "pt": {
+          "details": "Carvão sobre papel",
+          "title": "Esboços",
+          "year": null
+        },
         "source": {
-          "details": null,
-          "title": "Acrílicos sobre papel de seda y collage",
+          "details": "Carbón sobre papel",
+          "title": "Bocetos",
           "year": null
         }
       },
@@ -9475,14 +9987,26 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Bocetos — Carbón sobre papel — Fabio Crisanti",
+        "pt": "Esboços — Carvão sobre papel — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
-        "source": null
+        "es": {
+          "details": "Carbón sobre papel",
+          "title": "Bocetos",
+          "year": null
+        },
+        "pt": {
+          "details": "Carvão sobre papel",
+          "title": "Esboços",
+          "year": null
+        },
+        "source": {
+          "details": "Carbón sobre papel",
+          "title": "Bocetos",
+          "year": null
+        }
       },
       "classification": "atual",
       "filename": "24.jpg",
@@ -9500,16 +10024,24 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Bocetos — Carbón sobre papel — Fabio Crisanti",
+        "pt": "Esboços — Carvão sobre papel — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Carbón sobre papel",
+          "title": "Bocetos",
+          "year": null
+        },
+        "pt": {
+          "details": "Carvão sobre papel",
+          "title": "Esboços",
+          "year": null
+        },
         "source": {
-          "details": null,
-          "title": "Acrílicos sobre papel de seda y collage",
+          "details": "Carbón sobre papel",
+          "title": "Bocetos",
           "year": null
         }
       },
@@ -9529,14 +10061,26 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Bocetos — Carbón sobre papel — Fabio Crisanti",
+        "pt": "Esboços — Carvão sobre papel — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
-        "source": null
+        "es": {
+          "details": "Carbón sobre papel",
+          "title": "Bocetos",
+          "year": null
+        },
+        "pt": {
+          "details": "Carvão sobre papel",
+          "title": "Esboços",
+          "year": null
+        },
+        "source": {
+          "details": "Carbón sobre papel",
+          "title": "Bocetos",
+          "year": null
+        }
       },
       "classification": "atual",
       "filename": "26.jpg",
@@ -9554,16 +10098,24 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Bocetos — Carbón sobre papel — Fabio Crisanti",
+        "pt": "Esboços — Carvão sobre papel — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Carbón sobre papel",
+          "title": "Bocetos",
+          "year": null
+        },
+        "pt": {
+          "details": "Carvão sobre papel",
+          "title": "Esboços",
+          "year": null
+        },
         "source": {
-          "details": null,
-          "title": "BocetosCarbón sobre papel",
+          "details": "Carbón sobre papel",
+          "title": "Bocetos",
           "year": null
         }
       },
@@ -9583,8 +10135,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "El Ciervo — imagen 00 — Fabio Crisanti",
+        "pt": "El Ciervo — imagem 00 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -9608,13 +10160,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Ciervo — 2013 — 1,40m x 1,00m x 0,60mMateriales: Lana NaturalAcero. BambúCartapesta. AcrílicosParsecGaza — Fabio Crisanti",
+        "pt": "Ciervo — 2013 — 1,40m x 1,00m x 0,60mMateriais: Lana NaturalAço. BambuCartapesta. AcrílicosParsecGaza — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "1,40m x 1,00m x 0,60mMateriales: Lana NaturalAcero. BambúCartapesta. AcrílicosParsecGaza",
+          "title": "Ciervo",
+          "year": "2013"
+        },
+        "pt": {
+          "details": "1,40m x 1,00m x 0,60mMateriais: Lana NaturalAço. BambuCartapesta. AcrílicosParsecGaza",
+          "title": "Ciervo",
+          "year": "2013"
+        },
         "source": {
           "details": "1,40m x 1,00m x 0,60mMateriales: Lana NaturalAcero. BambúCartapesta. AcrílicosParsecGaza",
           "title": "Ciervo",
@@ -9637,8 +10197,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "El Ciervo — imagen 02 — Fabio Crisanti",
+        "pt": "El Ciervo — imagem 02 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -9662,8 +10222,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "El Ciervo — imagen 03 — Fabio Crisanti",
+        "pt": "El Ciervo — imagem 03 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -9687,8 +10247,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "El Ciervo — imagen 04 — Fabio Crisanti",
+        "pt": "El Ciervo — imagem 04 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -9712,8 +10272,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "El Ciervo — imagen 05 — Fabio Crisanti",
+        "pt": "El Ciervo — imagem 05 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -9737,8 +10297,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "El Ciervo — imagen 06 — Fabio Crisanti",
+        "pt": "El Ciervo — imagem 06 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -9762,8 +10322,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "El Ciervo — imagen 07 — Fabio Crisanti",
+        "pt": "El Ciervo — imagem 07 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -9787,8 +10347,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "El Ciervo — imagen 08 — Fabio Crisanti",
+        "pt": "El Ciervo — imagem 08 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -9812,8 +10372,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "El Ciervo — imagen 09 — Fabio Crisanti",
+        "pt": "El Ciervo — imagem 09 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -9837,8 +10397,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "El Ciervo — imagen 10 — Fabio Crisanti",
+        "pt": "El Ciervo — imagem 10 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -9862,8 +10422,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "El Ciervo — imagen 11 — Fabio Crisanti",
+        "pt": "El Ciervo — imagem 11 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -9887,8 +10447,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "El Ciervo — imagen 12 — Fabio Crisanti",
+        "pt": "El Ciervo — imagem 12 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -9912,8 +10472,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "El Ciervo — imagen 13 — Fabio Crisanti",
+        "pt": "El Ciervo — imagem 13 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -9937,13 +10497,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Materiales:AceroMaderaGomaespumaPoliesterAcrílicosAerógrafoCartapestaLana — Fabio Crisanti",
+        "pt": "Materiales:AceroMaderaGomaespumaPoliesterAcrílicosAerógrafoCartapestaLana — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Materiales:AceroMaderaGomaespumaPoliesterAcrílicosAerógrafoCartapestaLana",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Materiales:AceroMaderaGomaespumaPoliesterAcrílicosAerógrafoCartapestaLana",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Materiales:AceroMaderaGomaespumaPoliesterAcrílicosAerógrafoCartapestaLana",
@@ -9966,13 +10534,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Materiales:AceroMaderaGomaespumaPoliesterAcrílicosAerógrafoCartapesta — Fabio Crisanti",
+        "pt": "Materiales:AceroMaderaGomaespumaPoliesterAcrílicosAerógrafoCartapesta — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Materiales:AceroMaderaGomaespumaPoliesterAcrílicosAerógrafoCartapesta",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Materiales:AceroMaderaGomaespumaPoliesterAcrílicosAerógrafoCartapesta",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Materiales:AceroMaderaGomaespumaPoliesterAcrílicosAerógrafoCartapesta",
@@ -9995,13 +10571,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Materiales:AceroMaderaGomaespumaPoliesterAcrílicosAerógrafoCartapestaLana — Fabio Crisanti",
+        "pt": "Materiales:AceroMaderaGomaespumaPoliesterAcrílicosAerógrafoCartapestaLana — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Materiales:AceroMaderaGomaespumaPoliesterAcrílicosAerógrafoCartapestaLana",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Materiales:AceroMaderaGomaespumaPoliesterAcrílicosAerógrafoCartapestaLana",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Materiales:AceroMaderaGomaespumaPoliesterAcrílicosAerógrafoCartapestaLana",
@@ -10024,13 +10608,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Materiales:AceroMaderaGomaespumaPoliesterAcrílicosAerógrafoCartapesta — Fabio Crisanti",
+        "pt": "Materiales:AceroMaderaGomaespumaPoliesterAcrílicosAerógrafoCartapesta — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Materiales:AceroMaderaGomaespumaPoliesterAcrílicosAerógrafoCartapesta",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Materiales:AceroMaderaGomaespumaPoliesterAcrílicosAerógrafoCartapesta",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Materiales:AceroMaderaGomaespumaPoliesterAcrílicosAerógrafoCartapesta",
@@ -10053,13 +10645,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Materiales:AceroMaderaGomaespumaPoliesterAcrílicosAerógrafoCartapesta — Fabio Crisanti",
+        "pt": "Materiales:AceroMaderaGomaespumaPoliesterAcrílicosAerógrafoCartapesta — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Materiales:AceroMaderaGomaespumaPoliesterAcrílicosAerógrafoCartapesta",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Materiales:AceroMaderaGomaespumaPoliesterAcrílicosAerógrafoCartapesta",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Materiales:AceroMaderaGomaespumaPoliesterAcrílicosAerógrafoCartapesta",
@@ -10082,13 +10682,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Materiales:AceroMaderaGomaespumaPoliesterAcrílicosAerógrafoCartapestaLana — Fabio Crisanti",
+        "pt": "Materiales:AceroMaderaGomaespumaPoliesterAcrílicosAerógrafoCartapestaLana — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Materiales:AceroMaderaGomaespumaPoliesterAcrílicosAerógrafoCartapestaLana",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Materiales:AceroMaderaGomaespumaPoliesterAcrílicosAerógrafoCartapestaLana",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Materiales:AceroMaderaGomaespumaPoliesterAcrílicosAerógrafoCartapestaLana",
@@ -10111,13 +10719,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Materiales:AceroMaderaGomaespumaPoliesterAcrílicosAerógrafoCartapestaLana — Fabio Crisanti",
+        "pt": "Materiales:AceroMaderaGomaespumaPoliesterAcrílicosAerógrafoCartapestaLana — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Materiales:AceroMaderaGomaespumaPoliesterAcrílicosAerógrafoCartapestaLana",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Materiales:AceroMaderaGomaespumaPoliesterAcrílicosAerógrafoCartapestaLana",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Materiales:AceroMaderaGomaespumaPoliesterAcrílicosAerógrafoCartapestaLana",
@@ -10140,13 +10756,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Proceso de construcción — Fabio Crisanti",
+        "pt": "Proceso de construcción — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Proceso de construcción",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Proceso de construcción",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Proceso de construcción",
@@ -10169,13 +10793,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Proceso de construcción — Fabio Crisanti",
+        "pt": "Proceso de construcción — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Proceso de construcción",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Proceso de construcción",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Proceso de construcción",
@@ -11048,8 +11680,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagen 01 — Fabio Crisanti",
+        "pt": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagem 01 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -11073,8 +11705,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagen 11 (1) — Fabio Crisanti",
+        "pt": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagem 11 (1) — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -11098,8 +11730,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagen 16 (3) — Fabio Crisanti",
+        "pt": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagem 16 (3) — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -11123,8 +11755,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagen 17 (1) — Fabio Crisanti",
+        "pt": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagem 17 (1) — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -11148,8 +11780,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagen 22 — Fabio Crisanti",
+        "pt": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagem 22 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -11173,8 +11805,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagen 20260808_182618 — Fabio Crisanti",
+        "pt": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagem 20260808_182618 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -11198,8 +11830,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagen 20260808_182647 — Fabio Crisanti",
+        "pt": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagem 20260808_182647 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -11223,8 +11855,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagen 20260808_182734 — Fabio Crisanti",
+        "pt": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagem 20260808_182734 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -11248,8 +11880,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagen 20260808_182800 — Fabio Crisanti",
+        "pt": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagem 20260808_182800 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -11273,8 +11905,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagen 20260808_182836 — Fabio Crisanti",
+        "pt": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagem 20260808_182836 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -11298,8 +11930,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagen 20260808_182902 — Fabio Crisanti",
+        "pt": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagem 20260808_182902 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -11323,8 +11955,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagen 20260808_182922 — Fabio Crisanti",
+        "pt": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagem 20260808_182922 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -11348,8 +11980,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagen 20260808_182942 — Fabio Crisanti",
+        "pt": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagem 20260808_182942 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -11373,8 +12005,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagen 20260808_183012 — Fabio Crisanti",
+        "pt": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagem 20260808_183012 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -11398,8 +12030,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagen 20260808_183038 — Fabio Crisanti",
+        "pt": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagem 20260808_183038 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -11423,8 +12055,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagen 20260808_183102 — Fabio Crisanti",
+        "pt": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagem 20260808_183102 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -11448,8 +12080,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagen 20260808_183125 — Fabio Crisanti",
+        "pt": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagem 20260808_183125 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -11473,8 +12105,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagen 20260808_183146 — Fabio Crisanti",
+        "pt": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagem 20260808_183146 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -11498,8 +12130,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagen 20260808_183209 — Fabio Crisanti",
+        "pt": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagem 20260808_183209 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -11523,8 +12155,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagen 20260808_183228 — Fabio Crisanti",
+        "pt": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagem 20260808_183228 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -11548,8 +12180,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagen 20260808_183343 — Fabio Crisanti",
+        "pt": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagem 20260808_183343 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -11573,8 +12205,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagen 20260808_183409 — Fabio Crisanti",
+        "pt": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagem 20260808_183409 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -11598,8 +12230,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagen 20260808_183439 — Fabio Crisanti",
+        "pt": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagem 20260808_183439 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -11623,8 +12255,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagen 20260808_183506 — Fabio Crisanti",
+        "pt": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagem 20260808_183506 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -11648,8 +12280,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagen 20260808_183601 — Fabio Crisanti",
+        "pt": "La Fuente y los Simios/Exposición Virtual (La Fuente...) — imagem 20260808_183601 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -11673,8 +12305,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Master Taxi — imagen 20260808_184017 — Fabio Crisanti",
+        "pt": "Master Taxi — imagem 20260808_184017 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -11696,15 +12328,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Maquete I — Materiales:Cerámica. Algodón. AcrílicosImpresión digital — Fabio Crisanti",
+        "pt": "Maquete I — Materiais:Cerámica. Algodão. AcrílicosImpresión digital — Fabio Crisanti"
       },
       "candidate_matches": [
         "images/highres/Juego del Tren/1.jpg"
       ],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Materiales:Cerámica. Algodón. AcrílicosImpresión digital",
+          "title": "Maquete I",
+          "year": null
+        },
+        "pt": {
+          "details": "Materiais:Cerámica. Algodão. AcrílicosImpresión digital",
+          "title": "Maquete I",
+          "year": null
+        },
         "source": {
           "details": "Materiales:Cerámica. Algodón. AcrílicosImpresión digital",
           "title": "Maquete I",
@@ -11725,13 +12365,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "MaqueteMateriales:CerámicaAlgodónAcrílicosCartónImpresión digital — Fabio Crisanti",
+        "pt": "MaqueteMateriales:CerámicaAlgodónAcrílicosCartónImpresión digital — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "MaqueteMateriales:CerámicaAlgodónAcrílicosCartónImpresión digital",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "MaqueteMateriales:CerámicaAlgodónAcrílicosCartónImpresión digital",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "MaqueteMateriales:CerámicaAlgodónAcrílicosCartónImpresión digital",
@@ -11755,13 +12403,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "MaqueteFichas — Fabio Crisanti",
+        "pt": "MaqueteFichas — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "MaqueteFichas",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "MaqueteFichas",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "MaqueteFichas",
@@ -11785,13 +12441,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "MaqueteFichas — Fabio Crisanti",
+        "pt": "MaqueteFichas — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "MaqueteFichas",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "MaqueteFichas",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "MaqueteFichas",
@@ -11815,13 +12479,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Boceto gráfico y síntesis del sistema — Fabio Crisanti",
+        "pt": "Boceto gráfico y síntesis del sistema — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Boceto gráfico y síntesis del sistema",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Boceto gráfico y síntesis del sistema",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Boceto gráfico y síntesis del sistema",
@@ -11842,16 +12514,24 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Tren — 0.10m x 0.15mBolígrafo sobre papel — Fabio Crisanti",
+        "pt": "Tren — 0.10m x 0.15mCaneta sobre papel — Fabio Crisanti"
       },
       "candidate_matches": [
         "images/galerias/Proyectos Especiales/Vlak/15.jpg",
         "images/highres/Juego del Tren/20260227_130215.jpg"
       ],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.10m x 0.15mBolígrafo sobre papel",
+          "title": "Tren",
+          "year": null
+        },
+        "pt": {
+          "details": "0.10m x 0.15mCaneta sobre papel",
+          "title": "Tren",
+          "year": null
+        },
         "source": {
           "details": "0.10m x 0.15mCaneta sobre papel",
           "title": "Tren",
@@ -11872,16 +12552,24 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Boceto tapa de caja — Fabio Crisanti",
+        "pt": "Boceto tapa de caja — Fabio Crisanti"
       },
       "candidate_matches": [
         "images/galerias/Proyectos Especiales/Vlak/08.jpg",
         "images/highres/Juego del Tren/20251109_170756.jpg"
       ],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Boceto tapa de caja",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Boceto tapa de caja",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Boceto tapa de caja",
@@ -11902,16 +12590,24 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Boceto tapa de caja — Fabio Crisanti",
+        "pt": "Boceto tapa de caja — Fabio Crisanti"
       },
       "candidate_matches": [
         "images/galerias/Proyectos Especiales/Vlak/16.jpg",
         "images/highres/Juego del Tren/20251002_100143.jpg"
       ],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Boceto tapa de caja",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Boceto tapa de caja",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Boceto tapa de caja",
@@ -11932,13 +12628,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Boceto de tablero — Fabio Crisanti",
+        "pt": "Boceto de tablero — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Boceto de tablero",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Boceto de tablero",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Boceto de tablero",
@@ -11959,13 +12663,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "MaqueteFichas — Fabio Crisanti",
+        "pt": "MaqueteFichas — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "MaqueteFichas",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "MaqueteFichas",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "MaqueteFichas",
@@ -11989,13 +12701,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "MaqueteFichas — Fabio Crisanti",
+        "pt": "MaqueteFichas — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "MaqueteFichas",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "MaqueteFichas",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "MaqueteFichas",
@@ -12019,13 +12739,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "MaqueteFichas — Fabio Crisanti",
+        "pt": "MaqueteFichas — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "MaqueteFichas",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "MaqueteFichas",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "MaqueteFichas",
@@ -12049,13 +12777,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "MaqueteFichas — Fabio Crisanti",
+        "pt": "MaqueteFichas — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "MaqueteFichas",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "MaqueteFichas",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "MaqueteFichas",
@@ -12079,13 +12815,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Maquete II — 0.80m x 0.80m x 0.05mMateriales:MDFCartón ParanáAceroCuerina. Acrílicos. Papel de sedaEnduidoLaca — Fabio Crisanti",
+        "pt": "Maquete II — 0.80m x 0.80m x 0.05mMateriais:MDFCartón ParanáAçoCuerina. Acrílicos. Papel de sedaEnduidoLaca — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.80m x 0.80m x 0.05mMateriales:MDFCartón ParanáAceroCuerina. Acrílicos. Papel de sedaEnduidoLaca",
+          "title": "Maquete II",
+          "year": null
+        },
+        "pt": {
+          "details": "0.80m x 0.80m x 0.05mMateriais:MDFCartón ParanáAçoCuerina. Acrílicos. Papel de sedaEnduidoLaca",
+          "title": "Maquete II",
+          "year": null
+        },
         "source": {
           "details": "0.80m x 0.80m x 0.05mMateriales:MDFCartón ParanáAceroCuerina. Acrílicos. Papel de sedaEnduidoLaca",
           "title": "Maquete II",
@@ -12109,13 +12853,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Maquete II — 0.80m x 0.80m x 0.05mMateriales:MDFCartón ParanáAceroCuerina. Acrílicos. Papel de sedaEnduidoLaca — Fabio Crisanti",
+        "pt": "Maquete II — 0.80m x 0.80m x 0.05mMateriais:MDFCartón ParanáAçoCuerina. Acrílicos. Papel de sedaEnduidoLaca — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.80m x 0.80m x 0.05mMateriales:MDFCartón ParanáAceroCuerina. Acrílicos. Papel de sedaEnduidoLaca",
+          "title": "Maquete II",
+          "year": null
+        },
+        "pt": {
+          "details": "0.80m x 0.80m x 0.05mMateriais:MDFCartón ParanáAçoCuerina. Acrílicos. Papel de sedaEnduidoLaca",
+          "title": "Maquete II",
+          "year": null
+        },
         "source": {
           "details": "0.80m x 0.80m x 0.05mMateriales:MDFCartón ParanáAceroCuerina. Acrílicos. Papel de sedaEnduidoLaca",
           "title": "Maquete II",
@@ -12139,13 +12891,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Maquete II — 0.80m x 0.80m x 0.05mTapa — Fabio Crisanti",
+        "pt": "Maquete II — 0.80m x 0.80m x 0.05mTapa — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.80m x 0.80m x 0.05mTapa",
+          "title": "Maquete II",
+          "year": null
+        },
+        "pt": {
+          "details": "0.80m x 0.80m x 0.05mTapa",
+          "title": "Maquete II",
+          "year": null
+        },
         "source": {
           "details": "0.80m x 0.80m x 0.05mTapa",
           "title": "Maquete II",
@@ -12166,13 +12926,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Maquete II — 0.80m x 0.80m x 0.05mContratapa — Fabio Crisanti",
+        "pt": "Maquete II — 0.80m x 0.80m x 0.05mContratapa — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.80m x 0.80m x 0.05mContratapa",
+          "title": "Maquete II",
+          "year": null
+        },
+        "pt": {
+          "details": "0.80m x 0.80m x 0.05mContratapa",
+          "title": "Maquete II",
+          "year": null
+        },
         "source": {
           "details": "0.80m x 0.80m x 0.05mContratapa",
           "title": "Maquete II",

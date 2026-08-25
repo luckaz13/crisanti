@@ -111,6 +111,8 @@ def localize_caption(
             ("Ideografía China", "Ideografia Chinesa"),
             ("Emulsión", "Emulsão"),
             ("Pez", "Peixe"),
+            ("Ilustración", "Ilustração"),
+            ("Bocetos", "Esboços"),
         ],
     )
     pt_details = _replace_all(
@@ -139,6 +141,9 @@ def localize_caption(
             ("Vidrio", "Vidro"),
             ("Acero", "Aço"),
             ("Fieltro", "Feltro"),
+            (" y collage", " e colagem"),
+            ("Diseño digital", "Design digital"),
+            ("Carbón sobre papel", "Carvão sobre papel"),
         ],
     )
     return (

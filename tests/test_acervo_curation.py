@@ -127,6 +127,14 @@ class NumberedFichaTests(unittest.TestCase):
         self.assertIn("Materiais: Bambu", pt["details"])
         self.assertIn("Praia central de Garopaba", pt["details"])
 
+    def test_localizes_children_illustration_metadata(self):
+        source = {"title": "Ilustración página 6", "year": None, "details": "Acrílicos sobre papel de seda y collage. Diseño digital"}
+
+        _, pt = localize_caption(source)
+
+        self.assertEqual(pt["title"], "Ilustração página 6")
+        self.assertEqual(pt["details"], "Acrílicos sobre papel de seda e colagem. Design digital")
+
 
 if __name__ == "__main__":
     unittest.main()
