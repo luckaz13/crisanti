@@ -6,11 +6,14 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class StableCarouselControlsTests(unittest.TestCase):
-    def test_script_anchors_controls_to_first_measurable_slide(self):
+    def test_script_anchors_controls_to_first_measurable_image_slide(self):
         script = (ROOT / "js/gallery.js").read_text(encoding="utf-8")
 
         self.assertIn("function updateControlsAnchor()", script)
-        self.assertIn("const anchorSlide = slides[0]", script)
+        self.assertIn(
+            "const anchorSlide = [...slides].find(slide => slide.querySelector('.gallery-img')) || slides[0]",
+            script,
+        )
         self.assertIn("controlsAnchorWidth", script)
         self.assertIn("--gallery-controls-top", script)
 
