@@ -1581,6 +1581,19 @@ ul, ol { list-style: none; }
   transform: scale(1.02);
 }
 
+.gallery-figure--video {
+  background: var(--c-bg-dark);
+}
+
+.gallery-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 478 / 850;
+  max-height: 78vh;
+  object-fit: contain;
+  background: var(--c-bg-dark);
+}
+
 .gallery-caption {
   padding: var(--sp-md);
   text-align: center;
