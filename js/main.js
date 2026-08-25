@@ -109,7 +109,7 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
     const item = currentItems[currentIndex];
     lbImg.src = item.src;
     lbImg.alt = item.alt;
-    lbCaption.textContent = [item.title, item.serie, item.dims].filter(Boolean).join(' · ');
+    lbCaption.textContent = [item.title, item.serie, item.dims, item.meta, item.desc].filter(Boolean).join(' · ');
     lightbox.hidden = false;
     document.body.style.overflow = 'hidden';
     lbClose.focus();
@@ -140,6 +140,8 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
       title: slide.querySelector('.gallery-title')?.textContent?.trim() || '',
       serie: '',
       dims:  '',
+      meta:  slide.querySelector('.gallery-meta')?.textContent?.trim() || '',
+      desc:  slide.querySelector('.gallery-desc')?.textContent?.trim() || '',
     })).filter(item => item.src);
 
   // Event delegation so every gallery works (including late/tab-hidden panels)
