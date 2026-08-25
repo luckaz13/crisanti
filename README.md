@@ -21,7 +21,7 @@ Site-catálogo digital do artista plástico e fotógrafo **Fabio Crisanti** — 
 - **Séries em destaque** — Der Elefant e Juego del Tren
 - **Trajetória** — timeline visual do percurso artístico
 - **Literatura** — textos críticos e ficcionais com modal de leitura (ajuste de tamanho de fonte)
-- **Instagram** — feed embutido do perfil do artista
+- **Instagram** — acesso direto ao perfil do artista
 - **Contato** — WhatsApp, Instagram e blog/catálogo original
 
 ### Experiência
@@ -56,8 +56,9 @@ js/
   gallery.js        # Carrosséis
   gallery-tabs.js   # Abas das galerias temáticas
   language.js       # Roteamento e preferência de idioma
-  gallery-data.js   # Dados auxiliares das galerias
-images/             # Obras, hero e acervo das galerias
+img/images/         # Acervo publicado (fonte atual e legado em uso)
+tools/acervo/       # Inventário, curadoria, publicação e auditoria do acervo
+data/acervo/        # Manifesto e conteúdo editorial estruturado
 literatura/         # Fontes textuais (críticas e ficção)
 ```
 
