@@ -98,6 +98,9 @@ def localize_caption(
             ("Papel Craft", "Papel kraft"),
             ("Tecido de renda", "Tejido de encaje"),
             ("Carimbo", "Sello"),
+            ("Poliester", "Poliéster"),
+            ("Preceso de Construcción", "Proceso de construcción"),
+            ("Gsropaba", "Garopaba"),
         ],
     )
     pt_title = _replace_all(
@@ -107,6 +110,7 @@ def localize_caption(
             ("Estudio", "Estudo"),
             ("Ideografía China", "Ideografia Chinesa"),
             ("Emulsión", "Emulsão"),
+            ("Pez", "Peixe"),
         ],
     )
     pt_details = _replace_all(
@@ -126,6 +130,15 @@ def localize_caption(
             ("Bambú", "Bambu"),
             ("Sello", "Carimbo"),
             ("Papel kraft", "Papel kraft"),
+            ("Materiales:", "Materiais:"),
+            ("Poliéster", "Poliéster"),
+            ("Cemento de contacto", "Cola de contato"),
+            ("Playa", "Praia"),
+            ("Proceso de construcción", "Processo de construção"),
+            ("Toma directa", "Captura direta"),
+            ("Vidrio", "Vidro"),
+            ("Acero", "Aço"),
+            ("Fieltro", "Feltro"),
         ],
     )
     return (

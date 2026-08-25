@@ -3334,13 +3334,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "ADDIS ABABA — 2011 — Medidas: 2,00 m x 1,10 m (Total: 11,00 m)Materiales:Tinta ChinaSeda. Papel kraft. Papel Batik. Papeles Metalizados: Cobre, Oro, Perla. Bambú. AcrílicosCartapestaLienzo CrudoHilos de Algodón — Fabio Crisanti",
+        "pt": "ADDIS ABABA — 2011 — Medidas: 2,00 m x 1,10 m (Total: 11,00 m)Materiais:Tinta nanquimSeda. Papel kraft. Papel Batik. Papeles Metalizados: Cobre, Oro, Perla. Bambu. AcrílicosCartapestaLienzo CrudoHilos de Algodão — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Medidas: 2,00 m x 1,10 m (Total: 11,00 m)Materiales:Tinta ChinaSeda. Papel kraft. Papel Batik. Papeles Metalizados: Cobre, Oro, Perla. Bambú. AcrílicosCartapestaLienzo CrudoHilos de Algodón",
+          "title": "ADDIS ABABA",
+          "year": "2011"
+        },
+        "pt": {
+          "details": "Medidas: 2,00 m x 1,10 m (Total: 11,00 m)Materiais:Tinta nanquimSeda. Papel kraft. Papel Batik. Papeles Metalizados: Cobre, Oro, Perla. Bambu. AcrílicosCartapestaLienzo CrudoHilos de Algodão",
+          "title": "ADDIS ABABA",
+          "year": "2011"
+        },
         "source": {
           "details": "Medidas: 2,00 m x 1,10 m (Total: 11,00 m)Materiales:Tinta ChinaSeda. Papel Craft. Papel Batik. Papeles Metalizados: Cobre, Oro, Perla. Bambú. AcrílicosCartapestaLienzo CrudoHilos de Algodón",
           "title": "ADDIS ABABA",
@@ -3363,13 +3371,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "LALIBELA — 2011 — Medidas: 2,08 m x 1,25 m (Total: 9,50 m). Materiales:BambúCartapesta. Tinta China. Papeles Metalizados: Cobre, Oro. LinoHilos de Algodón — Fabio Crisanti",
+        "pt": "LALIBELA — 2011 — Medidas: 2,08 m x 1,25 m (Total: 9,50 m). Materiais:BambuCartapesta. Tinta nanquim. Papeles Metalizados: Cobre, Oro. LinoHilos de Algodão — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Medidas: 2,08 m x 1,25 m (Total: 9,50 m). Materiales:BambúCartapesta. Tinta China. Papeles Metalizados: Cobre, Oro. LinoHilos de Algodón",
+          "title": "LALIBELA",
+          "year": "2011"
+        },
+        "pt": {
+          "details": "Medidas: 2,08 m x 1,25 m (Total: 9,50 m). Materiais:BambuCartapesta. Tinta nanquim. Papeles Metalizados: Cobre, Oro. LinoHilos de Algodão",
+          "title": "LALIBELA",
+          "year": "2011"
+        },
         "source": {
           "details": "Medidas: 2,08 m x 1,25 m (Total: 9,50 m). Materiales:BambúCartapesta. Tinta China. Papeles Metalizados: Cobre, Oro. LinoHilos de Algodón",
           "title": "LALIBELA",
@@ -3392,13 +3408,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "HANA — 2011 — Medidas: 2,05 m. x 1,15 m. (Total: 11,50 m.)Materiales:Bambú. Papel kraftCorchoCartapesta. Tinta China. Papeles Metalizados: Oro, Cobre. LinoHilos de Algodón — Fabio Crisanti",
+        "pt": "HANA — 2011 — Medidas: 2,05 m. x 1,15 m. (Total: 11,50 m.)Materiais:Bambu. Papel kraftCorchoCartapesta. Tinta nanquim. Papeles Metalizados: Oro, Cobre. LinoHilos de Algodão — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Medidas: 2,05 m. x 1,15 m. (Total: 11,50 m.)Materiales:Bambú. Papel kraftCorchoCartapesta. Tinta China. Papeles Metalizados: Oro, Cobre. LinoHilos de Algodón",
+          "title": "HANA",
+          "year": "2011"
+        },
+        "pt": {
+          "details": "Medidas: 2,05 m. x 1,15 m. (Total: 11,50 m.)Materiais:Bambu. Papel kraftCorchoCartapesta. Tinta nanquim. Papeles Metalizados: Oro, Cobre. LinoHilos de Algodão",
+          "title": "HANA",
+          "year": "2011"
+        },
         "source": {
           "details": "Medidas: 2,05 m. x 1,15 m. (Total: 11,50 m.)Materiales:Bambú. Papel CraftCorchoCartapesta. Tinta China. Papeles Metalizados: Oro, Cobre. LinoHilos de Algodón",
           "title": "HANA",
@@ -3421,13 +3445,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "LALIBELA — (Detalle) — Fabio Crisanti",
+        "pt": "LALIBELA — (Detalle) — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "(Detalle)",
+          "title": "LALIBELA",
+          "year": null
+        },
+        "pt": {
+          "details": "(Detalle)",
+          "title": "LALIBELA",
+          "year": null
+        },
         "source": {
           "details": "(Detalle)",
           "title": "LALIBELA",
@@ -3450,13 +3482,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "LALIBELA — (Detalle) — Fabio Crisanti",
+        "pt": "LALIBELA — (Detalle) — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "(Detalle)",
+          "title": "LALIBELA",
+          "year": null
+        },
+        "pt": {
+          "details": "(Detalle)",
+          "title": "LALIBELA",
+          "year": null
+        },
         "source": {
           "details": "(Detalle)",
           "title": "LALIBELA",
@@ -3479,13 +3519,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "HANA — (Detalle) — Fabio Crisanti",
+        "pt": "HANA — (Detalle) — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "(Detalle)",
+          "title": "HANA",
+          "year": null
+        },
+        "pt": {
+          "details": "(Detalle)",
+          "title": "HANA",
+          "year": null
+        },
         "source": {
           "details": "(Detalle)",
           "title": "HANA",
@@ -3508,13 +3556,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "ADDIS ABABA — (Detalle) — Fabio Crisanti",
+        "pt": "ADDIS ABABA — (Detalle) — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "(Detalle)",
+          "title": "ADDIS ABABA",
+          "year": null
+        },
+        "pt": {
+          "details": "(Detalle)",
+          "title": "ADDIS ABABA",
+          "year": null
+        },
         "source": {
           "details": "(Detalle)",
           "title": "ADDIS ABABA",
@@ -3537,13 +3593,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "ADDIS ABABA — (Detalle) — Fabio Crisanti",
+        "pt": "ADDIS ABABA — (Detalle) — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "(Detalle)",
+          "title": "ADDIS ABABA",
+          "year": null
+        },
+        "pt": {
+          "details": "(Detalle)",
+          "title": "ADDIS ABABA",
+          "year": null
+        },
         "source": {
           "details": "(Detalle)",
           "title": "ADDIS ABABA",
@@ -3566,13 +3630,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Invierno II — 2023 — (Detalle)Dunas de Macacú - Garopaba — Fabio Crisanti",
+        "pt": "Invierno II — 2023 — (Detalle)Dunas de Macacú - Garopaba — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "(Detalle)Dunas de Macacú - Garopaba",
+          "title": "Invierno II",
+          "year": "2023"
+        },
+        "pt": {
+          "details": "(Detalle)Dunas de Macacú - Garopaba",
+          "title": "Invierno II",
+          "year": "2023"
+        },
         "source": {
           "details": "(Detalle)Dunas de Macacú - Garopaba",
           "title": "Invierno II",
@@ -3595,13 +3667,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Invierno II — 2023 — 1.80m x 1.30m (Total 14m)Materiales:BambúRaso. Algodón. Papel Kraft. Acrílicos. Tinta ChinaPoliésterSemente de AraucariaCola Vinílica. Papelão ParanáVidrioAcero. Tecido de Renda Foto: Mitsue Yanai — Fabio Crisanti",
+        "pt": "Invierno II — 2023 — 1.80m x 1.30m (Total 14m)Materiais:BambuRaso. Algodão. Papel Kraft. Acrílicos. Tinta nanquimPoliésterSemente de AraucariaCola Vinílica. Papelão ParanáVidroAço. Tecido de Renda Foto: Mitsue Yanai — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "1.80m x 1.30m (Total 14m)Materiales:BambúRaso. Algodón. Papel Kraft. Acrílicos. Tinta ChinaPoliésterSemente de AraucariaCola Vinílica. Papelão ParanáVidrioAcero. Tecido de Renda Foto: Mitsue Yanai",
+          "title": "Invierno II",
+          "year": "2023"
+        },
+        "pt": {
+          "details": "1.80m x 1.30m (Total 14m)Materiais:BambuRaso. Algodão. Papel Kraft. Acrílicos. Tinta nanquimPoliésterSemente de AraucariaCola Vinílica. Papelão ParanáVidroAço. Tecido de Renda Foto: Mitsue Yanai",
+          "title": "Invierno II",
+          "year": "2023"
+        },
         "source": {
           "details": "1.80m x 1.30m (Total 14m)Materiales:BambúRaso. Algodón. Papel Kraft. Acrílicos. Tinta ChinaPoliesterSemente de AraucariaCola Vinílica. Papelão ParanáVidrioAcero. Tecido de Renda Foto: Mitsue Yanai",
           "title": "Invierno II",
@@ -3624,13 +3704,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Invierno II — 2023 — Foto: Mitsue Yanai — Fabio Crisanti",
+        "pt": "Invierno II — 2023 — Foto: Mitsue Yanai — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Foto: Mitsue Yanai",
+          "title": "Invierno II",
+          "year": "2023"
+        },
+        "pt": {
+          "details": "Foto: Mitsue Yanai",
+          "title": "Invierno II",
+          "year": "2023"
+        },
         "source": {
           "details": "Foto: Mitsue Yanai",
           "title": "Invierno II",
@@ -3653,13 +3741,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Invierno II — 2023 — Foto: Mitsue Yanai — Fabio Crisanti",
+        "pt": "Invierno II — 2023 — Foto: Mitsue Yanai — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Foto: Mitsue Yanai",
+          "title": "Invierno II",
+          "year": "2023"
+        },
+        "pt": {
+          "details": "Foto: Mitsue Yanai",
+          "title": "Invierno II",
+          "year": "2023"
+        },
         "source": {
           "details": "Foto: Mitsue Yanai",
           "title": "Invierno II",
@@ -3682,13 +3778,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Invierno II — 2023 — (Detalle de rabiola) — Fabio Crisanti",
+        "pt": "Invierno II — 2023 — (Detalle de rabiola) — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "(Detalle de rabiola)",
+          "title": "Invierno II",
+          "year": "2023"
+        },
+        "pt": {
+          "details": "(Detalle de rabiola)",
+          "title": "Invierno II",
+          "year": "2023"
+        },
         "source": {
           "details": "(Detalle de rabiola)",
           "title": "Invierno II",
@@ -3711,13 +3815,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Invierno II — 2023 — (Detalle de rabiola) — Fabio Crisanti",
+        "pt": "Invierno II — 2023 — (Detalle de rabiola) — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "(Detalle de rabiola)",
+          "title": "Invierno II",
+          "year": "2023"
+        },
+        "pt": {
+          "details": "(Detalle de rabiola)",
+          "title": "Invierno II",
+          "year": "2023"
+        },
         "source": {
           "details": "(Detalle de rabiola)",
           "title": "Invierno II",
@@ -3740,13 +3852,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Invierno III — 2023 — (Detalle de rabiola) — Fabio Crisanti",
+        "pt": "Invierno III — 2023 — (Detalle de rabiola) — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "(Detalle de rabiola)",
+          "title": "Invierno III",
+          "year": "2023"
+        },
+        "pt": {
+          "details": "(Detalle de rabiola)",
+          "title": "Invierno III",
+          "year": "2023"
+        },
         "source": {
           "details": "(Detalle de rabiola)",
           "title": "Invierno IiI",
@@ -3769,13 +3889,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Invierno II — 2023 — (Detalle de rabiola) — Fabio Crisanti",
+        "pt": "Invierno II — 2023 — (Detalle de rabiola) — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "(Detalle de rabiola)",
+          "title": "Invierno II",
+          "year": "2023"
+        },
+        "pt": {
+          "details": "(Detalle de rabiola)",
+          "title": "Invierno II",
+          "year": "2023"
+        },
         "source": {
           "details": "(Detalle de rabiola)",
           "title": "Invierno II",
@@ -3798,13 +3926,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Invierno II — 2023 — (Detalle de vela) — Fabio Crisanti",
+        "pt": "Invierno II — 2023 — (Detalle de vela) — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "(Detalle de vela)",
+          "title": "Invierno II",
+          "year": "2023"
+        },
+        "pt": {
+          "details": "(Detalle de vela)",
+          "title": "Invierno II",
+          "year": "2023"
+        },
         "source": {
           "details": "(Detalle de vela)",
           "title": "Invierno II",
@@ -3827,13 +3963,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Invierno II — 2023 — (Detalle de rabiola) — Fabio Crisanti",
+        "pt": "Invierno II — 2023 — (Detalle de rabiola) — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "(Detalle de rabiola)",
+          "title": "Invierno II",
+          "year": "2023"
+        },
+        "pt": {
+          "details": "(Detalle de rabiola)",
+          "title": "Invierno II",
+          "year": "2023"
+        },
         "source": {
           "details": "(Detalle de rabiola)",
           "title": "Invierno II",
@@ -3856,13 +4000,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Dunas de MacacúGaropaba, Brasil. Foto : Marilia Benevenuto — Fabio Crisanti",
+        "pt": "Dunas de MacacúGaropaba, Brasil. Foto : Marilia Benevenuto — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Dunas de MacacúGaropaba, Brasil. Foto : Marilia Benevenuto",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Dunas de MacacúGaropaba, Brasil. Foto : Marilia Benevenuto",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Dunas de MacacúGaropaba, Brasil. Foto : Marilia Benevenuto",
@@ -3885,13 +4037,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Dunas de MacacúGaropaba, Brasil. Foto: Marilia Benevenuto — Fabio Crisanti",
+        "pt": "Dunas de MacacúGaropaba, Brasil. Foto: Marilia Benevenuto — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Dunas de MacacúGaropaba, Brasil. Foto: Marilia Benevenuto",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Dunas de MacacúGaropaba, Brasil. Foto: Marilia Benevenuto",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Dunas de MacacúGaropaba, Brasil. Foto: Marilia Benevenuto",
@@ -3914,13 +4074,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Dunas de MacacúGaropaba, Brasil. Foto: Elis Luna — Fabio Crisanti",
+        "pt": "Dunas de MacacúGaropaba, Brasil. Foto: Elis Luna — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Dunas de MacacúGaropaba, Brasil. Foto: Elis Luna",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Dunas de MacacúGaropaba, Brasil. Foto: Elis Luna",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Dunas de MacacúGaropaba, Brasil. Foto: Elis Luna",
@@ -3943,13 +4111,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Dunas de MacacúGaropaba, Brasil. Foto: Elis Luna — Fabio Crisanti",
+        "pt": "Dunas de MacacúGaropaba, Brasil. Foto: Elis Luna — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Dunas de MacacúGaropaba, Brasil. Foto: Elis Luna",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Dunas de MacacúGaropaba, Brasil. Foto: Elis Luna",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Dunas de MacacúGaropaba, Brasil. Foto: Elis Luna",
@@ -3972,13 +4148,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Dunas de MacacúGaropaba, Brasil. Foto: Manohead — Fabio Crisanti",
+        "pt": "Dunas de MacacúGaropaba, Brasil. Foto: Manohead — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Dunas de MacacúGaropaba, Brasil. Foto: Manohead",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Dunas de MacacúGaropaba, Brasil. Foto: Manohead",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Dunas de MacacúGaropaba, Brasil. Foto: Manohead",
@@ -4001,15 +4185,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Boceto para \"Invierno II\" — Fabio Crisanti",
+        "pt": "Boceto para \"Invierno II\" — Fabio Crisanti"
       },
       "candidate_matches": [
         "images/galerias/La Escultura/Invierno/16.jpg"
       ],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Boceto para \"Invierno II\"",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Boceto para \"Invierno II\"",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Boceto para \"Invierno II\"",
@@ -4030,13 +4222,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Invierno III — 2024 — 2.30m x 1.20m (Total: 17m) Materiales:FieltroCola. Papel de seda. Acrílicos. Papel kraft. Algodón. Bambú. TintaCemento de contacto — Fabio Crisanti",
+        "pt": "Invierno III — 2024 — 2.30m x 1.20m (Total: 17m) Materiais:FeltroCola. Papel de seda. Acrílicos. Papel kraft. Algodão. Bambu. TintaCola de contato — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2.30m x 1.20m (Total: 17m) Materiales:FieltroCola. Papel de seda. Acrílicos. Papel kraft. Algodón. Bambú. TintaCemento de contacto",
+          "title": "Invierno III",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "2.30m x 1.20m (Total: 17m) Materiais:FeltroCola. Papel de seda. Acrílicos. Papel kraft. Algodão. Bambu. TintaCola de contato",
+          "title": "Invierno III",
+          "year": "2024"
+        },
         "source": {
           "details": "2.30m x 1.20m (Total: 17m) Materiales:FieltroCola. Papel de seda. Acrílicos. Papel kraft. Algodón. Bambú. TintaCemento de contacto",
           "title": "Invierno III",
@@ -4059,13 +4259,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Invierno III — 2024 — (Detalle, Galería Rancho 29, Garopaba) — Fabio Crisanti",
+        "pt": "Invierno III — 2024 — (Detalle, Galería Rancho 29, Garopaba) — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "(Detalle, Galería Rancho 29, Garopaba)",
+          "title": "Invierno III",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "(Detalle, Galería Rancho 29, Garopaba)",
+          "title": "Invierno III",
+          "year": "2024"
+        },
         "source": {
           "details": "(Detalle, Galería Rancho 29, Gsropaba)",
           "title": "Invierno III",
@@ -4088,13 +4296,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Invierno III — 2024 — (En proceso de construcción) — Fabio Crisanti",
+        "pt": "Invierno III — 2024 — (En proceso de construcción) — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "(En proceso de construcción)",
+          "title": "Invierno III",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "(En proceso de construcción)",
+          "title": "Invierno III",
+          "year": "2024"
+        },
         "source": {
           "details": "(En proceso de construcción)",
           "title": "Invierno III",
@@ -4117,13 +4333,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Invierno III — 2024 — Dunas de Macacú Foto: Katy Pinheiro — Fabio Crisanti",
+        "pt": "Invierno III — 2024 — Dunas de Macacú Foto: Katy Pinheiro — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Dunas de Macacú Foto: Katy Pinheiro",
+          "title": "Invierno III",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "Dunas de Macacú Foto: Katy Pinheiro",
+          "title": "Invierno III",
+          "year": "2024"
+        },
         "source": {
           "details": "Dunas de Macacú Foto: Katy Pinheiro",
           "title": "Invierno III",
@@ -4146,13 +4370,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Invierno III — 2024 — Dunas de Macacú Foto: Katy Pinheiro — Fabio Crisanti",
+        "pt": "Invierno III — 2024 — Dunas de Macacú Foto: Katy Pinheiro — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Dunas de Macacú Foto: Katy Pinheiro",
+          "title": "Invierno III",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "Dunas de Macacú Foto: Katy Pinheiro",
+          "title": "Invierno III",
+          "year": "2024"
+        },
         "source": {
           "details": "Dunas de Macacú Foto: Katy Pinheiro",
           "title": "Invierno III",
@@ -4175,13 +4407,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Invierno III — 2024 — Dunas de Macacú Foto: Katy Pinheiro — Fabio Crisanti",
+        "pt": "Invierno III — 2024 — Dunas de Macacú Foto: Katy Pinheiro — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Dunas de Macacú Foto: Katy Pinheiro",
+          "title": "Invierno III",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "Dunas de Macacú Foto: Katy Pinheiro",
+          "title": "Invierno III",
+          "year": "2024"
+        },
         "source": {
           "details": "Dunas de Macacú Foto: Katy Pinheiro",
           "title": "Invierno III",
@@ -4204,15 +4444,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Invierno III — 2024 — Dunas de Macacú Foto: Katy Pinheiro — Fabio Crisanti",
+        "pt": "Invierno III — 2024 — Dunas de Macacú Foto: Katy Pinheiro — Fabio Crisanti"
       },
       "candidate_matches": [
         "images/galerias/La Escultura/Verde/07.jpg"
       ],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Dunas de Macacú Foto: Katy Pinheiro",
+          "title": "Invierno III",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "Dunas de Macacú Foto: Katy Pinheiro",
+          "title": "Invierno III",
+          "year": "2024"
+        },
         "source": {
           "details": "Dunas de Macacú Foto: Katy Pinheiro",
           "title": "Invierno III",
@@ -4233,13 +4481,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Invierno III — 2024 — (Detalle) — Fabio Crisanti",
+        "pt": "Invierno III — 2024 — (Detalle) — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "(Detalle)",
+          "title": "Invierno III",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "(Detalle)",
+          "title": "Invierno III",
+          "year": "2024"
+        },
         "source": {
           "details": "(Detalle)",
           "title": "Invierno III",
@@ -4262,13 +4518,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Invierno III — 2024 — (Detalle rabiola) — Fabio Crisanti",
+        "pt": "Invierno III — 2024 — (Detalle rabiola) — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "(Detalle rabiola)",
+          "title": "Invierno III",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "(Detalle rabiola)",
+          "title": "Invierno III",
+          "year": "2024"
+        },
         "source": {
           "details": "(Detalle rabiola)",
           "title": "Invierno III",
@@ -4291,13 +4555,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Invierno III — 2024 — (Detalle rabiola) — Fabio Crisanti",
+        "pt": "Invierno III — 2024 — (Detalle rabiola) — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "(Detalle rabiola)",
+          "title": "Invierno III",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "(Detalle rabiola)",
+          "title": "Invierno III",
+          "year": "2024"
+        },
         "source": {
           "details": "(Detalle rabiola)",
           "title": "Invierno III",
@@ -4320,13 +4592,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Invierno III — 2024 — Dunas de Macacú Foto: Katy Pinheiro — Fabio Crisanti",
+        "pt": "Invierno III — 2024 — Dunas de Macacú Foto: Katy Pinheiro — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Dunas de Macacú Foto: Katy Pinheiro",
+          "title": "Invierno III",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "Dunas de Macacú Foto: Katy Pinheiro",
+          "title": "Invierno III",
+          "year": "2024"
+        },
         "source": {
           "details": "Dunas de Macacú Foto: Katy Pinheiro",
           "title": "Invierno III",
@@ -4349,13 +4629,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Invierno III — 2024 — Dunas de Macacú Foto: Katy Pinheiro — Fabio Crisanti",
+        "pt": "Invierno III — 2024 — Dunas de Macacú Foto: Katy Pinheiro — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Dunas de Macacú Foto: Katy Pinheiro",
+          "title": "Invierno III",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "Dunas de Macacú Foto: Katy Pinheiro",
+          "title": "Invierno III",
+          "year": "2024"
+        },
         "source": {
           "details": "Dunas de Macacú Foto: Katy Pinheiro",
           "title": "Invierno III",
@@ -4378,13 +4666,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Invierno III — 2024 — Dunas de Macacú Foto: Katy Pinheiro — Fabio Crisanti",
+        "pt": "Invierno III — 2024 — Dunas de Macacú Foto: Katy Pinheiro — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Dunas de Macacú Foto: Katy Pinheiro",
+          "title": "Invierno III",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "Dunas de Macacú Foto: Katy Pinheiro",
+          "title": "Invierno III",
+          "year": "2024"
+        },
         "source": {
           "details": "Dunas de Macacú Foto: Katy Pinheiro",
           "title": "Invierno III",
@@ -4407,13 +4703,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Invierno III — 2024 — (Detalle rabiola) — Fabio Crisanti",
+        "pt": "Invierno III — 2024 — (Detalle rabiola) — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "(Detalle rabiola)",
+          "title": "Invierno III",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "(Detalle rabiola)",
+          "title": "Invierno III",
+          "year": "2024"
+        },
         "source": {
           "details": "(Detalle rabiola)",
           "title": "Invierno III",
@@ -4436,13 +4740,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Pez III — 2014 — 1.7m x 1.70m (Total: 15m)Materiales:TafetánBrocado. AlgodónGazaOrganzaJacquardDenim. Bambú Foto : Ariel Martinez — Fabio Crisanti",
+        "pt": "Peixe III — 2014 — 1.7m x 1.70m (Total: 15m)Materiais:TafetánBrocado. AlgodãoGazaOrganzaJacquardDenim. Bambu Foto : Ariel Martinez — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "1.7m x 1.70m (Total: 15m)Materiales:TafetánBrocado. AlgodónGazaOrganzaJacquardDenim. Bambú Foto : Ariel Martinez",
+          "title": "Pez III",
+          "year": "2014"
+        },
+        "pt": {
+          "details": "1.7m x 1.70m (Total: 15m)Materiais:TafetánBrocado. AlgodãoGazaOrganzaJacquardDenim. Bambu Foto : Ariel Martinez",
+          "title": "Peixe III",
+          "year": "2014"
+        },
         "source": {
           "details": "1.7m x 1.70m (Total: 15m)Materiales:TafetánBrocado. AlgodónGazaOrganzaJacquardDenim. Bambú Foto : Ariel Martinez",
           "title": "Pez III",
@@ -4465,8 +4777,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Pez III — (Detalle) — Fabio Crisanti",
+        "pt": "Peixe III — (Detalle) — Fabio Crisanti"
       },
       "candidate_matches": [
         "images/galerias/La Escultura/Pez III/02.jpg",
@@ -4479,8 +4791,16 @@
         "images/galerias/Literatura/Ficción/El Nombre/IMG-20260513-WA0058.jpg"
       ],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "(Detalle)",
+          "title": "Pez III",
+          "year": null
+        },
+        "pt": {
+          "details": "(Detalle)",
+          "title": "Peixe III",
+          "year": null
+        },
         "source": {
           "details": "(Detalle)",
           "title": "Pez III",
@@ -4501,8 +4821,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Pez III — (Detalle) — Fabio Crisanti",
+        "pt": "Peixe III — (Detalle) — Fabio Crisanti"
       },
       "candidate_matches": [
         "images/galerias/La Escultura/Pez III/02.jpg",
@@ -4515,8 +4835,16 @@
         "images/galerias/Literatura/Ficción/El Nombre/IMG-20260513-WA0058.jpg"
       ],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "(Detalle)",
+          "title": "Pez III",
+          "year": null
+        },
+        "pt": {
+          "details": "(Detalle)",
+          "title": "Peixe III",
+          "year": null
+        },
         "source": {
           "details": "(Detalle)",
           "title": "Pez III",
@@ -4537,8 +4865,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Pez III — (Detalle) — Fabio Crisanti",
+        "pt": "Peixe III — (Detalle) — Fabio Crisanti"
       },
       "candidate_matches": [
         "images/galerias/La Escultura/Pez III/02.jpg",
@@ -4551,8 +4879,16 @@
         "images/galerias/Literatura/Ficción/El Nombre/IMG-20260513-WA0058.jpg"
       ],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "(Detalle)",
+          "title": "Pez III",
+          "year": null
+        },
+        "pt": {
+          "details": "(Detalle)",
+          "title": "Peixe III",
+          "year": null
+        },
         "source": {
           "details": "(Detalle)",
           "title": "Pez III",
@@ -4573,8 +4909,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Pez III — (Detalle) — Fabio Crisanti",
+        "pt": "Peixe III — (Detalle) — Fabio Crisanti"
       },
       "candidate_matches": [
         "images/galerias/La Escultura/Pez III/02.jpg",
@@ -4587,8 +4923,16 @@
         "images/galerias/Literatura/Ficción/El Nombre/IMG-20260513-WA0058.jpg"
       ],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "(Detalle)",
+          "title": "Pez III",
+          "year": null
+        },
+        "pt": {
+          "details": "(Detalle)",
+          "title": "Peixe III",
+          "year": null
+        },
         "source": {
           "details": "(Detalle)",
           "title": "Pez III",
@@ -4609,8 +4953,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Pez III — (Detalle) — Fabio Crisanti",
+        "pt": "Peixe III — (Detalle) — Fabio Crisanti"
       },
       "candidate_matches": [
         "images/galerias/La Escultura/Pez III/02.jpg",
@@ -4623,8 +4967,16 @@
         "images/galerias/Literatura/Ficción/El Nombre/IMG-20260513-WA0058.jpg"
       ],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "(Detalle)",
+          "title": "Pez III",
+          "year": null
+        },
+        "pt": {
+          "details": "(Detalle)",
+          "title": "Peixe III",
+          "year": null
+        },
         "source": {
           "details": "(Detalle)",
           "title": "Pez III",
@@ -4645,13 +4997,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Boceto para \"Pez III\") — Fabio Crisanti",
+        "pt": "Boceto para \"Peixe III\") — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Boceto para \"Pez III\")",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Boceto para \"Peixe III\")",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Boceto para \"Pez III\")",
@@ -4672,13 +5032,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Pez III — La Salada, Pcia. De Bs. As. - Argentina. — Fabio Crisanti",
+        "pt": "Peixe III — La Salada, Pcia. De Bs. As. - Argentina. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "La Salada, Pcia. De Bs. As. - Argentina.",
+          "title": "Pez III",
+          "year": null
+        },
+        "pt": {
+          "details": "La Salada, Pcia. De Bs. As. - Argentina.",
+          "title": "Peixe III",
+          "year": null
+        },
         "source": {
           "details": "La Salada, Pcia. De Bs. As. - Argentina.",
           "title": "Pez III",
@@ -4699,13 +5067,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Pez IV — 2024 — 3.00m x 3.00m (Total: 19m)Materiales:BambúPoliésterCemento de contacto. Algodón Foto: Rena Blah02 a — Fabio Crisanti",
+        "pt": "Peixe IV — 2024 — 3.00m x 3.00m (Total: 19m)Materiais:BambuPoliésterCola de contato. Algodão Foto: Rena Blah02 a — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "3.00m x 3.00m (Total: 19m)Materiales:BambúPoliésterCemento de contacto. Algodón Foto: Rena Blah02 a",
+          "title": "Pez IV",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "3.00m x 3.00m (Total: 19m)Materiais:BambuPoliésterCola de contato. Algodão Foto: Rena Blah02 a",
+          "title": "Peixe IV",
+          "year": "2024"
+        },
         "source": {
           "details": "3.00m x 3.00m (Total: 19m)Materiales:BambúPoliesterCemento de contacto. Algodón Foto: Rena Blah02 a",
           "title": "Pez IV",
@@ -4728,14 +5104,26 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Pez IV — 2024 — Playa central de Garopaba, Brasil. Fotos: Rena Blah — Fabio Crisanti",
+        "pt": "Peixe IV — 2024 — Praia central de Garopaba, Brasil. Fotos: Rena Blah — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
-        "source": null
+        "es": {
+          "details": "Playa central de Garopaba, Brasil. Fotos: Rena Blah",
+          "title": "Pez IV",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "Praia central de Garopaba, Brasil. Fotos: Rena Blah",
+          "title": "Peixe IV",
+          "year": "2024"
+        },
+        "source": {
+          "details": "Playa central de Garopaba, Brasil. Fotos: Rena Blah",
+          "title": "Pez IV",
+          "year": "2024"
+        }
       },
       "classification": "atual",
       "filename": "02.jpg",
@@ -4753,14 +5141,26 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Pez IV — 2024 — Playa central de Garopaba, Brasil. Fotos: Rena Blah — Fabio Crisanti",
+        "pt": "Peixe IV — 2024 — Praia central de Garopaba, Brasil. Fotos: Rena Blah — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
-        "source": null
+        "es": {
+          "details": "Playa central de Garopaba, Brasil. Fotos: Rena Blah",
+          "title": "Pez IV",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "Praia central de Garopaba, Brasil. Fotos: Rena Blah",
+          "title": "Peixe IV",
+          "year": "2024"
+        },
+        "source": {
+          "details": "Playa central de Garopaba, Brasil. Fotos: Rena Blah",
+          "title": "Pez IV",
+          "year": "2024"
+        }
       },
       "classification": "atual",
       "filename": "03.jpg",
@@ -4778,14 +5178,26 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Pez IV — 2024 — Playa central de Garopaba, Brasil. Fotos: Rena Blah — Fabio Crisanti",
+        "pt": "Peixe IV — 2024 — Praia central de Garopaba, Brasil. Fotos: Rena Blah — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
-        "source": null
+        "es": {
+          "details": "Playa central de Garopaba, Brasil. Fotos: Rena Blah",
+          "title": "Pez IV",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "Praia central de Garopaba, Brasil. Fotos: Rena Blah",
+          "title": "Peixe IV",
+          "year": "2024"
+        },
+        "source": {
+          "details": "Playa central de Garopaba, Brasil. Fotos: Rena Blah",
+          "title": "Pez IV",
+          "year": "2024"
+        }
       },
       "classification": "atual",
       "filename": "04.jpg",
@@ -4803,14 +5215,26 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Pez IV — 2024 — Playa central de Garopaba, Brasil. Fotos: Rena Blah — Fabio Crisanti",
+        "pt": "Peixe IV — 2024 — Praia central de Garopaba, Brasil. Fotos: Rena Blah — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
-        "source": null
+        "es": {
+          "details": "Playa central de Garopaba, Brasil. Fotos: Rena Blah",
+          "title": "Pez IV",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "Praia central de Garopaba, Brasil. Fotos: Rena Blah",
+          "title": "Peixe IV",
+          "year": "2024"
+        },
+        "source": {
+          "details": "Playa central de Garopaba, Brasil. Fotos: Rena Blah",
+          "title": "Pez IV",
+          "year": "2024"
+        }
       },
       "classification": "atual",
       "filename": "05.jpg",
@@ -4828,14 +5252,26 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Pez IV — 2024 — Playa central de Garopaba, Brasil. Fotos: Rena Blah — Fabio Crisanti",
+        "pt": "Peixe IV — 2024 — Praia central de Garopaba, Brasil. Fotos: Rena Blah — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
-        "source": null
+        "es": {
+          "details": "Playa central de Garopaba, Brasil. Fotos: Rena Blah",
+          "title": "Pez IV",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "Praia central de Garopaba, Brasil. Fotos: Rena Blah",
+          "title": "Peixe IV",
+          "year": "2024"
+        },
+        "source": {
+          "details": "Playa central de Garopaba, Brasil. Fotos: Rena Blah",
+          "title": "Pez IV",
+          "year": "2024"
+        }
       },
       "classification": "atual",
       "filename": "06.jpg",
@@ -4853,14 +5289,26 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Pez IV — 2024 — Playa central de Garopaba, Brasil. Fotos: Rena Blah — Fabio Crisanti",
+        "pt": "Peixe IV — 2024 — Praia central de Garopaba, Brasil. Fotos: Rena Blah — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
-        "source": null
+        "es": {
+          "details": "Playa central de Garopaba, Brasil. Fotos: Rena Blah",
+          "title": "Pez IV",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "Praia central de Garopaba, Brasil. Fotos: Rena Blah",
+          "title": "Peixe IV",
+          "year": "2024"
+        },
+        "source": {
+          "details": "Playa central de Garopaba, Brasil. Fotos: Rena Blah",
+          "title": "Pez IV",
+          "year": "2024"
+        }
       },
       "classification": "atual",
       "filename": "07.jpg",
@@ -4878,14 +5326,26 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Pez IV — 2024 — Playa central de Garopaba, Brasil. Fotos: Rena Blah — Fabio Crisanti",
+        "pt": "Peixe IV — 2024 — Praia central de Garopaba, Brasil. Fotos: Rena Blah — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
-        "source": null
+        "es": {
+          "details": "Playa central de Garopaba, Brasil. Fotos: Rena Blah",
+          "title": "Pez IV",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "Praia central de Garopaba, Brasil. Fotos: Rena Blah",
+          "title": "Peixe IV",
+          "year": "2024"
+        },
+        "source": {
+          "details": "Playa central de Garopaba, Brasil. Fotos: Rena Blah",
+          "title": "Pez IV",
+          "year": "2024"
+        }
       },
       "classification": "atual",
       "filename": "08.jpg",
@@ -4903,14 +5363,26 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Pez IV — 2024 — Playa central de Garopaba, Brasil. Fotos: Rena Blah — Fabio Crisanti",
+        "pt": "Peixe IV — 2024 — Praia central de Garopaba, Brasil. Fotos: Rena Blah — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
-        "source": null
+        "es": {
+          "details": "Playa central de Garopaba, Brasil. Fotos: Rena Blah",
+          "title": "Pez IV",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "Praia central de Garopaba, Brasil. Fotos: Rena Blah",
+          "title": "Peixe IV",
+          "year": "2024"
+        },
+        "source": {
+          "details": "Playa central de Garopaba, Brasil. Fotos: Rena Blah",
+          "title": "Pez IV",
+          "year": "2024"
+        }
       },
       "classification": "atual",
       "filename": "09.jpg",
@@ -4928,15 +5400,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Pez IV — 2024 — Playa central de Garopaba, Brasil. Fotos: Rena Blah — Fabio Crisanti",
+        "pt": "Peixe IV — 2024 — Praia central de Garopaba, Brasil. Fotos: Rena Blah — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Playa central de Garopaba, Brasil. Fotos: Rena Blah",
+          "title": "Pez IV",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "Praia central de Garopaba, Brasil. Fotos: Rena Blah",
+          "title": "Peixe IV",
+          "year": "2024"
+        },
         "source": {
-          "details": "Playa central de Garopaba, Brasil. Fotos: Rena Blah 11 a",
+          "details": "Playa central de Garopaba, Brasil. Fotos: Rena Blah",
           "title": "Pez IV",
           "year": "2024"
         }
@@ -4957,14 +5437,26 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Pez IV — 2024 — Playa central de Garopaba, Brasil. Fotos: Mitsue Yanai — Fabio Crisanti",
+        "pt": "Peixe IV — 2024 — Praia central de Garopaba, Brasil. Fotos: Mitsue Yanai — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
-        "source": null
+        "es": {
+          "details": "Playa central de Garopaba, Brasil. Fotos: Mitsue Yanai",
+          "title": "Pez IV",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "Praia central de Garopaba, Brasil. Fotos: Mitsue Yanai",
+          "title": "Peixe IV",
+          "year": "2024"
+        },
+        "source": {
+          "details": "Playa central de Garopaba, Brasil. Fotos: Mitsue Yanai",
+          "title": "Pez IV",
+          "year": "2024"
+        }
       },
       "classification": "atual",
       "filename": "11.jpg",
@@ -4982,14 +5474,26 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Pez IV — 2024 — Playa central de Garopaba, Brasil. Fotos: Mitsue Yanai — Fabio Crisanti",
+        "pt": "Peixe IV — 2024 — Praia central de Garopaba, Brasil. Fotos: Mitsue Yanai — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
-        "source": null
+        "es": {
+          "details": "Playa central de Garopaba, Brasil. Fotos: Mitsue Yanai",
+          "title": "Pez IV",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "Praia central de Garopaba, Brasil. Fotos: Mitsue Yanai",
+          "title": "Peixe IV",
+          "year": "2024"
+        },
+        "source": {
+          "details": "Playa central de Garopaba, Brasil. Fotos: Mitsue Yanai",
+          "title": "Pez IV",
+          "year": "2024"
+        }
       },
       "classification": "atual",
       "filename": "12.jpg",
@@ -5007,15 +5511,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Pez IV — 2024 — Playa central de Garopaba, Brasil. Fotos: Mitsue Yanai — Fabio Crisanti",
+        "pt": "Peixe IV — 2024 — Praia central de Garopaba, Brasil. Fotos: Mitsue Yanai — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Playa central de Garopaba, Brasil. Fotos: Mitsue Yanai",
+          "title": "Pez IV",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "Praia central de Garopaba, Brasil. Fotos: Mitsue Yanai",
+          "title": "Peixe IV",
+          "year": "2024"
+        },
         "source": {
-          "details": "Playa central de Garopaba, Brasil. Fotos: Mitsue Yanai 14 a",
+          "details": "Playa central de Garopaba, Brasil. Fotos: Mitsue Yanai",
           "title": "Pez IV",
           "year": "2024"
         }
@@ -5036,14 +5548,26 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Pez IV — 2024 — Fotos: Cora — Fabio Crisanti",
+        "pt": "Peixe IV — 2024 — Fotos: Cora — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
-        "source": null
+        "es": {
+          "details": "Fotos: Cora",
+          "title": "Pez IV",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "Fotos: Cora",
+          "title": "Peixe IV",
+          "year": "2024"
+        },
+        "source": {
+          "details": "Fotos: Cora",
+          "title": "Pez IV",
+          "year": "2024"
+        }
       },
       "classification": "atual",
       "filename": "14.jpg",
@@ -5061,14 +5585,26 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Pez IV — 2024 — Fotos: Cora — Fabio Crisanti",
+        "pt": "Peixe IV — 2024 — Fotos: Cora — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
-        "source": null
+        "es": {
+          "details": "Fotos: Cora",
+          "title": "Pez IV",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "Fotos: Cora",
+          "title": "Peixe IV",
+          "year": "2024"
+        },
+        "source": {
+          "details": "Fotos: Cora",
+          "title": "Pez IV",
+          "year": "2024"
+        }
       },
       "classification": "atual",
       "filename": "15.jpg",
@@ -5086,14 +5622,26 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Pez IV — 2024 — Fotos: Cora — Fabio Crisanti",
+        "pt": "Peixe IV — 2024 — Fotos: Cora — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
-        "source": null
+        "es": {
+          "details": "Fotos: Cora",
+          "title": "Pez IV",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "Fotos: Cora",
+          "title": "Peixe IV",
+          "year": "2024"
+        },
+        "source": {
+          "details": "Fotos: Cora",
+          "title": "Pez IV",
+          "year": "2024"
+        }
       },
       "classification": "atual",
       "filename": "16.jpg",
@@ -5111,14 +5659,26 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Pez IV — 2024 — Fotos: Cora — Fabio Crisanti",
+        "pt": "Peixe IV — 2024 — Fotos: Cora — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
-        "source": null
+        "es": {
+          "details": "Fotos: Cora",
+          "title": "Pez IV",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "Fotos: Cora",
+          "title": "Peixe IV",
+          "year": "2024"
+        },
+        "source": {
+          "details": "Fotos: Cora",
+          "title": "Pez IV",
+          "year": "2024"
+        }
       },
       "classification": "atual",
       "filename": "17.jpg",
@@ -5136,14 +5696,26 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Pez IV — 2024 — Fotos: Cora — Fabio Crisanti",
+        "pt": "Peixe IV — 2024 — Fotos: Cora — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
-        "source": null
+        "es": {
+          "details": "Fotos: Cora",
+          "title": "Pez IV",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "Fotos: Cora",
+          "title": "Peixe IV",
+          "year": "2024"
+        },
+        "source": {
+          "details": "Fotos: Cora",
+          "title": "Pez IV",
+          "year": "2024"
+        }
       },
       "classification": "atual",
       "filename": "18.jpg",
@@ -5161,17 +5733,25 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Pez IV — 2024 — Fotos: Cora — Fabio Crisanti",
+        "pt": "Peixe IV — 2024 — Fotos: Cora — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
-        "source": {
-          "details": "2024 Fotos: Cora",
+        "es": {
+          "details": "Fotos: Cora",
           "title": "Pez IV",
-          "year": null
+          "year": "2024"
+        },
+        "pt": {
+          "details": "Fotos: Cora",
+          "title": "Peixe IV",
+          "year": "2024"
+        },
+        "source": {
+          "details": "Fotos: Cora",
+          "title": "Pez IV",
+          "year": "2024"
         }
       },
       "classification": "atual",
@@ -5190,8 +5770,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Pez IV — imagen 20 — Fabio Crisanti",
+        "pt": "Pez IV — imagem 20 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -5215,13 +5795,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Pez IV — 2024 — (Proceso de construcción) — Fabio Crisanti",
+        "pt": "Peixe IV — 2024 — (Processo de construção) — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "(Proceso de construcción)",
+          "title": "Pez IV",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "(Processo de construção)",
+          "title": "Peixe IV",
+          "year": "2024"
+        },
         "source": {
           "details": "(Preceso de Construcción)",
           "title": "Pez IV",
@@ -5244,13 +5832,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Pez IV — 2024 — (Proceso de construcción) — Fabio Crisanti",
+        "pt": "Peixe IV — 2024 — (Processo de construção) — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "(Proceso de construcción)",
+          "title": "Pez IV",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "(Processo de construção)",
+          "title": "Peixe IV",
+          "year": "2024"
+        },
         "source": {
           "details": "(Proceso de construcción)",
           "title": "Pez IV",
@@ -5273,13 +5869,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Pez IV — 2024 — Playa norte de Garopaba, Brasil. — Fabio Crisanti",
+        "pt": "Peixe IV — 2024 — Praia norte de Garopaba, Brasil. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Playa norte de Garopaba, Brasil.",
+          "title": "Pez IV",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "Praia norte de Garopaba, Brasil.",
+          "title": "Peixe IV",
+          "year": "2024"
+        },
         "source": {
           "details": "Playa norte de Garopaba, Brasil.",
           "title": "Pez IV",
@@ -5302,13 +5906,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "SARON2009 — Medidas: 1,70 mx 1,00 m (Total: 9,70 m)Materiales:BambúSaronPoliéster. Papel. Papel SedaHilos Encerados. Algodón. Acrílicos. Tinta China — Fabio Crisanti",
+        "pt": "SARON2009 — Medidas: 1,70 mx 1,00 m (Total: 9,70 m)Materiais:BambuSaronPoliéster. Papel. Papel SedaHilos Encerados. Algodão. Acrílicos. Tinta nanquim — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Medidas: 1,70 mx 1,00 m (Total: 9,70 m)Materiales:BambúSaronPoliéster. Papel. Papel SedaHilos Encerados. Algodón. Acrílicos. Tinta China",
+          "title": "SARON2009",
+          "year": null
+        },
+        "pt": {
+          "details": "Medidas: 1,70 mx 1,00 m (Total: 9,70 m)Materiais:BambuSaronPoliéster. Papel. Papel SedaHilos Encerados. Algodão. Acrílicos. Tinta nanquim",
+          "title": "SARON2009",
+          "year": null
+        },
         "source": {
           "details": "Medidas: 1,70 mx 1,00 m (Total: 9,70 m)Materiales:BambúSaronPoliester. Papel. Papel SedaHilos Encerados. Algodón. Acrílicos. Tinta China",
           "title": "SARON2009",
@@ -5331,13 +5943,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "TACUABÉ — 2009 — Medidas: 1.90 x 1.25 m (Total: 9.00 m)Bambú. Papel kraftHilos Encerados. Tinta ChinaTelas ResinadasAcrylicos — Fabio Crisanti",
+        "pt": "TACUABÉ — 2009 — Medidas: 1.90 x 1.25 m (Total: 9.00 m)Bambu. Papel kraftHilos Encerados. Tinta nanquimTelas ResinadasAcrylicos — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Medidas: 1.90 x 1.25 m (Total: 9.00 m)Bambú. Papel kraftHilos Encerados. Tinta ChinaTelas ResinadasAcrylicos",
+          "title": "TACUABÉ",
+          "year": "2009"
+        },
+        "pt": {
+          "details": "Medidas: 1.90 x 1.25 m (Total: 9.00 m)Bambu. Papel kraftHilos Encerados. Tinta nanquimTelas ResinadasAcrylicos",
+          "title": "TACUABÉ",
+          "year": "2009"
+        },
         "source": {
           "details": "Medidas: 1.90 x 1.25 m (Total: 9.00 m)Bambú. Papel CraftHilos Encerados. Tinta ChinaTelas ResinadasAcrylicos",
           "title": "TACUABÉ",
@@ -5360,13 +5980,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Sol — 2009 — Medidas: 1,87 m x 1,35 m (Total: 8,87 m)Materiales:SedaTelas de resinaHilosCartulina. AcrílicosAlgodon. Bambú. Papel Seda. Tinta ChinaHilos Encerados — Fabio Crisanti",
+        "pt": "Sol — 2009 — Medidas: 1,87 m x 1,35 m (Total: 8,87 m)Materiais:SedaTelas de resinaHilosCartulina. AcrílicosAlgodon. Bambu. Papel Seda. Tinta nanquimHilos Encerados — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Medidas: 1,87 m x 1,35 m (Total: 8,87 m)Materiales:SedaTelas de resinaHilosCartulina. AcrílicosAlgodon. Bambú. Papel Seda. Tinta ChinaHilos Encerados",
+          "title": "Sol",
+          "year": "2009"
+        },
+        "pt": {
+          "details": "Medidas: 1,87 m x 1,35 m (Total: 8,87 m)Materiais:SedaTelas de resinaHilosCartulina. AcrílicosAlgodon. Bambu. Papel Seda. Tinta nanquimHilos Encerados",
+          "title": "Sol",
+          "year": "2009"
+        },
         "source": {
           "details": "Medidas: 1,87 m x 1,35 m (Total: 8,87 m)Materiales:SedaTelas de resinaHilosCartulina. AcrílicosAlgodon. Bambú. Papel Seda. Tinta ChinaHilos Encerados",
           "title": "Sol",
@@ -5389,13 +6017,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "PEZ II — 2009 — Medidas: 1,90 m X 1,10 m (Total: 12 m)Materiales:BambúTela de resina. Papel. AcrílicoTelaCartulinaAlgodon. Papel Encerado — Fabio Crisanti",
+        "pt": "PEZ II — 2009 — Medidas: 1,90 m X 1,10 m (Total: 12 m)Materiais:BambuTela de resina. Papel. AcrílicoTelaCartulinaAlgodon. Papel Encerado — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Medidas: 1,90 m X 1,10 m (Total: 12 m)Materiales:BambúTela de resina. Papel. AcrílicoTelaCartulinaAlgodon. Papel Encerado",
+          "title": "PEZ II",
+          "year": "2009"
+        },
+        "pt": {
+          "details": "Medidas: 1,90 m X 1,10 m (Total: 12 m)Materiais:BambuTela de resina. Papel. AcrílicoTelaCartulinaAlgodon. Papel Encerado",
+          "title": "PEZ II",
+          "year": "2009"
+        },
         "source": {
           "details": "Medidas: 1,90 m X 1,10 m (Total: 12 m)Materiales:BambúTela de resina. Papel. AcrílicoTelaCartulinaAlgodon. Papel Encerado",
           "title": "PEZ II",
@@ -5418,13 +6054,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "ÍLIYMA — 2009 — Medidas: 2,30 mx 1,65 m (Total: 9,00 m)Materiales:Bambú. Papel kraftTelas de resinaSeda. Tinta China. Acrílicos. Papel Batik. Papel de Seda — Fabio Crisanti",
+        "pt": "ÍLIYMA — 2009 — Medidas: 2,30 mx 1,65 m (Total: 9,00 m)Materiais:Bambu. Papel kraftTelas de resinaSeda. Tinta nanquim. Acrílicos. Papel Batik. Papel de Seda — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Medidas: 2,30 mx 1,65 m (Total: 9,00 m)Materiales:Bambú. Papel kraftTelas de resinaSeda. Tinta China. Acrílicos. Papel Batik. Papel de Seda",
+          "title": "ÍLIYMA",
+          "year": "2009"
+        },
+        "pt": {
+          "details": "Medidas: 2,30 mx 1,65 m (Total: 9,00 m)Materiais:Bambu. Papel kraftTelas de resinaSeda. Tinta nanquim. Acrílicos. Papel Batik. Papel de Seda",
+          "title": "ÍLIYMA",
+          "year": "2009"
+        },
         "source": {
           "details": "Medidas: 2,30 mx 1,65 m (Total: 9,00 m)Materiales:Bambú. Papel kraftTelas de resinaSeda. Tinta China. Acrílicos. Papel Batik. Papel de Seda",
           "title": "ÍLIYMA",
@@ -5447,13 +6091,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "TOTO — 2009 — Medidas: 1,90 mx 1,40 m (Total: 9,00 m)Materiales:Bambú. Papel kraftTelas de resinaTerciopeloSeda salvajeSeda. Tinta China. Acrílicos. Papel Batik — Fabio Crisanti",
+        "pt": "TOTO — 2009 — Medidas: 1,90 mx 1,40 m (Total: 9,00 m)Materiais:Bambu. Papel kraftTelas de resinaTerciopeloSeda salvajeSeda. Tinta nanquim. Acrílicos. Papel Batik — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Medidas: 1,90 mx 1,40 m (Total: 9,00 m)Materiales:Bambú. Papel kraftTelas de resinaTerciopeloSeda salvajeSeda. Tinta China. Acrílicos. Papel Batik",
+          "title": "TOTO",
+          "year": "2009"
+        },
+        "pt": {
+          "details": "Medidas: 1,90 mx 1,40 m (Total: 9,00 m)Materiais:Bambu. Papel kraftTelas de resinaTerciopeloSeda salvajeSeda. Tinta nanquim. Acrílicos. Papel Batik",
+          "title": "TOTO",
+          "year": "2009"
+        },
         "source": {
           "details": "Medidas: 1,90 mx 1,40 m (Total: 9,00 m)Materiales:Bambú. Papel kraftTelas de resinaTerciopeloSeda salvajeSeda. Tinta China. Acrílicos. Papel Batik",
           "title": "TOTO",
@@ -5476,13 +6128,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Soies Sauvages — Galería del Consulado Argentino de la República Argentina en Colonia del Sacramento, Uruguay — Fabio Crisanti",
+        "pt": "Soies Sauvages — Galería del Consulado Argentino de la República Argentina en Colonia del Sacramento, Uruguay — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Galería del Consulado Argentino de la República Argentina en Colonia del Sacramento, Uruguay",
+          "title": "Soies Sauvages",
+          "year": null
+        },
+        "pt": {
+          "details": "Galería del Consulado Argentino de la República Argentina en Colonia del Sacramento, Uruguay",
+          "title": "Soies Sauvages",
+          "year": null
+        },
         "source": {
           "details": "Galería del Consulado Argentino de la República Argentina en Colonia del Sacramento, Uruguay",
           "title": "Soies Sauvages",
@@ -5505,13 +6165,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Sol — 2009 — (Detalle) — Fabio Crisanti",
+        "pt": "Sol — 2009 — (Detalle) — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "(Detalle)",
+          "title": "Sol",
+          "year": "2009"
+        },
+        "pt": {
+          "details": "(Detalle)",
+          "title": "Sol",
+          "year": "2009"
+        },
         "source": {
           "details": "(Detalle)",
           "title": "Sol",
@@ -5532,13 +6200,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Pez II — 2009 — Fabio Crisanti",
+        "pt": "Peixe II — 2009 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Pez II",
+          "year": "2009"
+        },
+        "pt": {
+          "details": null,
+          "title": "Peixe II",
+          "year": "2009"
+        },
         "source": {
           "details": null,
           "title": "Pez II",
@@ -5561,13 +6237,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "SEDA SALVAJE — .2009Medidas: 1.90 m X 1.30 m (Total: 12.0 m)Materiales:Bambú. Papel Encerado. Tinta ChinaSeda salvaje. Papel BatikTela NáuticaTela de resinaAlgodon — Fabio Crisanti",
+        "pt": "SEDA SALVAJE — .2009Medidas: 1.90 m X 1.30 m (Total: 12.0 m)Materiais:Bambu. Papel Encerado. Tinta nanquimSeda salvaje. Papel BatikTela NáuticaTela de resinaAlgodon — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": ".2009Medidas: 1.90 m X 1.30 m (Total: 12.0 m)Materiales:Bambú. Papel Encerado. Tinta ChinaSeda salvaje. Papel BatikTela NáuticaTela de resinaAlgodon",
+          "title": "SEDA SALVAJE",
+          "year": null
+        },
+        "pt": {
+          "details": ".2009Medidas: 1.90 m X 1.30 m (Total: 12.0 m)Materiais:Bambu. Papel Encerado. Tinta nanquimSeda salvaje. Papel BatikTela NáuticaTela de resinaAlgodon",
+          "title": "SEDA SALVAJE",
+          "year": null
+        },
         "source": {
           "details": ".2009Medidas: 1.90 m X 1.30 m (Total: 12.0 m)Materiales:Bambú. Papel Encerado. Tinta ChinaSeda salvaje. Papel BatikTela NáuticaTela de resinaAlgodon",
           "title": "SEDA SALVAJE",
@@ -5588,13 +6272,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "ÍLIYMA — 2009 — (Detalle) — Fabio Crisanti",
+        "pt": "ÍLIYMA — 2009 — (Detalle) — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "(Detalle)",
+          "title": "ÍLIYMA",
+          "year": "2009"
+        },
+        "pt": {
+          "details": "(Detalle)",
+          "title": "ÍLIYMA",
+          "year": "2009"
+        },
         "source": {
           "details": "(Detalle)",
           "title": "ÍLIYMA",
@@ -5615,13 +6307,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Bocetos para \"Pez II\" — Fabio Crisanti",
+        "pt": "Bocetos para \"Peixe II\" — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Bocetos para \"Pez II\"",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Bocetos para \"Peixe II\"",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Bocetos para \"Pez II\"",
@@ -5644,13 +6344,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Antonio — 2007 — Toma directa 35mm1.00 x 0.70mColonia, Uruguay. — Fabio Crisanti",
+        "pt": "Antonio — 2007 — Captura direta 35mm1.00 x 0.70mColonia, Uruguay. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Toma directa 35mm1.00 x 0.70mColonia, Uruguay.",
+          "title": "Antonio",
+          "year": "2007"
+        },
+        "pt": {
+          "details": "Captura direta 35mm1.00 x 0.70mColonia, Uruguay.",
+          "title": "Antonio",
+          "year": "2007"
+        },
         "source": {
           "details": "Toma directa 35mm1.00 x 0.70mColonia, Uruguay.",
           "title": "Antonio",
@@ -5673,13 +6381,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "La pulpería de los faroles — 2007 — Toma directa 35mm1.00 x 0.70mColonia, Uruguay. — Fabio Crisanti",
+        "pt": "La pulpería de los faroles — 2007 — Captura direta 35mm1.00 x 0.70mColonia, Uruguay. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Toma directa 35mm1.00 x 0.70mColonia, Uruguay.",
+          "title": "La pulpería de los faroles",
+          "year": "2007"
+        },
+        "pt": {
+          "details": "Captura direta 35mm1.00 x 0.70mColonia, Uruguay.",
+          "title": "La pulpería de los faroles",
+          "year": "2007"
+        },
         "source": {
           "details": "Toma directa 35mm1.00 x 0.70mColonia, Uruguay.",
           "title": "La pulpería de los faroles",
@@ -5702,13 +6418,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Anticuario — 2007 — Toma directa 35mm1.00 x 0.70mColonia, Uruguay. — Fabio Crisanti",
+        "pt": "Anticuario — 2007 — Captura direta 35mm1.00 x 0.70mColonia, Uruguay. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Toma directa 35mm1.00 x 0.70mColonia, Uruguay.",
+          "title": "Anticuario",
+          "year": "2007"
+        },
+        "pt": {
+          "details": "Captura direta 35mm1.00 x 0.70mColonia, Uruguay.",
+          "title": "Anticuario",
+          "year": "2007"
+        },
         "source": {
           "details": "Toma directa 35mm1.00 x 0.70mColonia, Uruguay.",
           "title": "Anticuario",
@@ -5731,13 +6455,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Agua — 2007 — Toma directa 35mm1.00 x 0.70mColonia, Uruguay. — Fabio Crisanti",
+        "pt": "Agua — 2007 — Captura direta 35mm1.00 x 0.70mColonia, Uruguay. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Toma directa 35mm1.00 x 0.70mColonia, Uruguay.",
+          "title": "Agua",
+          "year": "2007"
+        },
+        "pt": {
+          "details": "Captura direta 35mm1.00 x 0.70mColonia, Uruguay.",
+          "title": "Agua",
+          "year": "2007"
+        },
         "source": {
           "details": "Toma directa 35mm1.00 x 0.70mColonia, Uruguay.",
           "title": "Agua",
@@ -5760,13 +6492,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Serenísima — 2007 — Toma directa 35mm1.00 x 0.70mColonia, Uruguay. — Fabio Crisanti",
+        "pt": "Serenísima — 2007 — Captura direta 35mm1.00 x 0.70mColonia, Uruguay. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Toma directa 35mm1.00 x 0.70mColonia, Uruguay.",
+          "title": "Serenísima",
+          "year": "2007"
+        },
+        "pt": {
+          "details": "Captura direta 35mm1.00 x 0.70mColonia, Uruguay.",
+          "title": "Serenísima",
+          "year": "2007"
+        },
         "source": {
           "details": "Toma directa 35mm1.00 x 0.70mColonia, Uruguay.",
           "title": "Serenísima",
@@ -5789,8 +6529,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Cotidiano — imagen 07 — Fabio Crisanti",
+        "pt": "Cotidiano — imagem 07 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -5814,13 +6554,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Exilio I — 1999Buenos AiresToma directa diapositivaCopia a papel 1.00 m x 0.70m — Fabio Crisanti",
+        "pt": "Exilio I — 1999Buenos AiresCaptura direta diapositivaCopia a papel 1.00 m x 0.70m — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "1999Buenos AiresToma directa diapositivaCopia a papel 1.00 m x 0.70m",
+          "title": "Exilio I",
+          "year": null
+        },
+        "pt": {
+          "details": "1999Buenos AiresCaptura direta diapositivaCopia a papel 1.00 m x 0.70m",
+          "title": "Exilio I",
+          "year": null
+        },
         "source": {
           "details": "1999Buenos AiresToma directa diapositivaCopia a papel 1.00 m x 0.70m",
           "title": "Exilio I",
@@ -5843,13 +6591,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Exilio II — 1999Buenos AiresToma directa diapositivaCopia a papel 1.00 m x 0.70m — Fabio Crisanti",
+        "pt": "Exilio II — 1999Buenos AiresCaptura direta diapositivaCopia a papel 1.00 m x 0.70m — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "1999Buenos AiresToma directa diapositivaCopia a papel 1.00 m x 0.70m",
+          "title": "Exilio II",
+          "year": null
+        },
+        "pt": {
+          "details": "1999Buenos AiresCaptura direta diapositivaCopia a papel 1.00 m x 0.70m",
+          "title": "Exilio II",
+          "year": null
+        },
         "source": {
           "details": "1999Buenos AiresToma directa diapositivaCopia a papel 1.00 m x 0.70m",
           "title": "Exilio II",
@@ -5872,13 +6628,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Exilio III — 1999Buenos AiresToma directa diapositivaCopia a papel 1.00 m x 0.70m — Fabio Crisanti",
+        "pt": "Exilio III — 1999Buenos AiresCaptura direta diapositivaCopia a papel 1.00 m x 0.70m — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "1999Buenos AiresToma directa diapositivaCopia a papel 1.00 m x 0.70m",
+          "title": "Exilio III",
+          "year": null
+        },
+        "pt": {
+          "details": "1999Buenos AiresCaptura direta diapositivaCopia a papel 1.00 m x 0.70m",
+          "title": "Exilio III",
+          "year": null
+        },
         "source": {
           "details": "1999Buenos AiresToma directa diapositivaCopia a papel 1.00 m x 0.70m",
           "title": "Exilio IiI",
@@ -5901,13 +6665,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Exilio IV — 1999Buenos AiresToma directa diapositivaCopia a papel 1.00 m x 0.70m — Fabio Crisanti",
+        "pt": "Exilio IV — 1999Buenos AiresCaptura direta diapositivaCopia a papel 1.00 m x 0.70m — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "1999Buenos AiresToma directa diapositivaCopia a papel 1.00 m x 0.70m",
+          "title": "Exilio IV",
+          "year": null
+        },
+        "pt": {
+          "details": "1999Buenos AiresCaptura direta diapositivaCopia a papel 1.00 m x 0.70m",
+          "title": "Exilio IV",
+          "year": null
+        },
         "source": {
           "details": "1999Buenos AiresToma directa diapositivaCopia a papel 1.00 m x 0.70m",
           "title": "Exilio IV",
@@ -5930,13 +6702,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Exilio V — 1999Buenos AiresToma directa diapositivaCopia a papel 1.00 m x 0.70m — Fabio Crisanti",
+        "pt": "Exilio V — 1999Buenos AiresCaptura direta diapositivaCopia a papel 1.00 m x 0.70m — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "1999Buenos AiresToma directa diapositivaCopia a papel 1.00 m x 0.70m",
+          "title": "Exilio V",
+          "year": null
+        },
+        "pt": {
+          "details": "1999Buenos AiresCaptura direta diapositivaCopia a papel 1.00 m x 0.70m",
+          "title": "Exilio V",
+          "year": null
+        },
         "source": {
           "details": "1999Buenos AiresToma directa diapositivaCopia a papel 1.00 m x 0.70m",
           "title": "Exilio V",
@@ -5959,13 +6739,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Luz Líquida I — 19941.80m x 1.00mEmulsión fotográfica sobre lienzo imprimado — Fabio Crisanti",
+        "pt": "Luz Líquida I — 19941.80m x 1.00mEmulsión fotográfica sobre lienzo imprimado — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "19941.80m x 1.00mEmulsión fotográfica sobre lienzo imprimado",
+          "title": "Luz Líquida I",
+          "year": null
+        },
+        "pt": {
+          "details": "19941.80m x 1.00mEmulsión fotográfica sobre lienzo imprimado",
+          "title": "Luz Líquida I",
+          "year": null
+        },
         "source": {
           "details": "19941.80m x 1.00mEmulsión fotográfica sobre lienzo imprimado",
           "title": "Luz Líquida I",
@@ -5988,13 +6776,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Luz Líquida II — 19942.00m x 1.40mEmulsión fotográfica sobre lienzo imprimado — Fabio Crisanti",
+        "pt": "Luz Líquida II — 19942.00m x 1.40mEmulsión fotográfica sobre lienzo imprimado — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "19942.00m x 1.40mEmulsión fotográfica sobre lienzo imprimado",
+          "title": "Luz Líquida II",
+          "year": null
+        },
+        "pt": {
+          "details": "19942.00m x 1.40mEmulsión fotográfica sobre lienzo imprimado",
+          "title": "Luz Líquida II",
+          "year": null
+        },
         "source": {
           "details": "19942.00m x 1.40mEmulsión fotográfica sobre lienzo imprimado",
           "title": "Luz Líquida II",
@@ -6017,13 +6813,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Luz Líquida III — 19942.00m x 1.40mEmulsión fotográfica sobre lienzo imprimado — Fabio Crisanti",
+        "pt": "Luz Líquida III — 19942.00m x 1.40mEmulsión fotográfica sobre lienzo imprimado — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "19942.00m x 1.40mEmulsión fotográfica sobre lienzo imprimado",
+          "title": "Luz Líquida III",
+          "year": null
+        },
+        "pt": {
+          "details": "19942.00m x 1.40mEmulsión fotográfica sobre lienzo imprimado",
+          "title": "Luz Líquida III",
+          "year": null
+        },
         "source": {
           "details": "19942.00m x 1.40mEmulsión fotográfica sobre lienzo imprimado",
           "title": "Luz Líquida III",
@@ -6046,13 +6850,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Luz Líquida IV — 19940.30m x 0.38mEmulsión fotográfica sobre lienzo imprimado — Fabio Crisanti",
+        "pt": "Luz Líquida IV — 19940.30m x 0.38mEmulsión fotográfica sobre lienzo imprimado — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "19940.30m x 0.38mEmulsión fotográfica sobre lienzo imprimado",
+          "title": "Luz Líquida IV",
+          "year": null
+        },
+        "pt": {
+          "details": "19940.30m x 0.38mEmulsión fotográfica sobre lienzo imprimado",
+          "title": "Luz Líquida IV",
+          "year": null
+        },
         "source": {
           "details": "19940.30m x 0.38mEmulsión fotográfica sobre lienzo imprimado",
           "title": "Luz Líquida IV",
@@ -6075,13 +6887,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Luz Líquida V — 19940.30m x 0.38mEmulsión fotográfica sobre lienzo imprimado — Fabio Crisanti",
+        "pt": "Luz Líquida V — 19940.30m x 0.38mEmulsión fotográfica sobre lienzo imprimado — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "19940.30m x 0.38mEmulsión fotográfica sobre lienzo imprimado",
+          "title": "Luz Líquida V",
+          "year": null
+        },
+        "pt": {
+          "details": "19940.30m x 0.38mEmulsión fotográfica sobre lienzo imprimado",
+          "title": "Luz Líquida V",
+          "year": null
+        },
         "source": {
           "details": "19940.30m x 0.38mEmulsión fotográfica sobre lienzo imprimado",
           "title": "Luz Líquida V",
@@ -6104,13 +6924,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Luz Líquida VI — 19940.20m x 0.30mEmulsión fotográfica sobre lienzo imprimado — Fabio Crisanti",
+        "pt": "Luz Líquida VI — 19940.20m x 0.30mEmulsión fotográfica sobre lienzo imprimado — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "19940.20m x 0.30mEmulsión fotográfica sobre lienzo imprimado",
+          "title": "Luz Líquida VI",
+          "year": null
+        },
+        "pt": {
+          "details": "19940.20m x 0.30mEmulsión fotográfica sobre lienzo imprimado",
+          "title": "Luz Líquida VI",
+          "year": null
+        },
         "source": {
           "details": "19940.20m x 0.30mEmulsión fotográfica sobre lienzo imprimado",
           "title": "Luz Líquida VI",
@@ -6133,13 +6961,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Luz Líquida VII — 19940.30m x 0.40mEmulsión fotográfica sobre lienzo imprimado — Fabio Crisanti",
+        "pt": "Luz Líquida VII — 19940.30m x 0.40mEmulsión fotográfica sobre lienzo imprimado — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "19940.30m x 0.40mEmulsión fotográfica sobre lienzo imprimado",
+          "title": "Luz Líquida VII",
+          "year": null
+        },
+        "pt": {
+          "details": "19940.30m x 0.40mEmulsión fotográfica sobre lienzo imprimado",
+          "title": "Luz Líquida VII",
+          "year": null
+        },
         "source": {
           "details": "19940.30m x 0.40mEmulsión fotográfica sobre lienzo imprimado",
           "title": "Luz Líquida VII",
@@ -6162,13 +6998,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Luz Líquida VIII — 19941.80m x 1.00mEmulsión fotográfica sobre lienzo imprimado — Fabio Crisanti",
+        "pt": "Luz Líquida VIII — 19941.80m x 1.00mEmulsión fotográfica sobre lienzo imprimado — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "19941.80m x 1.00mEmulsión fotográfica sobre lienzo imprimado",
+          "title": "Luz Líquida VIII",
+          "year": null
+        },
+        "pt": {
+          "details": "19941.80m x 1.00mEmulsión fotográfica sobre lienzo imprimado",
+          "title": "Luz Líquida VIII",
+          "year": null
+        },
         "source": {
           "details": "19941.80m x 1.00mEmulsión fotográfica sobre lienzo imprimado",
           "title": "Luz Líquida VIII",
@@ -6191,13 +7035,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Luz Líquida IX — 19940.40m x 0.50mEmulsión fotográfica sobre lienzo imprimado — Fabio Crisanti",
+        "pt": "Luz Líquida IX — 19940.40m x 0.50mEmulsión fotográfica sobre lienzo imprimado — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "19940.40m x 0.50mEmulsión fotográfica sobre lienzo imprimado",
+          "title": "Luz Líquida IX",
+          "year": null
+        },
+        "pt": {
+          "details": "19940.40m x 0.50mEmulsión fotográfica sobre lienzo imprimado",
+          "title": "Luz Líquida IX",
+          "year": null
+        },
         "source": {
           "details": "19940.40m x 0.50mEmulsión fotográfica sobre lienzo imprimado",
           "title": "Luz Líquida IX",
@@ -6220,13 +7072,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Luz Líquida X — 19940.15m x 0.20mEmulsión fotográfica sobre lienzo imprimado. Acrílicos — Fabio Crisanti",
+        "pt": "Luz Líquida X — 19940.15m x 0.20mEmulsión fotográfica sobre lienzo imprimado. Acrílicos — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "19940.15m x 0.20mEmulsión fotográfica sobre lienzo imprimado. Acrílicos",
+          "title": "Luz Líquida X",
+          "year": null
+        },
+        "pt": {
+          "details": "19940.15m x 0.20mEmulsión fotográfica sobre lienzo imprimado. Acrílicos",
+          "title": "Luz Líquida X",
+          "year": null
+        },
         "source": {
           "details": "19940.15m x 0.20mEmulsión fotográfica sobre lienzo imprimado. Acrílicos",
           "title": "Luz Líquida X",
@@ -6249,13 +7109,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Boceto para vestido desde la serie \"Seda\" — Fabio Crisanti",
+        "pt": "Boceto para vestido desde la serie \"Seda\" — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Boceto para vestido desde la serie \"Seda\"",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Boceto para vestido desde la serie \"Seda\"",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Boceto para vestido desde la serie \"Seda\"",
@@ -6278,13 +7146,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Bocetos para vestidos desde la serie \"Seda\" — Fabio Crisanti",
+        "pt": "Bocetos para vestidos desde la serie \"Seda\" — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Bocetos para vestidos desde la serie \"Seda\"",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Bocetos para vestidos desde la serie \"Seda\"",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Bocetos para vestidos desde la serie \"Seda\"",
@@ -6307,13 +7183,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Dries Van Noten — 2014 — Fabio Crisanti 2009 — Fabio Crisanti",
+        "pt": "Dries Van Noten — 2014 — Fabio Crisanti 2009 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Fabio Crisanti 2009",
+          "title": "Dries Van Noten",
+          "year": "2014"
+        },
+        "pt": {
+          "details": "Fabio Crisanti 2009",
+          "title": "Dries Van Noten",
+          "year": "2014"
+        },
         "source": {
           "details": "Fabio Crisanti 2009",
           "title": "Dries Van Noten",
@@ -6336,13 +7220,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Dries Van Noten — 2014 — Fabio Crisanti 2009 — Fabio Crisanti",
+        "pt": "Dries Van Noten — 2014 — Fabio Crisanti 2009 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Fabio Crisanti 2009",
+          "title": "Dries Van Noten",
+          "year": "2014"
+        },
+        "pt": {
+          "details": "Fabio Crisanti 2009",
+          "title": "Dries Van Noten",
+          "year": "2014"
+        },
         "source": {
           "details": "Fabio Crisanti 2009",
           "title": "Dries Van Noten",
@@ -6365,8 +7257,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Fabio Crisanti — 2014 — Fabio Crisanti",
+        "pt": "Fabio Crisanti — 2014 — Fabio Crisanti"
       },
       "candidate_matches": [
         "images/galerias/La Escultura/Pez III/02.jpg",
@@ -6379,8 +7271,16 @@
         "images/galerias/Literatura/Ficción/El Nombre/IMG-20260513-WA0058.jpg"
       ],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Fabio Crisanti",
+          "year": "2014"
+        },
+        "pt": {
+          "details": null,
+          "title": "Fabio Crisanti",
+          "year": "2014"
+        },
         "source": {
           "details": null,
           "title": "Fabio Crisanti",
@@ -6401,8 +7301,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Fabio Crisanti — 2014 — Fabio Crisanti",
+        "pt": "Fabio Crisanti — 2014 — Fabio Crisanti"
       },
       "candidate_matches": [
         "images/galerias/La Escultura/Pez III/02.jpg",
@@ -6415,8 +7315,16 @@
         "images/galerias/Literatura/Ficción/El Nombre/IMG-20260513-WA0058.jpg"
       ],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Fabio Crisanti",
+          "year": "2014"
+        },
+        "pt": {
+          "details": null,
+          "title": "Fabio Crisanti",
+          "year": "2014"
+        },
         "source": {
           "details": null,
           "title": "Fabio Crisanti",
@@ -6437,8 +7345,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Fabio Crisanti — 2014 — Fabio Crisanti",
+        "pt": "Fabio Crisanti — 2014 — Fabio Crisanti"
       },
       "candidate_matches": [
         "images/galerias/La Escultura/Pez III/02.jpg",
@@ -6451,8 +7359,16 @@
         "images/galerias/Literatura/Ficción/El Nombre/IMG-20260513-WA0058.jpg"
       ],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Fabio Crisanti",
+          "year": "2014"
+        },
+        "pt": {
+          "details": null,
+          "title": "Fabio Crisanti",
+          "year": "2014"
+        },
         "source": {
           "details": null,
           "title": "Fabio Crisanti",
@@ -6473,8 +7389,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Fabio Crisanti — 2014 — Fabio Crisanti",
+        "pt": "Fabio Crisanti — 2014 — Fabio Crisanti"
       },
       "candidate_matches": [
         "images/galerias/La Escultura/Pez III/02.jpg",
@@ -6487,8 +7403,16 @@
         "images/galerias/Literatura/Ficción/El Nombre/IMG-20260513-WA0058.jpg"
       ],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Fabio Crisanti",
+          "year": "2014"
+        },
+        "pt": {
+          "details": null,
+          "title": "Fabio Crisanti",
+          "year": "2014"
+        },
         "source": {
           "details": null,
           "title": "Fabio Crisanti",
@@ -6509,8 +7433,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Fabio Crisanti — 2014 — Fabio Crisanti",
+        "pt": "Fabio Crisanti — 2014 — Fabio Crisanti"
       },
       "candidate_matches": [
         "images/galerias/La Escultura/Pez III/02.jpg",
@@ -6523,8 +7447,16 @@
         "images/galerias/Literatura/Ficción/El Nombre/IMG-20260513-WA0058.jpg"
       ],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Fabio Crisanti",
+          "year": "2014"
+        },
+        "pt": {
+          "details": null,
+          "title": "Fabio Crisanti",
+          "year": "2014"
+        },
         "source": {
           "details": null,
           "title": "Fabio Crisanti",
@@ -6545,13 +7477,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Fabio Crisanti — 2014 — Fabio Crisanti",
+        "pt": "Fabio Crisanti — 2014 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Fabio Crisanti",
+          "year": "2014"
+        },
+        "pt": {
+          "details": null,
+          "title": "Fabio Crisanti",
+          "year": "2014"
+        },
         "source": {
           "details": null,
           "title": "Fabio Crisanti",
@@ -6574,13 +7514,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Drien Van Noten — 2016 — Fabio Crisanti",
+        "pt": "Drien Van Noten — 2016 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Drien Van Noten",
+          "year": "2016"
+        },
+        "pt": {
+          "details": null,
+          "title": "Drien Van Noten",
+          "year": "2016"
+        },
         "source": {
           "details": null,
           "title": "Drien Van Noten",
@@ -6603,13 +7551,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Dries Van Noten — 2016 — 13 a — Fabio Crisanti",
+        "pt": "Dries Van Noten — 2016 — 13 a — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "13 a",
+          "title": "Dries Van Noten",
+          "year": "2016"
+        },
+        "pt": {
+          "details": "13 a",
+          "title": "Dries Van Noten",
+          "year": "2016"
+        },
         "source": {
           "details": "13 a",
           "title": "Dries Van Noten",
@@ -6632,14 +7588,26 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Chaleco — 2024 — Materiales: Algodón. Lino. Raso — Fabio Crisanti",
+        "pt": "Chaleco — 2024 — Materiais: Algodão. Lino. Raso — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
-        "source": null
+        "es": {
+          "details": "Materiales: Algodón. Lino. Raso",
+          "title": "Chaleco",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "Materiais: Algodão. Lino. Raso",
+          "title": "Chaleco",
+          "year": "2024"
+        },
+        "source": {
+          "details": "Materiales: Algodón. Lino. Raso",
+          "title": "Chaleco",
+          "year": "2024"
+        }
       },
       "classification": "novo",
       "filename": "13.jpg",
@@ -6655,14 +7623,26 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Chaleco — 2024 — Materiales: Algodón. Lino. Raso — Fabio Crisanti",
+        "pt": "Chaleco — 2024 — Materiais: Algodão. Lino. Raso — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
-        "source": null
+        "es": {
+          "details": "Materiales: Algodón. Lino. Raso",
+          "title": "Chaleco",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "Materiais: Algodão. Lino. Raso",
+          "title": "Chaleco",
+          "year": "2024"
+        },
+        "source": {
+          "details": "Materiales: Algodón. Lino. Raso",
+          "title": "Chaleco",
+          "year": "2024"
+        }
       },
       "classification": "novo",
       "filename": "14.jpg",
@@ -6678,15 +7658,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Chaleco — 2024 — Materiales: Algodón. Lino. Raso — Fabio Crisanti",
+        "pt": "Chaleco — 2024 — Materiais: Algodão. Lino. Raso — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Materiales: Algodón. Lino. Raso",
+          "title": "Chaleco",
+          "year": "2024"
+        },
+        "pt": {
+          "details": "Materiais: Algodão. Lino. Raso",
+          "title": "Chaleco",
+          "year": "2024"
+        },
         "source": {
-          "details": "Materiales:AlgodónLinoRaso",
+          "details": "Materiales: Algodón. Lino. Raso",
           "title": "Chaleco",
           "year": "2024"
         }

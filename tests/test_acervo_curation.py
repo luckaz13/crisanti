@@ -113,6 +113,20 @@ class NumberedFichaTests(unittest.TestCase):
         self.assertIn("Collage. Sello. Bambú.", es["details"])
         self.assertIn("Colagem. Carimbo. Bambu.", pt["details"])
 
+    def test_localizes_sculpture_techniques_and_locations(self):
+        source = {
+            "title": "Pez IV",
+            "year": "2024",
+            "details": "Materiales: Bambú. Poliester. Cemento de contacto. Algodón. Playa central de Garopaba, Brasil.",
+        }
+
+        es, pt = localize_caption(source)
+
+        self.assertIn("Poliéster", es["details"])
+        self.assertEqual(pt["title"], "Peixe IV")
+        self.assertIn("Materiais: Bambu", pt["details"])
+        self.assertIn("Praia central de Garopaba", pt["details"])
+
 
 if __name__ == "__main__":
     unittest.main()
