@@ -1469,7 +1469,7 @@ ul, ol { list-style: none; }
 
 .gallery-controls {
    position: absolute;
-   top: 50%;
+   top: var(--gallery-controls-top, 50%);
    left: -60px;
    right: -60px;
    display: flex;

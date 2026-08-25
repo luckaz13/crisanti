@@ -30,6 +30,7 @@
         let autoplayTimer = null;
         let pointerPaused = false;
         let focusPaused = false;
+        let controlsAnchorWidth = null;
 
         function preloadImage(img) {
             if (!img || img.dataset.preloaded === 'true') return;
@@ -57,9 +58,28 @@
             }
         }
 
+        function updateControlsAnchor() {
+            const width = carouselEl.getBoundingClientRect().width;
+            if (width <= 0) return;
+            if (controlsAnchorWidth !== null && Math.abs(width - controlsAnchorWidth) < 1) return;
+
+            const anchorSlide = slides[0];
+            const anchorImage = anchorSlide.querySelector('.gallery-img');
+            const anchorFigure = anchorSlide.querySelector('.gallery-figure');
+            if (anchorImage && (!anchorImage.complete || anchorImage.naturalWidth === 0)) return;
+
+            const anchorTarget = anchorFigure || anchorImage || anchorSlide;
+            const anchorHeight = anchorTarget.getBoundingClientRect().height;
+            if (anchorHeight <= 0) return;
+
+            carouselEl.style.setProperty('--gallery-controls-top', `${Math.ceil(anchorHeight / 2)}px`);
+            controlsAnchorWidth = width;
+        }
+
         function updateCarousel() {
             track.style.transform = `translateX(${-currentIndex * 100}%)`;
             updateViewportHeight();
+            updateControlsAnchor();
             prevBtn.disabled = currentIndex === 0;
             nextBtn.disabled = currentIndex === slideCount - 1;
             prevBtn.setAttribute('aria-disabled', currentIndex === 0);
