@@ -32,6 +32,7 @@ PHRASE_RULES = {
     "spanish-material": r"\b(?:madera|cartón|acero|alambre|piel|cuero|caja|gomaespuma|lana\s+natural|terciopelo|seda\s+salvaje|hilos\s+encerados)\b",
     "spanish-page-label": r"(?:^|(?<=\d))(?:tapa|contratapa)(?:$|(?=[A-ZÁÉÍÓÚ]))|\b(?:tapa\s+del|retiro\s+de\s+tapa|imágenes\s+del|páginas?\s+\d+\s+y|contratapa\s+de)\b",
     "spanish-production": r"\b(?:diseño\s+digital|copias\s+fotográficas|tomadas\s+de\s+la\s+serie|desde\s+la\s+serie|motivo:)\b",
+    "spanish-exhibition-caption": r"(?:las\s+fotograf[ií]a|fueron\s+tomadas|de\s+la\s+serie\s+del\s+autor|expuesta\s+en\s+el\s+consulado)",
     "mixed-conjunction": r"\b(?:papel\s+de\s+seda|acrílicos?)\s+y\s+(?:collage|cromía)\b",
     "spanish-editorial-label": r"(?:emulsión|lienzo|papeles\s+metalizados|hilos\s+de|corcho|proceso\s+de|gráficos\s+descriptivos|elementos\s+del|ilustraciones\s+de|estructuras\s+de|páginas\s+centrales|galería\s+del|plano\s+contrapicado)",
     "spanish-criticism": r"\b(?:jlb\s+siempre|esta\s+pieza|la\s+de\s+aquellos|es,\s+en\s+el|fotografía\s+y\s+escultura|queremos\s+creer|así\s+pendulamos|cuando\s+yo|ahora\s+creo|los\s+diseños|juliana\s+lee|es\s+un\s+goce|los\s+[“\"]mapas|son\s+como|en\s+la\s+ideografia|en\s+otra\s+variante|si\s+lo\s+rearm|brillante\s+investigación)\b",

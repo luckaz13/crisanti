@@ -6,6 +6,14 @@ from tools.acervo.audit_pt_br import audit_pt_br_html, find_spanish_residuals
 
 
 class PtBrAuditTests(unittest.TestCase):
+    def test_detects_spanish_exhibition_caption(self):
+        findings = find_spanish_residuals(
+            ["Las fotografía fueron tomadas de la serie del autor, expuesta en el Consulado."]
+        )
+
+        self.assertEqual(1, len(findings))
+        self.assertIn("spanish-exhibition-caption", findings[0].rules)
+
     def test_detects_known_spanish_caption_phrases(self):
         findings = find_spanish_residuals(
             [

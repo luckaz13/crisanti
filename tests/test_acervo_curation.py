@@ -11,6 +11,48 @@ from tools.acervo.localize_manifest_pt import localize_manifest_pt
 
 
 class NumberedFichaTests(unittest.TestCase):
+    def test_localizes_el_calendario_captions_exactly(self):
+        manifest = {
+            "assets": [
+                {
+                    "path": "img/Los Laberintos/El Calendario/01.jpg",
+                    "caption": {
+                        "pt": {
+                            "title": "Tapa del Calendario",
+                            "year": "2006",
+                            "details": "Motivo",
+                        }
+                    },
+                    "alt": {"pt": "legacy"},
+                },
+                {
+                    "path": "img/Los Laberintos/El Calendario/02.jpg",
+                    "caption": {
+                        "pt": {
+                            "title": "Imágenes del Calendario",
+                            "year": "2006",
+                            "details": "legacy",
+                        }
+                    },
+                    "alt": {"pt": "legacy"},
+                },
+            ]
+        }
+
+        first, second = localize_manifest_pt(manifest)["assets"]
+
+        self.assertEqual('Capa de “El Calendario”', first["caption"]["pt"]["title"])
+        self.assertEqual(
+            'Motivo: detalhe da personagem do candombe uruguaio “Mamá Vieja”.',
+            first["caption"]["pt"]["details"],
+        )
+        self.assertEqual('Imagens de “El Calendario”', second["caption"]["pt"]["title"])
+        self.assertEqual(
+            'As fotografias foram feitas a partir da série do autor “Hay agua caliente”, exposta no Consulado da República Argentina em Colônia do Sacramento, Uruguai, em 2005.',
+            second["caption"]["pt"]["details"],
+        )
+        self.assertIn('Capa de “El Calendario”', first["alt"]["pt"])
+
     def test_manifest_localization_updates_caption_and_alt_idempotently(self):
         manifest = {
             "assets": [

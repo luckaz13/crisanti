@@ -30,6 +30,17 @@ TITLE_OVERRIDES = {
     "img/Los Niños/Der Elefant/15.jpg": "Páginas 26 e 27",
 }
 
+CAPTION_OVERRIDES = {
+    "img/Los Laberintos/El Calendario/01.jpg": {
+        "title": 'Capa de “El Calendario”',
+        "details": 'Motivo: detalhe da personagem do candombe uruguaio “Mamá Vieja”.',
+    },
+    "img/Los Laberintos/El Calendario/02.jpg": {
+        "title": 'Imagens de “El Calendario”',
+        "details": 'As fotografias foram feitas a partir da série do autor “Hay agua caliente”, exposta no Consulado da República Argentina em Colônia do Sacramento, Uruguai, em 2005.',
+    },
+}
+
 
 def localize_manifest_pt(manifest: dict[str, Any]) -> dict[str, Any]:
     result = deepcopy(manifest)
@@ -40,6 +51,9 @@ def localize_manifest_pt(manifest: dict[str, Any]) -> dict[str, Any]:
                 caption[field] = localize_pt_text(caption.get(field))
             if asset.get("path") in TITLE_OVERRIDES:
                 caption["title"] = TITLE_OVERRIDES[asset["path"]]
+            override = CAPTION_OVERRIDES.get(asset.get("path"))
+            if override:
+                caption.update(override)
         alt = asset.get("alt", {}).get("pt")
         if isinstance(alt, str):
             asset["alt"]["pt"] = localize_pt_text(alt)
