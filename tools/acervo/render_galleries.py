@@ -185,7 +185,39 @@ def _replace_track(panel: Any, assets: list[dict[str, Any]], language: str, capt
     track.extend(list(fragment.contents))
 
 
-def render_page(page: str, manifest: dict[str, Any], language: str) -> str:
+def apply_pt_editorial(page: str, editorial: dict[str, Any]) -> str:
+    """Apply reviewed Portuguese prose to legacy criticism cards."""
+    soup = BeautifulSoup(page, "html.parser")
+    criticism = soup.find(id="critica")
+    if criticism is None:
+        raise ValueError("criticism section not found: critica")
+    intro = criticism.select_one(".literatura-intro")
+    if intro is None:
+        raise ValueError("criticism introduction not found")
+    intro.string = editorial["intro"]
+    for article_id, content in editorial.get("articles", {}).items():
+        article = criticism.find(id=article_id)
+        if article is None:
+            raise ValueError(f"criticism article not found: {article_id}")
+        excerpt = article.select_one(".literatura-excerpt")
+        body = article.select_one(".literatura-full")
+        if excerpt is None or body is None:
+            raise ValueError(f"criticism article is incomplete: {article_id}")
+        excerpt.string = content["excerpt"]
+        body.clear()
+        for paragraph in content["paragraphs"]:
+            tag = soup.new_tag("p")
+            tag.string = paragraph
+            body.append(tag)
+    return str(soup)
+
+
+def render_page(
+    page: str,
+    manifest: dict[str, Any],
+    language: str,
+    pt_editorial: dict[str, Any] | None = None,
+) -> str:
     soup = BeautifulSoup(page, "html.parser")
     grouped: dict[str, list[dict[str, Any]]] = {}
     for asset in manifest["assets"]:
@@ -292,7 +324,10 @@ def render_page(page: str, manifest: dict[str, Any], language: str) -> str:
         overview = soup.new_tag("div", attrs={"class": "literatura-fiction-overview"})
         overview.extend(list(fragment.template.contents))
         fiction_tabs.insert_before(overview)
-    return str(soup)
+    rendered = str(soup)
+    if language == "pt" and pt_editorial:
+        rendered = apply_pt_editorial(rendered, pt_editorial)
+    return rendered
 
 
 def main() -> None:
@@ -300,9 +335,18 @@ def main() -> None:
     parser.add_argument("--manifest", type=Path, required=True)
     parser.add_argument("--pt", type=Path, required=True)
     parser.add_argument("--es", type=Path, required=True)
+    parser.add_argument(
+        "--pt-editorial",
+        type=Path,
+        default=Path("data/acervo/editorial-literatura-critica.json"),
+    )
     args = parser.parse_args()
     manifest = json.loads(args.manifest.read_text(encoding="utf-8"))
-    args.pt.write_text(render_page(args.pt.read_text(encoding="utf-8"), manifest, "pt"), encoding="utf-8")
+    pt_editorial = json.loads(args.pt_editorial.read_text(encoding="utf-8"))
+    args.pt.write_text(
+        render_page(args.pt.read_text(encoding="utf-8"), manifest, "pt", pt_editorial),
+        encoding="utf-8",
+    )
     args.es.write_text(render_page(args.es.read_text(encoding="utf-8"), manifest, "es"), encoding="utf-8")
 
 

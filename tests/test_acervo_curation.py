@@ -3,12 +3,82 @@ import unittest
 from tools.acervo.curate import (
     apply_fichas,
     localize_caption,
+    localize_pt_text,
     parse_caption,
     split_numbered_entries,
 )
+from tools.acervo.localize_manifest_pt import localize_manifest_pt
 
 
 class NumberedFichaTests(unittest.TestCase):
+    def test_manifest_localization_updates_caption_and_alt_idempotently(self):
+        manifest = {
+            "assets": [
+                {
+                    "caption": {"pt": {"title": "Boceto", "details": "(Detalle)"}},
+                    "alt": {"pt": "Boceto — (Detalle) — Fabio Crisanti"},
+                }
+            ]
+        }
+
+        once = localize_manifest_pt(manifest)
+        twice = localize_manifest_pt(once)
+
+        self.assertEqual("Esboço", once["assets"][0]["caption"]["pt"]["title"])
+        self.assertEqual("Esboço — (Detalhe) — Fabio Crisanti", once["assets"][0]["alt"]["pt"])
+        self.assertEqual(once, twice)
+
+    def test_localizes_recurring_documentary_labels(self):
+        cases = {
+            "Vista general de la seria": "Vista geral da série",
+            "(Detalle de rabiola)": "(Detalhe da rabiola)",
+            'Boceto para vestido desde la serie "Seda"': 'Esboço para vestido da série "Seda"',
+            "Retiro de tapa y página 1": "Verso da capa e página 1",
+            "Páginas 28 y 29": "Páginas 28 e 29",
+            "Contratapa": "Contracapa",
+            "Tapa del cuaderno": "Capa do cuaderno",
+            "ContratapaAcrílicos": "Contracapa. Acrílicos",
+            "TapaAcrílicos": "Capa. Acrílicos",
+            "Boceto tapa de caixa": "Esboço capa da caixa",
+            "0.80mContratapa": "0.80mContracapa",
+        }
+
+        for source, expected in cases.items():
+            with self.subTest(source=source):
+                self.assertEqual(expected, localize_pt_text(source))
+
+    def test_localizes_recurring_materials_and_techniques(self):
+        source = "Materiales:AceroMaderaGomaespumaPoliesterAcrílicosAerógrafoCartapestaLana"
+
+        localized = localize_pt_text(source)
+
+        self.assertEqual(
+            "Materiais:AçoMadeiraEspumaPoliésterAcrílicosAerógrafoPapel machêLã",
+            localized,
+        )
+
+    def test_localizes_concatenated_sculpture_materials(self):
+        source = "Papeles Metalizados: Cobre, Oro, Perla. CartapestaLienzo CrudoHilos de AlgodónCorcho"
+
+        localized = localize_pt_text(source)
+
+        self.assertEqual(
+            "Papéis metalizados: Cobre, Ouro, Pérola. Papel machêTela cruaFios de AlgodãoCortiça",
+            localized,
+        )
+
+    def test_localizes_photographic_and_editorial_descriptions(self):
+        cases = {
+            "Emulsión fotográfica sobre lienzo imprimado": "Emulsão fotográfica sobre tela preparada",
+            "Imágenes del Calendario": "Imagens do Calendario",
+            "Copias fotográficas tomadas de la serie Exilio": "Cópias fotográficas feitas a partir da série Exilio",
+            "Acrílicos sobre papel de seda y collage. Diseño digital": "Acrílicos sobre papel de seda e colagem. Design digital",
+        }
+
+        for source, expected in cases.items():
+            with self.subTest(source=source):
+                self.assertEqual(expected, localize_pt_text(source))
+
     def test_splits_entries_without_treating_dimensions_as_numbers(self):
         text = (
             '01"Seda I"20210.30m x 0.50mAcrílico sobre papel de sedaCollage '

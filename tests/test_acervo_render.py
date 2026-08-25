@@ -2,6 +2,7 @@ import unittest
 from pathlib import Path
 
 from tools.acervo.render_galleries import (
+    apply_pt_editorial,
     clone_tabbed_gallery,
     render_series_copy,
     render_slides,
@@ -22,6 +23,26 @@ def asset(path, title="Obra I"):
 
 
 class GalleryRenderingTests(unittest.TestCase):
+    def test_applies_portuguese_editorial_overrides_to_criticism(self):
+        page = '''<section id="critica"><p class="literatura-intro">Spanish intro</p><article id="lit-example"><p class="literatura-excerpt">Spanish excerpt</p><div class="literatura-full"><p>Spanish body</p></div></article></section>'''
+        editorial = {
+            "intro": "Introdução em português.",
+            "articles": {
+                "lit-example": {
+                    "excerpt": "Resumo em português.",
+                    "paragraphs": ["Primeiro parágrafo.", "Segundo parágrafo."],
+                }
+            },
+        }
+
+        rendered = apply_pt_editorial(page, editorial)
+
+        self.assertIn("Introdução em português.", rendered)
+        self.assertIn("Resumo em português.", rendered)
+        self.assertIn("Primeiro parágrafo.", rendered)
+        self.assertIn("Segundo parágrafo.", rendered)
+        self.assertNotIn("Spanish", rendered)
+
     def test_tab_script_synchronizes_editorial_copy(self):
         script = (Path(__file__).resolve().parents[1] / "js/gallery-tabs.js").read_text()
 

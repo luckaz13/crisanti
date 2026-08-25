@@ -82,6 +82,105 @@ def _replace_all(value: str | None, replacements: list[tuple[str, str]]) -> str 
     return value
 
 
+def localize_pt_text(value: str | None) -> str | None:
+    """Localize recurring documentary labels without translating proper titles."""
+    if value is None:
+        return None
+    replacements = [
+        ("Vista general de la seria", "Vista geral da série"),
+        ("Vista general de la serie", "Vista geral da série"),
+        ("Vista general serie", "Vista geral da série"),
+        ("Retiro de tapa", "Verso da capa"),
+        ("retiro de contratapa", "verso da contracapa"),
+        ("retiro de cpntratapa", "verso da contracapa"),
+        ("Imágenes del", "Imagens do"),
+        ("Ilustraciones de las fichas", "Ilustrações das fichas"),
+        ("Copias fotográficas tomadas de la serie", "Cópias fotográficas feitas a partir da série"),
+        ("tomadas de la serie", "feitas a partir da série"),
+        ("desde la serie", "da série"),
+        ("Detalle del personaje", "Detalhe da personagem"),
+        ("Detalle de rabiola", "Detalhe da rabiola"),
+        ("Detalle de vela", "Detalhe da vela"),
+        ("Detalle rabiola", "Detalhe da rabiola"),
+        ("Detalle", "Detalhe"),
+        ("detalle", "detalhe"),
+        ("Bocetos", "Esboços"),
+        ("Boceto", "Esboço"),
+        ("boceto", "esboço"),
+        ("Materiales:", "Materiais:"),
+        ("Emulsión fotográfica", "Emulsão fotográfica"),
+        ("sobre lienzo imprimado", "sobre tela preparada"),
+        ("Proceso de construcción", "Processo de construção"),
+        ("proceso de construcción", "processo de construção"),
+        ("Gráficos descriptivos", "Gráficos descritivos"),
+        ("Elementos del universo del cuento", "Elementos do universo do conto"),
+        ("Esquema narrativo (esboço)", "Esquema narrativo (esboço)"),
+        ("Tapas de", "Capas de"),
+        ("Ejemplares de", "Exemplares de"),
+        ("Encuadernación", "Encadernação"),
+        ("Contratapa de", "Contracapa de"),
+        ("Diseño digital", "Design digital"),
+        ("Estructuras de Bambú", "Estruturas de bambu"),
+        ("Páginas centrales", "Páginas centrais"),
+        ("Cadaver exquisito", "Cadáver exquisito"),
+        ("Plano Contrapicado Iglesia de Garopaba", "Plano em contra-plongée da Igreja de Garopaba"),
+        ("Galería del Consulado Argentino de la República Argentina en Colonia del Sacramento, Uruguay", "Galeria do Consulado da República Argentina em Colônia do Sacramento, Uruguai"),
+        ("La Salada, Pcia. De Bs. As. - Argentina.", "La Salada, Província de Buenos Aires, Argentina."),
+        ("Esque líneas narrativas", "Esquema de linhas narrativas"),
+        ("Seda salvaje", "Seda selvagem"),
+        ("SEDA SALVAJE", "SEDA SELVAGEM"),
+        ("Hilos Encerados", "Fios encerados"),
+        ("Lana Natural", "Lã natural"),
+        ("Gomaespuma", "Espuma"),
+        ("Cartapesta", "Papel machê"),
+        ("Papeles Metalizados", "Papéis metalizados"),
+        ("Lienzo Crudo", "Tela crua"),
+        ("Hilos de", "Fios de"),
+        ("Corcho", "Cortiça"),
+        ("Oro", "Ouro"),
+        ("Perla", "Pérola"),
+        ("Poliester", "Poliéster"),
+        ("Madera", "Madeira"),
+        ("Cartón", "Papelão"),
+        ("Acero", "Aço"),
+        ("Alambre", "Arame"),
+        ("Piel", "Pele"),
+        ("Cuero", "Couro"),
+        ("Terciopelo", "Veludo"),
+        ("Lana", "Lã"),
+        ("Algodón", "Algodão"),
+        ("Cerámica", "Cerâmica"),
+        ("Impresión digital", "Impressão digital"),
+        ("Collage", "Colagem"),
+        ("collage", "colagem"),
+        (" y colagem", " e colagem"),
+        (" y cromía", " e cromia"),
+        (" y síntesis", " e síntese"),
+        (" y página", " e página"),
+        (" y verso", " e verso"),
+        ("Galería", "Galeria"),
+        ("Chaleco", "Colete"),
+        ("Lino", "Linho"),
+        ("Raso", "Cetim"),
+        ("Caja", "Caixa"),
+        ("caja", "caixa"),
+        ("Cuarto", "Quarto"),
+        ('La Cuadratura del Círculo en la Perspectiva "Ojo de Pez"', 'A Quadratura do Círculo na Perspectiva "Olho de Peixe"'),
+    ]
+    value = _replace_all(value, replacements) or ""
+    value = re.sub(r"\bPáginas?(\s+\d+)\s+y\s+(?=\d)", lambda match: match.group(0).replace(" y ", " e "), value)
+    value = re.sub(r'(["”])\s+y\s+(["“])', r'\1 e \2', value)
+    value = value.replace("ContratapaAcrílicos", "Contracapa. Acrílicos")
+    value = value.replace("TapaAcrílicos", "Capa. Acrílicos")
+    value = value.replace("tapa de caixa", "capa da caixa")
+    value = value.replace("tapa de", "capa de")
+    value = value.replace("Contratapa", "Contracapa")
+    value = value.replace("Tapa", "Capa")
+    value = value.replace("Capa del", "Capa do")
+    value = re.sub(r"(?<=\d)Acrílicos", ". Acrílicos", value)
+    return value
+
+
 def localize_caption(
     source: dict[str, str | None],
 ) -> tuple[dict[str, str | None], dict[str, str | None]]:
@@ -103,7 +202,7 @@ def localize_caption(
             ("Gsropaba", "Garopaba"),
         ],
     )
-    pt_title = _replace_all(
+    pt_title = localize_pt_text(_replace_all(
         es_title,
         [
             ("Huesos", "Ossos"),
@@ -114,8 +213,8 @@ def localize_caption(
             ("Ilustración", "Ilustração"),
             ("Bocetos", "Esboços"),
         ],
-    )
-    pt_details = _replace_all(
+    ))
+    pt_details = localize_pt_text(_replace_all(
         es_details,
         [
             ("Toma directa con teléfono", "Captura direta com telefone"),
@@ -145,7 +244,7 @@ def localize_caption(
             ("Diseño digital", "Design digital"),
             ("Carbón sobre papel", "Carvão sobre papel"),
         ],
-    )
+    ))
     return (
         {"title": es_title, "year": source.get("year"), "details": es_details},
         {"title": pt_title, "year": source.get("year"), "details": pt_details},
