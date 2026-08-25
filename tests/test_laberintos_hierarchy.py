@@ -35,6 +35,12 @@ class LaberintosHierarchyTests(unittest.TestCase):
             script,
         )
 
+    def test_gallery_copy_heading_has_scoped_editorial_style(self):
+        css = (ROOT / "css/style.css").read_text(encoding="utf-8")
+        self.assertIn(".series-copy-display--gallery", css)
+        self.assertIn(".series-copy-title", css)
+        self.assertIn("font-family: var(--f-serif);", css)
+
 
 if __name__ == "__main__":
     unittest.main()

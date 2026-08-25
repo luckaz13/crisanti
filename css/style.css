@@ -864,6 +864,19 @@ ul, ol { list-style: none; }
   max-width: 62ch;
 }
 
+.series-copy-display--gallery {
+  margin: 0 0 1.5rem;
+}
+
+.series-copy-title {
+  margin: 0 0 0.75rem;
+  font-family: var(--f-serif);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--c-ink);
+}
+
 .series-copy-more summary {
   width: fit-content;
   margin: 0.75rem 0 1.25rem;
