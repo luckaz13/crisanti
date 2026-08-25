@@ -1,0 +1,69 @@
+"""Helpers for turning numbered fichas into structured editorial captions."""
+
+from __future__ import annotations
+
+import re
+from copy import deepcopy
+from pathlib import PurePosixPath
+from typing import Any
+
+
+ENTRY_PATTERN = re.compile(r"(?<!\d)(\d{2})(?=\s*[“\"A-ZÁÉÍÓÚ])")
+
+
+def split_numbered_entries(text: str) -> dict[str, str]:
+    matches = list(ENTRY_PATTERN.finditer(text))
+    entries: dict[str, str] = {}
+    for index, match in enumerate(matches):
+        end = matches[index + 1].start() if index + 1 < len(matches) else len(text)
+        entries[match.group(1)] = text[match.end() : end].strip()
+    return entries
+
+
+def _readable_details(text: str) -> str:
+    text = re.sub(r"(?<=\.)(?=[A-ZÁÉÍÓÚ])", " ", text)
+    text = re.sub(r"(?<=[a-záéíóú])(?=(?:Bambú|Collage|Carimbo|Algodón|Papel|Tinta|Dorado|Tecido))", ". ", text)
+    return " ".join(text.split()).strip()
+
+
+def parse_caption(raw: str) -> dict[str, str | None]:
+    value = raw.strip()
+    title = None
+    quoted = re.match(r"[“\"]([^”\"]+)[”\"]", value)
+    if quoted:
+        title = quoted.group(1).strip()
+        value = value[quoted.end() :]
+    else:
+        year_position = re.search(r"20\d{2}", value)
+        if year_position:
+            title = value[: year_position.start()].strip() or None
+            value = value[year_position.start() :]
+        elif value:
+            title = value
+            value = ""
+    year_match = re.match(r"(20\d{2})", value)
+    year = year_match.group(1) if year_match else None
+    if year_match:
+        value = value[year_match.end() :]
+    return {"title": title, "year": year, "details": _readable_details(value) or None}
+
+
+def apply_fichas(
+    manifest: dict[str, Any], documents: list[dict[str, Any]]
+) -> dict[str, Any]:
+    result = deepcopy(manifest)
+    fichas: dict[str, dict[str, str]] = {}
+    for document in documents:
+        path = PurePosixPath(document["path"])
+        if "ficha" not in path.name.casefold() or path.suffix.casefold() != ".docx":
+            continue
+        entries = split_numbered_entries(" ".join(document.get("paragraphs", [])))
+        if entries:
+            fichas[path.parent.as_posix()] = entries
+    for asset in result.get("assets", []):
+        path = PurePosixPath(asset["path"])
+        number = re.match(r"^(\d+)", asset["filename"])
+        raw = fichas.get(path.parent.as_posix(), {}).get(number.group(1) if number else "")
+        if raw:
+            asset["caption"]["source"] = parse_caption(raw)
+    return result
