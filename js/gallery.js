@@ -25,6 +25,7 @@
         let currentIndex = 0;
         const slideCount = slides.length;
         const preloadRadius = 4;
+        const captionClearance = 8;
         const autoplayDelay = Number.parseInt(carouselEl.dataset.autoplay || '', 10);
         const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
         let autoplayTimer = null;
@@ -68,7 +69,7 @@
             const anchorFigure = anchorSlide.querySelector('.gallery-figure');
             if (anchorImage && (!anchorImage.complete || anchorImage.naturalWidth === 0)) return;
 
-            const anchorTarget = anchorFigure || anchorImage || anchorSlide;
+            const anchorTarget = anchorImage || anchorFigure || anchorSlide;
             const anchorHeight = anchorTarget.getBoundingClientRect().height;
             if (anchorHeight <= 0) return;
 
@@ -122,7 +123,7 @@
                 const target = figure || img || activeSlide;
                 const height = target.getBoundingClientRect().height;
                 if (height > 0) {
-                    viewport.style.height = `${Math.ceil(height)}px`;
+                    viewport.style.height = `${Math.ceil(height) + captionClearance}px`;
                 }
             });
         }
@@ -142,6 +143,16 @@
         if ('ResizeObserver' in window) {
             const resizeObserver = new ResizeObserver(updateCarousel);
             resizeObserver.observe(carouselEl);
+            const figureResizeObserver = new ResizeObserver(entries => {
+                const activeFigure = slides[currentIndex].querySelector('.gallery-figure');
+                if (entries.some(entry => entry.target === activeFigure)) {
+                    updateViewportHeight();
+                }
+            });
+            slides.forEach(slide => {
+                const figure = slide.querySelector('.gallery-figure');
+                if (figure) figureResizeObserver.observe(figure);
+            });
         } else {
             window.addEventListener('resize', updateCarousel);
         }
