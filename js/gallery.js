@@ -66,7 +66,7 @@
             if (width <= 0) return;
             if (controlsAnchorWidth !== null && Math.abs(width - controlsAnchorWidth) < 1) return;
 
-            const anchorSlide = slides[0];
+            const anchorSlide = [...slides].find(slide => slide.querySelector('.gallery-img')) || slides[0];
             const anchorImage = anchorSlide.querySelector('.gallery-img');
             const anchorFigure = anchorSlide.querySelector('.gallery-figure');
             if (anchorImage && (!anchorImage.complete || anchorImage.naturalWidth === 0)) return;
