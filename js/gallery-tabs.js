@@ -8,6 +8,25 @@
     var template = section.querySelector('template[data-series-copy="' + targetId + '"]');
     var lead = section.querySelector('.series-lead, .literatura-intro');
     var display = section.querySelector('.series-copy-display');
+    var tablist = section.querySelector('.gallery-tabs');
+    var activeTab = section.querySelector('.gallery-tab[data-target="' + targetId + '"]');
+    var copyInGallery = section.dataset.seriesCopyLayout === 'gallery';
+    if (copyInGallery && tablist && activeTab) {
+      if (!display) {
+        display = document.createElement('div');
+        display.className = 'series-copy-display series-copy-display--gallery';
+        tablist.insertAdjacentElement('afterend', display);
+      }
+      display.innerHTML = '';
+      var title = document.createElement('h3');
+      title.className = 'series-copy-title';
+      title.textContent = activeTab.textContent.trim();
+      display.appendChild(title);
+      if (template) display.appendChild(template.content.cloneNode(true));
+      display.hidden = false;
+      if (lead) lead.hidden = false;
+      return;
+    }
     if (!template) {
       if (lead) lead.hidden = false;
       if (display) display.hidden = true;
@@ -24,7 +43,6 @@
     display.hidden = false;
     if (lead) lead.hidden = true;
     var workTitle = section.querySelector('.literatura-work-title');
-    var activeTab = section.querySelector('.gallery-tab[data-target="' + targetId + '"]');
     if (workTitle && activeTab) workTitle.textContent = activeTab.textContent.trim();
   }
 
