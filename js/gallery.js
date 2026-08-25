@@ -32,6 +32,8 @@
         let pointerPaused = false;
         let focusPaused = false;
         let controlsAnchorWidth = null;
+        const videos = [...carouselEl.querySelectorAll('.gallery-video')];
+        let carouselVisible = false;
 
         function preloadImage(img) {
             if (!img || img.dataset.preloaded === 'true') return;
@@ -77,6 +79,23 @@
             controlsAnchorWidth = width;
         }
 
+        function syncVideoPlayback() {
+            videos.forEach(video => {
+                const slide = video.closest('.gallery-slide');
+                const slideIndex = [...slides].indexOf(slide);
+                const shouldPlay = slideIndex === currentIndex && carouselVisible &&
+                    document.visibilityState === 'visible' && !video.ended;
+                if (shouldPlay && video.paused) {
+                    const playPromise = video.play();
+                    if (playPromise && typeof playPromise.catch === 'function') {
+                        playPromise.catch(() => {});
+                    }
+                } else if (!shouldPlay && !video.paused) {
+                    video.pause();
+                }
+            });
+        }
+
         function updateCarousel() {
             track.style.transform = `translateX(${-currentIndex * 100}%)`;
             updateViewportHeight();
@@ -85,6 +104,7 @@
             nextBtn.disabled = currentIndex === slideCount - 1;
             prevBtn.setAttribute('aria-disabled', currentIndex === 0);
             nextBtn.setAttribute('aria-disabled', currentIndex === slideCount - 1);
+            syncVideoPlayback();
         }
 
         carouselEl._updateCarousel = updateCarousel;
@@ -140,6 +160,10 @@
             img.addEventListener('error', updateCarousel, { once: true });
         });
 
+        videos.forEach(video => {
+            video.addEventListener('loadedmetadata', updateCarousel, { once: true });
+        });
+
         if ('ResizeObserver' in window) {
             const resizeObserver = new ResizeObserver(updateCarousel);
             resizeObserver.observe(carouselEl);
@@ -155,6 +179,17 @@
             });
         } else {
             window.addEventListener('resize', updateCarousel);
+        }
+
+        if ('IntersectionObserver' in window) {
+            const visibilityObserver = new IntersectionObserver(entries => {
+                carouselVisible = entries.some(entry => entry.isIntersecting);
+                syncVideoPlayback();
+            }, { threshold: 0.25 });
+            visibilityObserver.observe(viewport);
+        } else {
+            carouselVisible = true;
+            syncVideoPlayback();
         }
 
         prevBtn.addEventListener('click', () => {
@@ -219,7 +254,10 @@
                 scheduleAutoplay();
             }, 0);
         });
-        document.addEventListener('visibilitychange', scheduleAutoplay);
+        document.addEventListener('visibilitychange', () => {
+            scheduleAutoplay();
+            syncVideoPlayback();
+        });
         if (typeof reducedMotion.addEventListener === 'function') {
             reducedMotion.addEventListener('change', scheduleAutoplay);
         } else if (typeof reducedMotion.addListener === 'function') {

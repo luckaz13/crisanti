@@ -83,6 +83,27 @@ class VlakVideoTests(unittest.TestCase):
         self.assertIn("object-fit: contain;", rule.group(1))
         self.assertIn("max-height: 78vh;", rule.group(1))
 
+    def test_controller_requires_active_slide_and_visible_carousel(self):
+        script = (ROOT / "js/gallery.js").read_text(encoding="utf-8")
+        self.assertIn("function syncVideoPlayback()", script)
+        self.assertIn("slideIndex === currentIndex", script)
+        self.assertIn("carouselVisible", script)
+        self.assertIn("document.visibilityState === 'visible'", script)
+        self.assertIn("!video.ended", script)
+
+    def test_controller_plays_safely_and_pauses_without_resetting(self):
+        script = (ROOT / "js/gallery.js").read_text(encoding="utf-8")
+        self.assertIn("video.play()", script)
+        self.assertIn("playPromise.catch(() => {})", script)
+        self.assertIn("video.pause()", script)
+        self.assertNotIn("video.currentTime = 0", script)
+
+    def test_controller_observes_viewport_and_syncs_after_navigation(self):
+        script = (ROOT / "js/gallery.js").read_text(encoding="utf-8")
+        self.assertIn("new IntersectionObserver", script)
+        self.assertIn("visibilityObserver.observe(viewport)", script)
+        self.assertIn("syncVideoPlayback();", script)
+
 
 if __name__ == "__main__":
     unittest.main()
