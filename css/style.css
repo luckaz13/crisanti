@@ -1156,7 +1156,7 @@ ul, ol { list-style: none; }
 .contato-img {
   width: 100%;
   aspect-ratio: 3/4;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: var(--radius);
 }
 
