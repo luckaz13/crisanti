@@ -12,6 +12,7 @@ ENTRY_PATTERN = re.compile(r"(?<!\d)(\d{2})(?=\s*[“\"A-ZÁÉÍÓÚ])")
 
 
 def split_numbered_entries(text: str) -> dict[str, str]:
+    text = re.sub(r"(20\d{2})(\d{2})(?=\s*[“\"])", r"\1 \2", text)
     matches = list(ENTRY_PATTERN.finditer(text))
     entries: dict[str, str] = {}
     for index, match in enumerate(matches):
@@ -22,7 +23,11 @@ def split_numbered_entries(text: str) -> dict[str, str]:
 
 def _readable_details(text: str) -> str:
     text = re.sub(r"(?<=\.)(?=[A-ZÁÉÍÓÚ])", " ", text)
-    text = re.sub(r"(?<=[a-záéíóú])(?=(?:Bambú|Collage|Carimbo|Algodón|Papel|Tinta|Dorado|Tecido))", ". ", text)
+    text = re.sub(
+        r"(?<=[a-záéíóú])(?=(?:Acrílico|Bambú|Collage|Carimbo|Algodón|Papel|Tinta|Dorado|Tecido))",
+        ". ",
+        text,
+    )
     return " ".join(text.split()).strip()
 
 
@@ -67,3 +72,63 @@ def apply_fichas(
         if raw:
             asset["caption"]["source"] = parse_caption(raw)
     return result
+
+
+def _replace_all(value: str | None, replacements: list[tuple[str, str]]) -> str | None:
+    if value is None:
+        return None
+    for old, new in replacements:
+        value = value.replace(old, new)
+    return value
+
+
+def localize_caption(
+    source: dict[str, str | None],
+) -> tuple[dict[str, str | None], dict[str, str | None]]:
+    es_title = _replace_all(
+        source.get("title"),
+        [("Primitivo Iii", "Primitivo III"), ("IiI", "III")],
+    )
+    es_details = _replace_all(
+        source.get("details"),
+        [
+            ("Toma directa teléfono", "Toma directa con teléfono"),
+            ("Caneta sobra papel", "Bolígrafo sobre papel"),
+            ("Caneta sobre papel", "Bolígrafo sobre papel"),
+            ("Papel Craft", "Papel kraft"),
+            ("Tecido de renda", "Tejido de encaje"),
+            ("Carimbo", "Sello"),
+        ],
+    )
+    pt_title = _replace_all(
+        es_title,
+        [
+            ("Huesos", "Ossos"),
+            ("Estudio", "Estudo"),
+            ("Ideografía China", "Ideografia Chinesa"),
+            ("Emulsión", "Emulsão"),
+        ],
+    )
+    pt_details = _replace_all(
+        es_details,
+        [
+            ("Toma directa con teléfono", "Captura direta com telefone"),
+            ("tratamiento digital", "tratamento digital"),
+            ("intervención digital", "intervenção digital"),
+            ("collage digital", "colagem digital"),
+            ("Collage", "Colagem"),
+            ("Bolígrafo sobre papel", "Caneta sobre papel"),
+            ("Acrílico sobre papel de seda", "Acrílico sobre papel de seda"),
+            ("Tejido de encaje", "Tecido de renda"),
+            ("Tinta China", "Tinta nanquim"),
+            ("Dorado a la hoja", "Douração a folha"),
+            ("Algodón", "Algodão"),
+            ("Bambú", "Bambu"),
+            ("Sello", "Carimbo"),
+            ("Papel kraft", "Papel kraft"),
+        ],
+    )
+    return (
+        {"title": es_title, "year": source.get("year"), "details": es_details},
+        {"title": pt_title, "year": source.get("year"), "details": pt_details},
+    )

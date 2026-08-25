@@ -501,7 +501,7 @@
         "es": null,
         "pt": null,
         "source": {
-          "details": "2024Boceto para pezAcrílicos , linha de costurar y vestigios orgánicos.",
+          "details": "2024Boceto para pez. Acrílicos , linha de costurar y vestigios orgánicos.",
           "title": "Cuaderno 5",
           "year": null
         }
@@ -638,13 +638,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Collage I — 1998Papel fotográfico — Fabio Crisanti",
+        "pt": "Collage I — 1998Papel fotográfico — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "1998Papel fotográfico",
+          "title": "Collage I",
+          "year": null
+        },
+        "pt": {
+          "details": "1998Papel fotográfico",
+          "title": "Collage I",
+          "year": null
+        },
         "source": {
           "details": "1998Papel fotográfico",
           "title": "Collage I",
@@ -667,13 +675,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Collage II — 1998Papel fotográfico — Fabio Crisanti",
+        "pt": "Collage II — 1998Papel fotográfico — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "1998Papel fotográfico",
+          "title": "Collage II",
+          "year": null
+        },
+        "pt": {
+          "details": "1998Papel fotográfico",
+          "title": "Collage II",
+          "year": null
+        },
         "source": {
           "details": "1998Papel fotográfico",
           "title": "Collage II",
@@ -696,13 +712,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Collage III — 1999Papel fotográfico — Fabio Crisanti",
+        "pt": "Collage III — 1999Papel fotográfico — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "1999Papel fotográfico",
+          "title": "Collage III",
+          "year": null
+        },
+        "pt": {
+          "details": "1999Papel fotográfico",
+          "title": "Collage III",
+          "year": null
+        },
         "source": {
           "details": "1999Papel fotográfico",
           "title": "Collage III",
@@ -725,13 +749,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Huesos I — 2025Toma directa con teléfono. Collage e intervención digital. — Fabio Crisanti",
+        "pt": "Ossos I — 2025Captura direta com telefone. Colagem e intervenção digital. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2025Toma directa con teléfono. Collage e intervención digital.",
+          "title": "Huesos I",
+          "year": null
+        },
+        "pt": {
+          "details": "2025Captura direta com telefone. Colagem e intervenção digital.",
+          "title": "Ossos I",
+          "year": null
+        },
         "source": {
           "details": "2025Toma directa con teléfono. Collage e intervención digital.",
           "title": "Huesos I",
@@ -754,13 +786,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Bambú I — 2024Toma directa con teléfono. Intervención digital. — Fabio Crisanti",
+        "pt": "Bambú I — 2024Captura direta com telefone. Intervención digital. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2024Toma directa con teléfono. Intervención digital.",
+          "title": "Bambú I",
+          "year": null
+        },
+        "pt": {
+          "details": "2024Captura direta com telefone. Intervención digital.",
+          "title": "Bambú I",
+          "year": null
+        },
         "source": {
           "details": "2024Toma directa con teléfono. Intervención digital.",
           "title": "Bambú I",
@@ -783,13 +823,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Pan I — 2025Toma directa con teléfono. Collage e intervención digital. — Fabio Crisanti",
+        "pt": "Pan I — 2025Captura direta com telefone. Colagem e intervenção digital. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2025Toma directa con teléfono. Collage e intervención digital.",
+          "title": "Pan I",
+          "year": null
+        },
+        "pt": {
+          "details": "2025Captura direta com telefone. Colagem e intervenção digital.",
+          "title": "Pan I",
+          "year": null
+        },
         "source": {
           "details": "2025Toma directa con teléfono. Collage e intervención digital.",
           "title": "Pan I",
@@ -812,13 +860,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Huesos II — 2025Toma directa con teléfono. Collage e intervención digital. — Fabio Crisanti",
+        "pt": "Ossos II — 2025Captura direta com telefone. Colagem e intervenção digital. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2025Toma directa con teléfono. Collage e intervención digital.",
+          "title": "Huesos II",
+          "year": null
+        },
+        "pt": {
+          "details": "2025Captura direta com telefone. Colagem e intervenção digital.",
+          "title": "Ossos II",
+          "year": null
+        },
         "source": {
           "details": "2025Toma directa con teléfono. Collage e intervención digital.",
           "title": "Huesos II",
@@ -841,13 +897,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Bambú II — 2024Toma directa con teléfono. Collage e intervención digital. — Fabio Crisanti",
+        "pt": "Bambú II — 2024Captura direta com telefone. Colagem e intervenção digital. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2024Toma directa con teléfono. Collage e intervención digital.",
+          "title": "Bambú II",
+          "year": null
+        },
+        "pt": {
+          "details": "2024Captura direta com telefone. Colagem e intervenção digital.",
+          "title": "Bambú II",
+          "year": null
+        },
         "source": {
           "details": "2024Toma directa con teléfono. Collage e intervención digital.",
           "title": "Bambú II",
@@ -870,13 +934,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Huesos III — 2025Toma directa con teléfono. Collage e intervención digital. — Fabio Crisanti",
+        "pt": "Ossos III — 2025Captura direta com telefone. Colagem e intervenção digital. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2025Toma directa con teléfono. Collage e intervención digital.",
+          "title": "Huesos III",
+          "year": null
+        },
+        "pt": {
+          "details": "2025Captura direta com telefone. Colagem e intervenção digital.",
+          "title": "Ossos III",
+          "year": null
+        },
         "source": {
           "details": "2025Toma directa con teléfono. Collage e intervención digital.",
           "title": "Huesos III",
@@ -899,13 +971,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Bambú III — 2024Toma directa con teléfono. Collage e intervención digital. — Fabio Crisanti",
+        "pt": "Bambú III — 2024Captura direta com telefone. Colagem e intervenção digital. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2024Toma directa con teléfono. Collage e intervención digital.",
+          "title": "Bambú III",
+          "year": null
+        },
+        "pt": {
+          "details": "2024Captura direta com telefone. Colagem e intervenção digital.",
+          "title": "Bambú III",
+          "year": null
+        },
         "source": {
           "details": "2024Toma directa con teléfono. Collage e intervención digital.",
           "title": "Bambú III",
@@ -928,13 +1008,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Bambú IV — 2024Toma directa con teléfono. Collage e intervención digital. — Fabio Crisanti",
+        "pt": "Bambú IV — 2024Captura direta com telefone. Colagem e intervenção digital. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2024Toma directa con teléfono. Collage e intervención digital.",
+          "title": "Bambú IV",
+          "year": null
+        },
+        "pt": {
+          "details": "2024Captura direta com telefone. Colagem e intervenção digital.",
+          "title": "Bambú IV",
+          "year": null
+        },
         "source": {
           "details": "2024Toma directa con teléfono. Collage e intervención digital.",
           "title": "Bambú IV",
@@ -957,13 +1045,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Bambú V — 2024Toma directa con teléfono. Collage e intervención digital. — Fabio Crisanti",
+        "pt": "Bambú V — 2024Captura direta com telefone. Colagem e intervenção digital. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2024Toma directa con teléfono. Collage e intervención digital.",
+          "title": "Bambú V",
+          "year": null
+        },
+        "pt": {
+          "details": "2024Captura direta com telefone. Colagem e intervenção digital.",
+          "title": "Bambú V",
+          "year": null
+        },
         "source": {
           "details": "2024Toma directa con teléfono. Collage e intervención digital.",
           "title": "Bambú V",
@@ -986,13 +1082,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Bambú VI — 2024Toma directa con teléfono. Intervención digital. — Fabio Crisanti",
+        "pt": "Bambú VI — 2024Captura direta com telefone. Intervención digital. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2024Toma directa con teléfono. Intervención digital.",
+          "title": "Bambú VI",
+          "year": null
+        },
+        "pt": {
+          "details": "2024Captura direta com telefone. Intervención digital.",
+          "title": "Bambú VI",
+          "year": null
+        },
         "source": {
           "details": "2024Toma directa con teléfono. Intervención digital.",
           "title": "Bambú VI",
@@ -1015,13 +1119,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Mosaico I — 2025Toma directa con teléfono. Collage e intervención digital. — Fabio Crisanti",
+        "pt": "Mosaico I — 2025Captura direta com telefone. Colagem e intervenção digital. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2025Toma directa con teléfono. Collage e intervención digital.",
+          "title": "Mosaico I",
+          "year": null
+        },
+        "pt": {
+          "details": "2025Captura direta com telefone. Colagem e intervenção digital.",
+          "title": "Mosaico I",
+          "year": null
+        },
         "source": {
           "details": "2025Toma directa con teléfono. Collage e intervención digital.",
           "title": "Mosaico I",
@@ -1044,13 +1156,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Bambú VII — 2024Toma directa con teléfono. Intervención digital. — Fabio Crisanti",
+        "pt": "Bambú VII — 2024Captura direta com telefone. Intervención digital. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2024Toma directa con teléfono. Intervención digital.",
+          "title": "Bambú VII",
+          "year": null
+        },
+        "pt": {
+          "details": "2024Captura direta com telefone. Intervención digital.",
+          "title": "Bambú VII",
+          "year": null
+        },
         "source": {
           "details": "2024Toma directa con teléfono. Intervención digital.",
           "title": "Bambú VII",
@@ -1073,13 +1193,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Bambú VIII — 2024Toma directa con teléfono. Intervención digital. — Fabio Crisanti",
+        "pt": "Bambú VIII — 2024Captura direta com telefone. Intervención digital. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2024Toma directa con teléfono. Intervención digital.",
+          "title": "Bambú VIII",
+          "year": null
+        },
+        "pt": {
+          "details": "2024Captura direta com telefone. Intervención digital.",
+          "title": "Bambú VIII",
+          "year": null
+        },
         "source": {
           "details": "2024Toma directa con teléfono. Intervención digital.",
           "title": "Bambú VIII",
@@ -1102,13 +1230,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Bambú IX — 2024Toma directa con teléfono. Collage e intervención digital. — Fabio Crisanti",
+        "pt": "Bambú IX — 2024Captura direta com telefone. Colagem e intervenção digital. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2024Toma directa con teléfono. Collage e intervención digital.",
+          "title": "Bambú IX",
+          "year": null
+        },
+        "pt": {
+          "details": "2024Captura direta com telefone. Colagem e intervenção digital.",
+          "title": "Bambú IX",
+          "year": null
+        },
         "source": {
           "details": "2024Toma directa con teléfono. Collage e intervención digital.",
           "title": "Bambú IX",
@@ -1131,13 +1267,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Bambú X — 2024Toma directa con teléfono. Intervención digital. — Fabio Crisanti",
+        "pt": "Bambú X — 2024Captura direta com telefone. Intervención digital. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2024Toma directa con teléfono. Intervención digital.",
+          "title": "Bambú X",
+          "year": null
+        },
+        "pt": {
+          "details": "2024Captura direta com telefone. Intervención digital.",
+          "title": "Bambú X",
+          "year": null
+        },
         "source": {
           "details": "2024Toma directa con teléfono. Intervención digital.",
           "title": "Bambú X",
@@ -1160,15 +1304,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Emulsión 1 — 2025 — Fabio Crisanti",
+        "pt": "Emulsão 1 — 2025 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2025",
+          "title": "Emulsión 1",
+          "year": null
+        },
+        "pt": {
+          "details": "2025",
+          "title": "Emulsão 1",
+          "year": null
+        },
         "source": {
-          "details": "202502“Emulsión 2” 202503“Emulsión 3” 202504“Emulsión 4” 202505 “Emulsión 5” 2025",
+          "details": "2025",
           "title": "Emulsión 1",
           "year": null
         }
@@ -1189,14 +1341,26 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Emulsión 2 — 2025 — Fabio Crisanti",
+        "pt": "Emulsão 2 — 2025 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
-        "source": null
+        "es": {
+          "details": "2025",
+          "title": "Emulsión 2",
+          "year": null
+        },
+        "pt": {
+          "details": "2025",
+          "title": "Emulsão 2",
+          "year": null
+        },
+        "source": {
+          "details": "2025",
+          "title": "Emulsión 2",
+          "year": null
+        }
       },
       "classification": "atual",
       "filename": "02.jpg",
@@ -1214,14 +1378,26 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Emulsión 3 — 2025 — Fabio Crisanti",
+        "pt": "Emulsão 3 — 2025 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
-        "source": null
+        "es": {
+          "details": "2025",
+          "title": "Emulsión 3",
+          "year": null
+        },
+        "pt": {
+          "details": "2025",
+          "title": "Emulsão 3",
+          "year": null
+        },
+        "source": {
+          "details": "2025",
+          "title": "Emulsión 3",
+          "year": null
+        }
       },
       "classification": "atual",
       "filename": "03.jpg",
@@ -1239,14 +1415,26 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Emulsión 4 — 2025 — Fabio Crisanti",
+        "pt": "Emulsão 4 — 2025 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
-        "source": null
+        "es": {
+          "details": "2025",
+          "title": "Emulsión 4",
+          "year": null
+        },
+        "pt": {
+          "details": "2025",
+          "title": "Emulsão 4",
+          "year": null
+        },
+        "source": {
+          "details": "2025",
+          "title": "Emulsión 4",
+          "year": null
+        }
       },
       "classification": "atual",
       "filename": "04.jpg",
@@ -1264,14 +1452,26 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Emulsión 5 — 2025 — Fabio Crisanti",
+        "pt": "Emulsão 5 — 2025 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
-        "source": null
+        "es": {
+          "details": "2025",
+          "title": "Emulsión 5",
+          "year": null
+        },
+        "pt": {
+          "details": "2025",
+          "title": "Emulsão 5",
+          "year": null
+        },
+        "source": {
+          "details": "2025",
+          "title": "Emulsión 5",
+          "year": null
+        }
       },
       "classification": "atual",
       "filename": "05.jpg",
@@ -1289,8 +1489,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Gatos — imagen 00 — Fabio Crisanti",
+        "pt": "Gatos — imagem 00 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -1312,13 +1512,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Gatos I — 2026 — Toma directa con teléfono. — Fabio Crisanti",
+        "pt": "Gatos I — 2026 — Captura direta com telefone. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Toma directa con teléfono.",
+          "title": "Gatos I",
+          "year": "2026"
+        },
+        "pt": {
+          "details": "Captura direta com telefone.",
+          "title": "Gatos I",
+          "year": "2026"
+        },
         "source": {
           "details": "Toma directa teléfono.",
           "title": "Gatos I",
@@ -1339,13 +1547,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Gatos II — 2026 — Toma directa con teléfono. — Fabio Crisanti",
+        "pt": "Gatos II — 2026 — Captura direta com telefone. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Toma directa con teléfono.",
+          "title": "Gatos II",
+          "year": "2026"
+        },
+        "pt": {
+          "details": "Captura direta com telefone.",
+          "title": "Gatos II",
+          "year": "2026"
+        },
         "source": {
           "details": "Toma directa teléfono.",
           "title": "Gatos II",
@@ -1366,13 +1582,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Gatos III — 2026 — Toma directa con teléfono. — Fabio Crisanti",
+        "pt": "Gatos III — 2026 — Captura direta com telefone. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Toma directa con teléfono.",
+          "title": "Gatos III",
+          "year": "2026"
+        },
+        "pt": {
+          "details": "Captura direta com telefone.",
+          "title": "Gatos III",
+          "year": "2026"
+        },
         "source": {
           "details": "Toma directa teléfono.",
           "title": "Gatos III",
@@ -1393,13 +1617,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Gatos IV — 2026 — Toma directa con teléfono. — Fabio Crisanti",
+        "pt": "Gatos IV — 2026 — Captura direta com telefone. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Toma directa con teléfono.",
+          "title": "Gatos IV",
+          "year": "2026"
+        },
+        "pt": {
+          "details": "Captura direta com telefone.",
+          "title": "Gatos IV",
+          "year": "2026"
+        },
         "source": {
           "details": "Toma directa teléfono.",
           "title": "Gatos IV",
@@ -1420,13 +1652,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Gatos V — 2026 — Toma directa con teléfono. — Fabio Crisanti",
+        "pt": "Gatos V — 2026 — Captura direta com telefone. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Toma directa con teléfono.",
+          "title": "Gatos V",
+          "year": "2026"
+        },
+        "pt": {
+          "details": "Captura direta com telefone.",
+          "title": "Gatos V",
+          "year": "2026"
+        },
         "source": {
           "details": "Toma directa teléfono.",
           "title": "Gatos V",
@@ -1447,13 +1687,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Gatos VI — 2026 — Toma directa con teléfono. — Fabio Crisanti",
+        "pt": "Gatos VI — 2026 — Captura direta com telefone. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Toma directa con teléfono.",
+          "title": "Gatos VI",
+          "year": "2026"
+        },
+        "pt": {
+          "details": "Captura direta com telefone.",
+          "title": "Gatos VI",
+          "year": "2026"
+        },
         "source": {
           "details": "Toma directa teléfono.",
           "title": "Gatos VI",
@@ -1474,13 +1722,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Gatos VII — 2026 — Toma directa con teléfono. Collage digital. — Fabio Crisanti",
+        "pt": "Gatos VII — 2026 — Captura direta com telefone. Colagem digital. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Toma directa con teléfono. Collage digital.",
+          "title": "Gatos VII",
+          "year": "2026"
+        },
+        "pt": {
+          "details": "Captura direta com telefone. Colagem digital.",
+          "title": "Gatos VII",
+          "year": "2026"
+        },
         "source": {
           "details": "Toma directa teléfono. Collage digital.",
           "title": "Gatos VII",
@@ -1501,13 +1757,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Gatos VIII — 2026 — Toma directa con teléfono. Collage digital. — Fabio Crisanti",
+        "pt": "Gatos VIII — 2026 — Captura direta com telefone. Colagem digital. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Toma directa con teléfono. Collage digital.",
+          "title": "Gatos VIII",
+          "year": "2026"
+        },
+        "pt": {
+          "details": "Captura direta com telefone. Colagem digital.",
+          "title": "Gatos VIII",
+          "year": "2026"
+        },
         "source": {
           "details": "Toma directa teléfono. Collage digital.",
           "title": "Gatos VIII",
@@ -1528,13 +1792,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Coca Cola — 2002Bolígrafo sobre papel. — Fabio Crisanti",
+        "pt": "Coca Cola — 2002Caneta sobre papel. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2002Bolígrafo sobre papel.",
+          "title": "Coca Cola",
+          "year": null
+        },
+        "pt": {
+          "details": "2002Caneta sobre papel.",
+          "title": "Coca Cola",
+          "year": null
+        },
         "source": {
           "details": "2002Caneta sobra papel.",
           "title": "Coca Cola",
@@ -1557,13 +1829,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Exprimidor — 2002Bolígrafo sobre papel. — Fabio Crisanti",
+        "pt": "Exprimidor — 2002Caneta sobre papel. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2002Bolígrafo sobre papel.",
+          "title": "Exprimidor",
+          "year": null
+        },
+        "pt": {
+          "details": "2002Caneta sobre papel.",
+          "title": "Exprimidor",
+          "year": null
+        },
         "source": {
           "details": "2002Caneta sobre papel.",
           "title": "Exprimidor",
@@ -1586,13 +1866,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Rallador — 2002Bolígrafo sobre papel. — Fabio Crisanti",
+        "pt": "Rallador — 2002Caneta sobre papel. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2002Bolígrafo sobre papel.",
+          "title": "Rallador",
+          "year": null
+        },
+        "pt": {
+          "details": "2002Caneta sobre papel.",
+          "title": "Rallador",
+          "year": null
+        },
         "source": {
           "details": "2002Caneta sobra papel.",
           "title": "Rallador",
@@ -1615,13 +1903,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Caldera — 2002Bolígrafo sobre papel. — Fabio Crisanti",
+        "pt": "Caldera — 2002Caneta sobre papel. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2002Bolígrafo sobre papel.",
+          "title": "Caldera",
+          "year": null
+        },
+        "pt": {
+          "details": "2002Caneta sobre papel.",
+          "title": "Caldera",
+          "year": null
+        },
         "source": {
           "details": "2002Caneta sobra papel.",
           "title": "Caldera",
@@ -1644,13 +1940,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Salero — 2002Bolígrafo sobre papel. — Fabio Crisanti",
+        "pt": "Salero — 2002Caneta sobre papel. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2002Bolígrafo sobre papel.",
+          "title": "Salero",
+          "year": null
+        },
+        "pt": {
+          "details": "2002Caneta sobre papel.",
+          "title": "Salero",
+          "year": null
+        },
         "source": {
           "details": "2002Caneta sobra papel.",
           "title": "Salero",
@@ -1673,13 +1977,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Tetera — 2002Bolígrafo sobre papel. — Fabio Crisanti",
+        "pt": "Tetera — 2002Caneta sobre papel. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2002Bolígrafo sobre papel.",
+          "title": "Tetera",
+          "year": null
+        },
+        "pt": {
+          "details": "2002Caneta sobre papel.",
+          "title": "Tetera",
+          "year": null
+        },
         "source": {
           "details": "2002Caneta sobra papel.",
           "title": "Tetera",
@@ -1702,8 +2014,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "La Cocina — imagen 07 — Fabio Crisanti",
+        "pt": "La Cocina — imagem 07 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -1727,15 +2039,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "“Estudio I “ — 2025 — Cuarto — Fabio Crisanti",
+        "pt": "“Estudo I “ — 2025 — Cuarto — Fabio Crisanti"
       },
       "candidate_matches": [
         "images/galerias/Ensayos/Perspectiva/01.webp"
       ],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Cuarto",
+          "title": "“Estudio I “",
+          "year": "2025"
+        },
+        "pt": {
+          "details": "Cuarto",
+          "title": "“Estudo I “",
+          "year": "2025"
+        },
         "source": {
           "details": "Cuarto",
           "title": "“Estudio I “",
@@ -1756,15 +2076,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "“Estudio II “ — 2025 — Plano Contrapicado Iglesia de Garopaba — Fabio Crisanti",
+        "pt": "“Estudo II “ — 2025 — Plano Contrapicado Iglesia de Garopaba — Fabio Crisanti"
       },
       "candidate_matches": [
         "images/galerias/Ensayos/Perspectiva/03.jpg"
       ],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "Plano Contrapicado Iglesia de Garopaba",
+          "title": "“Estudio II “",
+          "year": "2025"
+        },
+        "pt": {
+          "details": "Plano Contrapicado Iglesia de Garopaba",
+          "title": "“Estudo II “",
+          "year": "2025"
+        },
         "source": {
           "details": "Plano Contrapicado Iglesia de Garopaba",
           "title": "“Estudio II “",
@@ -1785,15 +2113,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Estudio III — 2025Bola — Fabio Crisanti",
+        "pt": "Estudo III — 2025Bola — Fabio Crisanti"
       },
       "candidate_matches": [
         "images/galerias/Ensayos/Perspectiva/05.jpg"
       ],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2025Bola",
+          "title": "Estudio III",
+          "year": null
+        },
+        "pt": {
+          "details": "2025Bola",
+          "title": "Estudo III",
+          "year": null
+        },
         "source": {
           "details": "2025Bola",
           "title": "Estudio III",
@@ -1814,15 +2150,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Estudio IV — 2025La Cuadratura del Círculo en la Perspectiva \"Ojo de Pez\". — Fabio Crisanti",
+        "pt": "Estudo IV — 2025La Cuadratura del Círculo en la Perspectiva \"Ojo de Pez\". — Fabio Crisanti"
       },
       "candidate_matches": [
         "images/galerias/Ensayos/Perspectiva/06.jpg"
       ],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2025La Cuadratura del Círculo en la Perspectiva \"Ojo de Pez\".",
+          "title": "Estudio IV",
+          "year": null
+        },
+        "pt": {
+          "details": "2025La Cuadratura del Círculo en la Perspectiva \"Ojo de Pez\".",
+          "title": "Estudo IV",
+          "year": null
+        },
         "source": {
           "details": "2025La Cuadratura del Círculo en la Perspectiva \"Ojo de Pez\".",
           "title": "Estudio IV",
@@ -1843,15 +2187,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Estudio V — 2025Cubos. — Fabio Crisanti",
+        "pt": "Estudo V — 2025Cubos. — Fabio Crisanti"
       },
       "candidate_matches": [
         "images/galerias/Ensayos/Perspectiva/02.jpg"
       ],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2025Cubos.",
+          "title": "Estudio V",
+          "year": null
+        },
+        "pt": {
+          "details": "2025Cubos.",
+          "title": "Estudo V",
+          "year": null
+        },
         "source": {
           "details": "2025Cubos.",
           "title": "Estudio V",
@@ -1872,8 +2224,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Perspectiva — imagen 05 — Fabio Crisanti",
+        "pt": "Perspectiva — imagem 05 — Fabio Crisanti"
       },
       "candidate_matches": [
         "images/galerias/Ensayos/Perspectiva/04.jpg"
@@ -1897,13 +2249,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Primitivo I — 2019Bolígrafo sobre papel. — Fabio Crisanti",
+        "pt": "Primitivo I — 2019Caneta sobre papel. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2019Bolígrafo sobre papel.",
+          "title": "Primitivo I",
+          "year": null
+        },
+        "pt": {
+          "details": "2019Caneta sobre papel.",
+          "title": "Primitivo I",
+          "year": null
+        },
         "source": {
           "details": "2019Caneta sobre papel.",
           "title": "Primitivo I",
@@ -1926,13 +2286,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Primitivo II — 2019Bolígrafo sobre papel. — Fabio Crisanti",
+        "pt": "Primitivo II — 2019Caneta sobre papel. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2019Bolígrafo sobre papel.",
+          "title": "Primitivo II",
+          "year": null
+        },
+        "pt": {
+          "details": "2019Caneta sobre papel.",
+          "title": "Primitivo II",
+          "year": null
+        },
         "source": {
           "details": "2019Caneta sobre papel.",
           "title": "Primitivo II",
@@ -1955,13 +2323,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Primitivo III — 2019Bolígrafo sobre papel. — Fabio Crisanti",
+        "pt": "Primitivo III — 2019Caneta sobre papel. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2019Bolígrafo sobre papel.",
+          "title": "Primitivo III",
+          "year": null
+        },
+        "pt": {
+          "details": "2019Caneta sobre papel.",
+          "title": "Primitivo III",
+          "year": null
+        },
         "source": {
           "details": "2019Caneta sobre papel.",
           "title": "Primitivo Iii",
@@ -1984,13 +2360,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Primitivo IV — 2019Bolígrafo sobre papel. — Fabio Crisanti",
+        "pt": "Primitivo IV — 2019Caneta sobre papel. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2019Bolígrafo sobre papel.",
+          "title": "Primitivo IV",
+          "year": null
+        },
+        "pt": {
+          "details": "2019Caneta sobre papel.",
+          "title": "Primitivo IV",
+          "year": null
+        },
         "source": {
           "details": "2019Caneta sobre papel.",
           "title": "Primitivo IV",
@@ -2013,13 +2397,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Primitivo V — 2019Bolígrafo sobre papel. — Fabio Crisanti",
+        "pt": "Primitivo V — 2019Caneta sobre papel. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2019Bolígrafo sobre papel.",
+          "title": "Primitivo V",
+          "year": null
+        },
+        "pt": {
+          "details": "2019Caneta sobre papel.",
+          "title": "Primitivo V",
+          "year": null
+        },
         "source": {
           "details": "2019Caneta sobre papel.",
           "title": "Primitivo V",
@@ -2042,13 +2434,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Primitivo VI — 2019Bolígrafo sobre papel. — Fabio Crisanti",
+        "pt": "Primitivo VI — 2019Caneta sobre papel. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2019Bolígrafo sobre papel.",
+          "title": "Primitivo VI",
+          "year": null
+        },
+        "pt": {
+          "details": "2019Caneta sobre papel.",
+          "title": "Primitivo VI",
+          "year": null
+        },
         "source": {
           "details": "2019Caneta sobre papel.",
           "title": "Primitivo VI",
@@ -2071,13 +2471,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Primitivo VII — 2019Bolígrafo sobre papel. — Fabio Crisanti",
+        "pt": "Primitivo VII — 2019Caneta sobre papel. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2019Bolígrafo sobre papel.",
+          "title": "Primitivo VII",
+          "year": null
+        },
+        "pt": {
+          "details": "2019Caneta sobre papel.",
+          "title": "Primitivo VII",
+          "year": null
+        },
         "source": {
           "details": "2019Caneta sobre papel.",
           "title": "Primitivo VII",
@@ -2100,13 +2508,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Primitivo VIII — 2019Bolígrafo sobre papel. — Fabio Crisanti",
+        "pt": "Primitivo VIII — 2019Caneta sobre papel. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2019Bolígrafo sobre papel.",
+          "title": "Primitivo VIII",
+          "year": null
+        },
+        "pt": {
+          "details": "2019Caneta sobre papel.",
+          "title": "Primitivo VIII",
+          "year": null
+        },
         "source": {
           "details": "2019Caneta sobre papel.",
           "title": "Primitivo VIII",
@@ -2129,13 +2545,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Primitivo IX — 2019Bolígrafo sobre papel. — Fabio Crisanti",
+        "pt": "Primitivo IX — 2019Caneta sobre papel. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2019Bolígrafo sobre papel.",
+          "title": "Primitivo IX",
+          "year": null
+        },
+        "pt": {
+          "details": "2019Caneta sobre papel.",
+          "title": "Primitivo IX",
+          "year": null
+        },
         "source": {
           "details": "2019Caneta sobre papel.",
           "title": "Primitivo IX",
@@ -2158,13 +2582,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Primitivo X — 2019Bolígrafo sobre papel. — Fabio Crisanti",
+        "pt": "Primitivo X — 2019Caneta sobre papel. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2019Bolígrafo sobre papel.",
+          "title": "Primitivo X",
+          "year": null
+        },
+        "pt": {
+          "details": "2019Caneta sobre papel.",
+          "title": "Primitivo X",
+          "year": null
+        },
         "source": {
           "details": "2019Caneta sobre papel.",
           "title": "Primitivo X",
@@ -2187,13 +2619,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Primitivo XI — 2019Bolígrafo sobre papel. — Fabio Crisanti",
+        "pt": "Primitivo XI — 2019Caneta sobre papel. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2019Bolígrafo sobre papel.",
+          "title": "Primitivo XI",
+          "year": null
+        },
+        "pt": {
+          "details": "2019Caneta sobre papel.",
+          "title": "Primitivo XI",
+          "year": null
+        },
         "source": {
           "details": "2019Caneta sobre papel.",
           "title": "Primitivo XI",
@@ -2216,13 +2656,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Urubús I — 2024Toma directa con teléfono. — Fabio Crisanti",
+        "pt": "Urubús I — 2024Captura direta com telefone. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2024Toma directa con teléfono.",
+          "title": "Urubús I",
+          "year": null
+        },
+        "pt": {
+          "details": "2024Captura direta com telefone.",
+          "title": "Urubús I",
+          "year": null
+        },
         "source": {
           "details": "2024Toma directa teléfono.",
           "title": "Urubús I",
@@ -2246,13 +2694,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Urubús II — 20244Toma directa con teléfono. — Fabio Crisanti",
+        "pt": "Urubús II — 20244Captura direta com telefone. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "20244Toma directa con teléfono.",
+          "title": "Urubús II",
+          "year": null
+        },
+        "pt": {
+          "details": "20244Captura direta com telefone.",
+          "title": "Urubús II",
+          "year": null
+        },
         "source": {
           "details": "20244Toma directa teléfono.",
           "title": "Urubús II",
@@ -2275,13 +2731,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Urubús III — 2024Toma directa con teléfono y tratamiento digital. — Fabio Crisanti",
+        "pt": "Urubús III — 2024Captura direta com telefone y tratamento digital. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2024Toma directa con teléfono y tratamiento digital.",
+          "title": "Urubús III",
+          "year": null
+        },
+        "pt": {
+          "details": "2024Captura direta com telefone y tratamento digital.",
+          "title": "Urubús III",
+          "year": null
+        },
         "source": {
           "details": "2024Toma directa teléfono y tratamiento digital.",
           "title": "Urubús III",
@@ -2304,13 +2768,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Urubús IV — 2024Toma directa con teléfono y tratamiento digital. — Fabio Crisanti",
+        "pt": "Urubús IV — 2024Captura direta com telefone y tratamento digital. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2024Toma directa con teléfono y tratamiento digital.",
+          "title": "Urubús IV",
+          "year": null
+        },
+        "pt": {
+          "details": "2024Captura direta com telefone y tratamento digital.",
+          "title": "Urubús IV",
+          "year": null
+        },
         "source": {
           "details": "2024Toma directa teléfono y tratamiento digital.",
           "title": "Urubús IV",
@@ -2333,13 +2805,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Urubús V — 2024Toma directa con teléfono y tratamiento digital. — Fabio Crisanti",
+        "pt": "Urubús V — 2024Captura direta com telefone y tratamento digital. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2024Toma directa con teléfono y tratamiento digital.",
+          "title": "Urubús V",
+          "year": null
+        },
+        "pt": {
+          "details": "2024Captura direta com telefone y tratamento digital.",
+          "title": "Urubús V",
+          "year": null
+        },
         "source": {
           "details": "2024Toma directa teléfono y tratamiento digital.",
           "title": "Urubús V",
@@ -2362,13 +2842,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Urubús VI — 2024Toma directa con teléfono y tratamiento digital. — Fabio Crisanti",
+        "pt": "Urubús VI — 2024Captura direta com telefone y tratamento digital. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2024Toma directa con teléfono y tratamiento digital.",
+          "title": "Urubús VI",
+          "year": null
+        },
+        "pt": {
+          "details": "2024Captura direta com telefone y tratamento digital.",
+          "title": "Urubús VI",
+          "year": null
+        },
         "source": {
           "details": "2024Toma directa teléfono y tratamiento digital.",
           "title": "Urubús VI",
@@ -2391,13 +2879,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Ideografía China I — Fabio Crisanti",
+        "pt": "Ideografia Chinesa I — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Ideografía China I",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Ideografia Chinesa I",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Ideografía China I",
@@ -2420,13 +2916,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Ideografía China II — Fabio Crisanti",
+        "pt": "Ideografia Chinesa II — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Ideografía China II",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Ideografia Chinesa II",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Ideografía China II",
@@ -2449,13 +2953,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Urubús VII — 2024Toma directa con teléfono y collage digital. — Fabio Crisanti",
+        "pt": "Urubús VII — 2024Captura direta com telefone y colagem digital. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2024Toma directa con teléfono y collage digital.",
+          "title": "Urubús VII",
+          "year": null
+        },
+        "pt": {
+          "details": "2024Captura direta com telefone y colagem digital.",
+          "title": "Urubús VII",
+          "year": null
+        },
         "source": {
           "details": "2024Toma directa teléfono y collage digital.",
           "title": "Urubús VII",
@@ -2478,13 +2990,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Urubús VIII — 2024Toma directa con teléfono y collage digital. — Fabio Crisanti",
+        "pt": "Urubús VIII — 2024Captura direta com telefone y colagem digital. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2024Toma directa con teléfono y collage digital.",
+          "title": "Urubús VIII",
+          "year": null
+        },
+        "pt": {
+          "details": "2024Captura direta com telefone y colagem digital.",
+          "title": "Urubús VIII",
+          "year": null
+        },
         "source": {
           "details": "2024Toma directa teléfono y collage digital.",
           "title": "Urubús VIII",
@@ -2507,13 +3027,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Urubús IX — 2024Toma directa con teléfono y collage digital. — Fabio Crisanti",
+        "pt": "Urubús IX — 2024Captura direta com telefone y colagem digital. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2024Toma directa con teléfono y collage digital.",
+          "title": "Urubús IX",
+          "year": null
+        },
+        "pt": {
+          "details": "2024Captura direta com telefone y colagem digital.",
+          "title": "Urubús IX",
+          "year": null
+        },
         "source": {
           "details": "2024Toma directa teléfono y collage digital.",
           "title": "Urubús IX",
@@ -2536,13 +3064,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Urubús X — 2024Toma directa con teléfono y collage digital. — Fabio Crisanti",
+        "pt": "Urubús X — 2024Captura direta com telefone y colagem digital. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2024Toma directa con teléfono y collage digital.",
+          "title": "Urubús X",
+          "year": null
+        },
+        "pt": {
+          "details": "2024Captura direta com telefone y colagem digital.",
+          "title": "Urubús X",
+          "year": null
+        },
         "source": {
           "details": "2024Toma directa teléfono y collage digital.",
           "title": "Urubús X",
@@ -2565,13 +3101,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Urubús XI — 2024Toma directa con teléfono y tratamiento digital. — Fabio Crisanti",
+        "pt": "Urubús XI — 2024Captura direta com telefone y tratamento digital. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2024Toma directa con teléfono y tratamiento digital.",
+          "title": "Urubús XI",
+          "year": null
+        },
+        "pt": {
+          "details": "2024Captura direta com telefone y tratamento digital.",
+          "title": "Urubús XI",
+          "year": null
+        },
         "source": {
           "details": "2024Toma directa teléfono y tratamiento digital.",
           "title": "Urubús XI",
@@ -2594,13 +3138,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Urubús XII — 2024Toma directa con teléfono y tratamiento digital. — Fabio Crisanti",
+        "pt": "Urubús XII — 2024Captura direta com telefone y tratamento digital. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2024Toma directa con teléfono y tratamiento digital.",
+          "title": "Urubús XII",
+          "year": null
+        },
+        "pt": {
+          "details": "2024Captura direta com telefone y tratamento digital.",
+          "title": "Urubús XII",
+          "year": null
+        },
         "source": {
           "details": "2024Toma directa teléfono y tratamiento digital.",
           "title": "Urubús XII",
@@ -2623,13 +3175,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Urubús XIII — 2024Toma directa con teléfono y tratamiento digital. — Fabio Crisanti",
+        "pt": "Urubús XIII — 2024Captura direta com telefone y tratamento digital. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2024Toma directa con teléfono y tratamiento digital.",
+          "title": "Urubús XIII",
+          "year": null
+        },
+        "pt": {
+          "details": "2024Captura direta com telefone y tratamento digital.",
+          "title": "Urubús XIII",
+          "year": null
+        },
         "source": {
           "details": "2024Toma directa teléfono y tratamiento digital.",
           "title": "Urubús XIII",
@@ -2652,13 +3212,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Urubús XIV — 2024Toma directa con teléfono y collage digital. — Fabio Crisanti",
+        "pt": "Urubús XIV — 2024Captura direta com telefone y colagem digital. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "2024Toma directa con teléfono y collage digital.",
+          "title": "Urubús XIV",
+          "year": null
+        },
+        "pt": {
+          "details": "2024Captura direta com telefone y colagem digital.",
+          "title": "Urubús XIV",
+          "year": null
+        },
         "source": {
           "details": "2024Toma directa teléfono y collage digital.",
           "title": "Urubús XIV",
@@ -2774,7 +3342,7 @@
         "es": null,
         "pt": null,
         "source": {
-          "details": "Medidas: 2,00 m x 1,10 m (Total: 11,00 m)Materiales:Tinta ChinaSeda. Papel Craft. Papel Batik. Papeles Metalizados: Cobre, Oro, Perla. BambúAcrílicosCartapestaLienzo CrudoHilos de Algodón",
+          "details": "Medidas: 2,00 m x 1,10 m (Total: 11,00 m)Materiales:Tinta ChinaSeda. Papel Craft. Papel Batik. Papeles Metalizados: Cobre, Oro, Perla. Bambú. AcrílicosCartapestaLienzo CrudoHilos de Algodón",
           "title": "ADDIS ABABA",
           "year": "2011"
         }
@@ -3035,7 +3603,7 @@
         "es": null,
         "pt": null,
         "source": {
-          "details": "1.80m x 1.30m (Total 14m)Materiales:BambúRaso. Algodón. Papel KraftAcrílicos. Tinta ChinaPoliesterSemente de AraucariaCola Vinílica. Papelão ParanáVidrioAcero. Tecido de Renda Foto: Mitsue Yanai",
+          "details": "1.80m x 1.30m (Total 14m)Materiales:BambúRaso. Algodón. Papel Kraft. Acrílicos. Tinta ChinaPoliesterSemente de AraucariaCola Vinílica. Papelão ParanáVidrioAcero. Tecido de Renda Foto: Mitsue Yanai",
           "title": "Invierno II",
           "year": "2023"
         }
@@ -3470,7 +4038,7 @@
         "es": null,
         "pt": null,
         "source": {
-          "details": "2.30m x 1.20m (Total: 17m) Materiales:FieltroCola. Papel de sedaAcrílicos. Papel kraft. Algodón. Bambú. TintaCemento de contacto",
+          "details": "2.30m x 1.20m (Total: 17m) Materiales:FieltroCola. Papel de seda. Acrílicos. Papel kraft. Algodón. Bambú. TintaCemento de contacto",
           "title": "Invierno III",
           "year": "2024"
         }
@@ -4742,7 +5310,7 @@
         "es": null,
         "pt": null,
         "source": {
-          "details": "Medidas: 1,70 mx 1,00 m (Total: 9,70 m)Materiales:BambúSaronPoliester. Papel. Papel SedaHilos Encerados. AlgodónAcrílicos. Tinta China",
+          "details": "Medidas: 1,70 mx 1,00 m (Total: 9,70 m)Materiales:BambúSaronPoliester. Papel. Papel SedaHilos Encerados. Algodón. Acrílicos. Tinta China",
           "title": "SARON2009",
           "year": null
         }
@@ -4800,7 +5368,7 @@
         "es": null,
         "pt": null,
         "source": {
-          "details": "Medidas: 1,87 m x 1,35 m (Total: 8,87 m)Materiales:SedaTelas de resinaHilosCartulinaAcrílicosAlgodon. Bambú. Papel Seda. Tinta ChinaHilos Encerados",
+          "details": "Medidas: 1,87 m x 1,35 m (Total: 8,87 m)Materiales:SedaTelas de resinaHilosCartulina. AcrílicosAlgodon. Bambú. Papel Seda. Tinta ChinaHilos Encerados",
           "title": "Sol",
           "year": "2009"
         }
@@ -4829,7 +5397,7 @@
         "es": null,
         "pt": null,
         "source": {
-          "details": "Medidas: 1,90 m X 1,10 m (Total: 12 m)Materiales:BambúTela de resina. PapelAcrílicoTelaCartulinaAlgodon. Papel Encerado",
+          "details": "Medidas: 1,90 m X 1,10 m (Total: 12 m)Materiales:BambúTela de resina. Papel. AcrílicoTelaCartulinaAlgodon. Papel Encerado",
           "title": "PEZ II",
           "year": "2009"
         }
@@ -4858,7 +5426,7 @@
         "es": null,
         "pt": null,
         "source": {
-          "details": "Medidas: 2,30 mx 1,65 m (Total: 9,00 m)Materiales:Bambú. Papel kraftTelas de resinaSeda. Tinta ChinaAcrílicos. Papel Batik. Papel de Seda",
+          "details": "Medidas: 2,30 mx 1,65 m (Total: 9,00 m)Materiales:Bambú. Papel kraftTelas de resinaSeda. Tinta China. Acrílicos. Papel Batik. Papel de Seda",
           "title": "ÍLIYMA",
           "year": "2009"
         }
@@ -4887,7 +5455,7 @@
         "es": null,
         "pt": null,
         "source": {
-          "details": "Medidas: 1,90 mx 1,40 m (Total: 9,00 m)Materiales:Bambú. Papel kraftTelas de resinaTerciopeloSeda salvajeSeda. Tinta ChinaAcrílicos. Papel Batik",
+          "details": "Medidas: 1,90 mx 1,40 m (Total: 9,00 m)Materiales:Bambú. Papel kraftTelas de resinaTerciopeloSeda salvajeSeda. Tinta China. Acrílicos. Papel Batik",
           "title": "TOTO",
           "year": "2009"
         }
@@ -5660,7 +6228,7 @@
         "es": null,
         "pt": null,
         "source": {
-          "details": "19940.15m x 0.20mEmulsión fotográfica sobre lienzo imprimadoAcrílicos",
+          "details": "19940.15m x 0.20mEmulsión fotográfica sobre lienzo imprimado. Acrílicos",
           "title": "Luz Líquida X",
           "year": null
         }
@@ -7038,7 +7606,7 @@
         "es": null,
         "pt": null,
         "source": {
-          "details": "0.10m x 0.10m x 0.20mMateriales:CartónShifónAceroAcrílicos. Bambú. AlgodónPoliester",
+          "details": "0.10m x 0.10m x 0.20mMateriales:CartónShifónAcero. Acrílicos. Bambú. AlgodónPoliester",
           "title": "Memory 2018",
           "year": null
         }
@@ -7241,7 +7809,7 @@
         "es": null,
         "pt": null,
         "source": {
-          "details": "Marioneta para TVBuenos Aires 1998Altura: 0.40mMateriales:ParsecAlambrePielCueroTelasAerógrafoAcrílicos Foto: Guadalupe Miles",
+          "details": "Marioneta para TVBuenos Aires 1998Altura: 0.40mMateriales:ParsecAlambrePielCueroTelasAerógrafo. Acrílicos Foto: Guadalupe Miles",
           "title": "Cósimo",
           "year": null
         }
@@ -8060,7 +8628,7 @@
         "es": null,
         "pt": null,
         "source": {
-          "details": "1,40m x 1,00m x 0,60mMateriales: Lana NaturalAcero. BambúCartapestaAcrílicosParsecGaza",
+          "details": "1,40m x 1,00m x 0,60mMateriales: Lana NaturalAcero. BambúCartapesta. AcrílicosParsecGaza",
           "title": "Ciervo",
           "year": "2013"
         }
@@ -10150,7 +10718,7 @@
         "es": null,
         "pt": null,
         "source": {
-          "details": "Materiales:Cerámica. AlgodónAcrílicosImpresión digital",
+          "details": "Materiales:Cerámica. Algodón. AcrílicosImpresión digital",
           "title": "Maquete I",
           "year": null
         }
@@ -10531,7 +11099,7 @@
         "es": null,
         "pt": null,
         "source": {
-          "details": "0.80m x 0.80m x 0.05mMateriales:MDFCartón ParanáAceroCuerinaAcrílicos. Papel de sedaEnduidoLaca",
+          "details": "0.80m x 0.80m x 0.05mMateriales:MDFCartón ParanáAceroCuerina. Acrílicos. Papel de sedaEnduidoLaca",
           "title": "Maquete II",
           "year": null
         }
@@ -10561,7 +11129,7 @@
         "es": null,
         "pt": null,
         "source": {
-          "details": "0.80m x 0.80m x 0.05mMateriales:MDFCartón ParanáAceroCuerinaAcrílicos. Papel de sedaEnduidoLaca",
+          "details": "0.80m x 0.80m x 0.05mMateriales:MDFCartón ParanáAceroCuerina. Acrílicos. Papel de sedaEnduidoLaca",
           "title": "Maquete II",
           "year": null
         }
@@ -10637,13 +11205,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Vista general de la seria — Fabio Crisanti",
+        "pt": "Vista general de la seria — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Vista general de la seria",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Vista general de la seria",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Vista general de la seria",
@@ -10666,15 +11242,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda I — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Collage — Fabio Crisanti",
+        "pt": "Seda I — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Colagem — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
+          "title": "Seda I",
+          "year": "2021"
+        },
+        "pt": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Colagem",
+          "title": "Seda I",
+          "year": "2021"
+        },
         "source": {
-          "details": "0.30m x 0.50mAcrílico sobre papel de seda. Collage",
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
           "title": "Seda I",
           "year": "2021"
         }
@@ -10695,15 +11279,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda II — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Collage — Fabio Crisanti",
+        "pt": "Seda II — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Colagem — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
+          "title": "Seda II",
+          "year": "2021"
+        },
+        "pt": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Colagem",
+          "title": "Seda II",
+          "year": "2021"
+        },
         "source": {
-          "details": "0.30m x 0.50mAcrílico sobre papel de seda. Collage",
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
           "title": "Seda II",
           "year": "2021"
         }
@@ -10724,15 +11316,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda III — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda — Fabio Crisanti",
+        "pt": "Seda III — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda",
+          "title": "Seda III",
+          "year": "2021"
+        },
+        "pt": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda",
+          "title": "Seda III",
+          "year": "2021"
+        },
         "source": {
-          "details": "0.30m x 0.50mAcrílico sobre papel de seda",
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda",
           "title": "Seda III",
           "year": "2021"
         }
@@ -10753,15 +11353,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda IV — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Collage — Fabio Crisanti",
+        "pt": "Seda IV — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Colagem — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
+          "title": "Seda IV",
+          "year": "2021"
+        },
+        "pt": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Colagem",
+          "title": "Seda IV",
+          "year": "2021"
+        },
         "source": {
-          "details": "0.30m x 0.50mAcrílico sobre papel de seda. Collage",
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
           "title": "Seda IV",
           "year": "2021"
         }
@@ -10782,15 +11390,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda V — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Collage — Fabio Crisanti",
+        "pt": "Seda V — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Colagem — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
+          "title": "Seda V",
+          "year": "2021"
+        },
+        "pt": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Colagem",
+          "title": "Seda V",
+          "year": "2021"
+        },
         "source": {
-          "details": "0.30m x 0.50mAcrílico sobre papel de seda. Collage",
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
           "title": "Seda V",
           "year": "2021"
         }
@@ -10811,15 +11427,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda VI — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda — Fabio Crisanti",
+        "pt": "Seda VI — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda",
+          "title": "Seda VI",
+          "year": "2021"
+        },
+        "pt": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda",
+          "title": "Seda VI",
+          "year": "2021"
+        },
         "source": {
-          "details": "0.30m x 0.50mAcrílico sobre papel de seda",
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda",
           "title": "Seda VI",
           "year": "2021"
         }
@@ -10840,15 +11464,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda VII — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Collage — Fabio Crisanti",
+        "pt": "Seda VII — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Colagem — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
+          "title": "Seda VII",
+          "year": "2021"
+        },
+        "pt": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Colagem",
+          "title": "Seda VII",
+          "year": "2021"
+        },
         "source": {
-          "details": "0.30m x 0.50mAcrílico sobre papel de seda. Collage",
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
           "title": "Seda VII",
           "year": "2021"
         }
@@ -10869,15 +11501,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda VIII — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Collage — Fabio Crisanti",
+        "pt": "Seda VIII — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Colagem — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
+          "title": "Seda VIII",
+          "year": "2021"
+        },
+        "pt": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Colagem",
+          "title": "Seda VIII",
+          "year": "2021"
+        },
         "source": {
-          "details": "0.30m x 0.50mAcrílico sobre papel de seda. Collage",
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
           "title": "Seda VIII",
           "year": "2021"
         }
@@ -10898,15 +11538,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda IX — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Collage — Fabio Crisanti",
+        "pt": "Seda IX — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Colagem — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
+          "title": "Seda IX",
+          "year": "2021"
+        },
+        "pt": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Colagem",
+          "title": "Seda IX",
+          "year": "2021"
+        },
         "source": {
-          "details": "0.30m x 0.50mAcrílico sobre papel de seda. Collage",
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
           "title": "Seda IX",
           "year": "2021"
         }
@@ -10927,15 +11575,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda X — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Collage. Sello — Fabio Crisanti",
+        "pt": "Seda X — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Colagem. Carimbo — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage. Sello",
+          "title": "Seda X",
+          "year": "2021"
+        },
+        "pt": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Colagem. Carimbo",
+          "title": "Seda X",
+          "year": "2021"
+        },
         "source": {
-          "details": "0.30m x 0.50mAcrílico sobre papel de seda. Collage. Carimbo",
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage. Carimbo",
           "title": "Seda X",
           "year": "2021"
         }
@@ -10956,15 +11612,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda XI — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Collage. Sello — Fabio Crisanti",
+        "pt": "Seda XI — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Colagem. Carimbo — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage. Sello",
+          "title": "Seda XI",
+          "year": "2021"
+        },
+        "pt": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Colagem. Carimbo",
+          "title": "Seda XI",
+          "year": "2021"
+        },
         "source": {
-          "details": "0.30m x 0.50mAcrílico sobre papel de seda. Collage. Carimbo",
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage. Carimbo",
           "title": "Seda XI",
           "year": "2021"
         }
@@ -10985,15 +11649,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda XII — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. CollageCARIMBO — Fabio Crisanti",
+        "pt": "Seda XII — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. ColagemCARIMBO — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. CollageCARIMBO",
+          "title": "Seda XII",
+          "year": "2021"
+        },
+        "pt": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. ColagemCARIMBO",
+          "title": "Seda XII",
+          "year": "2021"
+        },
         "source": {
-          "details": "0.30m x 0.50mAcrílico sobre papel de seda. CollageCARIMBO",
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. CollageCARIMBO",
           "title": "Seda XII",
           "year": "2021"
         }
@@ -11014,15 +11686,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda XIII — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Collage — Fabio Crisanti",
+        "pt": "Seda XIII — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Colagem — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
+          "title": "Seda XIII",
+          "year": "2021"
+        },
+        "pt": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Colagem",
+          "title": "Seda XIII",
+          "year": "2021"
+        },
         "source": {
-          "details": "0.30m x 0.50mAcrílico sobre papel de seda. Collage",
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
           "title": "Seda XIII",
           "year": "2021"
         }
@@ -11043,15 +11723,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda XIV — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda — Fabio Crisanti",
+        "pt": "Seda XIV — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda",
+          "title": "Seda XIV",
+          "year": "2021"
+        },
+        "pt": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda",
+          "title": "Seda XIV",
+          "year": "2021"
+        },
         "source": {
-          "details": "0.30m x 0.50mAcrílico sobre papel de seda",
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda",
           "title": "Seda XIV",
           "year": "2021"
         }
@@ -11072,15 +11760,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda XV — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Collage — Fabio Crisanti",
+        "pt": "Seda XV — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Colagem — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
+          "title": "Seda XV",
+          "year": "2021"
+        },
+        "pt": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Colagem",
+          "title": "Seda XV",
+          "year": "2021"
+        },
         "source": {
-          "details": "0.30m x 0.50mAcrílico sobre papel de seda. Collage",
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
           "title": "Seda XV",
           "year": "2021"
         }
@@ -11101,15 +11797,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda XVI — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Collage — Fabio Crisanti",
+        "pt": "Seda XVI — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Colagem — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
+          "title": "Seda XVI",
+          "year": "2021"
+        },
+        "pt": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Colagem",
+          "title": "Seda XVI",
+          "year": "2021"
+        },
         "source": {
-          "details": "0.30m x 0.50mAcrílico sobre papel de seda. Collage",
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
           "title": "Seda XVI",
           "year": "2021"
         }
@@ -11130,15 +11834,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda XVII — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Collage. Sello — Fabio Crisanti",
+        "pt": "Seda XVII — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Colagem. Carimbo — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage. Sello",
+          "title": "Seda XVII",
+          "year": "2021"
+        },
+        "pt": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Colagem. Carimbo",
+          "title": "Seda XVII",
+          "year": "2021"
+        },
         "source": {
-          "details": "0.30m x 0.50mAcrílico sobre papel de seda. Collage. Carimbo",
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage. Carimbo",
           "title": "Seda XVII",
           "year": "2021"
         }
@@ -11159,15 +11871,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda XVIII — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Collage. Sello — Fabio Crisanti",
+        "pt": "Seda XVIII — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Colagem. Carimbo — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage. Sello",
+          "title": "Seda XVIII",
+          "year": "2021"
+        },
+        "pt": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Colagem. Carimbo",
+          "title": "Seda XVIII",
+          "year": "2021"
+        },
         "source": {
-          "details": "0.30m x 0.50mAcrílico sobre papel de seda. Collage. Carimbo",
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage. Carimbo",
           "title": "Seda XVIII",
           "year": "2021"
         }
@@ -11188,15 +11908,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda XIX — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Collage — Fabio Crisanti",
+        "pt": "Seda XIX — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Colagem — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
+          "title": "Seda XIX",
+          "year": "2021"
+        },
+        "pt": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Colagem",
+          "title": "Seda XIX",
+          "year": "2021"
+        },
         "source": {
-          "details": "0.30m x 0.50mAcrílico sobre papel de seda. Collage",
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
           "title": "Seda XIX",
           "year": "2021"
         }
@@ -11217,15 +11945,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda XX — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Collage — Fabio Crisanti",
+        "pt": "Seda XX — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Colagem — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
+          "title": "Seda XX",
+          "year": "2021"
+        },
+        "pt": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Colagem",
+          "title": "Seda XX",
+          "year": "2021"
+        },
         "source": {
-          "details": "0.30m x 0.50mAcrílico sobre papel de seda. Collage",
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
           "title": "Seda XX",
           "year": "2021"
         }
@@ -11246,15 +11982,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda XXI — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Collage — Fabio Crisanti",
+        "pt": "Seda XXI — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Colagem — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
+          "title": "Seda XXI",
+          "year": "2021"
+        },
+        "pt": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Colagem",
+          "title": "Seda XXI",
+          "year": "2021"
+        },
         "source": {
-          "details": "0.30m x 0.50mAcrílico sobre papel de seda. Collage",
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
           "title": "Seda XXI",
           "year": "2021"
         }
@@ -11275,15 +12019,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda XXII — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Collage — Fabio Crisanti",
+        "pt": "Seda XXII — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Colagem — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
+          "title": "Seda XXII",
+          "year": "2021"
+        },
+        "pt": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Colagem",
+          "title": "Seda XXII",
+          "year": "2021"
+        },
         "source": {
-          "details": "0.30m x 0.50mAcrílico sobre papel de seda. Collage",
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
           "title": "Seda XXII",
           "year": "2021"
         }
@@ -11304,15 +12056,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda XXIII — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Collage. Sello — Fabio Crisanti",
+        "pt": "Seda XXIII — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Colagem. Carimbo — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage. Sello",
+          "title": "Seda XXIII",
+          "year": "2021"
+        },
+        "pt": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Colagem. Carimbo",
+          "title": "Seda XXIII",
+          "year": "2021"
+        },
         "source": {
-          "details": "0.30m x 0.50mAcrílico sobre papel de seda. Collage. Carimbo",
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage. Carimbo",
           "title": "Seda XXIII",
           "year": "2021"
         }
@@ -11333,15 +12093,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda XXIV — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Collage — Fabio Crisanti",
+        "pt": "Seda XXIV — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Colagem — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
+          "title": "Seda XXIV",
+          "year": "2021"
+        },
+        "pt": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Colagem",
+          "title": "Seda XXIV",
+          "year": "2021"
+        },
         "source": {
-          "details": "0.30m x 0.50mAcrílico sobre papel de seda. Collage",
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
           "title": "Seda XXIV",
           "year": "2021"
         }
@@ -11362,15 +12130,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda XXV — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Collage 2702 \"Seda XXVI\"20210.30m x 0.50m. Acrílico sobre papel de seda. Collage. Sello — Fabio Crisanti",
+        "pt": "Seda XXV — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Colagem 2702 \"Seda XXVI\"20210.30m x 0.50m. Acrílico sobre papel de seda. Colagem. Carimbo — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage 2702 \"Seda XXVI\"20210.30m x 0.50m. Acrílico sobre papel de seda. Collage. Sello",
+          "title": "Seda XXV",
+          "year": "2021"
+        },
+        "pt": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Colagem 2702 \"Seda XXVI\"20210.30m x 0.50m. Acrílico sobre papel de seda. Colagem. Carimbo",
+          "title": "Seda XXV",
+          "year": "2021"
+        },
         "source": {
-          "details": "0.30m x 0.50mAcrílico sobre papel de seda. Collage 2702 \"Seda XXVI\"20210.30m x 0.50mAcrílico sobre papel de seda. Collage. Carimbo",
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage 2702 \"Seda XXVI\"20210.30m x 0.50m. Acrílico sobre papel de seda. Collage. Carimbo",
           "title": "Seda XXV",
           "year": "2021"
         }
@@ -11391,14 +12167,26 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda XXVI — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Collage. Sello. — Fabio Crisanti",
+        "pt": "Seda XXVI — 2021 — 0,30 m × 0,50 m. Acrílico sobre papel de seda. Colagem. Carimbo. — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
-        "source": null
+        "es": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage. Sello.",
+          "title": "Seda XXVI",
+          "year": "2021"
+        },
+        "pt": {
+          "details": "0,30 m × 0,50 m. Acrílico sobre papel de seda. Colagem. Carimbo.",
+          "title": "Seda XXVI",
+          "year": "2021"
+        },
+        "source": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage. Carimbo.",
+          "title": "Seda XXVI",
+          "year": "2021"
+        }
       },
       "classification": "atual",
       "filename": "27.jpg",
@@ -11416,15 +12204,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda XXVII — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Collage. Sello — Fabio Crisanti",
+        "pt": "Seda XXVII — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Colagem. Carimbo — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage. Sello",
+          "title": "Seda XXVII",
+          "year": "2021"
+        },
+        "pt": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Colagem. Carimbo",
+          "title": "Seda XXVII",
+          "year": "2021"
+        },
         "source": {
-          "details": "0.30m x 0.50mAcrílico sobre papel de seda. Collage. Carimbo",
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage. Carimbo",
           "title": "Seda XXVII",
           "year": "2021"
         }
@@ -11445,15 +12241,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda XXVIII — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Collage — Fabio Crisanti",
+        "pt": "Seda XXVIII — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Colagem — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
+          "title": "Seda XXVIII",
+          "year": "2021"
+        },
+        "pt": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Colagem",
+          "title": "Seda XXVIII",
+          "year": "2021"
+        },
         "source": {
-          "details": "0.30m x 0.50mAcrílico sobre papel de seda. Collage",
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
           "title": "Seda XXVIII",
           "year": "2021"
         }
@@ -11474,15 +12278,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda XXIX — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Collage — Fabio Crisanti",
+        "pt": "Seda XXIX — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Colagem — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
+          "title": "Seda XXIX",
+          "year": "2021"
+        },
+        "pt": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Colagem",
+          "title": "Seda XXIX",
+          "year": "2021"
+        },
         "source": {
-          "details": "0.30m x 0.50mAcrílico sobre papel de seda. Collage",
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
           "title": "Seda XXIX",
           "year": "2021"
         }
@@ -11503,15 +12315,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda XXX — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Collage — Fabio Crisanti",
+        "pt": "Seda XXX — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Colagem — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
+          "title": "Seda XXX",
+          "year": "2021"
+        },
+        "pt": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Colagem",
+          "title": "Seda XXX",
+          "year": "2021"
+        },
         "source": {
-          "details": "0.30m x 0.50mAcrílico sobre papel de seda. Collage",
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
           "title": "Seda XXX",
           "year": "2021"
         }
@@ -11532,15 +12352,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda XXXI — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Collage — Fabio Crisanti",
+        "pt": "Seda XXXI — 2021 — 0.30m x 0.50m. Acrílico sobre papel de seda. Colagem — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
+          "title": "Seda XXXI",
+          "year": "2021"
+        },
+        "pt": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Colagem",
+          "title": "Seda XXXI",
+          "year": "2021"
+        },
         "source": {
-          "details": "0.30m x 0.50mAcrílico sobre papel de seda. Collage",
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda. Collage",
           "title": "Seda XXXI",
           "year": "2021"
         }
@@ -11561,8 +12389,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "SEDA 2024 — imagen 00 — Fabio Crisanti",
+        "pt": "SEDA 2024 — imagem 00 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -11584,15 +12412,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda 2024 I — 0.50m x 0.38m. Acrílico sobre papel de seda. Bambú. Collage — Fabio Crisanti",
+        "pt": "Seda 2024 I — 0.50m x 0.38m. Acrílico sobre papel de seda. Bambu. Colagem — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.50m x 0.38m. Acrílico sobre papel de seda. Bambú. Collage",
+          "title": "Seda 2024 I",
+          "year": null
+        },
+        "pt": {
+          "details": "0.50m x 0.38m. Acrílico sobre papel de seda. Bambu. Colagem",
+          "title": "Seda 2024 I",
+          "year": null
+        },
         "source": {
-          "details": "0.50m x 0.38mAcrílico sobre papel de seda. Bambú. Collage",
+          "details": "0.50m x 0.38m. Acrílico sobre papel de seda. Bambú. Collage",
           "title": "Seda 2024 I",
           "year": null
         }
@@ -11611,15 +12447,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda 2024 II — 0.40m x 0.30m. Acrílico sobre papel de seda. Bambú. Collage — Fabio Crisanti",
+        "pt": "Seda 2024 II — 0.40m x 0.30m. Acrílico sobre papel de seda. Bambu. Colagem — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.40m x 0.30m. Acrílico sobre papel de seda. Bambú. Collage",
+          "title": "Seda 2024 II",
+          "year": null
+        },
+        "pt": {
+          "details": "0.40m x 0.30m. Acrílico sobre papel de seda. Bambu. Colagem",
+          "title": "Seda 2024 II",
+          "year": null
+        },
         "source": {
-          "details": "0.40m x 0.30mAcrílico sobre papel de seda. Bambú. Collage",
+          "details": "0.40m x 0.30m. Acrílico sobre papel de seda. Bambú. Collage",
           "title": "Seda 2024 II",
           "year": null
         }
@@ -11638,15 +12482,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda 2024 III — 0.50m x 0.30m. Acrílico sobre papel de seda. Collage. Tinta China. Bambú — Fabio Crisanti",
+        "pt": "Seda 2024 III — 0.50m x 0.30m. Acrílico sobre papel de seda. Colagem. Tinta nanquim. Bambu — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.50m x 0.30m. Acrílico sobre papel de seda. Collage. Tinta China. Bambú",
+          "title": "Seda 2024 III",
+          "year": null
+        },
+        "pt": {
+          "details": "0.50m x 0.30m. Acrílico sobre papel de seda. Colagem. Tinta nanquim. Bambu",
+          "title": "Seda 2024 III",
+          "year": null
+        },
         "source": {
-          "details": "0.50m x 0.30mAcrílico sobre papel de seda. Collage. Tinta China. Bambú",
+          "details": "0.50m x 0.30m. Acrílico sobre papel de seda. Collage. Tinta China. Bambú",
           "title": "Seda 2024 III",
           "year": null
         }
@@ -11665,8 +12517,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda 2024 IV — 0.50m x 0.380m. Acrílico sobre papel de seda. Collage. Papel kraft. Bambú — Fabio Crisanti",
+        "pt": "Seda 2024 IV — 0.50m x 0.380m. Acrílico sobre papel de seda. Colagem. Papel kraft. Bambu — Fabio Crisanti"
       },
       "candidate_matches": [
         "images/galerias/Literatura/Ficción/El Nombre/Screenshot_20260607-000247_CDR Viewer.jpg",
@@ -11674,10 +12526,18 @@
         "images/highres/Juego del Tren/Screenshot_20251118-181210_Instagram.jpg"
       ],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.50m x 0.380m. Acrílico sobre papel de seda. Collage. Papel kraft. Bambú",
+          "title": "Seda 2024 IV",
+          "year": null
+        },
+        "pt": {
+          "details": "0.50m x 0.380m. Acrílico sobre papel de seda. Colagem. Papel kraft. Bambu",
+          "title": "Seda 2024 IV",
+          "year": null
+        },
         "source": {
-          "details": "0.50m x 0.380mAcrílico sobre papel de seda. Collage. Papel kraft. Bambú",
+          "details": "0.50m x 0.380m. Acrílico sobre papel de seda. Collage. Papel kraft. Bambú",
           "title": "Seda 2024 IV",
           "year": null
         }
@@ -11696,15 +12556,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda 2024 V — 0.50m x 0.40m. Acrílico sobre papel de seda. Collage. Papel kraft. Bambú — Fabio Crisanti",
+        "pt": "Seda 2024 V — 0.50m x 0.40m. Acrílico sobre papel de seda. Colagem. Papel kraft. Bambu — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.50m x 0.40m. Acrílico sobre papel de seda. Collage. Papel kraft. Bambú",
+          "title": "Seda 2024 V",
+          "year": null
+        },
+        "pt": {
+          "details": "0.50m x 0.40m. Acrílico sobre papel de seda. Colagem. Papel kraft. Bambu",
+          "title": "Seda 2024 V",
+          "year": null
+        },
         "source": {
-          "details": "0.50m x 0.40mAcrílico sobre papel de seda. Collage. Papel kraft. Bambú",
+          "details": "0.50m x 0.40m. Acrílico sobre papel de seda. Collage. Papel kraft. Bambú",
           "title": "Seda 2024 V",
           "year": null
         }
@@ -11723,15 +12591,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda 2024 VI — 0.40m x 0.35m. Acrílico sobre papel de seda. Collage. Sello. Bambú — Fabio Crisanti",
+        "pt": "Seda 2024 VI — 0.40m x 0.35m. Acrílico sobre papel de seda. Colagem. Carimbo. Bambu — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.40m x 0.35m. Acrílico sobre papel de seda. Collage. Sello. Bambú",
+          "title": "Seda 2024 VI",
+          "year": null
+        },
+        "pt": {
+          "details": "0.40m x 0.35m. Acrílico sobre papel de seda. Colagem. Carimbo. Bambu",
+          "title": "Seda 2024 VI",
+          "year": null
+        },
         "source": {
-          "details": "0.40m x 0.35mAcrílico sobre papel de seda. Collage. Carimbo. Bambú",
+          "details": "0.40m x 0.35m. Acrílico sobre papel de seda. Collage. Carimbo. Bambú",
           "title": "Seda 2024 VI",
           "year": null
         }
@@ -11750,8 +12626,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda 2024 VII — 0.40m x 0.30m. Acrílico sobre papel de seda. Algodón. Bambú — Fabio Crisanti",
+        "pt": "Seda 2024 VII — 0.40m x 0.30m. Acrílico sobre papel de seda. Algodão. Bambu — Fabio Crisanti"
       },
       "candidate_matches": [
         "images/galerias/Literatura/Ficción/El Nombre/Screenshot_20260607-000247_CDR Viewer.jpg",
@@ -11759,10 +12635,18 @@
         "images/highres/Juego del Tren/Screenshot_20251118-181210_Instagram.jpg"
       ],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.40m x 0.30m. Acrílico sobre papel de seda. Algodón. Bambú",
+          "title": "Seda 2024 VII",
+          "year": null
+        },
+        "pt": {
+          "details": "0.40m x 0.30m. Acrílico sobre papel de seda. Algodão. Bambu",
+          "title": "Seda 2024 VII",
+          "year": null
+        },
         "source": {
-          "details": "0.40m x 0.30mAcrílico sobre papel de seda. Algodón. Bambú",
+          "details": "0.40m x 0.30m. Acrílico sobre papel de seda. Algodón. Bambú",
           "title": "Seda 2024 VII",
           "year": null
         }
@@ -11781,17 +12665,25 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda 2024 VIII — 0.40m x 0.30m. Acrílico sobre papel de seda. Collage. Papel kraft. Bambú — Fabio Crisanti",
+        "pt": "Seda 2024 VIII — 0.40m x 0.30m. Acrílico sobre papel de seda. Colagem. Papel kraft. Bambu — Fabio Crisanti"
       },
       "candidate_matches": [
         "images/highres/SEDA 2024/20250721_232152.jpg"
       ],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.40m x 0.30m. Acrílico sobre papel de seda. Collage. Papel kraft. Bambú",
+          "title": "Seda 2024 VIII",
+          "year": null
+        },
+        "pt": {
+          "details": "0.40m x 0.30m. Acrílico sobre papel de seda. Colagem. Papel kraft. Bambu",
+          "title": "Seda 2024 VIII",
+          "year": null
+        },
         "source": {
-          "details": "0.40m x 0.30mAcrílico sobre papel de seda. Collage. Papel kraft. Bambú",
+          "details": "0.40m x 0.30m. Acrílico sobre papel de seda. Collage. Papel kraft. Bambú",
           "title": "Seda 2024 VIII",
           "year": null
         }
@@ -11810,15 +12702,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda 2024 IX — 0.70m x 0.50m. Acrílico sobre papel de seda. Collage. Bambú. Tejido de encaje. Bambú — Fabio Crisanti",
+        "pt": "Seda 2024 IX — 0.70m x 0.50m. Acrílico sobre papel de seda. Colagem. Bambu. Tecido de renda. Bambu — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.70m x 0.50m. Acrílico sobre papel de seda. Collage. Bambú. Tejido de encaje. Bambú",
+          "title": "Seda 2024 IX",
+          "year": null
+        },
+        "pt": {
+          "details": "0.70m x 0.50m. Acrílico sobre papel de seda. Colagem. Bambu. Tecido de renda. Bambu",
+          "title": "Seda 2024 IX",
+          "year": null
+        },
         "source": {
-          "details": "0.70m x 0.50mAcrílico sobre papel de seda. Collage. Bambú. Tecido de renda. Bambú",
+          "details": "0.70m x 0.50m. Acrílico sobre papel de seda. Collage. Bambú. Tecido de renda. Bambú",
           "title": "Seda 2024 IX",
           "year": null
         }
@@ -11839,17 +12739,25 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda 2024 X — 0.50m x 0.20m. Acrílico sobre papel de seda. Collage. Dorado a la hoja. Bambú — Fabio Crisanti",
+        "pt": "Seda 2024 X — 0.50m x 0.20m. Acrílico sobre papel de seda. Colagem. Douração a folha. Bambu — Fabio Crisanti"
       },
       "candidate_matches": [
         "images/highres/SEDA 2024/20230825_135504.jpg"
       ],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.50m x 0.20m. Acrílico sobre papel de seda. Collage. Dorado a la hoja. Bambú",
+          "title": "Seda 2024 X",
+          "year": null
+        },
+        "pt": {
+          "details": "0.50m x 0.20m. Acrílico sobre papel de seda. Colagem. Douração a folha. Bambu",
+          "title": "Seda 2024 X",
+          "year": null
+        },
         "source": {
-          "details": "0.50m x 0.20mAcrílico sobre papel de seda. Collage. Dorado a la hoja. Bambú",
+          "details": "0.50m x 0.20m. Acrílico sobre papel de seda. Collage. Dorado a la hoja. Bambú",
           "title": "Seda 2024 X",
           "year": null
         }
@@ -11868,15 +12776,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda 2024 XI — 0.40m x 0.30m. Acrílico sobre papel de seda. Collage. Papel kraft. Algodón — Fabio Crisanti",
+        "pt": "Seda 2024 XI — 0.40m x 0.30m. Acrílico sobre papel de seda. Colagem. Papel kraft. Algodão — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.40m x 0.30m. Acrílico sobre papel de seda. Collage. Papel kraft. Algodón",
+          "title": "Seda 2024 XI",
+          "year": null
+        },
+        "pt": {
+          "details": "0.40m x 0.30m. Acrílico sobre papel de seda. Colagem. Papel kraft. Algodão",
+          "title": "Seda 2024 XI",
+          "year": null
+        },
         "source": {
-          "details": "0.40m x 0.30mAcrílico sobre papel de seda. Collage. Papel kraft. Algodón",
+          "details": "0.40m x 0.30m. Acrílico sobre papel de seda. Collage. Papel kraft. Algodón",
           "title": "Seda 2024 XI",
           "year": null
         }
@@ -11897,15 +12813,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda 2024 XII — 0.40m x 0.30m. Acrílico sobre papel de seda. Collage. Dorado a la hoja — Fabio Crisanti",
+        "pt": "Seda 2024 XII — 0.40m x 0.30m. Acrílico sobre papel de seda. Colagem. Douração a folha — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.40m x 0.30m. Acrílico sobre papel de seda. Collage. Dorado a la hoja",
+          "title": "Seda 2024 XII",
+          "year": null
+        },
+        "pt": {
+          "details": "0.40m x 0.30m. Acrílico sobre papel de seda. Colagem. Douração a folha",
+          "title": "Seda 2024 XII",
+          "year": null
+        },
         "source": {
-          "details": "0.40m x 0.30mAcrílico sobre papel de seda. Collage. Dorado a la hoja",
+          "details": "0.40m x 0.30m. Acrílico sobre papel de seda. Collage. Dorado a la hoja",
           "title": "Seda 2024 XII",
           "year": null
         }
@@ -11926,15 +12850,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda 2024 XIII — 0.50m x 0.30m. Acrílico sobre papel de seda. Collage — Fabio Crisanti",
+        "pt": "Seda 2024 XIII — 0.50m x 0.30m. Acrílico sobre papel de seda. Colagem — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.50m x 0.30m. Acrílico sobre papel de seda. Collage",
+          "title": "Seda 2024 XIII",
+          "year": null
+        },
+        "pt": {
+          "details": "0.50m x 0.30m. Acrílico sobre papel de seda. Colagem",
+          "title": "Seda 2024 XIII",
+          "year": null
+        },
         "source": {
-          "details": "0.50m x 0.30mAcrílico sobre papel de seda. Collage",
+          "details": "0.50m x 0.30m. Acrílico sobre papel de seda. Collage",
           "title": "Seda 2024 XIII",
           "year": null
         }
@@ -11953,8 +12885,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda 2024 XIV — 0.40m x 0.30m. Acrílico sobre papel de seda. Collage. Algodón — Fabio Crisanti",
+        "pt": "Seda 2024 XIV — 0.40m x 0.30m. Acrílico sobre papel de seda. Colagem. Algodão — Fabio Crisanti"
       },
       "candidate_matches": [
         "images/galerias/Literatura/Ficción/El Nombre/Screenshot_20260607-000247_CDR Viewer.jpg",
@@ -11962,10 +12894,18 @@
         "images/highres/Juego del Tren/Screenshot_20251118-181210_Instagram.jpg"
       ],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.40m x 0.30m. Acrílico sobre papel de seda. Collage. Algodón",
+          "title": "Seda 2024 XIV",
+          "year": null
+        },
+        "pt": {
+          "details": "0.40m x 0.30m. Acrílico sobre papel de seda. Colagem. Algodão",
+          "title": "Seda 2024 XIV",
+          "year": null
+        },
         "source": {
-          "details": "0.40m x 0.30mAcrílico sobre papel de seda. Collage. Algodón",
+          "details": "0.40m x 0.30m. Acrílico sobre papel de seda. Collage. Algodón",
           "title": "Seda 2024 XIV",
           "year": null
         }
@@ -11984,15 +12924,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda 2024 XV — 0.40m x 0.30m. Acrílico sobre papel de seda. Collage — Fabio Crisanti",
+        "pt": "Seda 2024 XV — 0.40m x 0.30m. Acrílico sobre papel de seda. Colagem — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.40m x 0.30m. Acrílico sobre papel de seda. Collage",
+          "title": "Seda 2024 XV",
+          "year": null
+        },
+        "pt": {
+          "details": "0.40m x 0.30m. Acrílico sobre papel de seda. Colagem",
+          "title": "Seda 2024 XV",
+          "year": null
+        },
         "source": {
-          "details": "0.40m x 0.30mAcrílico sobre papel de seda. Collage",
+          "details": "0.40m x 0.30m. Acrílico sobre papel de seda. Collage",
           "title": "Seda 2024 XV",
           "year": null
         }
@@ -12011,15 +12959,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda 2024 XVI — 0.50m x 0.45m. Acrílico sobre papel de seda. Collage — Fabio Crisanti",
+        "pt": "Seda 2024 XVI — 0.50m x 0.45m. Acrílico sobre papel de seda. Colagem — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.50m x 0.45m. Acrílico sobre papel de seda. Collage",
+          "title": "Seda 2024 XVI",
+          "year": null
+        },
+        "pt": {
+          "details": "0.50m x 0.45m. Acrílico sobre papel de seda. Colagem",
+          "title": "Seda 2024 XVI",
+          "year": null
+        },
         "source": {
-          "details": "0.50m x 0.45mAcrílico sobre papel de seda. Collage",
+          "details": "0.50m x 0.45m. Acrílico sobre papel de seda. Collage",
           "title": "Seda 2024 XVI",
           "year": null
         }
@@ -12038,13 +12994,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Estructuras de Bambú — Fabio Crisanti",
+        "pt": "Estructuras de Bambú — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Estructuras de Bambú",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Estructuras de Bambú",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Estructuras de Bambú",
@@ -12065,13 +13029,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Estructuras de Bambú — Fabio Crisanti",
+        "pt": "Estructuras de Bambú — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Estructuras de Bambú",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Estructuras de Bambú",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Estructuras de Bambú",
@@ -12092,13 +13064,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda XX — \"Seda VII\"\"Seda X\" — Fabio Crisanti",
+        "pt": "Seda XX — \"Seda VII\"\"Seda X\" — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "\"Seda VII\"\"Seda X\"",
+          "title": "Seda XX",
+          "year": null
+        },
+        "pt": {
+          "details": "\"Seda VII\"\"Seda X\"",
+          "title": "Seda XX",
+          "year": null
+        },
         "source": {
           "details": "\"Seda VII\"\"Seda X\"",
           "title": "Seda XX",
@@ -12119,13 +13099,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Bambú — Fabio Crisanti",
+        "pt": "Bambú — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Bambú",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Bambú",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Bambú",
@@ -12148,8 +13136,8 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "SEDA 2024 — imagen 21 — Fabio Crisanti",
+        "pt": "SEDA 2024 — imagem 21 — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
@@ -12171,13 +13159,21 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Vista general serie \"Seda Bahia\" — Fabio Crisanti",
+        "pt": "Vista general serie \"Seda Bahia\" — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Vista general serie \"Seda Bahia\"",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Vista general serie \"Seda Bahia\"",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Vista general serie \"Seda Bahia\"",
@@ -12200,15 +13196,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda Bahia I — 2025 — 0.50m x 0.30m. Acrílico sobre papel de seda. Collage — Fabio Crisanti",
+        "pt": "Seda Bahia I — 2025 — 0.50m x 0.30m. Acrílico sobre papel de seda. Colagem — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.50m x 0.30m. Acrílico sobre papel de seda. Collage",
+          "title": "Seda Bahia I",
+          "year": "2025"
+        },
+        "pt": {
+          "details": "0.50m x 0.30m. Acrílico sobre papel de seda. Colagem",
+          "title": "Seda Bahia I",
+          "year": "2025"
+        },
         "source": {
-          "details": "0.50m x 0.30mAcrílico sobre papel de seda. Collage",
+          "details": "0.50m x 0.30m. Acrílico sobre papel de seda. Collage",
           "title": "Seda Bahia I",
           "year": "2025"
         }
@@ -12229,15 +13233,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda Bahia II — 2025 — 0.50m x 0.30m. Acrílico sobre papel de seda. Collage — Fabio Crisanti",
+        "pt": "Seda Bahia II — 2025 — 0.50m x 0.30m. Acrílico sobre papel de seda. Colagem — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.50m x 0.30m. Acrílico sobre papel de seda. Collage",
+          "title": "Seda Bahia II",
+          "year": "2025"
+        },
+        "pt": {
+          "details": "0.50m x 0.30m. Acrílico sobre papel de seda. Colagem",
+          "title": "Seda Bahia II",
+          "year": "2025"
+        },
         "source": {
-          "details": "0.50m x 0.30mAcrílico sobre papel de seda. Collage",
+          "details": "0.50m x 0.30m. Acrílico sobre papel de seda. Collage",
           "title": "Seda Bahia II",
           "year": "2025"
         }
@@ -12258,15 +13270,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda Bahia III — 2025 — 0.50m x 0.30m. Acrílico sobre papel de seda. Collage — Fabio Crisanti",
+        "pt": "Seda Bahia III — 2025 — 0.50m x 0.30m. Acrílico sobre papel de seda. Colagem — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.50m x 0.30m. Acrílico sobre papel de seda. Collage",
+          "title": "Seda Bahia III",
+          "year": "2025"
+        },
+        "pt": {
+          "details": "0.50m x 0.30m. Acrílico sobre papel de seda. Colagem",
+          "title": "Seda Bahia III",
+          "year": "2025"
+        },
         "source": {
-          "details": "0.50m x 0.30mAcrílico sobre papel de seda. Collage",
+          "details": "0.50m x 0.30m. Acrílico sobre papel de seda. Collage",
           "title": "Seda Bahia IiI",
           "year": "2025"
         }
@@ -12287,15 +13307,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda Bahia IV — 2025 — 0.50m x 0.30m. Acrílico sobre papel de seda. Collage — Fabio Crisanti",
+        "pt": "Seda Bahia IV — 2025 — 0.50m x 0.30m. Acrílico sobre papel de seda. Colagem — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.50m x 0.30m. Acrílico sobre papel de seda. Collage",
+          "title": "Seda Bahia IV",
+          "year": "2025"
+        },
+        "pt": {
+          "details": "0.50m x 0.30m. Acrílico sobre papel de seda. Colagem",
+          "title": "Seda Bahia IV",
+          "year": "2025"
+        },
         "source": {
-          "details": "0.50m x 0.30mAcrílico sobre papel de seda. Collage",
+          "details": "0.50m x 0.30m. Acrílico sobre papel de seda. Collage",
           "title": "Seda Bahia IV",
           "year": "2025"
         }
@@ -12316,15 +13344,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda Bahia V — 2025 — 0.30m x 0.25m. Acrílico sobre papel de seda — Fabio Crisanti",
+        "pt": "Seda Bahia V — 2025 — 0.30m x 0.25m. Acrílico sobre papel de seda — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.25m. Acrílico sobre papel de seda",
+          "title": "Seda Bahia V",
+          "year": "2025"
+        },
+        "pt": {
+          "details": "0.30m x 0.25m. Acrílico sobre papel de seda",
+          "title": "Seda Bahia V",
+          "year": "2025"
+        },
         "source": {
-          "details": "0.30m x 0.25mAcrílico sobre papel de seda",
+          "details": "0.30m x 0.25m. Acrílico sobre papel de seda",
           "title": "Seda Bahia V",
           "year": "2025"
         }
@@ -12345,15 +13381,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda Bahia VI — 2025 — 0.30m x 0.25m. Acrílico sobre papel de seda — Fabio Crisanti",
+        "pt": "Seda Bahia VI — 2025 — 0.30m x 0.25m. Acrílico sobre papel de seda — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.25m. Acrílico sobre papel de seda",
+          "title": "Seda Bahia VI",
+          "year": "2025"
+        },
+        "pt": {
+          "details": "0.30m x 0.25m. Acrílico sobre papel de seda",
+          "title": "Seda Bahia VI",
+          "year": "2025"
+        },
         "source": {
-          "details": "0.30m x 0.25mAcrílico sobre papel de seda",
+          "details": "0.30m x 0.25m. Acrílico sobre papel de seda",
           "title": "Seda Bahia VI",
           "year": "2025"
         }
@@ -12374,15 +13418,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda Bahia VII — 2025 — 0.30m x 0.25m. Acrílico sobre papel de seda — Fabio Crisanti",
+        "pt": "Seda Bahia VII — 2025 — 0.30m x 0.25m. Acrílico sobre papel de seda — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.25m. Acrílico sobre papel de seda",
+          "title": "Seda Bahia VII",
+          "year": "2025"
+        },
+        "pt": {
+          "details": "0.30m x 0.25m. Acrílico sobre papel de seda",
+          "title": "Seda Bahia VII",
+          "year": "2025"
+        },
         "source": {
-          "details": "0.30m x 0.25mAcrílico sobre papel de seda",
+          "details": "0.30m x 0.25m. Acrílico sobre papel de seda",
           "title": "Seda Bahia VII",
           "year": "2025"
         }
@@ -12403,15 +13455,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda Bahia VIII — 2025 — 0.30m x 0.25m. Acrílico sobre papel de seda — Fabio Crisanti",
+        "pt": "Seda Bahia VIII — 2025 — 0.30m x 0.25m. Acrílico sobre papel de seda — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.25m. Acrílico sobre papel de seda",
+          "title": "Seda Bahia VIII",
+          "year": "2025"
+        },
+        "pt": {
+          "details": "0.30m x 0.25m. Acrílico sobre papel de seda",
+          "title": "Seda Bahia VIII",
+          "year": "2025"
+        },
         "source": {
-          "details": "0.30m x 0.25mAcrílico sobre papel de seda",
+          "details": "0.30m x 0.25m. Acrílico sobre papel de seda",
           "title": "Seda Bahia VIII",
           "year": "2025"
         }
@@ -12432,15 +13492,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda Bahia IX — 2025 — 0.30m x 0.25m. Acrílico sobre papel de seda — Fabio Crisanti",
+        "pt": "Seda Bahia IX — 2025 — 0.30m x 0.25m. Acrílico sobre papel de seda — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.25m. Acrílico sobre papel de seda",
+          "title": "Seda Bahia IX",
+          "year": "2025"
+        },
+        "pt": {
+          "details": "0.30m x 0.25m. Acrílico sobre papel de seda",
+          "title": "Seda Bahia IX",
+          "year": "2025"
+        },
         "source": {
-          "details": "0.30m x 0.25mAcrílico sobre papel de seda",
+          "details": "0.30m x 0.25m. Acrílico sobre papel de seda",
           "title": "Seda Bahia IX",
           "year": "2025"
         }
@@ -12461,15 +13529,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda Bahia X — 2025 — 0.30m x 0.25m. Acrílico sobre papel de seda — Fabio Crisanti",
+        "pt": "Seda Bahia X — 2025 — 0.30m x 0.25m. Acrílico sobre papel de seda — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.25m. Acrílico sobre papel de seda",
+          "title": "Seda Bahia X",
+          "year": "2025"
+        },
+        "pt": {
+          "details": "0.30m x 0.25m. Acrílico sobre papel de seda",
+          "title": "Seda Bahia X",
+          "year": "2025"
+        },
         "source": {
-          "details": "0.30m x 0.25mAcrílico sobre papel de seda",
+          "details": "0.30m x 0.25m. Acrílico sobre papel de seda",
           "title": "Seda Bahia X",
           "year": "2025"
         }
@@ -12490,15 +13566,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda Bahia XI — 2025 — 0.30m x 0.25m. Acrílico sobre papel de seda. Collage — Fabio Crisanti",
+        "pt": "Seda Bahia XI — 2025 — 0.30m x 0.25m. Acrílico sobre papel de seda. Colagem — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.25m. Acrílico sobre papel de seda. Collage",
+          "title": "Seda Bahia XI",
+          "year": "2025"
+        },
+        "pt": {
+          "details": "0.30m x 0.25m. Acrílico sobre papel de seda. Colagem",
+          "title": "Seda Bahia XI",
+          "year": "2025"
+        },
         "source": {
-          "details": "0.30m x 0.25mAcrílico sobre papel de seda. Collage",
+          "details": "0.30m x 0.25m. Acrílico sobre papel de seda. Collage",
           "title": "Seda Bahia XI",
           "year": "2025"
         }
@@ -12519,15 +13603,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda Bahia XIV — 2025 — 0.30m x 0.25m. Acrílico sobre papel de seda — Fabio Crisanti",
+        "pt": "Seda Bahia XIV — 2025 — 0.30m x 0.25m. Acrílico sobre papel de seda — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.25m. Acrílico sobre papel de seda",
+          "title": "Seda Bahia XIV",
+          "year": "2025"
+        },
+        "pt": {
+          "details": "0.30m x 0.25m. Acrílico sobre papel de seda",
+          "title": "Seda Bahia XIV",
+          "year": "2025"
+        },
         "source": {
-          "details": "0.30m x 0.25mAcrílico sobre papel de seda",
+          "details": "0.30m x 0.25m. Acrílico sobre papel de seda",
           "title": "Seda Bahia XIV",
           "year": "2025"
         }
@@ -12548,15 +13640,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda Bahia XV — 2025 — 0.30m x 0.25m. Acrílico sobre papel de seda — Fabio Crisanti",
+        "pt": "Seda Bahia XV — 2025 — 0.30m x 0.25m. Acrílico sobre papel de seda — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.25m. Acrílico sobre papel de seda",
+          "title": "Seda Bahia XV",
+          "year": "2025"
+        },
+        "pt": {
+          "details": "0.30m x 0.25m. Acrílico sobre papel de seda",
+          "title": "Seda Bahia XV",
+          "year": "2025"
+        },
         "source": {
-          "details": "0.30m x 0.25mAcrílico sobre papel de seda",
+          "details": "0.30m x 0.25m. Acrílico sobre papel de seda",
           "title": "Seda Bahia XV",
           "year": "2025"
         }
@@ -12577,15 +13677,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda Bahia XVI — 2025 — 0.30m x 0.40m. Acrílico sobre papel de seda — Fabio Crisanti",
+        "pt": "Seda Bahia XVI — 2025 — 0.30m x 0.40m. Acrílico sobre papel de seda — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.40m. Acrílico sobre papel de seda",
+          "title": "Seda Bahia XVI",
+          "year": "2025"
+        },
+        "pt": {
+          "details": "0.30m x 0.40m. Acrílico sobre papel de seda",
+          "title": "Seda Bahia XVI",
+          "year": "2025"
+        },
         "source": {
-          "details": "0.30m x 0.40mAcrílico sobre papel de seda",
+          "details": "0.30m x 0.40m. Acrílico sobre papel de seda",
           "title": "Seda Bahia XVI",
           "year": "2025"
         }
@@ -12606,15 +13714,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda Bahia XVII — 2025 — 0.30m x 0.40m. Acrílico sobre papel de seda — Fabio Crisanti",
+        "pt": "Seda Bahia XVII — 2025 — 0.30m x 0.40m. Acrílico sobre papel de seda — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.40m. Acrílico sobre papel de seda",
+          "title": "Seda Bahia XVII",
+          "year": "2025"
+        },
+        "pt": {
+          "details": "0.30m x 0.40m. Acrílico sobre papel de seda",
+          "title": "Seda Bahia XVII",
+          "year": "2025"
+        },
         "source": {
-          "details": "0.30m x 0.40mAcrílico sobre papel de seda",
+          "details": "0.30m x 0.40m. Acrílico sobre papel de seda",
           "title": "Seda Bahia XVII",
           "year": "2025"
         }
@@ -12635,15 +13751,23 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Seda Bahia XVIII — 2025 — 0.30m x 0.50m. Acrílico sobre papel de seda — Fabio Crisanti",
+        "pt": "Seda Bahia XVIII — 2025 — 0.30m x 0.50m. Acrílico sobre papel de seda — Fabio Crisanti"
       },
       "candidate_matches": [],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda",
+          "title": "Seda Bahia XVIII",
+          "year": "2025"
+        },
+        "pt": {
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda",
+          "title": "Seda Bahia XVIII",
+          "year": "2025"
+        },
         "source": {
-          "details": "0.30m x 0.50mAcrílico sobre papel de seda",
+          "details": "0.30m x 0.50m. Acrílico sobre papel de seda",
           "title": "Seda Bahia XVIII",
           "year": "2025"
         }
@@ -12664,16 +13788,24 @@
     },
     {
       "alt": {
-        "es": null,
-        "pt": null
+        "es": "Estructuras de Bambú — Fabio Crisanti",
+        "pt": "Estructuras de Bambú — Fabio Crisanti"
       },
       "candidate_matches": [
         "images/highres/SEDA BAHIA/20260417_214506.jpg",
         "images/novas/7 Pequenas Pipas/pequenas-pipas-4.jpeg"
       ],
       "caption": {
-        "es": null,
-        "pt": null,
+        "es": {
+          "details": null,
+          "title": "Estructuras de Bambú",
+          "year": null
+        },
+        "pt": {
+          "details": null,
+          "title": "Estructuras de Bambú",
+          "year": null
+        },
         "source": {
           "details": null,
           "title": "Estructuras de Bambú",
@@ -18521,5 +19653,81 @@
       "width": 1080
     }
   ],
-  "schema_version": 1
+  "schema_version": 1,
+  "series_content": {
+    "Ensayos/El Teléfono": {
+      "es": [
+        "Dice Lucrecia Martel que cualquier teléfono móvil actual permite realizar registros audiovisuales de mayor calidad que las cámaras de cine más sofisticadas de mediados del siglo pasado. Y aclara: excepto las soviéticas. FC usa su teléfono como cámara y laboratorio fotográfico portátiles para ofrecernos esta serie de naturalezas intervenidas por medio de la pantalla táctil, retomando algunas de las técnicas clásicas de la plástica. Trazos de carbón o lápiz, collages y virados cromáticos digitales operan de forma más o menos evidente en esta serie de fotografías tomadas con su teléfono."
+      ],
+      "pt": [
+        "Lucrecia Martel diz que qualquer telefone celular atual permite realizar registros audiovisuais de qualidade superior à das câmeras de cinema mais sofisticadas de meados do século passado. E ressalva: exceto as soviéticas. FC usa seu telefone como câmera e laboratório fotográfico portáteis para nos oferecer esta série de naturezas intervindas por meio da tela sensível ao toque, retomando algumas das técnicas clássicas das artes plásticas. Traços de carvão ou lápis, colagens e viragens cromáticas digitais operam de forma mais ou menos evidente nesta série de fotografias feitas com seu telefone."
+      ]
+    },
+    "Ensayos/Emulsión": {
+      "es": [
+        "Una emulsión cosmética funciona como soporte material para la exploración de nociones tales como latencia, velo e impresión. En efecto, el campo semántico parece provenir de la fotografía. Posiblemente no sea casual: esta disciplina porta, aparentemente como resto, los vestigios del primer hecho que la concretiza, una huella de luz sobre una superficie sensible, sobre una piel. Existe también algo del orden de lo premanifiesto, de lo no nato. Una interfaz como función de una latencia. Una membrana."
+      ],
+      "pt": [
+        "Uma emulsão cosmética funciona como suporte material para a exploração de noções como latência, véu e impressão. De fato, o campo semântico parece provir da fotografia. Possivelmente não seja casual: essa disciplina carrega, aparentemente como resto, os vestígios do primeiro acontecimento que a concretiza, uma marca de luz sobre uma superfície sensível, sobre uma pele. Existe também algo da ordem do pré-manifesto, do não nascido. Uma interface como função de uma latência. Uma membrana."
+      ]
+    },
+    "Ensayos/Urubús": {
+      "es": [
+        "La escritura china no nace simplemente de «dibujar cosas», sino de convertir relaciones visuales en unidades de significado. Entre la formación de los ideogramas chinos y la representación de animales o de configuraciones naturales hay una cuestión histórica y semiótica muy interesante.",
+        "La escritura china nace de convertir relaciones visuales en unidades de significado.",
+        "En las inscripciones sobre huesos oraculares, muchos caracteres no eran dibujos realistas de animales, sino formas que conservaban algunos rasgos reconocibles del objeto y que, sintetizadas, expresaban momentos de extraordinaria articulación semántica."
+      ],
+      "pt": [
+        "A escrita chinesa não nasce simplesmente de «desenhar coisas», mas de converter relações visuais em unidades de significado. Entre a formação dos ideogramas chineses e a representação de animais ou de configurações naturais existe uma questão histórica e semiótica muito interessante.",
+        "A escrita chinesa nasce da conversão de relações visuais em unidades de significado.",
+        "Nas inscrições sobre ossos oraculares, muitos caracteres não eram desenhos realistas de animais, mas formas que conservavam alguns traços reconhecíveis do objeto e que, sintetizadas, expressavam momentos de extraordinária articulação semântica."
+      ]
+    },
+    "Seda/SEDA": {
+      "credit": "Luiza Bueno",
+      "es": [
+        "Fabio Crisanti reescribe la ruta de la seda en una trayectoria inusitada que se remonta a tiempos ancestrales. La serie presenta capas de significado y sedimentos que remiten al origen de la vida, a las entrañas de la tierra.",
+        "La obra, marcada por la organicidad, despierta los sentidos y desafía la percepción. Algunos detalles están sembrados a lo largo del camino, sutilezas reservadas al observador más curioso, como los pequeños sellos en la esquina de los lienzos, forma con la que firma el pintor. El aspecto intimista trae consigo una complicidad entre el objeto y la mirada, en un viaje cautivador guiado por el artista patagónico a lo largo de la serie.",
+        "En un abordaje atípico del material, la seda es tratada casi en su estado original de capullo. La paleta de tonos predominantemente terrosos —ocre, arena, terracota y carbón— se acentúa con suaves brillos que relucen según los diferentes ángulos de incidencia de la luz. A veces, la escena es invadida por tonos de azul claro que evocan el cielo y el agua.",
+        "La seda como tejido aparece en pliegues, recortes y arrugas que recuerdan la erosión del suelo y el paso del tiempo. También como materia textil, cintas, retazos y filamentos desbordan los márgenes como tentáculos que exploran el vacío, en busca de lo desconocido más allá de sí mismos.",
+        "La colección presenta patrones extraídos del mundo natural: fósiles, escamas, cortezas, ramas y otros elementos que aportan textura y profundidad a los lienzos, así como referencias rupestres que evocan las pinturas de las cavernas, registros de antiguas eras tribales que remiten a memorias atávicas y dan vida a la composición.",
+        "La serie exhibe una miríada de elementos dibujados por luces y sombras, que asumen contornos, rasgos y siluetas, insinuando géneros y formas diversas que emergen de imágenes fluidas y abstractas. El simbolismo arquetípico presente confiere intensidad y expresión a la obra.",
+        "En una alusión a la cruz, el madero de Cristo, centenares de fragmentos convergen en una encrucijada. Las imágenes del acervo a veces asumen más de un significado: en este caso, la espada; en otro lienzo, el cáliz y el vientre.",
+        "En otra incursión creativa en la seda, el artista visita la escultura: sale del plano hacia el espacio y presenta un repertorio de gráciles cometas, artefactos del viento. Un probable retorno a sus raíces como fotógrafo, universo donde predominan la luz y la forma, pero donde el movimiento también forma parte de la mirada.",
+        "Adentrarse en el espacio propuesto por el artista en la inspirada serie Seda es un verdadero regalo para los ojos y los sentidos."
+      ],
+      "pt": [
+        "Fabio Crisanti reescreve a rota da seda em uma trajetória inusitada que remonta a tempos ancestrais. A série traz camadas de significado e sedimentos que remetem à origem da vida, às entranhas da terra.",
+        "O trabalho, marcado pela organicidade, desperta os sentidos e desafia a percepção. Alguns detalhes estão semeados ao longo do caminho, sutilezas reservadas ao observador mais curioso, como os pequenos selos no canto das telas, forma com que o pintor assina. O aspecto intimista traz cumplicidade entre o objeto e o olhar, em uma jornada cativante guiada pelo artista patagônio ao longo da série.",
+        "Em uma abordagem atípica do material, a seda é tratada quase em seu estado original de casulo. A paleta de tons predominantemente terrosos — ocre, areia, terracota e carvão — é acentuada por suaves brilhos que reluzem em diferentes ângulos de incidência da luz. Por vezes, a cena ainda é invadida por tons de azul-claro que evocam o céu e a água.",
+        "A seda como tecido é apresentada em dobras, nesgas e rugas que lembram a erosão do solo e a passagem do tempo. Também como matéria têxtil, fitas, retalhos e filamentos extravasam as margens como tentáculos que exploram o vazio, em busca do desconhecido além de si.",
+        "A coletânea traz padrões extraídos do mundo natural: fósseis, escamas, cascas, galhos e outros elementos que agregam textura e profundidade às telas, bem como referências rupestres que evocam pinturas em cavernas, registros de antigas eras tribais que remetem a memórias atávicas e dão vida à composição.",
+        "A série exibe uma miríade de elementos desenhados por luzes e sombras, que assumem contornos, feições e silhuetas, insinuando gêneros e formas diversas que emergem das imagens fluidas e abstratas. O simbolismo arquetípico presente concede intensidade e expressão ao trabalho.",
+        "Em uma alusão à cruz, o madeiro de Cristo, centenas de fragmentos convergem em uma encruzilhada. As imagens do acervo por vezes assumem mais de um significado: nesse caso, a espada; em outra tela, o cálice e o ventre.",
+        "Em outra incursão criativa na seda, o artista visita a escultura: sai do plano para o espaço e traz um repertório de graciosas pipas, artefatos do vento. Um provável retorno às raízes como fotógrafo, universo em que predominam a luz e a forma, mas no qual o movimento também faz parte do olhar.",
+        "Adentrar o espaço proposto pelo artista na inspirada série Seda é um verdadeiro presente para os olhos e os sentidos."
+      ]
+    },
+    "Seda/SEDA BAHIA": {
+      "es": [
+        "La relación entre la pintura de Uzo Hiramatsu y la de Fabio Crisanti no se establece en el plano del estilo, sino en una experiencia compartida: Brasil como territorio de arraigo pictórico. En ambos casos, el desplazamiento geográfico no funciona como anécdota biográfica, sino como condición estructural de la obra.",
+        "En Hiramatsu, la pintura se construye a partir de un tiempo lento, acumulativo, donde la superficie deviene campo de sedimentación. Brasil no aparece como tema, sino como clima material y rítmico que permite que una sensibilidad contenida, de raíz japonesa, se despliegue sin volverse ilustrativa ni simbólica. La abstracción encuentra allí un espacio de respiración: una práctica silenciosa, insistente, sostenida en el hacer.",
+        "En la pintura de Crisanti, Brasil opera también como lugar donde la obra echa raíces, pero desde una tensión distinta. La materia no se pacifica del todo: persiste, resiste, se vuelve problemática. El proceso —el secado, la manipulación— no es un medio para alcanzar una imagen final, sino el núcleo mismo del sentido. La superficie no se abre como ventana, sino que se pliega sobre sí misma, generando una lógica de estratificación donde el tiempo queda atrapado en la piel de la obra.",
+        "Ambas prácticas comparten una abstracción no expresionista, alejada del gesto heroico, y una comprensión de la pintura como campo de operaciones temporales. Sin embargo, mientras en Hiramatsu el tiempo tiende al equilibrio y al silencio, en Crisanti se vuelve fricción, insistencia, resto.",
+        "Brasil aparece así no como identidad ni paisaje, sino como condición de posibilidad: un territorio donde la pintura puede dejar de representar para empezar, simplemente, a suceder."
+      ],
+      "omitted_source_credit": "Por ChatGPT",
+      "pt": [
+        "A relação entre a pintura de Uzo Hiramatsu e a de Fabio Crisanti não se estabelece no plano do estilo, mas em uma experiência compartilhada: o Brasil como território de enraizamento pictórico. Em ambos os casos, o deslocamento geográfico não funciona como anedota biográfica, mas como condição estrutural da obra.",
+        "Em Hiramatsu, a pintura se constrói a partir de um tempo lento, cumulativo, em que a superfície se torna campo de sedimentação. O Brasil não aparece como tema, mas como clima material e rítmico que permite que uma sensibilidade contida, de raiz japonesa, se desenvolva sem se tornar ilustrativa nem simbólica. A abstração encontra ali um espaço de respiração: uma prática silenciosa, insistente, sustentada no fazer.",
+        "Na pintura de Crisanti, o Brasil também opera como lugar onde a obra cria raízes, mas a partir de uma tensão diferente. A matéria não se pacifica por completo: persiste, resiste, torna-se problemática. O processo — a secagem, a manipulação — não é um meio para alcançar uma imagem final, mas o próprio núcleo do sentido. A superfície não se abre como janela; dobra-se sobre si mesma, gerando uma lógica de estratificação na qual o tempo fica preso à pele da obra.",
+        "As duas práticas compartilham uma abstração não expressionista, distante do gesto heroico, e uma compreensão da pintura como campo de operações temporais. No entanto, enquanto em Hiramatsu o tempo tende ao equilíbrio e ao silêncio, em Crisanti torna-se fricção, insistência, resto.",
+        "O Brasil aparece, assim, não como identidade nem paisagem, mas como condição de possibilidade: um território onde a pintura pode deixar de representar para começar, simplesmente, a acontecer."
+      ],
+      "title": {
+        "es": "Brasil como territorio de arraigo: Hiramatsu / Crisanti",
+        "pt": "Brasil como território de enraizamento: Hiramatsu / Crisanti"
+      }
+    }
+  }
 }
