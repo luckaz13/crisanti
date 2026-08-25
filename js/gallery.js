@@ -12,6 +12,12 @@
         const nextBtn = carouselEl.querySelector('.gallery-btn--next');
 
         if (!carouselEl || !track || !viewport || !prevBtn || !nextBtn) return;
+        if (carouselEl.dataset.carouselInitialized === 'true') {
+            if (typeof carouselEl._updateCarousel === 'function') {
+                carouselEl._updateCarousel();
+            }
+            return;
+        }
 
         const slides = carouselEl.querySelectorAll('.gallery-slide');
         if (!slides.length) return;
@@ -19,6 +25,13 @@
         let currentIndex = 0;
         const slideCount = slides.length;
         const preloadRadius = 4;
+        const captionClearance = 8;
+        const autoplayDelay = Number.parseInt(carouselEl.dataset.autoplay || '', 10);
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+        let autoplayTimer = null;
+        let pointerPaused = false;
+        let focusPaused = false;
+        let controlsAnchorWidth = null;
 
         function preloadImage(img) {
             if (!img || img.dataset.preloaded === 'true') return;
@@ -46,13 +59,59 @@
             }
         }
 
+        function updateControlsAnchor() {
+            const width = carouselEl.getBoundingClientRect().width;
+            if (width <= 0) return;
+            if (controlsAnchorWidth !== null && Math.abs(width - controlsAnchorWidth) < 1) return;
+
+            const anchorSlide = slides[0];
+            const anchorImage = anchorSlide.querySelector('.gallery-img');
+            const anchorFigure = anchorSlide.querySelector('.gallery-figure');
+            if (anchorImage && (!anchorImage.complete || anchorImage.naturalWidth === 0)) return;
+
+            const anchorTarget = anchorImage || anchorFigure || anchorSlide;
+            const anchorHeight = anchorTarget.getBoundingClientRect().height;
+            if (anchorHeight <= 0) return;
+
+            carouselEl.style.setProperty('--gallery-controls-top', `${Math.ceil(anchorHeight / 2)}px`);
+            controlsAnchorWidth = width;
+        }
+
         function updateCarousel() {
             track.style.transform = `translateX(${-currentIndex * 100}%)`;
             updateViewportHeight();
+            updateControlsAnchor();
             prevBtn.disabled = currentIndex === 0;
             nextBtn.disabled = currentIndex === slideCount - 1;
             prevBtn.setAttribute('aria-disabled', currentIndex === 0);
             nextBtn.setAttribute('aria-disabled', currentIndex === slideCount - 1);
+        }
+
+        carouselEl._updateCarousel = updateCarousel;
+        carouselEl.dataset.carouselInitialized = 'true';
+
+        function canAutoplay() {
+            return Number.isFinite(autoplayDelay) && autoplayDelay > 0 && slideCount > 1 &&
+                !pointerPaused && !focusPaused && !reducedMotion.matches &&
+                document.visibilityState === 'visible';
+        }
+
+        function stopAutoplay() {
+            if (autoplayTimer !== null) {
+                window.clearTimeout(autoplayTimer);
+                autoplayTimer = null;
+            }
+        }
+
+        function scheduleAutoplay() {
+            stopAutoplay();
+            if (!canAutoplay()) return;
+            autoplayTimer = window.setTimeout(() => {
+                currentIndex = (currentIndex + 1) % slideCount;
+                preloadAround(currentIndex, 1);
+                updateCarousel();
+                scheduleAutoplay();
+            }, autoplayDelay);
         }
 
         function updateViewportHeight() {
@@ -61,10 +120,10 @@
             window.requestAnimationFrame(() => {
                 const img = activeSlide.querySelector('.gallery-img');
                 const figure = activeSlide.querySelector('.gallery-figure');
-                const target = img || figure || activeSlide;
+                const target = figure || img || activeSlide;
                 const height = target.getBoundingClientRect().height;
                 if (height > 0) {
-                    viewport.style.height = `${Math.ceil(height)}px`;
+                    viewport.style.height = `${Math.ceil(height) + captionClearance}px`;
                 }
             });
         }
@@ -84,6 +143,16 @@
         if ('ResizeObserver' in window) {
             const resizeObserver = new ResizeObserver(updateCarousel);
             resizeObserver.observe(carouselEl);
+            const figureResizeObserver = new ResizeObserver(entries => {
+                const activeFigure = slides[currentIndex].querySelector('.gallery-figure');
+                if (entries.some(entry => entry.target === activeFigure)) {
+                    updateViewportHeight();
+                }
+            });
+            slides.forEach(slide => {
+                const figure = slide.querySelector('.gallery-figure');
+                if (figure) figureResizeObserver.observe(figure);
+            });
         } else {
             window.addEventListener('resize', updateCarousel);
         }
@@ -93,6 +162,7 @@
                 currentIndex--;
                 preloadAround(currentIndex, -1);
                 updateCarousel();
+                scheduleAutoplay();
             }
         });
 
@@ -101,6 +171,7 @@
                 currentIndex++;
                 preloadAround(currentIndex, 1);
                 updateCarousel();
+                scheduleAutoplay();
             }
         });
 
@@ -119,14 +190,42 @@
                     currentIndex--;
                     preloadAround(currentIndex, -1);
                     updateCarousel();
+                    scheduleAutoplay();
                 }
                 else if (dx < 0 && currentIndex < slideCount - 1) {
                     currentIndex++;
                     preloadAround(currentIndex, 1);
                     updateCarousel();
+                    scheduleAutoplay();
                 }
             }
         });
+
+        carouselEl.addEventListener('pointerenter', () => {
+            pointerPaused = true;
+            stopAutoplay();
+        });
+        carouselEl.addEventListener('pointerleave', () => {
+            pointerPaused = false;
+            scheduleAutoplay();
+        });
+        carouselEl.addEventListener('focusin', () => {
+            focusPaused = true;
+            stopAutoplay();
+        });
+        carouselEl.addEventListener('focusout', () => {
+            window.setTimeout(() => {
+                focusPaused = carouselEl.contains(document.activeElement);
+                scheduleAutoplay();
+            }, 0);
+        });
+        document.addEventListener('visibilitychange', scheduleAutoplay);
+        if (typeof reducedMotion.addEventListener === 'function') {
+            reducedMotion.addEventListener('change', scheduleAutoplay);
+        } else if (typeof reducedMotion.addListener === 'function') {
+            reducedMotion.addListener(scheduleAutoplay);
+        }
+        scheduleAutoplay();
     }
 
     // Expose for lazy initialization from gallery tabs
@@ -217,27 +316,4 @@
         setupCarousel(carousel);
     });
 
-    // --- Instagram preview from local exported Instagram gallery data ---
-    const instagramGrid = document.getElementById('instagram-grid');
-    if (instagramGrid) {
-        const data = typeof galleryData !== 'undefined' ? galleryData : [];
-        const latest = data
-            .filter(item => item.src && item.date)
-            .slice()
-            .sort((a, b) => String(b.date).localeCompare(String(a.date)))
-            .slice(0, 9);
-
-        const fragment = document.createDocumentFragment();
-        latest.forEach(item => {
-            const link = document.createElement('a');
-            link.href = '#instagram';
-            link.className = 'instagram-card';
-            link.setAttribute('data-ig-card', '');
-            const label = item.title || item.meta || item.desc || item.date || 'Instagram';
-            link.setAttribute('aria-label', `Ver em tela cheia: ${label}`);
-            link.innerHTML = `<img src="${item.src}" alt="${item.alt || label}" loading="lazy" /><span>${label}</span>`;
-            fragment.appendChild(link);
-        });
-        instagramGrid.appendChild(fragment);
-    }
 })();

@@ -109,7 +109,7 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
     const item = currentItems[currentIndex];
     lbImg.src = item.src;
     lbImg.alt = item.alt;
-    lbCaption.textContent = [item.title, item.serie, item.dims].filter(Boolean).join(' · ');
+    lbCaption.textContent = [item.title, item.serie, item.dims, item.meta, item.desc].filter(Boolean).join(' · ');
     lightbox.hidden = false;
     document.body.style.overflow = 'hidden';
     lbClose.focus();
@@ -140,15 +140,8 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
       title: slide.querySelector('.gallery-title')?.textContent?.trim() || '',
       serie: '',
       dims:  '',
-    })).filter(item => item.src);
-
-  const getInstagramItems = () =>
-    $$('#instagram-grid img').map(img => ({
-      src: img.src || '',
-      alt: img.alt || '',
-      title: img.closest('a,button,[data-ig-card]')?.getAttribute('aria-label') || img.alt || '',
-      serie: '',
-      dims: '',
+      meta:  slide.querySelector('.gallery-meta')?.textContent?.trim() || '',
+      desc:  slide.querySelector('.gallery-desc')?.textContent?.trim() || '',
     })).filter(item => item.src);
 
   // Event delegation so every gallery works (including late/tab-hidden panels)
@@ -192,16 +185,6 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
       return;
     }
 
-    const igCard = e.target.closest('#instagram-grid a.instagram-card, #instagram-grid [data-ig-card]');
-    if (igCard) {
-      const img = igCard.querySelector('img');
-      if (!img) return;
-      e.preventDefault();
-      const items = getInstagramItems();
-      const idx = items.findIndex(i => i.src === img.src);
-      currentItems = items;
-      open(idx >= 0 ? idx : 0);
-    }
   });
 
   // ── Controls ──
@@ -244,7 +227,6 @@ document.addEventListener('DOMContentLoaded', () => {
     '.series-figure',
     '.traj-col',
     '.literatura-card',
-    '.instagram-card',
     '.contato-text',
     '.contato-visual',
   ];
@@ -254,7 +236,6 @@ document.addEventListener('DOMContentLoaded', () => {
     '.traj-col': true,
     '.series-text > *': true,
     '.literatura-card': true,
-    '.instagram-card': true,
   };
 
   toReveal.forEach(sel => {
