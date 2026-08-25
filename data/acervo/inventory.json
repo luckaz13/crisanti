@@ -11027,12 +11027,12 @@
     },
     {
       "filename": "04.jpg",
-      "height": 2220,
+      "height": 1650,
       "order": 4,
       "path": "img/Seda/SEDA 2024/04.jpg",
       "section": "Seda",
       "series": "SEDA 2024",
-      "sha256": "00d56300c633226ecfe2984e6fffed06b4b2d13ec92719aaccd2d337376d81b6",
+      "sha256": "b9d0b05764f7176e0408824c6cc7dc16a03696243fa338255380777c4efb02df",
       "width": 1080
     },
     {
@@ -11127,12 +11127,12 @@
     },
     {
       "filename": "14.jpg",
-      "height": 2220,
+      "height": 1747,
       "order": 14,
       "path": "img/Seda/SEDA 2024/14.jpg",
       "section": "Seda",
       "series": "SEDA 2024",
-      "sha256": "9c094face66e7dc84894073f77991b24c4fa46550ad3bf42060973241f858e62",
+      "sha256": "a45ad2a8bfddbfd8cc56763846a71f43ff1cf45d95f75a02626d56457a0ba5b0",
       "width": 1080
     },
     {
