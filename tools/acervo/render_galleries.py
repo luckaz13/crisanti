@@ -1,0 +1,310 @@
+#!/usr/bin/env python3
+"""Render reviewed archive galleries into the bilingual static pages."""
+
+from __future__ import annotations
+
+import argparse
+import copy
+import html
+import json
+from pathlib import Path
+from typing import Any
+
+from bs4 import BeautifulSoup
+
+
+GALLERY_TARGETS = {
+    "Seda/SEDA": "seda",
+    "Seda/SEDA 2024": "seda-2024",
+    "Seda/SEDA BAHIA": "seda-bahia",
+    "Peces": "peixes",
+    "Ensayos/Collagem": "ensayos-collagem",
+    "Ensayos/Emulsión": "ensayos-crema",
+    "Ensayos/El Teléfono": "ensayos-el-telefono",
+    "Ensayos/La Cocina": "ensayos-la-cocina",
+    "Ensayos/Perspectiva": "ensayos-perspectiva",
+    "Ensayos/Siluetas": "ensayos-siluetas",
+    "Ensayos/Urubús": "ensayos-urubus",
+    "Cuadernos": "cadernos",
+    "La Escultura/Addis Abbaba": "la-escultura-addis-abbaba",
+    "La Escultura/Invierno II": "la-escultura-invierno",
+    "La Escultura/Pez III": "la-escultura-pez-iii",
+    "La Escultura/Pez IV": "la-escultura-pez-iv",
+    "La Escultura/Soies Sauvages": "la-escultura-soies-sauvages",
+    "La Fotografía/Cotidiano": "la-fotografia-cotidiano",
+    "La Fotografía/Exilio": "la-fotografia-exilio",
+    "La Fotografía/Luz Líquida": "la-fotografia-luz-liquida",
+    "La Moda": "la-moda",
+    "Los Laberintos/Cadaver Exquisito": "los-laberintos-cadaver-exquisito",
+    "Los Laberintos/El Calendario": "los-laberintos-el-calendario",
+    "Los Laberintos/El Puzzle": "los-laberintos-el-puzzle",
+    "Los Laberintos/Las Etiquetas": "los-laberintos-las-etiquetas",
+    "Los Laberintos/Memory": "los-laberintos-memory",
+    "Los Niños/Cósimo": "los-ninos-cosimo",
+    "Los Niños/Der Elefant": "los-ninos-der-elefant",
+    "Los Niños/El Ciervo": "los-ninos-el-ciervo",
+    "Los Niños/Seis Animales": "los-ninos-seis-animales",
+    "Proyectos Especiales/La Fuente y los Simios/Exposición Virtual (La Fuente...)": "proyectos-especiales-la-fuente-y-los-simios",
+    "Proyectos Especiales/Master Taxi": "proyectos-especiales-master-taxi",
+    "Proyectos Especiales/Vlak": "proyectos-especiales-vlak",
+    "Literatura/Ficción/El Nombre": "ficcao-el-nombre",
+}
+
+
+def published_path(source_path: str) -> str:
+    relative = Path(source_path).relative_to("img").as_posix()
+    return f"img/images/{relative}"
+
+
+def render_slides(
+    assets: list[dict[str, Any]], language: str, *, visible_captions: bool
+) -> str:
+    slides = []
+    for index, asset in enumerate(assets):
+        alt = html.escape(asset.get("alt", {}).get(language) or asset["filename"], quote=True)
+        source_path = published_path(asset["path"])
+        if language == "es":
+            source_path = f"../{source_path}"
+        source = html.escape(source_path, quote=True)
+        caption = asset.get("caption", {}).get(language)
+        caption_html = ""
+        if visible_captions and caption:
+            title = html.escape(caption.get("title") or "")
+            meta = " · ".join(
+                html.escape(value)
+                for value in (caption.get("year"), caption.get("details"))
+                if value
+            )
+            caption_html = '<figcaption class="gallery-caption">'
+            if title:
+                caption_html += f'<h3 class="gallery-title">{title}</h3>'
+            if meta:
+                caption_html += f'<p class="gallery-meta">{meta}</p>'
+            caption_html += "</figcaption>"
+        slides.append(
+            f'<div class="gallery-slide" data-index="{index}">'
+            '<figure class="gallery-figure">'
+            f'<img src="{source}" alt="{alt}" class="gallery-img" loading="lazy" />'
+            f"{caption_html}</figure></div>"
+        )
+    return "\n".join(slides)
+
+
+def render_series_copy(target: str, content: dict[str, Any], language: str) -> str:
+    paragraphs = content.get(language, [])
+    rendered = [f"<p>{html.escape(paragraph).replace(chr(10), '<br/>')}</p>" for paragraph in paragraphs]
+    for section in content.get("sections", []):
+        title = html.escape(section.get("title", {}).get(language, ""))
+        rendered.append(f"<h4>{title}</h4>")
+        rendered.extend(
+            f"<p>{html.escape(paragraph).replace(chr(10), '<br/>')}</p>"
+            for paragraph in section.get(language, [])
+        )
+    if len(rendered) > 2:
+        summary = "Leer texto completo" if language == "es" else "Ler texto completo"
+        body = rendered[0] + f'<details class="series-copy-more"><summary>{summary}</summary>{"".join(rendered[1:])}</details>'
+    else:
+        body = "".join(rendered)
+    if content.get("credit"):
+        body += f'<p class="series-copy-credit">{html.escape(content["credit"])}</p>'
+    return f'<template data-series-copy="{html.escape(target, quote=True)}">{body}</template>'
+
+
+def update_carousel(
+    page: str,
+    carousel_id: str,
+    assets: list[dict[str, Any]],
+    language: str,
+    visible_captions: bool,
+) -> str:
+    soup = BeautifulSoup(page, "html.parser")
+    carousel = soup.find(id=carousel_id)
+    if carousel is None:
+        raise ValueError(f"carousel not found: {carousel_id}")
+    track = carousel.select_one(".gallery-track")
+    if track is None:
+        raise ValueError(f"gallery track not found: {carousel_id}")
+    track.clear()
+    fragment = BeautifulSoup(
+        render_slides(assets, language, visible_captions=visible_captions),
+        "html.parser",
+    )
+    track.extend(list(fragment.contents))
+    return str(soup)
+
+
+def clone_tabbed_gallery(
+    page: str,
+    section_id: str,
+    base_target: str,
+    new_target: str,
+    label: str,
+    assets: list[dict[str, Any]],
+    language: str,
+) -> str:
+    soup = BeautifulSoup(page, "html.parser")
+    section = soup.find(id=section_id)
+    if section is None:
+        raise ValueError(f"section not found: {section_id}")
+    base_tab = section.select_one(f'.gallery-tab[data-target="{base_target}"]')
+    base = section.find(id=f"gallery-carousel-{base_target}")
+    if base_tab is None or base is None:
+        raise ValueError(f"base gallery not found: {base_target}")
+    tab = copy.copy(base_tab)
+    tab["data-target"] = new_target
+    tab["aria-selected"] = "false"
+    tab["class"] = [name for name in tab.get("class", []) if name != "active"]
+    tab.string = label
+    base_tab.insert_after(tab)
+    panel = copy.copy(base)
+    panel["id"] = f"gallery-carousel-{new_target}"
+    panel["hidden"] = ""
+    for tagged in panel.select("[id]"):
+        if tagged is not panel:
+            del tagged["id"]
+    track = panel.select_one(".gallery-track")
+    if track is None:
+        raise ValueError(f"gallery track not found: {base_target}")
+    track.clear()
+    fragment = BeautifulSoup(render_slides(assets, language, visible_captions=True), "html.parser")
+    track.extend(list(fragment.contents))
+    base.insert_after(panel)
+    return str(soup)
+
+
+def _key(asset: dict[str, Any]) -> str:
+    return "/".join(part for part in (asset["section"], asset["series"]) if part)
+
+
+def _replace_track(panel: Any, assets: list[dict[str, Any]], language: str, captions: bool) -> None:
+    track = panel.select_one(".gallery-track")
+    if track is None:
+        raise ValueError(f"gallery track not found: {panel.get('id')}")
+    track.clear()
+    fragment = BeautifulSoup(render_slides(assets, language, visible_captions=captions), "html.parser")
+    track.extend(list(fragment.contents))
+
+
+def render_page(page: str, manifest: dict[str, Any], language: str) -> str:
+    soup = BeautifulSoup(page, "html.parser")
+    grouped: dict[str, list[dict[str, Any]]] = {}
+    for asset in manifest["assets"]:
+        grouped.setdefault(_key(asset), []).append(asset)
+    targets = dict(GALLERY_TARGETS)
+    if language == "es":
+        targets["Peces"] = "peces"
+        targets["Cuadernos"] = "cuadernos"
+    for key, target in targets.items():
+        panel = soup.find(id=f"gallery-carousel-{target}")
+        if panel is None:
+            raise ValueError(f"carousel not found: {target}")
+        _replace_track(panel, grouped[key], language, captions=key != "Peces")
+
+    additions = [
+        ("ensayos", "ensayos-el-telefono", "ensayos-gatos", "Gatos", "Ensayos/Gatos"),
+        ("los-laberintos", "los-laberintos-el-puzzle", "los-laberintos-la-papa", "La Papa", "Los Laberintos/La Papa"),
+        ("la-escultura", "la-escultura-invierno", "la-escultura-invierno-iii", "Invierno III", "La Escultura/Invierno III"),
+    ]
+    for section_id, base_target, target, label, key in additions:
+        section = soup.find(id=section_id)
+        existing = section.find(id=f"gallery-carousel-{target}")
+        if existing is not None:
+            _replace_track(existing, grouped[key], language, captions=True)
+            continue
+        base_tab = section.select_one(f'.gallery-tab[data-target="{base_target}"]')
+        base = section.find(id=f"gallery-carousel-{base_target}")
+        if target == "la-escultura-invierno-iii":
+            base_tab.string = "Invierno II"
+        tab = copy.copy(base_tab)
+        tab["data-target"] = target
+        tab["aria-selected"] = "false"
+        tab["class"] = [name for name in tab.get("class", []) if name != "active"]
+        tab.string = label
+        base_tab.insert_after(tab)
+        panel = copy.copy(base)
+        panel["id"] = f"gallery-carousel-{target}"
+        panel["hidden"] = ""
+        for tagged in panel.select("[id]"):
+            if tagged is not panel:
+                del tagged["id"]
+        _replace_track(panel, grouped[key], language, captions=True)
+        base.insert_after(panel)
+
+    fiction = soup.find(id="ficcao")
+    fiction_base = fiction.find(id="gallery-carousel-ficcao-el-nombre")
+    fiction_tabs = fiction.select_one('.gallery-tabs')
+    if fiction_tabs is None:
+        fiction_tabs = soup.new_tag("div", attrs={"class": "gallery-tabs", "role": "tablist", "aria-label": "Obras de ficción" if language == "es" else "Obras de ficção"})
+        for active, target, label in [(True, "ficcao-el-nombre", "El Nombre"), (False, "ficcao-flores", "Flores")]:
+            button = soup.new_tag("button", attrs={"class": "gallery-tab active" if active else "gallery-tab", "role": "tab", "aria-selected": "true" if active else "false", "data-target": target})
+            button.string = label
+            fiction_tabs.append(button)
+        fiction_base.insert_before(fiction_tabs)
+    flores = fiction.find(id="gallery-carousel-ficcao-flores")
+    if flores is None:
+        flores = copy.copy(fiction_base)
+        flores["id"] = "gallery-carousel-ficcao-flores"
+        flores["hidden"] = ""
+        for tagged in flores.select("[id]"):
+            if tagged is not flores:
+                del tagged["id"]
+        fiction_base.insert_after(flores)
+    _replace_track(flores, grouped["Literatura/Ficción/Flores"], language, captions=True)
+
+    for old_template in soup.select('template[data-series-copy]'):
+        old_template.decompose()
+    old_overview = fiction.select_one('.literatura-fiction-overview')
+    if old_overview:
+        old_overview.decompose()
+
+    content_targets = {
+        "Seda/SEDA": ("series", "seda"),
+        "Seda/SEDA BAHIA": ("seda-bahia", "seda-bahia"),
+        "Ensayos/El Teléfono": ("ensayos", "ensayos-el-telefono"),
+        "Ensayos/Emulsión": ("ensayos", "ensayos-crema"),
+        "Ensayos/Urubús": ("ensayos", "ensayos-urubus"),
+        "La Fotografía/Cotidiano": ("la-fotografia", "la-fotografia-cotidiano"),
+        "La Fotografía/Luz Líquida": ("la-fotografia", "la-fotografia-luz-liquida"),
+        "La Moda": ("la-moda", "la-moda"),
+        "Los Laberintos/Cadaver Exquisito": ("los-laberintos", "los-laberintos-cadaver-exquisito"),
+        "Los Laberintos/El Calendario": ("los-laberintos", "los-laberintos-el-calendario"),
+        "Los Laberintos/El Puzzle": ("los-laberintos", "los-laberintos-el-puzzle"),
+        "Los Laberintos/La Papa": ("los-laberintos", "los-laberintos-la-papa"),
+        "Los Niños/Cósimo": ("los-ninos", "los-ninos-cosimo"),
+        "Los Niños/Der Elefant": ("los-ninos", "los-ninos-der-elefant"),
+        "Los Niños/El Ciervo": ("los-ninos", "los-ninos-el-ciervo"),
+        "Los Niños/Seis Animales": ("los-ninos", "los-ninos-seis-animales"),
+        "Proyectos Especiales/La Fuente y los Simios": ("proyectos-especiales", "proyectos-especiales-la-fuente-y-los-simios"),
+        "Proyectos Especiales/Vlak": ("proyectos-especiales", "proyectos-especiales-vlak"),
+        "Literatura/Ficción/El Nombre": ("ficcao", "ficcao-el-nombre"),
+        "Literatura/Ficción/Flores": ("ficcao", "ficcao-flores"),
+    }
+    for key, (section_id, target) in content_targets.items():
+        content = manifest.get("series_content", {}).get(key)
+        if not content:
+            continue
+        section = soup.find(id=section_id)
+        fragment = BeautifulSoup(render_series_copy(target, content, language), "html.parser")
+        section.append(fragment.template)
+    fiction_overview = manifest.get("series_content", {}).get("Literatura/Ficción")
+    if fiction_overview:
+        fragment = BeautifulSoup(render_series_copy("ficcao-overview", fiction_overview, language), "html.parser")
+        overview = soup.new_tag("div", attrs={"class": "literatura-fiction-overview"})
+        overview.extend(list(fragment.template.contents))
+        fiction_tabs.insert_before(overview)
+    return str(soup)
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--manifest", type=Path, required=True)
+    parser.add_argument("--pt", type=Path, required=True)
+    parser.add_argument("--es", type=Path, required=True)
+    args = parser.parse_args()
+    manifest = json.loads(args.manifest.read_text(encoding="utf-8"))
+    args.pt.write_text(render_page(args.pt.read_text(encoding="utf-8"), manifest, "pt"), encoding="utf-8")
+    args.es.write_text(render_page(args.es.read_text(encoding="utf-8"), manifest, "es"), encoding="utf-8")
+
+
+if __name__ == "__main__":
+    main()

@@ -4,6 +4,30 @@
 'use strict';
 
 (function initGalleryTabs() {
+  function syncSeriesCopy(section, targetId) {
+    var template = section.querySelector('template[data-series-copy="' + targetId + '"]');
+    var lead = section.querySelector('.series-lead, .literatura-intro');
+    var display = section.querySelector('.series-copy-display');
+    if (!template) {
+      if (lead) lead.hidden = false;
+      if (display) display.hidden = true;
+      return;
+    }
+    if (!display) {
+      display = document.createElement('div');
+      display.className = 'series-copy-display';
+      if (lead) lead.insertAdjacentElement('afterend', display);
+      else section.insertBefore(display, section.firstChild);
+    }
+    display.innerHTML = '';
+    display.appendChild(template.content.cloneNode(true));
+    display.hidden = false;
+    if (lead) lead.hidden = true;
+    var workTitle = section.querySelector('.literatura-work-title');
+    var activeTab = section.querySelector('.gallery-tab[data-target="' + targetId + '"]');
+    if (workTitle && activeTab) workTitle.textContent = activeTab.textContent.trim();
+  }
+
   // Gallery tab system — switches between sub-gallery carousels
   document.querySelectorAll('.gallery-tabs').forEach(function(tablist) {
     var tabs = tablist.querySelectorAll('.gallery-tab');
@@ -38,8 +62,19 @@
         });
         tab.classList.add('active');
         tab.setAttribute('aria-selected', 'true');
+        syncSeriesCopy(section, targetId);
       });
     });
+
+    var initiallyActive = tablist.querySelector('.gallery-tab.active');
+    if (initiallyActive) syncSeriesCopy(section, initiallyActive.dataset.target);
+  });
+
+  document.querySelectorAll('template[data-series-copy]').forEach(function(template) {
+    var section = template.closest('.series, .series-group, .literatura-subsection');
+    if (section && !section.querySelector('.gallery-tabs')) {
+      syncSeriesCopy(section, template.dataset.seriesCopy);
+    }
   });
 
   // Init Literatura Reading Modal

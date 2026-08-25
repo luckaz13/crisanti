@@ -856,6 +856,36 @@ ul, ol { list-style: none; }
 }
 .series-text strong { color: #1E1B18; font-weight: 500; }
 
+.series-copy-display {
+  margin-bottom: 1.5rem;
+}
+
+.series-copy-display p {
+  max-width: 62ch;
+}
+
+.series-copy-more summary {
+  width: fit-content;
+  margin: 0.75rem 0 1.25rem;
+  border-bottom: 1px solid currentColor;
+  color: #282420;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.series-copy-more[open] summary {
+  margin-bottom: 1rem;
+}
+
+.series-copy-credit {
+  margin-top: 1.25rem;
+  font-size: 0.8rem !important;
+  letter-spacing: 0.06em;
+}
+
 .series-credit {
   margin-top: 2rem;
   border-top: 1px solid #757068;
