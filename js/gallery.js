@@ -85,6 +85,7 @@
                 const slideIndex = [...slides].indexOf(slide);
                 const shouldPlay = slideIndex === currentIndex && carouselVisible &&
                     document.visibilityState === 'visible' && !video.ended;
+                if (shouldPlay) applyInitialVideoTime(video);
                 if (shouldPlay && video.paused) {
                     const playPromise = video.play();
                     if (playPromise && typeof playPromise.catch === 'function') {
@@ -94,6 +95,29 @@
                     video.pause();
                 }
             });
+        }
+
+        function applyInitialVideoTime(video) {
+            if (video.dataset.startTimeApplied === 'true') return;
+            if (video.dataset.startTimePending === 'true') return;
+            const startTime = Number.parseFloat(video.dataset.startTime || '');
+            if (!Number.isFinite(startTime) || startTime < 0 ||
+                !Number.isFinite(video.duration) || startTime >= video.duration) return;
+            if (Math.abs(video.currentTime - startTime) < 0.25) {
+                video.dataset.startTimeApplied = 'true';
+                return;
+            }
+            const canSeekToStart = [video.seekable].some(range => {
+                for (let index = 0; index < range.length; index++) {
+                    if (range.start(index) <= startTime && range.end(index) >= startTime) {
+                        return true;
+                    }
+                }
+                return false;
+            });
+            if (!canSeekToStart) return;
+            video.dataset.startTimePending = 'true';
+            video.currentTime = startTime;
         }
 
         function updateCarousel() {
@@ -161,7 +185,22 @@
         });
 
         videos.forEach(video => {
-            video.addEventListener('loadedmetadata', updateCarousel, { once: true });
+            const initializeVideo = () => {
+                applyInitialVideoTime(video);
+                updateCarousel();
+            };
+            const completeInitialSeek = () => {
+                delete video.dataset.startTimePending;
+                initializeVideo();
+            };
+            if (video.readyState >= 1) {
+                initializeVideo();
+            } else {
+                video.addEventListener('loadedmetadata', initializeVideo, { once: true });
+            }
+            video.addEventListener('seeked', completeInitialSeek);
+            video.addEventListener('progress', initializeVideo);
+            video.addEventListener('canplay', initializeVideo);
         });
 
         if ('ResizeObserver' in window) {

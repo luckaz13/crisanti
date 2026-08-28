@@ -75,6 +75,12 @@ class VlakVideoTests(unittest.TestCase):
                 self.assertIsNone(video.get("loop"))
                 self.assertEqual(source, video.select_one("source")["src"])
 
+    def test_video_declares_ten_second_start_time_in_both_languages(self):
+        for relative in ("index.html", "es/index.html"):
+            with self.subTest(relative=relative):
+                video = self._section(relative).select_one("video.gallery-video")
+                self.assertEqual("10", video.get("data-start-time"))
+
     def test_video_surface_is_scoped_and_uncropped(self):
         css = (ROOT / "css/style.css").read_text(encoding="utf-8")
         rule = re.search(r"\.gallery-video\s*\{([^}]+)\}", css)
@@ -97,6 +103,34 @@ class VlakVideoTests(unittest.TestCase):
         self.assertIn("playPromise.catch(() => {})", script)
         self.assertIn("video.pause()", script)
         self.assertNotIn("video.currentTime = 0", script)
+
+    def test_controller_applies_configured_start_time_only_once(self):
+        script = (ROOT / "js/gallery.js").read_text(encoding="utf-8")
+        self.assertIn("function applyInitialVideoTime(video)", script)
+        self.assertIn("video.dataset.startTimeApplied === 'true'", script)
+        self.assertIn("video.currentTime = startTime;", script)
+        self.assertIn("video.dataset.startTimeApplied = 'true';", script)
+        self.assertIn("Math.abs(video.currentTime - startTime) < 0.25", script)
+        self.assertIn("video.addEventListener('seeked', completeInitialSeek);", script)
+        self.assertIn("video.addEventListener('progress', initializeVideo);", script)
+        self.assertIn("video.addEventListener('canplay', initializeVideo);", script)
+        self.assertIn("video.dataset.startTimePending === 'true'", script)
+        self.assertIn("video.dataset.startTimePending = 'true';", script)
+        self.assertIn("delete video.dataset.startTimePending;", script)
+        self.assertIn("range.start(index) <= startTime", script)
+        self.assertIn("range.end(index) >= startTime", script)
+        self.assertIn(
+            "video.addEventListener('loadedmetadata', initializeVideo, { once: true });",
+            script,
+        )
+        sync = script[
+            script.index("function syncVideoPlayback()") :
+            script.index("function updateCarousel()")
+        ]
+        self.assertIn("applyInitialVideoTime(video);", sync)
+        self.assertLess(
+            sync.index("applyInitialVideoTime(video);"), sync.index("video.play()")
+        )
 
     def test_controller_observes_viewport_and_syncs_after_navigation(self):
         script = (ROOT / "js/gallery.js").read_text(encoding="utf-8")
