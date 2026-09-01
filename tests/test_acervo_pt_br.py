@@ -1,11 +1,43 @@
+import json
 import tempfile
 import unittest
 from pathlib import Path
 
+from bs4 import BeautifulSoup
+
 from tools.acervo.audit_pt_br import audit_pt_br_html, find_spanish_residuals
 
 
+ROOT = Path(__file__).resolve().parents[1]
+
+
 class PtBrAuditTests(unittest.TestCase):
+    def test_critica_editorial_preserves_source_paragraph_boundaries(self):
+        editorial = json.loads(
+            (ROOT / "data/acervo/editorial-literatura-critica.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        spanish = BeautifulSoup(
+            (ROOT / "es/index.html").read_text(encoding="utf-8"), "html.parser"
+        )
+
+        source_counts = {
+            article["id"]: len(article.select(".literatura-full p"))
+            for article in spanish.select("#critica article[id]")
+        }
+        translated_counts = {
+            article_id: len(article["paragraphs"])
+            for article_id, article in editorial["articles"].items()
+        }
+
+        self.assertEqual(source_counts, translated_counts)
+        translated_texts = [editorial["intro"]]
+        for article in editorial["articles"].values():
+            self.assertEqual(article["excerpt"], article["paragraphs"][0])
+            translated_texts.extend([article["excerpt"], *article["paragraphs"]])
+        self.assertEqual([], find_spanish_residuals(translated_texts))
+
     def test_detects_spanish_exhibition_caption(self):
         findings = find_spanish_residuals(
             ["Las fotografía fueron tomadas de la serie del autor, expuesta en el Consulado."]

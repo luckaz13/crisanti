@@ -1935,25 +1935,6 @@ ul, ol { list-style: none; }
   box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
 }
 
-#critica .literatura-card {
-  background: #D4B38A;
-  border: 1px solid rgba(26, 23, 20, 0.14);
-  box-shadow: 0 6px 18px rgba(26, 23, 20, 0.14);
-}
-
-#critica .literatura-card:hover {
-  border-color: rgba(26, 23, 20, 0.2);
-  box-shadow: 0 10px 24px rgba(26, 23, 20, 0.18);
-}
-
-#critica .literatura-card h4,
-#critica .literatura-card h3,
-#critica .literatura-card p,
-#critica .literatura-card .literatura-excerpt,
-#critica .literatura-card .literatura-full p {
-  color: #1A1714 !important;
-}
-
 .literatura-card h4,
 .literatura-card h3 {
   font-family: var(--f-serif, 'Cormorant Garamond', serif);
