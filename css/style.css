@@ -669,6 +669,7 @@ ul, ol { list-style: none; }
 ════════════════════════════════════════════════════ */
 /* ── Universal artwork surface ────────────────────── */
 :root {
+  --artwork-mat: 3px;
   --artwork-outline: rgba(255, 255, 255, 0.96);
   --artwork-shadow: 0 5px 14px rgba(26, 23, 20, 0.1);
 }
@@ -676,8 +677,7 @@ ul, ol { list-style: none; }
 .obra-img,
 .gallery-img,
 .lightbox-img {
-  outline: 1px solid var(--artwork-outline);
-  outline-offset: -1px;
+  border: var(--artwork-mat) solid var(--artwork-outline);
   box-shadow: var(--artwork-shadow);
 }
 
@@ -1297,17 +1297,23 @@ ul, ol { list-style: none; }
 
 .lightbox-content {
   position: relative;
+  width: min(100%, 90vw);
   max-width: 90vw;
-  max-height: 90vh;
+  max-height: calc(100dvh - 2rem);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 4rem 0 4.5rem;
+  scrollbar-gutter: stable both-edges;
 }
 
 .lightbox-img {
   max-width: 100%;
-  max-height: 82vh;
+  max-height: calc(100dvh - 13rem);
+  flex: 0 0 auto;
   object-fit: contain;
   border-radius: var(--radius);
   animation: lbImgIn 0.3s var(--ease);
@@ -1324,12 +1330,8 @@ ul, ol { list-style: none; }
   color: rgba(255,255,255,0.55);
   text-align: center;
   letter-spacing: 0.04em;
-}
-
-@media (max-width: 768px) {
-  .lightbox-caption {
-    display: none;
-  }
+  max-width: 72ch;
+  flex: 0 0 auto;
 }
 
 .lightbox-close {

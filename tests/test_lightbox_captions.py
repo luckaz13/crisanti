@@ -1,6 +1,8 @@
 import unittest
 from pathlib import Path
 
+from tests.css_helpers import css_rule
+
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -26,15 +28,10 @@ class LightboxCaptionTests(unittest.TestCase):
             self.script,
         )
 
-    def test_mobile_lightbox_caption_is_hidden(self):
-        self.assertIn(
-            "@media (max-width: 768px) {\n"
-            "  .lightbox-caption {\n"
-            "    display: none;\n"
-            "  }\n"
-            "}",
-            self.css,
-        )
+    def test_mobile_lightbox_caption_remains_visible(self):
+        self.assertNotIn(".lightbox-caption {\n    display: none;", self.css)
+        self.assertIn("overflow-y: auto;", css_rule(self.css, ".lightbox-content"))
+        self.assertIn("flex: 0 0 auto;", css_rule(self.css, ".lightbox-caption"))
 
 
 if __name__ == "__main__":
