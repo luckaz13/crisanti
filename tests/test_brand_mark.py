@@ -55,10 +55,11 @@ class BrandMarkStylesTests(unittest.TestCase):
     def test_footer_token_matches_fc_text_scale(self):
         css = (ROOT / "css/style.css").read_text(encoding="utf-8")
         footer = css_rule(css, ".footer-brand-mark")
-        fc = css_rule(css, ".footer-brand-mark__text")
-        fc_size = re.search(r"font-size\s*:\s*([^;]+);", fc)
-        self.assertIsNotNone(fc_size)
-        self.assertIn(f"--brand-mark-height: {fc_size.group(1).strip()};", footer)
+        fc = css_rule(css, ".footer-brand-mark__fc")
+        self.assertIn("--brand-mark-height: 1em;", footer)
+        self.assertIn("font-size: clamp(1.45rem, 3vw, 1.8rem);", footer)
+        self.assertIn("font-size: inherit;", fc)
+        self.assertIn("line-height: 1;", fc)
         self.assertIn("align-items: center;", footer)
         self.assertIn("overflow: visible;", footer)
 
@@ -83,6 +84,8 @@ class BrandMarkStylesTests(unittest.TestCase):
         es = (ROOT / "es/index.html").read_text(encoding="utf-8")
         self.assertEqual(2, pt.count('src="img/Peces/03-header-mark.png"'))
         self.assertEqual(2, es.count('src="../img/Peces/03-header-mark.png"'))
+        self.assertIn('class="footer-brand-mark__text footer-brand-mark__fc"', pt)
+        self.assertIn('class="footer-brand-mark__text footer-brand-mark__fc"', es)
         self.assertIn('src="img/images/Peces/03-header-mark.png"', pt)
         self.assertIn('src="../img/images/Peces/03-header-mark.png"', es)
 

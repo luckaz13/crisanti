@@ -1200,7 +1200,8 @@ ul, ol { list-style: none; }
 .footer-brand-mark {
   display: inline-flex;
   align-items: center;
-  --brand-mark-height: clamp(1.45rem, 3vw, 1.8rem);
+  --brand-mark-height: 1em;
+  font-size: clamp(1.45rem, 3vw, 1.8rem);
   overflow: visible;
   justify-content: center;
   gap: 0.45rem;
@@ -1221,7 +1222,13 @@ ul, ol { list-style: none; }
 
 .footer-brand-mark__text {
   font-family: var(--f-serif);
-  font-size: clamp(1.45rem, 3vw, 1.8rem);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+.footer-brand-mark__fc {
+  font-family: var(--f-serif);
+  font-size: inherit;
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0.08em;
