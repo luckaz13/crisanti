@@ -193,7 +193,8 @@ def reorder_el_nombre(fiction: Any, content: dict[str, Any], language: str) -> N
         "html.parser",
     ).template
     wrapper_soup = BeautifulSoup(
-        '<div class="series-copy-display" data-rendered-series-copy="ficcao-el-nombre"></div>',
+        '<div class="series-copy-display series-copy-display--static" '
+        'data-rendered-series-copy="ficcao-el-nombre"></div>',
         "html.parser",
     )
     wrapper = wrapper_soup.div

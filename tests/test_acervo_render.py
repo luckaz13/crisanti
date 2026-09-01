@@ -173,6 +173,21 @@ class GalleryRenderingTests(unittest.TestCase):
         self.assertTrue(any("Dinámica" in name for name in document_names))
         self.assertFalse(any("Sinópsis" in name for name in document_names))
 
+    def test_master_taxi_renders_the_complete_synopsis_in_both_languages(self):
+        content = self.manifest["series_content"]["Proyectos Especiales/Master Taxi"]["synopsis"]
+        for language in ("pt", "es"):
+            with self.subTest(language=language):
+                panel = BeautifulSoup(self.render(language), "html.parser").find(
+                    id="gallery-carousel-proyectos-especiales-master-taxi"
+                )
+                expected = [
+                    paragraph
+                    for section in content["sections"]
+                    for paragraph in section[language]
+                ]
+                rendered = [node.get_text(strip=True) for node in panel.select(".master-taxi-synopsis p")]
+                self.assertEqual(expected, rendered)
+
     def test_master_taxi_synopsis_rendering_is_idempotent(self):
         page = '''<div id="panel"><div class="gallery-viewport"></div>
 <section class="project-documents"><div class="project-documents__list">
@@ -201,6 +216,62 @@ class GalleryRenderingTests(unittest.TestCase):
         self.assertLess(title, gallery)
         self.assertLess(gallery, copy)
         self.assertIn('id="gallery-carousel-ficcao-flores"', fiction)
+
+    def test_el_nombre_copy_is_isolated_from_the_shared_flores_tab_display(self):
+        root = Path(__file__).resolve().parents[1]
+        script = (root / "js/gallery-tabs.js").read_text(encoding="utf-8")
+        for language in ("pt", "es"):
+            with self.subTest(language=language):
+                fiction = BeautifulSoup(self.render(language), "html.parser").find(id="ficcao")
+                static_copy = fiction.select_one(
+                    '[data-rendered-series-copy="ficcao-el-nombre"]'
+                )
+                self.assertIsNotNone(static_copy)
+                self.assertIn("series-copy-display--static", static_copy.get("class", []))
+                el_nombre_template = fiction.select_one(
+                    'template[data-series-copy="ficcao-el-nombre"]'
+                )
+                flores_template = fiction.select_one('template[data-series-copy="ficcao-flores"]')
+                self.assertEqual(
+                    list(el_nombre_template.stripped_strings),
+                    list(static_copy.stripped_strings),
+                )
+                self.assertNotEqual(
+                    list(flores_template.stripped_strings),
+                    list(static_copy.stripped_strings),
+                )
+        self.assertIn(
+            ".series-copy-display:not([data-rendered-series-copy])",
+            script,
+        )
+        self.assertIn(
+            "[data-rendered-series-copy=\"' + targetId + '\"]",
+            script,
+        )
+        self.assertIn("staticCopies.forEach", script)
+        self.assertIn("copy.hidden = copy !== staticDisplay", script)
+        self.assertIn("copy.hidden = true", script)
+        self.assertIn("if (display) display.hidden = true", script)
+
+    def test_both_vlak_panels_use_the_exact_approved_manifest_names(self):
+        expected = [
+            "01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg", "06.jpg",
+            "08(1).jpg", "08.jpg", "09.jpg", "10.jpg", "11.jpg", "12.jpg",
+            "13.jpg", "14.jpg", "15.jpg", "16.jpg", "17.jpg",
+        ]
+        for language in ("pt", "es"):
+            with self.subTest(language=language):
+                soup = BeautifulSoup(self.render(language), "html.parser")
+                for panel_id in (
+                    "gallery-carousel-juego-del-tren",
+                    "gallery-carousel-proyectos-especiales-vlak",
+                ):
+                    paths = [
+                        Path(node["src"]).name
+                        for node in soup.find(id=panel_id).select(".gallery-img")
+                    ]
+                    self.assertEqual(expected, paths)
+                    self.assertNotIn("07.jpg", paths)
 
     def test_approved_ensayos_and_laberintos_leads_are_rendered_in_both_languages(self):
         expected = {

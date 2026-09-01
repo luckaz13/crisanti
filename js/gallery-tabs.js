@@ -7,9 +7,25 @@
   function syncSeriesCopy(section, targetId) {
     var template = section.querySelector('template[data-series-copy="' + targetId + '"]');
     var lead = section.querySelector('.series-lead, .literatura-intro');
-    var display = section.querySelector('.series-copy-display');
+    var staticCopies = section.querySelectorAll('[data-rendered-series-copy]');
+    var staticDisplay = section.querySelector('[data-rendered-series-copy="' + targetId + '"]');
+    var display = section.querySelector('.series-copy-display:not([data-rendered-series-copy])');
     var tablist = section.querySelector('.gallery-tabs');
     var activeTab = section.querySelector('.gallery-tab[data-target="' + targetId + '"]');
+    var workTitle = section.querySelector('.literatura-work-title');
+    if (staticDisplay) {
+      staticCopies.forEach(function(copy) {
+        copy.hidden = copy !== staticDisplay;
+      });
+      if (display) display.hidden = true;
+      staticDisplay.hidden = false;
+      if (lead) lead.hidden = true;
+      if (workTitle && activeTab) workTitle.textContent = activeTab.textContent.trim();
+      return;
+    }
+    staticCopies.forEach(function(copy) {
+      copy.hidden = true;
+    });
     var copyInGallery = section.dataset.seriesCopyLayout === 'gallery';
     if (copyInGallery && tablist && activeTab) {
       if (!display) {
@@ -42,7 +58,6 @@
     display.appendChild(template.content.cloneNode(true));
     display.hidden = false;
     if (lead) lead.hidden = true;
-    var workTitle = section.querySelector('.literatura-work-title');
     if (workTitle && activeTab) workTitle.textContent = activeTab.textContent.trim();
   }
 
