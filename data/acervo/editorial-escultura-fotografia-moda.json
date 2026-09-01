@@ -1,6 +1,12 @@
 {
   "schema_version": 1,
   "series": {
+    "La Escultura": {
+      "lead": {
+        "es": "Objetos y esculturas que habitan el espacio entre la materia bruta y la forma — piezas que cargan peso, textura y presencia tridimensional.",
+        "pt": "Objetos e esculturas que habitam o espaço entre a matéria bruta e a forma — peças que carregam peso, textura e presença tridimensional."
+      }
+    },
     "La Fotografía/Cotidiano": {
       "credit": "Sebastián Rivero",
       "title": {

@@ -43,8 +43,8 @@ class VlakVideoTests(unittest.TestCase):
 
     def test_video_is_first_slide_and_images_keep_their_order(self):
         expected_first_image = {
-            "index.html": "img/images/legacy/highres/Juego del Tren/1.jpg",
-            "es/index.html": "../img/images/legacy/highres/Juego del Tren/1.jpg",
+            "index.html": "img/images/Proyectos Especiales/Vlak/01.jpg",
+            "es/index.html": "../img/images/Proyectos Especiales/Vlak/01.jpg",
         }
         for relative, first_image in expected_first_image.items():
             with self.subTest(relative=relative):
@@ -52,8 +52,8 @@ class VlakVideoTests(unittest.TestCase):
                 slides = section.select(".gallery-track > .gallery-slide")
                 video = slides[0].select_one("video.gallery-video")
                 self.assertIsNotNone(video)
-                self.assertEqual(73, len(slides))
-                self.assertEqual(72, len(section.select(".gallery-slide .gallery-img")))
+                self.assertEqual(18, len(slides))
+                self.assertEqual(17, len(section.select(".gallery-slide .gallery-img")))
                 self.assertEqual(
                     first_image, slides[1].select_one(".gallery-img")["src"]
                 )

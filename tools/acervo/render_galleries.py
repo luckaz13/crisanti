@@ -10,7 +10,14 @@ import json
 from pathlib import Path
 from typing import Any
 
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, NavigableString
+
+if __package__:
+    from .curate import localize_caption
+    from .localize_manifest_pt import localize_manifest_pt
+else:
+    from curate import localize_caption
+    from localize_manifest_pt import localize_manifest_pt
 
 
 GALLERY_TARGETS = {
@@ -48,6 +55,20 @@ GALLERY_TARGETS = {
     "Proyectos Especiales/Master Taxi": "proyectos-especiales-master-taxi",
     "Proyectos Especiales/Vlak": "proyectos-especiales-vlak",
     "Literatura/Ficción/El Nombre": "ficcao-el-nombre",
+}
+
+EDITORIAL_FILENAMES = (
+    "editorial-seda-ensaios.json",
+    "editorial-escultura-fotografia-moda.json",
+    "editorial-laberintos-ninos.json",
+    "editorial-proyectos-literatura.json",
+)
+
+SECTION_LEAD_TARGETS = {
+    "Ensayos": "ensayos",
+    "La Escultura": "la-escultura",
+    "Los Laberintos": "los-laberintos",
+    "Literatura/Crítica": "critica",
 }
 
 
@@ -108,6 +129,82 @@ def render_series_copy(target: str, content: dict[str, Any], language: str) -> s
     if content.get("credit"):
         body += f'<p class="series-copy-credit">{html.escape(content["credit"])}</p>'
     return f'<template data-series-copy="{html.escape(target, quote=True)}">{body}</template>'
+
+
+def replace_images_after_leading_media(
+    panel: Any, assets: list[dict[str, Any]], language: str
+) -> None:
+    """Replace image slides while preserving a standalone leading video slide."""
+    track = panel.select_one(".gallery-track")
+    if track is None:
+        raise ValueError(f"gallery track not found: {panel.get('id')}")
+    leading = next(
+        (slide for slide in track.select(":scope > .gallery-slide") if slide.select_one(".gallery-video")),
+        None,
+    )
+    if leading is None:
+        raise ValueError(f"leading video slide not found: {panel.get('id')}")
+    leading.extract()
+    track.clear()
+    track.append(leading)
+    slides = BeautifulSoup(
+        render_slides(assets, language, visible_captions=True),
+        "html.parser",
+    )
+    track.extend(list(slides.contents))
+
+
+def render_master_taxi_synopsis(panel: Any, content: dict[str, Any], language: str) -> None:
+    """Render the synopsis inline and remove only its legacy document card."""
+    for old_synopsis in panel.select(".master-taxi-synopsis"):
+        old_synopsis.decompose()
+    for document in panel.select(".project-document"):
+        name = document.select_one(".project-document__name")
+        if name and "sinopsis" in name.get_text(" ", strip=True).casefold().replace("ó", "o"):
+            whitespace = document.previous_sibling
+            document.decompose()
+            if isinstance(whitespace, NavigableString) and not whitespace.strip():
+                whitespace.extract()
+
+    title = html.escape(content.get("title", {}).get(language, ""))
+    rendered = [f'<section class="master-taxi-synopsis"><h3>{title}</h3>']
+    for section in content.get("sections", []):
+        heading = html.escape(section.get("title", {}).get(language, ""))
+        if heading:
+            rendered.append(f"<h4>{heading}</h4>")
+        rendered.extend(f"<p>{html.escape(paragraph)}</p>" for paragraph in section.get(language, []))
+    rendered.append("</section>")
+    synopsis = BeautifulSoup("".join(rendered), "html.parser").section
+    viewport = panel.select_one(".gallery-viewport")
+    if viewport is None:
+        raise ValueError("Master Taxi gallery viewport not found")
+    viewport.insert_after(synopsis)
+
+
+def reorder_el_nombre(fiction: Any, content: dict[str, Any], language: str) -> None:
+    """Place El Nombre's rendered copy after its gallery without touching Flores."""
+    panel = fiction.find(id="gallery-carousel-ficcao-el-nombre")
+    if panel is None:
+        raise ValueError("El Nombre gallery not found")
+    for old_copy in fiction.select('[data-rendered-series-copy="ficcao-el-nombre"]'):
+        old_copy.decompose()
+    template = BeautifulSoup(
+        render_series_copy("ficcao-el-nombre", content, language),
+        "html.parser",
+    ).template
+    wrapper_soup = BeautifulSoup(
+        '<div class="series-copy-display" data-rendered-series-copy="ficcao-el-nombre"></div>',
+        "html.parser",
+    )
+    wrapper = wrapper_soup.div
+    wrapper.extend(list(template.contents))
+
+    overview = fiction.select_one(".literatura-fiction-overview")
+    if overview is not None:
+        panel.insert_after(overview)
+        overview.insert_after(wrapper)
+    else:
+        panel.insert_after(wrapper)
 
 
 def update_carousel(
@@ -176,6 +273,59 @@ def _key(asset: dict[str, Any]) -> str:
     return "/".join(part for part in (asset["section"], asset["series"]) if part)
 
 
+def load_series_editorial(manifest: dict[str, Any], editorial_dir: Path) -> dict[str, Any]:
+    """Merge the reviewed editorial sources into a regenerated manifest in memory."""
+    result = copy.deepcopy(manifest)
+    content = dict(result.get("series_content", {}))
+    for filename in EDITORIAL_FILENAMES:
+        payload = json.loads((editorial_dir / filename).read_text(encoding="utf-8"))
+        content.update(payload.get("series", {}))
+    result["series_content"] = content
+    return result
+
+
+def _asset_with_editorial_caption(
+    asset: dict[str, Any], series_content: dict[str, Any]
+) -> dict[str, Any]:
+    override = series_content.get(_key(asset), {}).get("captions", {}).get(asset["filename"])
+    captions = asset.get("caption", {})
+    source = captions.get("source")
+    needs_localization = source and any(
+        not isinstance(captions.get(language), dict) for language in ("es", "pt")
+    )
+    if not override and not needs_localization:
+        return asset
+    result = copy.deepcopy(asset)
+    if needs_localization:
+        es_caption, pt_caption = localize_caption(source)
+        result.setdefault("caption", {})["es"] = es_caption
+        result["caption"]["pt"] = pt_caption
+        result = localize_manifest_pt({"assets": [result]})["assets"][0]
+    if override:
+        result.setdefault("caption", {}).update(copy.deepcopy(override))
+    for language in ("es", "pt"):
+        caption = result.get("caption", {}).get(language)
+        if not isinstance(caption, dict):
+            continue
+        values = [caption.get(field) for field in ("title", "year", "details")]
+        values = [value for value in values if value]
+        if values:
+            result.setdefault("alt", {})[language] = " — ".join([*values, "Fabio Crisanti"])
+    return result
+
+
+def _apply_section_leads(soup: BeautifulSoup, series_content: dict[str, Any], language: str) -> None:
+    for key, section_id in SECTION_LEAD_TARGETS.items():
+        value = series_content.get(key, {}).get("lead", {}).get(language)
+        if not value:
+            continue
+        section = soup.find(id=section_id)
+        lead = section.select_one(".series-lead, .literatura-intro") if section else None
+        if lead is None:
+            raise ValueError(f"section lead not found: {section_id}")
+        lead.string = value
+
+
 def _replace_track(panel: Any, assets: list[dict[str, Any]], language: str, captions: bool) -> None:
     track = panel.select_one(".gallery-track")
     if track is None:
@@ -219,9 +369,11 @@ def render_page(
     pt_editorial: dict[str, Any] | None = None,
 ) -> str:
     soup = BeautifulSoup(page, "html.parser")
+    series_content = manifest.get("series_content", {})
     grouped: dict[str, list[dict[str, Any]]] = {}
     for asset in manifest["assets"]:
-        grouped.setdefault(_key(asset), []).append(asset)
+        rendered_asset = _asset_with_editorial_caption(asset, series_content)
+        grouped.setdefault(_key(rendered_asset), []).append(rendered_asset)
     targets = dict(GALLERY_TARGETS)
     if language == "es":
         targets["Peces"] = "peces"
@@ -231,6 +383,15 @@ def render_page(
         if panel is None:
             raise ValueError(f"carousel not found: {target}")
         _replace_track(panel, grouped[key], language, captions=key != "Peces")
+
+    standalone_vlak = soup.find(id="gallery-carousel-juego-del-tren")
+    if standalone_vlak is None:
+        raise ValueError("carousel not found: juego-del-tren")
+    replace_images_after_leading_media(
+        standalone_vlak,
+        grouped["Proyectos Especiales/Vlak"],
+        language,
+    )
 
     additions = [
         ("ensayos", "ensayos-el-telefono", "ensayos-gatos", "Gatos", "Ensayos/Gatos"),
@@ -312,18 +473,28 @@ def render_page(
         "Literatura/Ficción/Flores": ("ficcao", "ficcao-flores"),
     }
     for key, (section_id, target) in content_targets.items():
-        content = manifest.get("series_content", {}).get(key)
+        content = series_content.get(key)
         if not content:
             continue
         section = soup.find(id=section_id)
         fragment = BeautifulSoup(render_series_copy(target, content, language), "html.parser")
         section.append(fragment.template)
-    fiction_overview = manifest.get("series_content", {}).get("Literatura/Ficción")
+    fiction_overview = series_content.get("Literatura/Ficción")
     if fiction_overview:
         fragment = BeautifulSoup(render_series_copy("ficcao-overview", fiction_overview, language), "html.parser")
         overview = soup.new_tag("div", attrs={"class": "literatura-fiction-overview"})
         overview.extend(list(fragment.template.contents))
         fiction_tabs.insert_before(overview)
+    el_nombre_content = series_content.get("Literatura/Ficción/El Nombre")
+    if el_nombre_content:
+        reorder_el_nombre(fiction, el_nombre_content, language)
+
+    master_taxi = soup.find(id="gallery-carousel-proyectos-especiales-master-taxi")
+    master_taxi_content = series_content.get("Proyectos Especiales/Master Taxi", {}).get("synopsis")
+    if master_taxi is not None and master_taxi_content:
+        render_master_taxi_synopsis(master_taxi, master_taxi_content, language)
+
+    _apply_section_leads(soup, series_content, language)
     rendered = str(soup)
     if language == "pt" and pt_editorial:
         rendered = apply_pt_editorial(rendered, pt_editorial)
@@ -341,7 +512,10 @@ def main() -> None:
         default=Path("data/acervo/editorial-literatura-critica.json"),
     )
     args = parser.parse_args()
-    manifest = json.loads(args.manifest.read_text(encoding="utf-8"))
+    manifest = load_series_editorial(
+        json.loads(args.manifest.read_text(encoding="utf-8")),
+        args.manifest.parent,
+    )
     pt_editorial = json.loads(args.pt_editorial.read_text(encoding="utf-8"))
     args.pt.write_text(
         render_page(args.pt.read_text(encoding="utf-8"), manifest, "pt", pt_editorial),

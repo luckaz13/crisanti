@@ -1,9 +1,15 @@
+import json
 import unittest
 from pathlib import Path
+
+from bs4 import BeautifulSoup
 
 from tools.acervo.render_galleries import (
     apply_pt_editorial,
     clone_tabbed_gallery,
+    load_series_editorial,
+    render_master_taxi_synopsis,
+    render_page,
     render_series_copy,
     render_slides,
     update_carousel,
@@ -23,6 +29,40 @@ def asset(path, title="Obra I"):
 
 
 class GalleryRenderingTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        root = Path(__file__).resolve().parents[1]
+        cls.pages = {
+            "pt": (root / "index.html").read_text(encoding="utf-8"),
+            "es": (root / "es/index.html").read_text(encoding="utf-8"),
+        }
+        cls.manifest = json.loads((root / "data/acervo/manifest.json").read_text(encoding="utf-8"))
+        cls.manifest["series_content"] = {}
+        for name in (
+            "editorial-seda-ensaios.json",
+            "editorial-escultura-fotografia-moda.json",
+            "editorial-laberintos-ninos.json",
+            "editorial-proyectos-literatura.json",
+        ):
+            payload = json.loads((root / "data/acervo" / name).read_text(encoding="utf-8"))
+            cls.manifest["series_content"].update(payload["series"])
+        cls.pt_editorial = json.loads(
+            (root / "data/acervo/editorial-literatura-critica.json").read_text(encoding="utf-8")
+        )
+
+    def render(self, language):
+        editorial = self.pt_editorial if language == "pt" else None
+        return render_page(self.pages[language], self.manifest, language, editorial)
+
+    def test_loads_editorial_series_for_a_regenerated_manifest(self):
+        manifest = {"assets": []}
+
+        loaded = load_series_editorial(manifest, Path(__file__).resolve().parents[1] / "data/acervo")
+
+        self.assertIn("Ensayos", loaded["series_content"])
+        self.assertIn("Proyectos Especiales/Master Taxi", loaded["series_content"])
+        self.assertIn("Literatura/Ficción/El Nombre", loaded["series_content"])
+
     def test_applies_portuguese_editorial_overrides_to_criticism(self):
         page = '''<section id="critica"><p class="literatura-intro">Spanish intro</p><article id="lit-example"><p class="literatura-excerpt">Spanish excerpt</p><div class="literatura-full"><p>Spanish body</p></div></article></section>'''
         editorial = {
@@ -114,6 +154,108 @@ class GalleryRenderingTests(unittest.TestCase):
         self.assertIn('id="gallery-carousel-ensayos-gatos"', rendered)
         self.assertIn("hidden", rendered)
         self.assertIn("img/images/Ensayos/Gatos/01.jpg", rendered)
+
+    def test_bilingual_standalone_vlak_keeps_video_then_17_manifest_images(self):
+        for language in ("pt", "es"):
+            with self.subTest(language=language):
+                section = BeautifulSoup(self.render(language), "html.parser").find(id="juego-del-tren")
+                slides = section.select(".gallery-track > .gallery-slide")
+                self.assertIsNotNone(slides[0].select_one("video.gallery-video"))
+                self.assertEqual(17, len(section.select(".gallery-slide .gallery-img")))
+
+    def test_master_taxi_renders_synopsis_but_keeps_dinamica_document(self):
+        panel = BeautifulSoup(self.render("pt"), "html.parser").find(
+            id="gallery-carousel-proyectos-especiales-master-taxi"
+        )
+
+        self.assertIsNotNone(panel.select_one(".master-taxi-synopsis"))
+        document_names = [node.get_text(" ", strip=True) for node in panel.select(".project-document__name")]
+        self.assertTrue(any("Dinámica" in name for name in document_names))
+        self.assertFalse(any("Sinópsis" in name for name in document_names))
+
+    def test_master_taxi_synopsis_rendering_is_idempotent(self):
+        page = '''<div id="panel"><div class="gallery-viewport"></div>
+<section class="project-documents"><div class="project-documents__list">
+<article class="project-document"><span class="project-document__name">Master Taxi Dinámica</span></article>
+<article class="project-document"><span class="project-document__name">Master Taxi Sinópsis</span></article>
+</div></section></div>'''
+        content = {
+            "title": {"pt": "Sinopse"},
+            "sections": [{"title": {"pt": "O Jogo"}, "pt": ["Texto."]}],
+        }
+        first_soup = BeautifulSoup(page, "html.parser")
+        render_master_taxi_synopsis(first_soup.find(id="panel"), content, "pt")
+        first = str(first_soup)
+        second_soup = BeautifulSoup(first, "html.parser")
+        render_master_taxi_synopsis(second_soup.find(id="panel"), content, "pt")
+
+        self.assertEqual(first, str(second_soup))
+
+    def test_el_nombre_order_is_title_gallery_copy_and_preserves_flores(self):
+        fiction = str(BeautifulSoup(self.render("pt"), "html.parser").find(id="ficcao"))
+
+        self.assertIn('data-rendered-series-copy="ficcao-el-nombre"', fiction)
+        title = fiction.index(">El Nombre<")
+        gallery = fiction.index('id="gallery-carousel-ficcao-el-nombre"')
+        copy = fiction.index('data-rendered-series-copy="ficcao-el-nombre"')
+        self.assertLess(title, gallery)
+        self.assertLess(gallery, copy)
+        self.assertIn('id="gallery-carousel-ficcao-flores"', fiction)
+
+    def test_approved_ensayos_and_laberintos_leads_are_rendered_in_both_languages(self):
+        expected = {
+            "pt": {
+                "ensayos": "Séries de ensaios fotográficos que exploram o cotidiano, os gestos e as texturas do mundo ao redor — registros íntimos onde a câmera se torna instrumento de meditação visual.",
+                "los-laberintos": "Sistemas visuais, quebra-cabeças e jogos conceituais. Os labirintos de nomear e numerar.",
+            },
+            "es": {
+                "ensayos": "Series de ensayos fotográficos que exploran lo cotidiano, los gestos y las texturas del mundo que nos rodea — registros íntimos en los que la cámara se convierte en un instrumento de meditación visual.",
+                "los-laberintos": "Sistemas visuales, puzles y juegos conceptuales. Los laberintos de nombrar y numerar.",
+            },
+        }
+        for language, sections in expected.items():
+            soup = BeautifulSoup(self.render(language), "html.parser")
+            for section_id, copy in sections.items():
+                with self.subTest(language=language, section=section_id):
+                    self.assertEqual(copy, soup.find(id=section_id).select_one(".series-lead").get_text(strip=True))
+
+    def test_approved_addis_and_spanish_criticism_corrections_are_rendered(self):
+        for language in ("pt", "es"):
+            with self.subTest(language=language):
+                lead = BeautifulSoup(self.render(language), "html.parser").find(id="la-escultura").select_one(
+                    ".series-lead"
+                )
+                self.assertNotIn("poétic", lead.get_text().casefold())
+        criticism = BeautifulSoup(self.render("es"), "html.parser").find(id="critica")
+        self.assertIn("en mi obra", criticism.select_one(".literatura-intro").get_text())
+        self.assertNotIn("Em mi obra", criticism.select_one(".literatura-intro").get_text())
+
+    def test_seis_animales_uses_readable_materials_from_its_ficha(self):
+        for language, expected in (
+            ("pt", "Materiais: Aço. Madeira. Espuma. Poliéster. Acrílicos. Aerógrafo. Papel machê. Lã."),
+            ("es", "Materiales: Acero. Madera. Gomaespuma. Poliéster. Acrílicos. Aerógrafo. Cartapesta. Lana."),
+        ):
+            with self.subTest(language=language):
+                section = BeautifulSoup(self.render(language), "html.parser").find(
+                    id="gallery-carousel-los-ninos-seis-animales"
+                )
+                meta = section.select_one(".gallery-meta")
+                self.assertIsNotNone(meta)
+                self.assertEqual(expected, meta.get_text(strip=True))
+
+    def test_regenerated_manifest_source_captions_are_localized_during_render(self):
+        expected = {
+            "pt": "Vista geral da série",
+            "es": "Vista general de la seria",
+        }
+        for language, title in expected.items():
+            with self.subTest(language=language):
+                panel = BeautifulSoup(self.render(language), "html.parser").find(
+                    id="gallery-carousel-seda"
+                )
+                rendered_title = panel.select_one(".gallery-title")
+                self.assertIsNotNone(rendered_title)
+                self.assertEqual(title, rendered_title.get_text(strip=True))
 
 
 if __name__ == "__main__":

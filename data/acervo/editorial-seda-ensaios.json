@@ -1,6 +1,12 @@
 {
   "schema_version": 1,
   "series": {
+    "Ensayos": {
+      "lead": {
+        "es": "Series de ensayos fotográficos que exploran lo cotidiano, los gestos y las texturas del mundo que nos rodea — registros íntimos en los que la cámara se convierte en un instrumento de meditación visual.",
+        "pt": "Séries de ensaios fotográficos que exploram o cotidiano, os gestos e as texturas do mundo ao redor — registros íntimos onde a câmera se torna instrumento de meditação visual."
+      }
+    },
     "Ensayos/El Teléfono": {
       "es": [
         "Dice Lucrecia Martel que cualquier teléfono móvil actual permite realizar registros audiovisuales de mayor calidad que las cámaras de cine más sofisticadas de mediados del siglo pasado. Y aclara: excepto las soviéticas. FC usa su teléfono como cámara y laboratorio fotográfico portátiles para ofrecernos esta serie de naturalezas intervenidas por medio de la pantalla táctil, retomando algunas de las técnicas clásicas de la plástica. Trazos de carbón o lápiz, collages y virados cromáticos digitales operan de forma más o menos evidente en esta serie de fotografías tomadas con su teléfono."

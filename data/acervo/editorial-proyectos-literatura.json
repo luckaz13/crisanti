@@ -1,9 +1,55 @@
 {
   "schema_version": 1,
   "series": {
+    "Literatura/Crítica": {
+      "lead": {
+        "es": "JLB siempre se reconoció como mejor lector que escritor. Com el paso de los años la reflexión crítica y las conceptualizaciones de los procesos creativos han ganado importancia y significación en mi obra."
+      }
+    },
     "Proyectos Especiales/La Fuente y los Simios": {
       "es": ["Fabio Crisanti toma la antología Proverbios budistas japoneses, de Lafcadio Hearn —editada por Interzona en 2013, con traducción de José Manuel Recillas—, para presentarnos La Fuente y los Simios, un ensayo fotográfico que reúne una serie de obras producidas en la ciudad de Buenos Aires durante la década de 1990, hace más de veinte años."],
       "pt": ["Fabio Crisanti toma a antologia Provérbios budistas japoneses, de Lafcadio Hearn — editada pela Interzona em 2013, com tradução de José Manuel Recillas —, para nos apresentar La Fuente y los Simios, um ensaio fotográfico que reúne uma série de obras produzidas na cidade de Buenos Aires durante a década de 1990, há mais de vinte anos."]
+    },
+    "Proyectos Especiales/Master Taxi": {
+      "synopsis": {
+        "title": {"es": "Master Taxi Sinopsis", "pt": "Sinopse de Master Taxi"},
+        "sections": [
+          {
+            "title": {"es": "El Juego", "pt": "O Jogo"},
+            "es": [
+              "Seis participantes en un estudio de televisión resuelven rutas de viajes en taxi. El competidor que encuentre las rutas más eficaces en términos de tiempo y distancia suma puntos para ganar el juego.",
+              "Una Locutora en estudios conectada a una central telefónica de taxis deriva solicitudes de viajes reales para ser resueltos virtualmente por los competidores en estudios.",
+              "Las rutas se resuelven elaborando la lista de calles que conforman el itinerario que une origen y destino de los viajes.",
+              "Las tecnologías de localización satelital y lectura de condiciones de tránsito son el soporte con el que se registran, evalúan y ponen en escena las propuestas de rutas de los competidores.",
+              "El área geográfica en la que se desarrolla el juego está limitada a la Capital Federal."
+            ],
+            "pt": [
+              "Seis participantes em um estúdio de televisão resolvem rotas de viagens de táxi. O competidor que encontrar as rotas mais eficazes em termos de tempo e distância soma pontos para vencer o jogo.",
+              "Uma locutora no estúdio, conectada a uma central telefônica de táxis, encaminha solicitações de viagens reais para serem resolvidas virtualmente pelos competidores no estúdio.",
+              "As rotas são resolvidas elaborando-se a lista de ruas que compõem o itinerário que une a origem e o destino das viagens.",
+              "As tecnologias de localização por satélite e de leitura das condições de trânsito são o suporte com o qual as propostas de rotas dos competidores são registradas, avaliadas e colocadas em cena.",
+              "A área geográfica em que o jogo se desenvolve está limitada à Capital Federal."
+            ]
+          },
+          {
+            "title": {"es": "El Show", "pt": "O Show"},
+            "es": [
+              "Un conductor típicamente porteño conecta al público con el clima propio del universo en el que la competencia se desarrolla: la Ciudad de Buenos Aires.",
+              "Un Panel de Taxistas Notables complementa o refuta los resultados del juego obtenidos desde las tecnologías GPS y, como testigos de las historias de sus habitantes, conectan al público con el imaginario popular propio del escenario donde el juego se desarrolla, la gran ciudad: el lugar donde existen todas las oportunidades, donde se cruzan todos los caminos, y donde todos los rumbos y los deseos pueden hacerse reales.",
+              "Una Celebridad en estudios relata una anécdota significativa de su vida que haya sucedido sobre un taxi en las calles de Buenos Aires. Funciona, en términos de identificación con el público, como evidencia viva de que aquel imaginario popular acerca de la gran ciudad puede realizarse, es posible.",
+              "Un Pasajero Real en un Taxi Real deberá resolver durante el transcurso del show las alternativas y dificultades del itinerario descripto en el relato de la celebridad. Participa por premios extras a la competencia en estudios; funciona como una segunda forma de participación del público dentro del show; hace de la ciudad una extensión del set de grabación e “ilustra” el desarrollo del juego propiamente dicho.",
+              "El Show identifica al televidente con ese lugar del corazón de las personas en el que se expresa el amor entrañable por la ciudad que habitan. Apela al orgullo que se expresa en el conocimiento de las calles en las que se tejen como identidad las tramas de sus historias personales y sociales."
+            ],
+            "pt": [
+              "Um apresentador tipicamente portenho conecta o público ao clima próprio do universo em que a competição se desenvolve: a Cidade de Buenos Aires.",
+              "Um Painel de Taxistas Notáveis complementa ou refuta os resultados do jogo obtidos pelas tecnologias de GPS e, como testemunhas das histórias dos habitantes, conecta o público ao imaginário popular próprio do cenário em que o jogo se desenvolve, a grande cidade: o lugar onde existem todas as oportunidades, onde todos os caminhos se cruzam e onde todos os rumos e desejos podem se tornar reais.",
+              "Uma celebridade no estúdio relata uma anedota significativa de sua vida ocorrida em um táxi nas ruas de Buenos Aires. Funciona, em termos de identificação com o público, como evidência viva de que aquele imaginário popular sobre a grande cidade pode se realizar, é possível.",
+              "Um Passageiro Real em um Táxi Real deverá resolver, durante o show, as alternativas e dificuldades do itinerário descrito no relato da celebridade. Participa por prêmios extras em relação à competição no estúdio; funciona como uma segunda forma de participação do público no show; faz da cidade uma extensão do set de gravação e “ilustra” o desenvolvimento do jogo propriamente dito.",
+              "O Show identifica o telespectador com esse lugar no coração das pessoas em que se expressa o amor profundo pela cidade que habitam. Apela ao orgulho expresso no conhecimento das ruas em que se tecem, como identidade, as tramas de suas histórias pessoais e sociais."
+            ]
+          }
+        ]
+      }
     },
     "Proyectos Especiales/Vlak": {
       "es": [

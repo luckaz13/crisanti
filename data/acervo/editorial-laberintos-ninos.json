@@ -1,6 +1,12 @@
 {
   "schema_version": 1,
   "series": {
+    "Los Laberintos": {
+      "lead": {
+        "es": "Sistemas visuales, puzles y juegos conceptuales. Los laberintos de nombrar y numerar.",
+        "pt": "Sistemas visuais, quebra-cabeças e jogos conceituais. Os labirintos de nomear e numerar."
+      }
+    },
     "Los Laberintos/Cadaver Exquisito": {
       "title": {"es": "Cadáver Exquisito", "pt": "Cadáver Exquisito"},
       "es": [
@@ -66,7 +72,45 @@
     },
     "Los Niños/Seis Animales": {
       "es": ["En la década de 1990, FC recibe el encargo de realizar seis marionetas de formato medio para la obra de teatro de contenido ambientalista Animales. Las piezas combinan técnicas y materiales de diferentes disciplinas: poliuretano, acero, madera, aerógrafo, costura y tejidos naturales y sintéticos."],
-      "pt": ["Na década de 1990, FC recebe a encomenda de realizar seis marionetes de formato médio para a peça teatral de conteúdo ambientalista Animales. As peças combinam técnicas e materiais de diferentes disciplinas: poliuretano, aço, madeira, aerógrafo, costura e tecidos naturais e sintéticos."]
+      "pt": ["Na década de 1990, FC recebe a encomenda de realizar seis marionetes de formato médio para a peça teatral de conteúdo ambientalista Animales. As peças combinam técnicas e materiais de diferentes disciplinas: poliuretano, aço, madeira, aerógrafo, costura e tecidos naturais e sintéticos."],
+      "captions": {
+        "01.jpg": {
+          "es": {"title": null, "year": null, "details": "Materiales: Acero. Madera. Gomaespuma. Poliéster. Acrílicos. Aerógrafo. Cartapesta. Lana."},
+          "pt": {"title": null, "year": null, "details": "Materiais: Aço. Madeira. Espuma. Poliéster. Acrílicos. Aerógrafo. Papel machê. Lã."}
+        },
+        "02.jpg": {
+          "es": {"title": null, "year": null, "details": "Materiales: Acero. Madera. Gomaespuma. Poliéster. Acrílicos. Aerógrafo. Cartapesta."},
+          "pt": {"title": null, "year": null, "details": "Materiais: Aço. Madeira. Espuma. Poliéster. Acrílicos. Aerógrafo. Papel machê."}
+        },
+        "03.jpg": {
+          "es": {"title": null, "year": null, "details": "Materiales: Acero. Madera. Gomaespuma. Poliéster. Acrílicos. Aerógrafo. Cartapesta. Lana."},
+          "pt": {"title": null, "year": null, "details": "Materiais: Aço. Madeira. Espuma. Poliéster. Acrílicos. Aerógrafo. Papel machê. Lã."}
+        },
+        "04.jpg": {
+          "es": {"title": null, "year": null, "details": "Materiales: Acero. Madera. Gomaespuma. Poliéster. Acrílicos. Aerógrafo. Cartapesta."},
+          "pt": {"title": null, "year": null, "details": "Materiais: Aço. Madeira. Espuma. Poliéster. Acrílicos. Aerógrafo. Papel machê."}
+        },
+        "05.jpg": {
+          "es": {"title": null, "year": null, "details": "Materiales: Acero. Madera. Gomaespuma. Poliéster. Acrílicos. Aerógrafo. Cartapesta."},
+          "pt": {"title": null, "year": null, "details": "Materiais: Aço. Madeira. Espuma. Poliéster. Acrílicos. Aerógrafo. Papel machê."}
+        },
+        "06.jpg": {
+          "es": {"title": null, "year": null, "details": "Materiales: Acero. Madera. Gomaespuma. Poliéster. Acrílicos. Aerógrafo. Cartapesta. Lana."},
+          "pt": {"title": null, "year": null, "details": "Materiais: Aço. Madeira. Espuma. Poliéster. Acrílicos. Aerógrafo. Papel machê. Lã."}
+        },
+        "07.webp": {
+          "es": {"title": null, "year": null, "details": "Materiales: Acero. Madera. Gomaespuma. Poliéster. Acrílicos. Aerógrafo. Cartapesta. Lana."},
+          "pt": {"title": null, "year": null, "details": "Materiais: Aço. Madeira. Espuma. Poliéster. Acrílicos. Aerógrafo. Papel machê. Lã."}
+        },
+        "08.jpg": {
+          "es": {"title": "Proceso de construcción", "year": null, "details": null},
+          "pt": {"title": "Processo de construção", "year": null, "details": null}
+        },
+        "09.jpg": {
+          "es": {"title": "Proceso de construcción", "year": null, "details": null},
+          "pt": {"title": "Processo de construção", "year": null, "details": null}
+        }
+      }
     }
   }
 }
