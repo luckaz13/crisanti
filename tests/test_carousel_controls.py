@@ -22,11 +22,19 @@ class StableCarouselControlsTests(unittest.TestCase):
 
         self.assertIn("const anchorTarget = anchorImage || anchorFigure || anchorSlide", script)
 
-    def test_viewport_tracks_figure_reflow_and_keeps_caption_clearance(self):
+    def test_viewport_height_uses_intrinsic_ratio_not_clipped_figure_rect(self):
         script = (ROOT / "js/gallery.js").read_text(encoding="utf-8")
 
-        self.assertIn("figureResizeObserver.observe(figure)", script)
-        self.assertIn("Math.ceil(height) + captionClearance", script)
+        self.assertIn("function measureSlideHeight(slide, availableWidth)", script)
+        self.assertIn("img.naturalHeight / img.naturalWidth", script)
+        self.assertNotIn("const height = target.getBoundingClientRect().height", script)
+
+    def test_viewport_remeasures_after_decode_load_and_resize(self):
+        script = (ROOT / "js/gallery.js").read_text(encoding="utf-8")
+
+        self.assertIn("img.decode()", script)
+        self.assertIn("img.addEventListener('load', updateCarousel", script)
+        self.assertIn("const resizeObserver = new ResizeObserver(updateCarousel)", script)
 
     def test_css_uses_anchor_on_desktop_and_preserves_mobile_flow(self):
         css = (ROOT / "css/style.css").read_text(encoding="utf-8")

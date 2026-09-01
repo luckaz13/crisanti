@@ -26,6 +26,7 @@
         const slideCount = slides.length;
         const preloadRadius = 4;
         const captionClearance = 8;
+        const isCrossfade = carouselEl.dataset.transition === 'crossfade';
         const autoplayDelay = Number.parseInt(carouselEl.dataset.autoplay || '', 10);
         const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
         let autoplayTimer = null;
@@ -121,7 +122,16 @@
         }
 
         function updateCarousel() {
-            track.style.transform = `translateX(${-currentIndex * 100}%)`;
+            if (isCrossfade) {
+                track.style.transform = 'none';
+                slides.forEach((slide, index) => {
+                    const isActive = index === currentIndex;
+                    slide.classList.toggle('is-active', isActive);
+                    slide.setAttribute('aria-hidden', String(!isActive));
+                });
+            } else {
+                track.style.transform = `translateX(${-currentIndex * 100}%)`;
+            }
             updateViewportHeight();
             updateControlsAnchor();
             prevBtn.disabled = currentIndex === 0;
@@ -158,16 +168,33 @@
             }, autoplayDelay);
         }
 
+        function measureSlideHeight(slide, availableWidth) {
+            const img = slide.querySelector('.gallery-img');
+            const caption = slide.querySelector('.gallery-caption');
+            const captionHeight = caption ? caption.getBoundingClientRect().height : 0;
+
+            if (img && img.naturalWidth > 0 && img.naturalHeight > 0) {
+                const renderedWidth = Math.min(availableWidth, img.naturalWidth);
+                const imageHeight = renderedWidth * (img.naturalHeight / img.naturalWidth);
+                return imageHeight + captionHeight + captionClearance;
+            }
+
+            const video = slide.querySelector('.gallery-video');
+            const videoHeight = video ? video.getBoundingClientRect().height : 0;
+            return videoHeight > 0 ? videoHeight + captionHeight + captionClearance : 0;
+        }
+
         function updateViewportHeight() {
             const activeSlide = slides[currentIndex];
             if (!activeSlide) return;
             window.requestAnimationFrame(() => {
-                const img = activeSlide.querySelector('.gallery-img');
-                const figure = activeSlide.querySelector('.gallery-figure');
-                const target = figure || img || activeSlide;
-                const height = target.getBoundingClientRect().height;
+                const slideStyles = window.getComputedStyle(activeSlide);
+                const horizontalPadding = Number.parseFloat(slideStyles.paddingLeft) +
+                    Number.parseFloat(slideStyles.paddingRight);
+                const availableWidth = Math.max(0, activeSlide.clientWidth - horizontalPadding);
+                const height = measureSlideHeight(activeSlide, availableWidth);
                 if (height > 0) {
-                    viewport.style.height = `${Math.ceil(height) + captionClearance}px`;
+                    viewport.style.height = `${Math.ceil(height)}px`;
                 }
             });
         }
@@ -179,9 +206,11 @@
         slides.forEach(slide => {
             const img = slide.querySelector('.gallery-img');
             if (!img) return;
-            if (img.complete) return;
             img.addEventListener('load', updateCarousel, { once: true });
             img.addEventListener('error', updateCarousel, { once: true });
+            if (img.complete && img.naturalWidth > 0 && typeof img.decode === 'function') {
+                img.decode().catch(() => {}).then(updateCarousel);
+            }
         });
 
         videos.forEach(video => {
@@ -206,16 +235,6 @@
         if ('ResizeObserver' in window) {
             const resizeObserver = new ResizeObserver(updateCarousel);
             resizeObserver.observe(carouselEl);
-            const figureResizeObserver = new ResizeObserver(entries => {
-                const activeFigure = slides[currentIndex].querySelector('.gallery-figure');
-                if (entries.some(entry => entry.target === activeFigure)) {
-                    updateViewportHeight();
-                }
-            });
-            slides.forEach(slide => {
-                const figure = slide.querySelector('.gallery-figure');
-                if (figure) figureResizeObserver.observe(figure);
-            });
         } else {
             window.addEventListener('resize', updateCarousel);
         }
