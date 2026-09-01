@@ -135,16 +135,21 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
       dims:  card.querySelector('.obra-dims')?.textContent?.trim()  || '',
     })).filter(item => item.src);
 
-  const getCarouselItems = (carouselEl) =>
-    $$('.gallery-slide', carouselEl).map(slide => ({
-      src:   slide.querySelector('.gallery-img')?.src || '',
-      alt:   slide.querySelector('.gallery-img')?.alt || '',
-      title: slide.querySelector('.gallery-title')?.textContent?.trim() || '',
-      serie: '',
-      dims:  '',
-      meta:  slide.querySelector('.gallery-meta')?.textContent?.trim() || '',
-      desc:  slide.querySelector('.gallery-desc')?.textContent?.trim() || '',
-    })).filter(item => item.src);
+  function getCarouselItems(carouselEl) {
+    return $$('.gallery-slide', carouselEl).map(slide => {
+      const img = slide.querySelector('.gallery-img');
+      const source = img?.getAttribute('src') || img?.dataset.src || '';
+      return {
+        src:   source ? new URL(source, document.baseURI).href : '',
+        alt:   img?.alt || '',
+        title: slide.querySelector('.gallery-title')?.textContent?.trim() || '',
+        serie: '',
+        dims:  '',
+        meta:  slide.querySelector('.gallery-meta')?.textContent?.trim() || '',
+        desc:  slide.querySelector('.gallery-desc')?.textContent?.trim() || '',
+      };
+    }).filter(item => item.src);
+  }
 
   // Event delegation so every gallery works (including late/tab-hidden panels)
   document.addEventListener('click', (e) => {

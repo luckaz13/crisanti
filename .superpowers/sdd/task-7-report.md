@@ -18,6 +18,14 @@
 - Follow-up regression suite: `python3 -m unittest discover -s tests -p 'test*.py' -q` passed all 127 tests; JavaScript syntax, diff whitespace, scoped audit, and the Impeccable detector also passed.
 - The resource test executes the real JavaScript helper functions under Node with fake image elements; it verifies that indices 0–4 retain `src`, later images move to `data-src`, and `preloadImage()` restores the requested source and probe.
 
+### Lightbox deferred-item follow-up
+
+- Root cause: `getCarouselItems()` read only the `HTMLImageElement.src` property and filtered empty sources, so crossfade images held exclusively in `data-src` disappeared from the lightbox item list, counter, and arrow navigation.
+- RED: the focused gallery/lightbox suite ran 18 tests with one expected failure because the deferred item contract was absent.
+- GREEN: the same 18 focused tests passed after collection began selecting `getAttribute('src') || dataset.src` and normalizing it against `document.baseURI` without mutating the carousel image.
+- The integration contract executes the real collector and confirms a data-only image enters the lightbox list with its alt/captions, while its `src`, image dataset, and slide dataset remain unchanged.
+- Final regression suite: all 128 tests passed; `node --check` for both gallery scripts, `git diff --check`, and the deferred-source mutation audit passed.
+
 ## Implementation and scope
 
 - Image height now comes from `min(availableWidth, naturalWidth) × naturalHeight / naturalWidth`; measured caption height and 8 px clearance are added independently of clipping.
