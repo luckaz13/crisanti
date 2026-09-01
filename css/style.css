@@ -1625,7 +1625,7 @@ ul, ol { list-style: none; }
 }
 
 .gallery-figure--video {
-  background: var(--c-bg-dark);
+  background: transparent;
 }
 
 .gallery-video {
@@ -1634,7 +1634,7 @@ ul, ol { list-style: none; }
   aspect-ratio: 478 / 850;
   max-height: 78vh;
   object-fit: contain;
-  background: var(--c-bg-dark);
+  background: transparent;
 }
 
 .gallery-caption {
@@ -1833,6 +1833,30 @@ ul, ol { list-style: none; }
   font-size: 0.95rem;
   line-height: 1.6;
   color: var(--c-ink-mid, #4A4540);
+}
+
+.timeline-toggle {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  margin-left: 2rem;
+  padding: 0.55rem 1rem;
+  border: 1px solid var(--c-accent, #9B7D5A);
+  color: var(--c-ink, #1A1714);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.2;
+  transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+
+.timeline-toggle:hover {
+  background: var(--c-accent, #9B7D5A);
+  color: var(--c-bg, #F9F7F4);
+}
+
+.timeline-toggle:focus-visible {
+  outline: 2px solid var(--c-ink, #1A1714);
+  outline-offset: 3px;
 }
 
 /* ═══════════════════════════════════════════════════
@@ -2217,6 +2241,9 @@ ul, ol { list-style: none; }
   }
   .timeline-content h3 {
     font-size: 1.1rem;
+  }
+  .timeline-toggle {
+    margin-left: 1.5rem;
   }
 }
 

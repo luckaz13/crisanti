@@ -304,6 +304,29 @@ document.addEventListener('DOMContentLoaded', () => {
 /* ═══════════════════════════════════════════════════
    TIMELINE — Reveal on scroll
 ═══════════════════════════════════════════════════ */
+(function initExpandableTimeline() {
+  const toggle = $('[data-timeline-toggle]');
+  const collapsibleId = toggle?.getAttribute('aria-controls');
+  const collapsible = collapsibleId ? document.getElementById(collapsibleId) : null;
+  if (!toggle || !collapsible) return;
+
+  const moreLabel = toggle.dataset.labelMore || toggle.textContent.trim();
+  const lessLabel = toggle.dataset.labelLess || moreLabel;
+
+  toggle.addEventListener('click', () => {
+    const isExpanded = toggle.getAttribute('aria-expanded') !== 'true';
+    const toggleTopBeforeCollapse = toggle.getBoundingClientRect().top;
+
+    collapsible.hidden = !isExpanded;
+    toggle.setAttribute('aria-expanded', String(isExpanded));
+    toggle.textContent = isExpanded ? lessLabel : moreLabel;
+
+    if (!isExpanded && toggleTopBeforeCollapse < 0) {
+      window.scrollBy({ top: toggle.getBoundingClientRect().top, behavior: 'auto' });
+    }
+  });
+})();
+
 (function initTimeline() {
   const items = $$('.timeline-item');
   if (!items.length) return;
