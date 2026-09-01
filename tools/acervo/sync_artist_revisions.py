@@ -23,6 +23,10 @@ PIPAS_MEMBERS = {
     for name in ("01", "02", "03", "04", "10")
 }
 APPROVED_DESTINATIONS = frozenset((*PRIMARY_MEMBERS.values(), *PIPAS_MEMBERS.values()))
+ARCHIVE_MEMBERS = {
+    PRIMARY_ARCHIVE: PRIMARY_MEMBERS,
+    PIPAS_ARCHIVE: PIPAS_MEMBERS,
+}
 
 
 @dataclass(frozen=True)
@@ -37,28 +41,48 @@ def _sha256(payload: bytes) -> str:
     return hashlib.sha256(payload).hexdigest()
 
 
-def _validate_destination(destination: Path, root: Path | None = None) -> Path:
-    """Return a resolved allowlisted destination or raise ``ValueError``."""
-    resolved = destination.resolve()
-    if root is not None:
-        img_root = (root / "img").resolve()
-        try:
-            relative = resolved.relative_to(img_root)
-        except ValueError as error:
-            raise ValueError(f"destination outside img/: {destination}") from error
-        relative_name = Path("img", relative).as_posix()
-    else:
-        # Actions carry no root separately. Recover the ``img`` component only
-        # for validating hand-built actions passed to apply_sync_plan.
-        try:
-            img_index = len(resolved.parts) - 1 - resolved.parts[::-1].index("img")
-        except ValueError as error:
-            raise ValueError(f"destination outside img/: {destination}") from error
-        relative_name = Path("img", *resolved.parts[img_index + 1 :]).as_posix()
+def _is_under(path: Path, parent: Path) -> bool:
+    return path == parent or parent in path.parents
 
-    if "images" in resolved.parts or relative_name not in APPROVED_DESTINATIONS:
+
+def _validate_destination(destination: Path, root: Path, expected_name: str) -> Path:
+    """Return an exact, resolved allowlisted destination or raise ``ValueError``."""
+    resolved = destination.resolve()
+    root = root.resolve()
+    img_root = (root / "img").resolve()
+    try:
+        img_root.relative_to(root)
+        resolved.relative_to(img_root)
+    except ValueError as error:
+        raise ValueError(f"destination outside img/: {destination}") from error
+
+    # Only these two repository-relative backup trees are forbidden. An
+    # unrelated ancestor directory may legitimately be named ``images``.
+    for backup_root in (root / "images", root / "img" / "images"):
+        if _is_under(resolved, backup_root.resolve()):
+            raise ValueError(f"destination is a backup tree: {destination}")
+
+    if expected_name not in APPROVED_DESTINATIONS:
+        raise ValueError(f"destination is not approved: {destination}")
+    expected = (root / expected_name).resolve()
+    if resolved != expected:
         raise ValueError(f"destination is not approved: {destination}")
     return resolved
+
+
+def _archive_spec(source_archive: str) -> tuple[Path, Path, dict[str, str]]:
+    """Validate a fixed archive path and return its logical root and map."""
+    source = Path(source_archive)
+    resolved_source = source.resolve()
+    members = ARCHIVE_MEMBERS.get(source.name)
+    if members is None or not source.is_file() or resolved_source.name != source.name:
+        raise ValueError(f"source archive is not approved: {source_archive}")
+
+    # The worktree exposes the fixed ZIPs as symlinks to shared immutable
+    # copies. Use the symlink's repository parent for destinations; for a
+    # regular ZIP this is exactly Path(source_archive).resolve().parent.
+    root = source.parent.resolve() if source.is_symlink() else resolved_source.parent
+    return source, root, members
 
 
 def build_sync_plan(root: Path) -> list[SyncAction]:
@@ -74,7 +98,9 @@ def build_sync_plan(root: Path) -> list[SyncAction]:
         with ZipFile(archive_path) as archive:
             for member, destination_name in members.items():
                 payload = archive.read(member)
-                destination = _validate_destination(root / destination_name, root)
+                destination = _validate_destination(
+                    root / destination_name, root, destination_name
+                )
                 plan.append(
                     SyncAction(
                         source_archive=str(archive_path),
@@ -89,13 +115,18 @@ def build_sync_plan(root: Path) -> list[SyncAction]:
 def apply_sync_plan(actions: list[SyncAction], *, dry_run: bool) -> list[Path]:
     written: list[Path] = []
     for action in actions:
-        destination = _validate_destination(action.destination)
-        destination.parent.mkdir(parents=True, exist_ok=True)
+        source_archive, root, members = _archive_spec(action.source_archive)
+        expected_name = members.get(action.member)
+        if expected_name is None:
+            raise ValueError(f"archive member is not approved: {action.member}")
+        destination = _validate_destination(action.destination, root, expected_name)
+        with ZipFile(source_archive) as archive:
+            payload = archive.read(action.member)
+        expected_sha256 = _sha256(payload)
+        if action.sha256 != expected_sha256:
+            raise ValueError(f"hash changed while reading {action.member}")
         if not dry_run:
-            with ZipFile(action.source_archive) as archive:
-                payload = archive.read(action.member)
-            if _sha256(payload) != action.sha256:
-                raise ValueError(f"hash changed while reading {action.member}")
+            destination.parent.mkdir(parents=True, exist_ok=True)
             destination.write_bytes(payload)
             written.append(destination)
     return written
