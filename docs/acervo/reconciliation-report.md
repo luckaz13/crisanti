@@ -2,22 +2,21 @@
 
 ## Totais
 
-- Fonte atual: 453 imagens
-- Atuais por hash: 369
-- Novas sem candidato ambíguo: 65
-- Conflitos para revisão visual: 19
-- Legado em uso: 325
-- Publicadas sem uso atual: 9
+- Fonte atual: 1237 imagens
+- Atuais por hash: 1232
+- Novas sem candidato ambíguo: 1
+- Conflitos para revisão visual: 4
+- Legado em uso: 0
+- Publicadas sem uso atual: 0
 
 ## Galerias
 
 ### Cuadernos
 
 - Total: 22
-- Atuais: 21
-- Novas: 1
+- Atuais: 22
+- Novas: 0
 - Conflitos: 0
-- Revisar: img/Cuadernos/11(1).jpg
 
 ### Ensayos / Collagem
 
@@ -43,10 +42,9 @@
 ### Ensayos / Gatos
 
 - Total: 9
-- Atuais: 0
-- Novas: 9
+- Atuais: 9
+- Novas: 0
 - Conflitos: 0
-- Revisar: img/Ensayos/Gatos/00.jpg, img/Ensayos/Gatos/01.jpg, img/Ensayos/Gatos/02.jpg, img/Ensayos/Gatos/03.jpg, img/Ensayos/Gatos/04.jpg, img/Ensayos/Gatos/05.jpg, img/Ensayos/Gatos/06.jpg, img/Ensayos/Gatos/07.jpg, img/Ensayos/Gatos/08.jpg
 
 ### Ensayos / La Cocina
 
@@ -58,10 +56,9 @@
 ### Ensayos / Perspectiva
 
 - Total: 6
-- Atuais: 0
-- Novas: 6
+- Atuais: 6
+- Novas: 0
 - Conflitos: 0
-- Revisar: img/Ensayos/Perspectiva/00.jpg, img/Ensayos/Perspectiva/01.jpg, img/Ensayos/Perspectiva/02.jpg, img/Ensayos/Perspectiva/03.jpg, img/Ensayos/Perspectiva/04.jpg, img/Ensayos/Perspectiva/05.jpg
 
 ### Ensayos / Siluetas
 
@@ -80,10 +77,9 @@
 ### Isotipo
 
 - Total: 3
-- Atuais: 0
-- Novas: 1
-- Conflitos: 2
-- Revisar: img/Isotipo/01.jpg, img/Isotipo/02.jpg, img/Isotipo/03.jpg
+- Atuais: 3
+- Novas: 0
+- Conflitos: 0
 
 ### La Escultura / Addis Abbaba
 
@@ -95,26 +91,23 @@
 ### La Escultura / Invierno II
 
 - Total: 16
-- Atuais: 15
-- Novas: 1
+- Atuais: 16
+- Novas: 0
 - Conflitos: 0
-- Revisar: img/La Escultura/Invierno II/16.jpg
 
 ### La Escultura / Invierno III
 
 - Total: 14
-- Atuais: 13
-- Novas: 1
+- Atuais: 14
+- Novas: 0
 - Conflitos: 0
-- Revisar: img/La Escultura/Invierno III/07.jpg
 
 ### La Escultura / Pez III
 
 - Total: 8
-- Atuais: 1
-- Novas: 2
-- Conflitos: 5
-- Revisar: img/La Escultura/Pez III/02.jpg, img/La Escultura/Pez III/03.jpg, img/La Escultura/Pez III/04.jpg, img/La Escultura/Pez III/05.jpg, img/La Escultura/Pez III/06.jpg, img/La Escultura/Pez III/07.jpg, img/La Escultura/Pez III/08.jpg
+- Atuais: 8
+- Novas: 0
+- Conflitos: 0
 
 ### La Escultura / Pez IV
 
@@ -126,10 +119,9 @@
 ### La Escultura / Soies Sauvages
 
 - Total: 12
-- Atuais: 9
-- Novas: 3
+- Atuais: 12
+- Novas: 0
 - Conflitos: 0
-- Revisar: img/La Escultura/Soies Sauvages/07.jpg, img/La Escultura/Soies Sauvages/09.jpg, img/La Escultura/Soies Sauvages/10.jpg
 
 ### La Fotografía / Cotidiano
 
@@ -155,26 +147,23 @@
 ### La Moda
 
 - Total: 15
-- Atuais: 7
-- Novas: 3
-- Conflitos: 5
-- Revisar: img/La Moda/05.jpg, img/La Moda/06.jpg, img/La Moda/07.jpg, img/La Moda/08.jpg, img/La Moda/09.jpg, img/La Moda/13.jpg, img/La Moda/14.jpg, img/La Moda/15.jpg
+- Atuais: 15
+- Novas: 0
+- Conflitos: 0
 
 ### Literatura / Ficción/El Nombre
 
 - Total: 6
-- Atuais: 5
-- Novas: 1
+- Atuais: 6
+- Novas: 0
 - Conflitos: 0
-- Revisar: img/Literatura/Ficción/El Nombre/04 Esquema Narrativo A.jpg
 
 ### Literatura / Ficción/Flores
 
 - Total: 6
-- Atuais: 0
-- Novas: 6
+- Atuais: 6
+- Novas: 0
 - Conflitos: 0
-- Revisar: img/Literatura/Ficción/Flores/00.jpg, img/Literatura/Ficción/Flores/02.jpg, img/Literatura/Ficción/Flores/05.jpg, img/Literatura/Ficción/Flores/06.jpg, img/Literatura/Ficción/Flores/07.jpg, img/Literatura/Ficción/Flores/08.jpg
 
 ### Los Laberintos / Cadaver Exquisito
 
@@ -200,10 +189,9 @@
 ### Los Laberintos / La Papa
 
 - Total: 9
-- Atuais: 0
-- Novas: 9
+- Atuais: 9
+- Novas: 0
 - Conflitos: 0
-- Revisar: img/Los Laberintos/La Papa/01.jpg, img/Los Laberintos/La Papa/02.jpg, img/Los Laberintos/La Papa/03.jpg, img/Los Laberintos/La Papa/04.jpg, img/Los Laberintos/La Papa/05.jpg, img/Los Laberintos/La Papa/06.jpg, img/Los Laberintos/La Papa/07.jpg, img/Los Laberintos/La Papa/08.jpg, img/Los Laberintos/La Papa/09.jpg
 
 ### Los Laberintos / Las Etiquetas
 
@@ -229,10 +217,9 @@
 ### Los Niños / Der Elefant
 
 - Total: 27
-- Atuais: 26
-- Novas: 1
+- Atuais: 27
+- Novas: 0
 - Conflitos: 0
-- Revisar: img/Los Niños/Der Elefant/01.jpg
 
 ### Los Niños / El Ciervo
 
@@ -250,10 +237,19 @@
 
 ### Peces
 
-- Total: 34
+- Total: 35
 - Atuais: 34
-- Novas: 0
+- Novas: 1
 - Conflitos: 0
+- Revisar: img/Peces/03-header-mark.png
+
+### Pequeñas Pipas
+
+- Total: 5
+- Atuais: 4
+- Novas: 0
+- Conflitos: 1
+- Revisar: img/Pequeñas Pipas/04.jpg
 
 ### Proyectos Especiales / La Fuente y los Simios/Exposición Virtual (La Fuente...)
 
@@ -265,18 +261,16 @@
 ### Proyectos Especiales / Master Taxi
 
 - Total: 1
-- Atuais: 0
-- Novas: 1
+- Atuais: 1
+- Novas: 0
 - Conflitos: 0
-- Revisar: img/Proyectos Especiales/Master Taxi/20260808_184017.jpg
 
 ### Proyectos Especiales / Vlak
 
 - Total: 17
-- Atuais: 9
-- Novas: 5
-- Conflitos: 3
-- Revisar: img/Proyectos Especiales/Vlak/01.jpg, img/Proyectos Especiales/Vlak/05.jpg, img/Proyectos Especiales/Vlak/06.jpg, img/Proyectos Especiales/Vlak/08(1).jpg, img/Proyectos Especiales/Vlak/08.jpg, img/Proyectos Especiales/Vlak/09.jpg, img/Proyectos Especiales/Vlak/16.jpg, img/Proyectos Especiales/Vlak/17.jpg
+- Atuais: 17
+- Novas: 0
+- Conflitos: 0
 
 ### Seda / SEDA
 
@@ -288,16 +282,435 @@
 ### Seda / SEDA 2024
 
 - Total: 22
-- Atuais: 4
-- Novas: 15
+- Atuais: 19
+- Novas: 0
 - Conflitos: 3
-- Revisar: img/Seda/SEDA 2024/00.jpg, img/Seda/SEDA 2024/01.jpg, img/Seda/SEDA 2024/02.jpg, img/Seda/SEDA 2024/03.jpg, img/Seda/SEDA 2024/04.jpg, img/Seda/SEDA 2024/05.jpg, img/Seda/SEDA 2024/06.jpg, img/Seda/SEDA 2024/07.jpg, img/Seda/SEDA 2024/08.jpg, img/Seda/SEDA 2024/10.jpg, img/Seda/SEDA 2024/13.jpg, img/Seda/SEDA 2024/14.jpg, img/Seda/SEDA 2024/15.jpg, img/Seda/SEDA 2024/16.jpg, img/Seda/SEDA 2024/17.jpg, img/Seda/SEDA 2024/18.jpg, img/Seda/SEDA 2024/19.jpg, img/Seda/SEDA 2024/21.jpg
+- Revisar: img/Seda/SEDA 2024/04.jpg, img/Seda/SEDA 2024/07.jpg, img/Seda/SEDA 2024/14.jpg
 
 ### Seda / SEDA BAHIA
 
 - Total: 18
+- Atuais: 18
+- Novas: 0
+- Conflitos: 0
+
+### images / Cuadernos
+
+- Total: 22
+- Atuais: 22
+- Novas: 0
+- Conflitos: 0
+
+### images / Ensayos/Collagem
+
+- Total: 3
+- Atuais: 3
+- Novas: 0
+- Conflitos: 0
+
+### images / Ensayos/El Teléfono
+
+- Total: 15
+- Atuais: 15
+- Novas: 0
+- Conflitos: 0
+
+### images / Ensayos/Emulsión
+
+- Total: 5
+- Atuais: 5
+- Novas: 0
+- Conflitos: 0
+
+### images / Ensayos/Gatos
+
+- Total: 9
+- Atuais: 9
+- Novas: 0
+- Conflitos: 0
+
+### images / Ensayos/La Cocina
+
+- Total: 7
+- Atuais: 7
+- Novas: 0
+- Conflitos: 0
+
+### images / Ensayos/Perspectiva
+
+- Total: 6
+- Atuais: 6
+- Novas: 0
+- Conflitos: 0
+
+### images / Ensayos/Siluetas
+
+- Total: 11
+- Atuais: 11
+- Novas: 0
+- Conflitos: 0
+
+### images / Ensayos/Urubús
+
+- Total: 16
+- Atuais: 16
+- Novas: 0
+- Conflitos: 0
+
+### images / Isotipo
+
+- Total: 3
+- Atuais: 3
+- Novas: 0
+- Conflitos: 0
+
+### images / La Escultura/Addis Abbaba
+
+- Total: 8
+- Atuais: 8
+- Novas: 0
+- Conflitos: 0
+
+### images / La Escultura/Invierno II
+
+- Total: 16
+- Atuais: 16
+- Novas: 0
+- Conflitos: 0
+
+### images / La Escultura/Invierno III
+
+- Total: 14
+- Atuais: 14
+- Novas: 0
+- Conflitos: 0
+
+### images / La Escultura/Pez III
+
+- Total: 8
+- Atuais: 8
+- Novas: 0
+- Conflitos: 0
+
+### images / La Escultura/Pez IV
+
+- Total: 23
+- Atuais: 23
+- Novas: 0
+- Conflitos: 0
+
+### images / La Escultura/Soies Sauvages
+
+- Total: 12
+- Atuais: 12
+- Novas: 0
+- Conflitos: 0
+
+### images / La Fotografía/Cotidiano
+
+- Total: 6
+- Atuais: 6
+- Novas: 0
+- Conflitos: 0
+
+### images / La Fotografía/Exilio
+
+- Total: 5
+- Atuais: 5
+- Novas: 0
+- Conflitos: 0
+
+### images / La Fotografía/Luz Líquida
+
+- Total: 10
+- Atuais: 10
+- Novas: 0
+- Conflitos: 0
+
+### images / La Moda
+
+- Total: 15
+- Atuais: 15
+- Novas: 0
+- Conflitos: 0
+
+### images / Literatura/Ficción/El Nombre
+
+- Total: 6
+- Atuais: 6
+- Novas: 0
+- Conflitos: 0
+
+### images / Literatura/Ficción/Flores
+
+- Total: 6
+- Atuais: 6
+- Novas: 0
+- Conflitos: 0
+
+### images / Los Laberintos/Cadaver Exquisito
+
+- Total: 4
+- Atuais: 4
+- Novas: 0
+- Conflitos: 0
+
+### images / Los Laberintos/El Calendario
+
+- Total: 2
+- Atuais: 2
+- Novas: 0
+- Conflitos: 0
+
+### images / Los Laberintos/El Puzzle
+
+- Total: 1
+- Atuais: 1
+- Novas: 0
+- Conflitos: 0
+
+### images / Los Laberintos/La Papa
+
+- Total: 9
+- Atuais: 9
+- Novas: 0
+- Conflitos: 0
+
+### images / Los Laberintos/Las Etiquetas
+
+- Total: 4
+- Atuais: 4
+- Novas: 0
+- Conflitos: 0
+
+### images / Los Laberintos/Memory
+
+- Total: 7
+- Atuais: 7
+- Novas: 0
+- Conflitos: 0
+
+### images / Los Niños/Cósimo
+
+- Total: 1
+- Atuais: 1
+- Novas: 0
+- Conflitos: 0
+
+### images / Los Niños/Der Elefant
+
+- Total: 27
+- Atuais: 27
+- Novas: 0
+- Conflitos: 0
+
+### images / Los Niños/El Ciervo
+
+- Total: 14
+- Atuais: 14
+- Novas: 0
+- Conflitos: 0
+
+### images / Los Niños/Seis Animales
+
+- Total: 9
+- Atuais: 9
+- Novas: 0
+- Conflitos: 0
+
+### images / Peces
+
+- Total: 34
+- Atuais: 34
+- Novas: 0
+- Conflitos: 0
+
+### images / Proyectos Especiales/La Fuente y los Simios/Exposición Virtual (La Fuente...)
+
+- Total: 25
+- Atuais: 25
+- Novas: 0
+- Conflitos: 0
+
+### images / Proyectos Especiales/Master Taxi
+
+- Total: 1
+- Atuais: 1
+- Novas: 0
+- Conflitos: 0
+
+### images / Proyectos Especiales/Vlak
+
+- Total: 17
 - Atuais: 17
 - Novas: 0
-- Conflitos: 1
-- Revisar: img/Seda/SEDA BAHIA/18.jpg
+- Conflitos: 0
+
+### images / Seda/SEDA
+
+- Total: 32
+- Atuais: 32
+- Novas: 0
+- Conflitos: 0
+
+### images / Seda/SEDA 2024
+
+- Total: 22
+- Atuais: 22
+- Novas: 0
+- Conflitos: 0
+
+### images / Seda/SEDA BAHIA
+
+- Total: 18
+- Atuais: 18
+- Novas: 0
+- Conflitos: 0
+
+### images / legacy
+
+- Total: 3
+- Atuais: 3
+- Novas: 0
+- Conflitos: 0
+
+### images / legacy/galerias/Ensayos/Perspectiva
+
+- Total: 6
+- Atuais: 6
+- Novas: 0
+- Conflitos: 0
+
+### images / legacy/galerias/Ensayos/Urubús
+
+- Total: 33
+- Atuais: 33
+- Novas: 0
+- Conflitos: 0
+
+### images / legacy/galerias/La Escultura/Invierno
+
+- Total: 1
+- Atuais: 1
+- Novas: 0
+- Conflitos: 0
+
+### images / legacy/galerias/La Escultura/Pez III
+
+- Total: 7
+- Atuais: 7
+- Novas: 0
+- Conflitos: 0
+
+### images / legacy/galerias/La Escultura/Soies Sauvages
+
+- Total: 6
+- Atuais: 6
+- Novas: 0
+- Conflitos: 0
+
+### images / legacy/galerias/La Escultura/Verde
+
+- Total: 2
+- Atuais: 2
+- Novas: 0
+- Conflitos: 0
+
+### images / legacy/galerias/La Fotografía/Cotidiano
+
+- Total: 1
+- Atuais: 1
+- Novas: 0
+- Conflitos: 0
+
+### images / legacy/galerias/La Moda
+
+- Total: 4
+- Atuais: 4
+- Novas: 0
+- Conflitos: 0
+
+### images / legacy/galerias/Literatura/Ficción/El Nombre
+
+- Total: 35
+- Atuais: 35
+- Novas: 0
+- Conflitos: 0
+
+### images / legacy/galerias/Proyectos Especiales/Master Taxi
+
+- Total: 1
+- Atuais: 1
+- Novas: 0
+- Conflitos: 0
+
+### images / legacy/galerias/Proyectos Especiales/Vlak
+
+- Total: 9
+- Atuais: 9
+- Novas: 0
+- Conflitos: 0
+
+### images / legacy/highres/Der Elefant
+
+- Total: 40
+- Atuais: 40
+- Novas: 0
+- Conflitos: 0
+
+### images / legacy/highres/Juego del Tren
+
+- Total: 63
+- Atuais: 63
+- Novas: 0
+- Conflitos: 0
+
+### images / legacy/highres/SEDA
+
+- Total: 35
+- Atuais: 35
+- Novas: 0
+- Conflitos: 0
+
+### images / legacy/highres/SEDA 2024
+
+- Total: 24
+- Atuais: 24
+- Novas: 0
+- Conflitos: 0
+
+### images / legacy/highres/SEDA BAHIA
+
+- Total: 40
+- Atuais: 40
+- Novas: 0
+- Conflitos: 0
+
+### images / legacy/novas/1 Addis Ababa
+
+- Total: 3
+- Atuais: 3
+- Novas: 0
+- Conflitos: 0
+
+### images / legacy/novas/3 Luz Líquida
+
+- Total: 2
+- Atuais: 2
+- Novas: 0
+- Conflitos: 0
+
+### images / legacy/novas/4 Pez
+
+- Total: 4
+- Atuais: 4
+- Novas: 0
+- Conflitos: 0
+
+### images / legacy/novas/7 Pequenas Pipas
+
+- Total: 6
+- Atuais: 6
+- Novas: 0
+- Conflitos: 0
 

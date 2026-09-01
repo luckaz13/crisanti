@@ -74,6 +74,42 @@ def apply_fichas(
     return result
 
 
+def apply_artist_pdf_revisions(
+    manifest: dict[str, Any], documents: list[dict[str, Any]]
+) -> dict[str, Any]:
+    """Apply the approved publication curation for the revised artist PDFs."""
+    result = apply_fichas(manifest, documents) if documents else deepcopy(manifest)
+    curated_assets = []
+    for asset in result.get("assets", []):
+        key = "/".join(part for part in (asset.get("section"), asset.get("series")) if part)
+        if key == "La Escultura/Verde":
+            continue
+        if asset.get("section") == "Los Niños":
+            source = asset.get("caption", {}).get("source")
+            if source and source.get("details"):
+                value = source["details"]
+                value = re.sub(r"(?<=\d{4})(?=[A-ZÁÉÍÓÚ])", ". ", value)
+                value = re.sub(
+                    r"(?i)Materiais?:(?=\S)",
+                    lambda match: f"{match.group(0)} ",
+                    value,
+                )
+                value = re.sub(
+                    r"(?i)Materiales:(?=\S)",
+                    lambda match: f"{match.group(0)} ",
+                    value,
+                )
+                value = re.sub(
+                    r"(?<=[a-záéíóú])(?=(?:Algodão|Acrílico|Cerâmica|Colagem|Impressão|Papel|Tecido))",
+                    ". ",
+                    value,
+                )
+                source["details"] = _readable_details(value) or None
+        curated_assets.append(asset)
+    result["assets"] = curated_assets
+    return result
+
+
 def _replace_all(value: str | None, replacements: list[tuple[str, str]]) -> str | None:
     if value is None:
         return None

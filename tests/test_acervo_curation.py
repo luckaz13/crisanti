@@ -1,6 +1,7 @@
 import unittest
 
 from tools.acervo.curate import (
+    apply_artist_pdf_revisions,
     apply_fichas,
     localize_caption,
     localize_pt_text,
@@ -246,6 +247,50 @@ class NumberedFichaTests(unittest.TestCase):
 
         self.assertEqual(pt["title"], "Ilustração página 6")
         self.assertEqual(pt["details"], "Acrílicos sobre papel de seda e colagem. Design digital")
+
+
+class ArtistPdfRevisionTests(unittest.TestCase):
+    def setUp(self):
+        self.manifest = {
+            "assets": [
+                {"section": "La Escultura", "series": "Verde", "caption": {"source": None}},
+                {"section": "La Escultura", "series": "Azul", "caption": {"source": None}},
+                {
+                    "section": "Los Niños",
+                    "series": "Cósimo",
+                    "caption": {"source": {"details": "1998Materiales:Algodón"}},
+                },
+                {
+                    "section": "Los Niños",
+                    "series": "El Ciervo",
+                    "caption": {"source": {"details": "0.40mAlgodão"}},
+                },
+                {"section": "Proyectos Especiales", "series": "Vlak", "caption": {"source": None}},
+                {"section": "Literatura", "series": "Ficción/Flores", "caption": {"source": None}},
+            ]
+        }
+        self.documents = []
+
+    def test_artist_revisions_remove_verde_only_from_manifest(self):
+        result = apply_artist_pdf_revisions(self.manifest, self.documents)
+        keys = {f"{asset['section']}/{asset['series']}".rstrip("/") for asset in result["assets"]}
+
+        self.assertNotIn("La Escultura/Verde", keys)
+        self.assertIn("La Escultura/Azul", keys)
+        self.assertIn("Proyectos Especiales/Vlak", keys)
+        self.assertIn("Literatura/Ficción/Flores", keys)
+
+    def test_children_details_have_boundaries(self):
+        result = apply_artist_pdf_revisions(self.manifest, self.documents)
+        children = [asset for asset in result["assets"] if asset["section"] == "Los Niños"]
+        for asset in children:
+            details = (asset.get("caption", {}).get("source", {}).get("details") or "")
+            self.assertNotRegex(details, r"\d{4}(?=[A-ZÁÉÍÓÚ])")
+            self.assertNotRegex(details, r"Materiales:(?=\S)")
+            self.assertNotRegex(
+                details,
+                r"(?<=[a-záéíóú])(?=(?:Algodão|Acrílico|Cerâmica|Colagem|Impressão|Papel|Tecido))",
+            )
 
 
 if __name__ == "__main__":

@@ -11,8 +11,10 @@ from pathlib import Path
 from typing import Any, Iterable
 
 if __package__:
+    from .curate import apply_artist_pdf_revisions
     from .inventory import natural_key
 else:
+    from curate import apply_artist_pdf_revisions
     from inventory import natural_key
 
 
@@ -100,12 +102,13 @@ def reconcile(
             }
         )
 
-    return {
+    manifest = {
         "schema_version": 1,
         "assets": assets,
         "legacy": legacy,
         "documents": documents,
     }
+    return apply_artist_pdf_revisions(manifest, documents)
 
 
 def write_report(manifest: dict[str, Any], output: Path) -> None:
