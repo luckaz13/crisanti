@@ -22,6 +22,10 @@ PIPAS_MEMBERS = {
     f"Pequeñas Pipas/{name}.jpg": f"img/Pequeñas Pipas/{name}.jpg"
     for name in ("01", "02", "03", "04", "10")
 }
+PIPAS_PUBLISHED_DESTINATIONS = {
+    f"{name}.jpg": f"img/images/Pequeñas Pipas/{name}.jpg"
+    for name in ("01", "02", "03", "04", "10")
+}
 APPROVED_DESTINATIONS = frozenset((*PRIMARY_MEMBERS.values(), *PIPAS_MEMBERS.values()))
 ARCHIVE_MEMBERS = {
     PRIMARY_ARCHIVE: PRIMARY_MEMBERS,
@@ -132,15 +136,48 @@ def apply_sync_plan(actions: list[SyncAction], *, dry_run: bool) -> list[Path]:
     return written
 
 
+def publish_pipas(root: Path) -> list[Path]:
+    """Publish the approved Pequeñas Pipas source files without overwriting.
+
+    A destination is created only when absent. Existing destinations are
+    accepted when their bytes match the source and rejected otherwise.
+    """
+    root = root.resolve()
+    written: list[Path] = []
+    for name, destination_name in PIPAS_PUBLISHED_DESTINATIONS.items():
+        source = root / "img" / "Pequeñas Pipas" / name
+        destination = root / destination_name
+        if not source.is_file():
+            raise FileNotFoundError(source)
+
+        payload = source.read_bytes()
+        source_sha256 = _sha256(payload)
+        if destination.exists() or destination.is_symlink():
+            if not destination.is_file() or _sha256(destination.read_bytes()) != source_sha256:
+                raise FileExistsError(f"different bytes already exist: {destination}")
+            continue
+
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        destination.write_bytes(payload)
+        written.append(destination)
+    return written
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=Path("."))
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--publish-pipas", action="store_true")
     return parser.parse_args()
 
 
 def main() -> None:
     args = parse_args()
+    if args.publish_pipas:
+        for destination in publish_pipas(args.root):
+            print(destination.relative_to(args.root.resolve()).as_posix())
+        return
+
     actions = build_sync_plan(args.root)
     for action in actions:
         print(action.destination.relative_to(args.root.resolve()).as_posix())
