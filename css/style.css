@@ -1200,7 +1200,7 @@ ul, ol { list-style: none; }
 .footer-brand-mark {
   display: inline-flex;
   align-items: center;
-  --brand-mark-height: 1em;
+  --brand-mark-height: clamp(1.45rem, 3vw, 1.8rem);
   overflow: visible;
   justify-content: center;
   gap: 0.45rem;
