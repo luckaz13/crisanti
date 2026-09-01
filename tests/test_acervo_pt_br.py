@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class PtBrAuditTests(unittest.TestCase):
-    def test_critica_editorial_preserves_source_paragraph_boundaries(self):
+    def test_critica_editorial_covers_source_with_only_reviewed_merges(self):
         editorial = json.loads(
             (ROOT / "data/acervo/editorial-literatura-critica.json").read_text(
                 encoding="utf-8"
@@ -26,12 +26,24 @@ class PtBrAuditTests(unittest.TestCase):
             article["id"]: len(article.select(".literatura-full p"))
             for article in spanish.select("#critica article[id]")
         }
-        translated_counts = {
+        final_counts = {
             article_id: len(article["paragraphs"])
             for article_id, article in editorial["articles"].items()
         }
+        expected_final_counts = {
+            "lit-celso-ricardo": 16,
+            "lit-el-nombre": 4,
+            "lit-flores": 5,
+            "lit-fotografia-y-escultura": 8,
+            "lit-hugo-franca": 13,
+            "lit-juliana-hoffmann": 15,
+            "lit-mauricio-capellari": 8,
+            "lit-mitica-gaya": 13,
+        }
 
-        self.assertEqual(source_counts, translated_counts)
+        self.assertEqual(86, sum(source_counts.values()))
+        self.assertEqual(expected_final_counts, final_counts)
+        self.assertEqual(82, sum(final_counts.values()))
         translated_texts = [editorial["intro"]]
         for article in editorial["articles"].values():
             self.assertEqual(article["excerpt"], article["paragraphs"][0])
