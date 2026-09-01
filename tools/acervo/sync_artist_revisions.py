@@ -26,6 +26,7 @@ PIPAS_PUBLISHED_DESTINATIONS = {
     f"{name}.jpg": f"img/images/Pequeñas Pipas/{name}.jpg"
     for name in ("01", "02", "03", "04", "10")
 }
+PIPAS_PUBLISHED_ROOT = Path("img/images/Pequeñas Pipas")
 APPROVED_DESTINATIONS = frozenset((*PRIMARY_MEMBERS.values(), *PIPAS_MEMBERS.values()))
 ARCHIVE_MEMBERS = {
     PRIMARY_ARCHIVE: PRIMARY_MEMBERS,
@@ -136,29 +137,67 @@ def apply_sync_plan(actions: list[SyncAction], *, dry_run: bool) -> list[Path]:
     return written
 
 
+def _validate_published_root(root: Path) -> Path:
+    """Validate the canonical published directory and return its lexical path."""
+    published_root = root / PIPAS_PUBLISHED_ROOT
+    ancestors = (root / "img", root / "img" / "images", published_root)
+    for ancestor in ancestors:
+        if ancestor.is_symlink():
+            raise ValueError(f"published directory is a symlink: {ancestor}")
+        if ancestor.exists() and not ancestor.is_dir():
+            raise ValueError(f"published directory is not a directory: {ancestor}")
+        try:
+            ancestor.resolve().relative_to(root)
+        except ValueError as error:
+            raise ValueError(f"published directory escapes root: {ancestor}") from error
+    return published_root
+
+
+def _pipas_operations(
+    root: Path,
+) -> list[tuple[Path, Path, bytes, str]]:
+    root = root.resolve()
+    published_root = _validate_published_root(root)
+    resolved_published_root = published_root.resolve()
+    operations: list[tuple[Path, Path, bytes, str]] = []
+    for name in PIPAS_PUBLISHED_DESTINATIONS:
+        source = root / "img" / "Pequeñas Pipas" / name
+        destination = published_root / name
+        if not source.is_file():
+            raise FileNotFoundError(source)
+        if destination.is_symlink():
+            raise FileExistsError(f"destination is a symlink: {destination}")
+        try:
+            destination.resolve().relative_to(resolved_published_root)
+        except ValueError as error:
+            raise ValueError(f"published destination escapes root: {destination}") from error
+
+        payload = source.read_bytes()
+        source_sha256 = _sha256(payload)
+        if destination.exists() and (
+            not destination.is_file()
+            or _sha256(destination.read_bytes()) != source_sha256
+        ):
+            raise FileExistsError(f"different bytes already exist: {destination}")
+        operations.append((source, destination, payload, source_sha256))
+    return operations
+
+
 def publish_pipas(root: Path) -> list[Path]:
     """Publish the approved Pequeñas Pipas source files without overwriting.
 
     A destination is created only when absent. Existing destinations are
     accepted when their bytes match the source and rejected otherwise.
     """
-    root = root.resolve()
     written: list[Path] = []
-    for name, destination_name in PIPAS_PUBLISHED_DESTINATIONS.items():
-        source = root / "img" / "Pequeñas Pipas" / name
-        destination = root / destination_name
-        if not source.is_file():
-            raise FileNotFoundError(source)
-
-        payload = source.read_bytes()
-        source_sha256 = _sha256(payload)
-        if destination.exists() or destination.is_symlink():
-            if not destination.is_file() or _sha256(destination.read_bytes()) != source_sha256:
-                raise FileExistsError(f"different bytes already exist: {destination}")
+    for _source, destination, payload, source_sha256 in _pipas_operations(root):
+        if destination.exists():
             continue
 
         destination.parent.mkdir(parents=True, exist_ok=True)
         destination.write_bytes(payload)
+        if _sha256(destination.read_bytes()) != source_sha256:
+            raise ValueError(f"destination checksum mismatch: {destination}")
         written.append(destination)
     return written
 
@@ -174,7 +213,11 @@ def parse_args() -> argparse.Namespace:
 def main() -> None:
     args = parse_args()
     if args.publish_pipas:
-        for destination in publish_pipas(args.root):
+        if args.dry_run:
+            destinations = [destination for _, destination, _, _ in _pipas_operations(args.root)]
+        else:
+            destinations = publish_pipas(args.root)
+        for destination in destinations:
             print(destination.relative_to(args.root.resolve()).as_posix())
         return
 

@@ -1,3 +1,6 @@
+import hashlib
+import subprocess
+import sys
 import tempfile
 import unittest
 from pathlib import Path
@@ -35,6 +38,14 @@ class PequenasPipasReplacementTests(unittest.TestCase):
                  for name in ("01", "02", "03", "04", "10")],
                 created,
             )
+            for name in ("01", "02", "03", "04", "10"):
+                source = source_root / f"{name}.jpg"
+                destination = root / "img" / "images" / "Pequeñas Pipas" / f"{name}.jpg"
+                self.assertEqual(source.read_bytes(), destination.read_bytes())
+                self.assertEqual(
+                    hashlib.sha256(source.read_bytes()).hexdigest(),
+                    hashlib.sha256(destination.read_bytes()).hexdigest(),
+                )
 
     def test_publish_pipas_accepts_identical_files_and_rejects_divergent_files(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -68,6 +79,52 @@ class PequenasPipasReplacementTests(unittest.TestCase):
             with self.assertRaises(FileExistsError):
                 publish_pipas(root)
             self.assertFalse(outside.exists())
+
+    def test_publish_pipas_rejects_external_parent_symlink(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source_root = root / "img" / "Pequeñas Pipas"
+            source_root.mkdir(parents=True)
+            for name in ("01", "02", "03", "04", "10"):
+                (source_root / f"{name}.jpg").write_bytes(f"pipas-{name}".encode())
+            external = root / "external-published"
+            external.mkdir()
+            (root / "img" / "images").symlink_to(external, target_is_directory=True)
+
+            with self.assertRaises(ValueError):
+                publish_pipas(root)
+            self.assertEqual([], list(external.iterdir()))
+
+    def test_publish_pipas_cli_dry_run_lists_plan_without_writing(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source_root = root / "img" / "Pequeñas Pipas"
+            source_root.mkdir(parents=True)
+            for name in ("01", "02", "03", "04", "10"):
+                (source_root / f"{name}.jpg").write_bytes(f"pipas-{name}".encode())
+
+            result = subprocess.run(
+                [
+                    sys.executable,
+                    str(ROOT / "tools/acervo/sync_artist_revisions.py"),
+                    "--root",
+                    str(root),
+                    "--publish-pipas",
+                    "--dry-run",
+                ],
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+
+            self.assertEqual(
+                [
+                    f"img/images/Pequeñas Pipas/{name}.jpg"
+                    for name in ("01", "02", "03", "04", "10")
+                ],
+                result.stdout.splitlines(),
+            )
+            self.assertFalse((root / "img" / "images").exists())
 
 
 if __name__ == "__main__":
