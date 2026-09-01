@@ -5,6 +5,23 @@
     const $ = (sel, ctx = document) => ctx.querySelector(sel);
     const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
+    function deferCrossfadeImages(slides, preloadRadius) {
+        slides.forEach((slide, index) => {
+            if (index <= preloadRadius) return;
+            const img = slide.querySelector('.gallery-img');
+            const src = img && img.getAttribute('src');
+            if (!src) return;
+            img.dataset.src = src;
+            img.removeAttribute('src');
+        });
+    }
+
+    function restoreImageSource(img) {
+        if (!img || !img.dataset.src) return;
+        img.src = img.dataset.src;
+        delete img.dataset.src;
+    }
+
     function setupCarousel(carouselEl) {
         const track = carouselEl.querySelector('.gallery-track');
         const viewport = carouselEl.querySelector('.gallery-viewport');
@@ -37,11 +54,13 @@
         let carouselVisible = false;
 
         function preloadImage(img) {
-            if (!img || img.dataset.preloaded === 'true') return;
+            if (!img) return;
+            restoreImageSource(img);
+            if (img.dataset.preloaded === 'true') return;
             img.loading = 'eager';
             img.decoding = 'async';
             img.dataset.preloaded = 'true';
-            const src = img.currentSrc || img.src;
+            const src = img.currentSrc || img.getAttribute('src');
             if (!src) return;
             const probe = new Image();
             probe.decoding = 'async';
@@ -141,9 +160,6 @@
             syncVideoPlayback();
         }
 
-        carouselEl._updateCarousel = updateCarousel;
-        carouselEl.dataset.carouselInitialized = 'true';
-
         function canAutoplay() {
             return Number.isFinite(autoplayDelay) && autoplayDelay > 0 && slideCount > 1 &&
                 !pointerPaused && !focusPaused && !reducedMotion.matches &&
@@ -199,6 +215,11 @@
             });
         }
 
+        if (isCrossfade) {
+            deferCrossfadeImages(slides, preloadRadius);
+        }
+        carouselEl._updateCarousel = updateCarousel;
+        carouselEl.dataset.carouselInitialized = 'true';
         updateCarousel();
         preloadAround(0, 1);
         carouselEl.style.cursor = 'grab';
