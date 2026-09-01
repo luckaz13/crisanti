@@ -95,7 +95,7 @@ class VlakVideoTests(unittest.TestCase):
         self.assertIn("background: transparent;", css_rule(css, ".gallery-figure--video"))
         self.assertIn("background: transparent;", css_rule(css, ".gallery-video"))
 
-    def test_timeline_is_accessibly_expandable_in_both_languages(self):
+    def test_timeline_has_localized_progressive_enhancement_labels(self):
         expected = {
             "index.html": ("Ver mais", "Ver menos"),
             "es/index.html": ("Ver más", "Ver menos"),
@@ -105,7 +105,8 @@ class VlakVideoTests(unittest.TestCase):
                 soup = BeautifulSoup((ROOT / page).read_text(encoding="utf-8"), "html.parser")
                 button = soup.select_one("[data-timeline-toggle]")
                 self.assertIsNotNone(button)
-                self.assertEqual("false", button["aria-expanded"])
+                self.assertTrue(button.has_attr("hidden"))
+                self.assertIsNone(button.get("aria-expanded"))
                 self.assertEqual(labels, (button["data-label-more"], button["data-label-less"]))
 
     def test_controller_requires_active_slide_and_visible_carousel(self):

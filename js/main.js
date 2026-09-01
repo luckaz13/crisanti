@@ -313,16 +313,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const moreLabel = toggle.dataset.labelMore || toggle.textContent.trim();
   const lessLabel = toggle.dataset.labelLess || moreLabel;
 
+  collapsible.hidden = true;
+  toggle.hidden = false;
+  toggle.setAttribute('aria-expanded', 'false');
+  toggle.textContent = moreLabel;
+
   toggle.addEventListener('click', () => {
     const isExpanded = toggle.getAttribute('aria-expanded') !== 'true';
-    const toggleTopBeforeCollapse = toggle.getBoundingClientRect().top;
 
     collapsible.hidden = !isExpanded;
     toggle.setAttribute('aria-expanded', String(isExpanded));
     toggle.textContent = isExpanded ? lessLabel : moreLabel;
 
-    if (!isExpanded && toggleTopBeforeCollapse < 0) {
-      window.scrollBy({ top: toggle.getBoundingClientRect().top, behavior: 'auto' });
+    if (!isExpanded) {
+      window.requestAnimationFrame(() => {
+        const toggleTopAfterCollapse = toggle.getBoundingClientRect().top;
+        if (toggleTopAfterCollapse < 0) {
+          window.scrollBy({ top: toggleTopAfterCollapse, behavior: 'auto' });
+        }
+      });
     }
   });
 })();
