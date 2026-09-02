@@ -97,6 +97,11 @@ class PtBrAuditTests(unittest.TestCase):
 
             self.assertEqual(2, len(report.findings))
 
+    def test_portuguese_index_has_no_unintended_spanish(self):
+        report = audit_pt_br_html(ROOT / "index.html")
+
+        self.assertEqual([], report.findings)
+
 
 if __name__ == "__main__":
     unittest.main()

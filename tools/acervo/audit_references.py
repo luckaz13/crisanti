@@ -38,7 +38,12 @@ def _references(path: Path) -> list[str]:
 
 def _local_path(raw_reference: str) -> str | None:
     reference = unescape(raw_reference.strip())
-    if not reference or reference.startswith("#") or reference.startswith("//"):
+    if (
+        not reference
+        or reference.startswith("#")
+        or reference.startswith("//")
+        or "${" in reference
+    ):
         return None
     parsed = urlsplit(reference)
     if parsed.scheme.lower() in IGNORED_SCHEMES:
@@ -46,10 +51,25 @@ def _local_path(raw_reference: str) -> str | None:
     return unquote(parsed.path) or None
 
 
+def _audit_paths(paths: list[Path]) -> list[Path]:
+    supported_suffixes = {".css", ".htm", ".html", ".js"}
+    expanded: list[Path] = []
+    for path in paths:
+        if path.is_dir():
+            expanded.extend(
+                candidate
+                for candidate in sorted(path.rglob("*"))
+                if candidate.is_file() and candidate.suffix.lower() in supported_suffixes
+            )
+        else:
+            expanded.append(path)
+    return expanded
+
+
 def audit_files(root: Path, paths: list[Path]) -> AuditReport:
     root = root.resolve()
     report = AuditReport()
-    for path in paths:
+    for path in _audit_paths(paths):
         path = path.resolve()
         display_path = path.relative_to(root).as_posix()
         for raw_reference in _references(path):

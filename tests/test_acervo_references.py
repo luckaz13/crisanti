@@ -91,6 +91,23 @@ class ReferenceAuditTests(unittest.TestCase):
 
             self.assertEqual(["index.html: img/images/missing.jpg"], report.missing_assets)
 
+    def test_audits_supported_files_within_a_directory(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            scripts = root / "js"
+            scripts.mkdir()
+            (scripts / "gallery.js").write_text(
+                '<img src="../img/images/current.jpg">', encoding="utf-8"
+            )
+            asset = root / "img/images/current.jpg"
+            asset.parent.mkdir(parents=True)
+            asset.write_bytes(b"image")
+
+            report = audit_files(root, [scripts])
+
+            self.assertEqual([], report.legacy_references)
+            self.assertEqual([], report.missing_assets)
+
 
 if __name__ == "__main__":
     unittest.main()
