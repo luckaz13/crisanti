@@ -934,8 +934,18 @@ ul, ol { list-style: none; }
 .series-figure--small { aspect-ratio: 16/9; }
 
 .series-gallery {
+  min-inline-size: 0;
+  inline-size: 100%;
+  max-inline-size: 100%;
   overflow-x: clip;
   overflow-y: visible;
+}
+
+.series-gallery > .gallery-carousel,
+.series-gallery .gallery-viewport {
+  min-inline-size: 0;
+  inline-size: 100%;
+  max-inline-size: 100%;
 }
 
 
@@ -1630,9 +1640,12 @@ ul, ol { list-style: none; }
 
 .gallery-video {
   display: block;
-  width: 100%;
+  width: auto;
+  max-width: 100%;
+  height: auto;
   aspect-ratio: 478 / 850;
   max-height: 78vh;
+  margin-inline: auto;
   object-fit: contain;
   background: transparent;
 }
