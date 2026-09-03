@@ -182,6 +182,22 @@ console.log(JSON.stringify({{
         self.assertIn("Math.max", height_fn)
         self.assertIn("slides", height_fn)
 
+    def test_ficcao_uses_compact_editorial_spacing(self):
+        css = (ROOT / "css/style.css").read_text(encoding="utf-8")
+
+        title = css_declarations(css, "#ficcao .literatura-work-title")
+        tabs = css_declarations(css, "#ficcao .gallery-tabs")
+        caption = css_declarations(css, "#ficcao .gallery-caption")
+        overview = css_declarations(css, "#ficcao .literatura-fiction-overview")
+        subsection = css_declarations(css, "#ficcao.literatura-subsection")
+
+        self.assertEqual("0.75rem auto 1rem", title.get("margin"))
+        self.assertEqual("0.75rem", tabs.get("margin-bottom"))
+        self.assertEqual("0.5rem", tabs.get("padding-bottom"))
+        self.assertEqual("0.75rem 1rem 0", caption.get("padding"))
+        self.assertEqual("1rem", overview.get("margin-top"))
+        self.assertEqual("1.5rem", subsection.get("margin-bottom"))
+
 
 if __name__ == "__main__":
     unittest.main()

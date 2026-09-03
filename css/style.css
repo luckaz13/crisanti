@@ -1908,6 +1908,29 @@ ul, ol { list-style: none; }
   width: 100%;
 }
 
+/* Ficção: a galeria vertical pede um ritmo mais contido entre título,
+   navegação, obra e texto crítico. */
+#ficcao.literatura-subsection {
+  margin-bottom: 1.5rem;
+}
+
+#ficcao .literatura-work-title {
+  margin: 0.75rem auto 1rem;
+}
+
+#ficcao .gallery-tabs {
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+}
+
+#ficcao .gallery-caption {
+  padding: 0.75rem 1rem 0;
+}
+
+#ficcao .literatura-fiction-overview {
+  margin-top: 1rem;
+}
+
 .literatura-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
