@@ -169,6 +169,19 @@ console.log(JSON.stringify({{
         self.assertIn('[data-carousel-initialized="true"] .gallery-slide', reduced_motion)
         self.assertIn("transition-duration: 0.01ms;", reduced_motion)
 
+    def test_crossfade_uses_slow_transition_and_stable_max_height(self):
+        css = (ROOT / "css/style.css").read_text(encoding="utf-8")
+        script = (ROOT / "js/gallery.js").read_text(encoding="utf-8")
+
+        self.assertRegex(
+            css,
+            r'\[data-transition="crossfade"\]\[data-carousel-initialized="true"\] \.gallery-slide\s*\{[^}]*transition:\s*opacity 2s',
+        )
+        height_fn = extract_js_function(script, "updateViewportHeight")
+        self.assertIn("isCrossfade", height_fn)
+        self.assertIn("Math.max", height_fn)
+        self.assertIn("slides", height_fn)
+
 
 if __name__ == "__main__":
     unittest.main()

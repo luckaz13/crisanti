@@ -208,7 +208,14 @@
                 const horizontalPadding = Number.parseFloat(slideStyles.paddingLeft) +
                     Number.parseFloat(slideStyles.paddingRight);
                 const availableWidth = Math.max(0, activeSlide.clientWidth - horizontalPadding);
-                const height = measureSlideHeight(activeSlide, availableWidth);
+                const measuredHeights = isCrossfade
+                    ? [...slides].map(slide => measureSlideHeight(slide, availableWidth)).filter(height => height > 0)
+                    : [measureSlideHeight(activeSlide, availableWidth)];
+                const stableAspectRatio = Number.parseFloat(carouselEl.dataset.stableAspectRatio || '');
+                const reservedHeight = Number.isFinite(stableAspectRatio) && stableAspectRatio > 0
+                    ? availableWidth * stableAspectRatio + captionClearance
+                    : 0;
+                const height = Math.max(0, ...measuredHeights, reservedHeight);
                 if (height > 0) {
                     viewport.style.height = `${Math.ceil(height)}px`;
                 }

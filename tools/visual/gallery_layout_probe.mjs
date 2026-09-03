@@ -654,7 +654,8 @@ async function measurePecesMotion(cdp, sectionId, prefix) {
       transitionProperty: style.transitionProperty,
     };
   }, sectionId);
-  await wait(650);
+  // Allow the deliberately slow 2s crossfade to settle before sampling opacity.
+  await wait(2_150);
   const after = await callPage(cdp, function readPeces(id) {
     const carousel = document.getElementById(id).querySelector('.gallery-carousel');
     const slides = [...carousel.querySelectorAll('.gallery-slide')];

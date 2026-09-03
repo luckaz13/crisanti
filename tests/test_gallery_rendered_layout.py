@@ -258,7 +258,7 @@ class RenderedGalleryLayoutTests(unittest.TestCase):
             with self.subTest(label=label):
                 self.assertFalse(peces["reducedMotion"], label)
                 self.assertIn("opacity", peces["transitionProperty"], label)
-                self.assertGreaterEqual(peces["transitionDurationMs"], 400, label)
+                self.assertGreaterEqual(peces["transitionDurationMs"], 1800, label)
                 self.assertEqual(0, peces["beforeActiveIndex"], label)
                 self.assertEqual(1, peces["afterActiveIndex"], label)
                 self.assertEqual("1", peces["activeOpacity"], label)
