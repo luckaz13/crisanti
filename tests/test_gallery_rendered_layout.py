@@ -8,6 +8,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 PROBE = ROOT / "tools/visual/gallery_layout_probe.mjs"
 EPSILON = 2.0
+EXPECTED_INITIALLY_HIDDEN_GALLERIES = 26
+PROBE_PROCESS_TIMEOUT_SECONDS = 125
 COMMON_GALLERY_IDS = {
     "gallery-carousel-seda",
     "gallery-carousel-seda-2024",
@@ -56,6 +58,28 @@ EXPECTED_GALLERY_IDS = {
 }
 
 
+class ProbeCommandTests(unittest.TestCase):
+    def test_run_command_times_out_and_terminates_its_child(self):
+        script = f"""
+import {{ runCommand }} from {PROBE.as_uri()!r};
+try {{
+  await runCommand(process.execPath, ['-e', 'setTimeout(() => {{}}, 5000)'], {{ timeoutMs: 25 }});
+  process.exitCode = 1;
+}} catch (error) {{
+  if (!/timed out/.test(error.message)) throw error;
+}}
+"""
+        completed = subprocess.run(
+            ["node", "--input-type=module", "--eval", script],
+            cwd=ROOT,
+            capture_output=True,
+            text=True,
+            timeout=5,
+        )
+
+        self.assertEqual(0, completed.returncode, completed.stderr)
+
+
 def assert_rect_within(test_case, inner, outer, label):
     test_case.assertGreater(inner["width"], 0, label)
     test_case.assertGreater(inner["height"], 0, label)
@@ -86,7 +110,7 @@ class RenderedGalleryLayoutTests(unittest.TestCase):
             cwd=ROOT,
             capture_output=True,
             text=True,
-            timeout=125,
+            timeout=PROBE_PROCESS_TIMEOUT_SECONDS,
         )
         if completed.returncode != 0:
             raise RuntimeError(f"Gallery CDP probe failed:\n{completed.stderr}")
@@ -122,18 +146,16 @@ class RenderedGalleryLayoutTests(unittest.TestCase):
                     {gallery["carouselId"] for gallery in galleries},
                     label,
                 )
-                self.assertTrue(any(gallery["initiallyHidden"] for gallery in galleries), label)
+                self.assertEqual(
+                    EXPECTED_INITIALLY_HIDDEN_GALLERIES,
+                    sum(gallery["initiallyHidden"] for gallery in galleries),
+                    label,
+                )
                 self.assertTrue(result["pageGeometry"]["overflowMaskDisabled"], label)
-                self.assertLessEqual(
-                    result["pageGeometry"]["documentScrollWidth"],
-                    viewport["width"] + EPSILON,
-                    label,
-                )
-                self.assertLessEqual(
-                    result["pageGeometry"]["bodyScrollWidth"],
-                    viewport["width"] + EPSILON,
-                    label,
-                )
+                inner_width = result["pageGeometry"]["innerWidth"]
+                self.assertEqual(viewport["width"], inner_width, label)
+                self.assertEqual(inner_width, result["pageGeometry"]["bodyScrollWidth"], label)
+                self.assertEqual(inner_width, result["pageGeometry"]["documentScrollWidth"], label)
                 for gallery in galleries:
                     gallery_label = f'{label} #{gallery["carouselId"]}'
                     section_bounds = {
@@ -145,11 +167,10 @@ class RenderedGalleryLayoutTests(unittest.TestCase):
                         "height": gallery["section"]["height"],
                     }
                     assert_horizontal_within(self, gallery["section"], section_bounds, gallery_label)
-                    self.assertLessEqual(
-                        gallery["section"]["right"],
-                        gallery["documentScrollWidth"] + EPSILON,
-                        gallery_label,
-                    )
+                    self.assertGreaterEqual(gallery["section"]["left"], 0, gallery_label)
+                    self.assertLessEqual(gallery["section"]["right"], inner_width, gallery_label)
+                    self.assertEqual(inner_width, gallery["bodyScrollWidth"], gallery_label)
+                    self.assertEqual(inner_width, gallery["documentScrollWidth"], gallery_label)
                     assert_horizontal_within(self, gallery["gallery"], gallery["section"], gallery_label)
                     assert_horizontal_within(self, gallery["viewport"], gallery["section"], gallery_label)
                     self.assertTrue(gallery["mediaComplete"], gallery_label)
@@ -248,6 +269,10 @@ class RenderedGalleryLayoutTests(unittest.TestCase):
                 self.assertGreaterEqual(lightbox["captionContrast"], 4.5, label)
                 self.assertGreater(lightbox["image"]["bottom"], 0, label)
                 self.assertLess(lightbox["image"]["top"], lightbox["viewport"]["height"], label)
+                self.assertGreater(lightbox["caption"]["bottom"], 0, label)
+                self.assertLess(lightbox["caption"]["top"], lightbox["viewport"]["height"], label)
+                self.assertTrue(lightbox["contentIsScrollOwner"], label)
+                self.assertTrue(lightbox["contentFocusable"], label)
 
     def test_browser_and_profile_are_cleaned_up(self):
         self.assertTrue(self.cleanup["browserExited"])

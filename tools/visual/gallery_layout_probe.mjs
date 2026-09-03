@@ -16,7 +16,8 @@ const outputFlagIndex = process.argv.indexOf(OUTPUT_FLAG);
 const outputPath = outputFlagIndex >= 0 ? process.argv[outputFlagIndex + 1] : null;
 const chromium = process.env.CHROMIUM_BIN ||
   (existsSync('/usr/bin/chromium') ? '/usr/bin/chromium' : 'chromium');
-const probeTimeoutMs = captureDir ? 110_000 : 80_000;
+const probeTimeoutMs = captureDir ? 105_000 : 80_000;
+const contactSheetCommandTimeoutMs = 5_000;
 const captureFrames = [];
 let navigationSequence = 0;
 
@@ -678,6 +679,7 @@ async function measureLightbox(cdp, cuadernosId, prefix) {
   const result = await callPage(cdp, function lightboxState(backgroundSectionId) {
     const image = document.querySelector('#lightbox-img');
     const caption = document.querySelector('#lightbox-caption');
+    const content = document.querySelector('.lightbox-content');
     const lightbox = document.querySelector('#lightbox');
     const parseColor = value => {
       const parts = value.match(/[\d.]+/g).map(Number);
@@ -720,6 +722,8 @@ async function measureLightbox(cdp, cuadernosId, prefix) {
       caption: rect(caption),
       captionContrast: (light + 0.05) / (dark + 0.05),
       captionText: caption.textContent.trim(),
+      contentFocusable: content.tabIndex >= 0,
+      contentIsScrollOwner: ['auto', 'scroll'].includes(getComputedStyle(content).overflowY),
       hidden: lightbox.hidden,
       image: rect(image),
       imageComplete: image.complete,
@@ -810,9 +814,10 @@ async function probePage(cdp, baseUrl, language, viewport) {
   };
 }
 
-async function runCommand(command, args) {
-  await new Promise((resolve, reject) => {
-    const child = spawn(command, args, { stdio: ['ignore', 'ignore', 'pipe'] });
+export async function runCommand(command, args, { timeoutMs = contactSheetCommandTimeoutMs } = {}) {
+  let child;
+  const completion = new Promise((resolve, reject) => {
+    child = spawn(command, args, { stdio: ['ignore', 'ignore', 'pipe'] });
     let stderr = '';
     child.stderr.on('data', chunk => {
       if (stderr.length < 8000) stderr += chunk.toString();
@@ -823,6 +828,15 @@ async function runCommand(command, args) {
       else reject(new Error(command + ' exited ' + code + ': ' + stderr.trim()));
     });
   });
+  try {
+    await withTimeout(completion, timeoutMs, command + ' timed out after ' + timeoutMs + 'ms');
+  } catch (error) {
+    if (!childHasExited(child)) {
+      child.kill('SIGTERM');
+      if (!(await waitForChildExit(child, 1000))) child.kill('SIGKILL');
+    }
+    throw error;
+  }
 }
 
 async function createContactSheets() {
@@ -846,7 +860,7 @@ async function createContactSheets() {
         '-pointsize', '12',
         '-set', 'label', '%t',
         output,
-      ]);
+      ], { timeoutMs: contactSheetCommandTimeoutMs });
       sheets.push(output);
     }
   }
@@ -983,7 +997,7 @@ async function main() {
       urls: ['https://fonts.googleapis.com/*', 'https://fonts.gstatic.com/*'],
     });
 
-    const results = await withTimeout((async () => {
+    const measured = await withTimeout((async () => {
       const measured = [];
       for (const viewport of [
         { height: 844, width: 390 },
@@ -993,17 +1007,17 @@ async function main() {
           measured.push(await probePage(cdp, baseUrl, language, viewport));
         }
       }
-      return measured;
+      const contactSheets = await createContactSheets();
+      return { contactSheets, results: measured };
     })(), probeTimeoutMs, 'Gallery CDP probe exceeded ' + probeTimeoutMs + 'ms');
-    const contactSheets = await createContactSheets();
     payload = {
       capture: captureDir ? {
-        contactSheets,
+        contactSheets: measured.contactSheets,
         directory: captureDir,
         frameCount: captureFrames.length,
         frames: captureFrames.map(name => name + '.png'),
       } : null,
-      results,
+      results: measured.results,
     };
   } catch (error) {
     failure = error;
@@ -1024,10 +1038,15 @@ async function main() {
     }
   }
 
-  if (failure) throw failure;
+  if (failure) {
+    const failurePayload = JSON.stringify({ cleanup, error: failure.message }, null, 2) + '\n';
+    if (outputPath) await writeFile(outputPath, failurePayload, 'utf8');
+    throw new Error(failure.message + '\nCleanup: ' + JSON.stringify(cleanup));
+  }
   const output = JSON.stringify({ ...payload, cleanup }, null, 2) + '\n';
   if (outputPath) await writeFile(outputPath, output, 'utf8');
   process.stdout.write(output);
 }
 
-await main();
+const isEntryPoint = process.argv[1] && pathToFileURL(process.argv[1]).href === import.meta.url;
+if (isEntryPoint) await main();
