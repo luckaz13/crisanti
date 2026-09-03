@@ -94,6 +94,21 @@ class BrandMarkStylesTests(unittest.TestCase):
         override = css_rule(css, ".site-header:not(.scrolled) .nav-logo-mark")
         self.assertNotIn("width", declarations(override))
 
+    def test_bilingual_pages_declare_fc_favicon(self):
+        pt = (ROOT / "index.html").read_text(encoding="utf-8")
+        es = (ROOT / "es/index.html").read_text(encoding="utf-8")
+        favicon = ROOT / "favicon.svg"
+        fallback = ROOT / "favicon-32.png"
+
+        self.assertTrue(favicon.is_file())
+        self.assertTrue(fallback.is_file())
+        self.assertIn('rel="icon"', pt)
+        self.assertIn('href="favicon.svg"', pt)
+        self.assertIn('href="../favicon.svg"', es)
+        self.assertIn('type="image/svg+xml"', pt)
+        self.assertIn('href="favicon-32.png"', pt)
+        self.assertIn('href="../favicon-32.png"', es)
+
 
 if __name__ == "__main__":
     unittest.main()
