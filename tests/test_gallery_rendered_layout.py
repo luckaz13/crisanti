@@ -3,13 +3,17 @@ import os
 import subprocess
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 
 ROOT = Path(__file__).resolve().parents[1]
 PROBE = ROOT / "tools/visual/gallery_layout_probe.mjs"
 EPSILON = 2.0
 EXPECTED_INITIALLY_HIDDEN_GALLERIES = 26
-PROBE_PROCESS_TIMEOUT_SECONDS = 125
+CHROMIUM_STARTUP_TIMEOUT_SECONDS = 15
+CAPTURED_PROBE_TIMEOUT_SECONDS = 105
+CLEANUP_RESERVE_SECONDS = 11
+PROBE_PROCESS_TIMEOUT_SECONDS = 150
 COMMON_GALLERY_IDS = {
     "gallery-carousel-seda",
     "gallery-carousel-seda-2024",
@@ -79,6 +83,25 @@ try {{
 
         self.assertEqual(0, completed.returncode, completed.stderr)
 
+    def test_external_timeout_reserves_startup_probe_and_cleanup_budget(self):
+        timing = read_probe_timing()
+        self.assertGreaterEqual(PROBE_PROCESS_TIMEOUT_SECONDS, 150)
+        self.assertEqual(CHROMIUM_STARTUP_TIMEOUT_SECONDS * 1000, timing["startupMs"])
+        self.assertEqual(CAPTURED_PROBE_TIMEOUT_SECONDS * 1000, timing["capturedProbeMs"])
+        self.assertEqual(CLEANUP_RESERVE_SECONDS * 1000, timing["cleanupReserveMs"])
+        self.assertGreater(
+            PROBE_PROCESS_TIMEOUT_SECONDS,
+            CHROMIUM_STARTUP_TIMEOUT_SECONDS
+            + CAPTURED_PROBE_TIMEOUT_SECONDS
+            + CLEANUP_RESERVE_SECONDS,
+        )
+
+    def test_probe_subprocess_uses_the_documented_external_timeout(self):
+        with patch("tests.test_gallery_rendered_layout.subprocess.run") as run:
+            run_probe(["node", str(PROBE)])
+
+        self.assertEqual(PROBE_PROCESS_TIMEOUT_SECONDS, run.call_args.kwargs["timeout"])
+
 
 def assert_rect_within(test_case, inner, outer, label):
     test_case.assertGreater(inner["width"], 0, label)
@@ -95,6 +118,32 @@ def assert_horizontal_within(test_case, inner, outer, label):
     test_case.assertLessEqual(inner["right"], outer["right"] + EPSILON, label)
 
 
+def run_probe(command):
+    return subprocess.run(
+        command,
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        timeout=PROBE_PROCESS_TIMEOUT_SECONDS,
+    )
+
+
+def read_probe_timing():
+    script = f"""
+import {{ PROBE_TIMING }} from {PROBE.as_uri()!r};
+console.log(JSON.stringify(PROBE_TIMING));
+"""
+    completed = subprocess.run(
+        ["node", "--input-type=module", "--eval", script],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        timeout=5,
+        check=True,
+    )
+    return json.loads(completed.stdout)
+
+
 class RenderedGalleryLayoutTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -105,13 +154,7 @@ class RenderedGalleryLayoutTests(unittest.TestCase):
             command.extend(["--capture-dir", capture_dir])
         if metrics_output:
             command.extend(["--output", metrics_output])
-        completed = subprocess.run(
-            command,
-            cwd=ROOT,
-            capture_output=True,
-            text=True,
-            timeout=PROBE_PROCESS_TIMEOUT_SECONDS,
-        )
+        completed = run_probe(command)
         if completed.returncode != 0:
             raise RuntimeError(f"Gallery CDP probe failed:\n{completed.stderr}")
         payload = json.loads(completed.stdout)
@@ -271,8 +314,14 @@ class RenderedGalleryLayoutTests(unittest.TestCase):
                 self.assertLess(lightbox["image"]["top"], lightbox["viewport"]["height"], label)
                 self.assertGreater(lightbox["caption"]["bottom"], 0, label)
                 self.assertLess(lightbox["caption"]["top"], lightbox["viewport"]["height"], label)
+                self.assertGreaterEqual(lightbox["caption"]["left"], 0, label)
+                self.assertLessEqual(lightbox["caption"]["right"], lightbox["viewport"]["width"], label)
+                self.assertGreaterEqual(lightbox["caption"]["top"], 0, label)
+                self.assertLessEqual(lightbox["caption"]["bottom"], lightbox["viewport"]["height"], label)
                 self.assertTrue(lightbox["contentIsScrollOwner"], label)
                 self.assertTrue(lightbox["contentFocusable"], label)
+                self.assertTrue(lightbox["closeFocusedBeforeContent"], label)
+                self.assertTrue(lightbox["contentFocused"], label)
 
     def test_browser_and_profile_are_cleaned_up(self):
         self.assertTrue(self.cleanup["browserExited"])

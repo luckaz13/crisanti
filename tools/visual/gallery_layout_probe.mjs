@@ -16,8 +16,19 @@ const outputFlagIndex = process.argv.indexOf(OUTPUT_FLAG);
 const outputPath = outputFlagIndex >= 0 ? process.argv[outputFlagIndex + 1] : null;
 const chromium = process.env.CHROMIUM_BIN ||
   (existsSync('/usr/bin/chromium') ? '/usr/bin/chromium' : 'chromium');
-const probeTimeoutMs = captureDir ? 105_000 : 80_000;
-const contactSheetCommandTimeoutMs = 5_000;
+// The Python harness imports this budget and grants Chromium startup + probe + cleanup time.
+export const PROBE_TIMING = Object.freeze({
+  capturedProbeMs: 105_000,
+  cleanupKillWaitMs: 5_000,
+  cleanupResidualWaitMs: 3_000,
+  cleanupReserveMs: 11_000,
+  cleanupTermWaitMs: 3_000,
+  contactSheetCommandMs: 5_000,
+  startupMs: 15_000,
+  uncapturedProbeMs: 80_000,
+});
+const probeTimeoutMs = captureDir ? PROBE_TIMING.capturedProbeMs : PROBE_TIMING.uncapturedProbeMs;
+const contactSheetCommandTimeoutMs = PROBE_TIMING.contactSheetCommandMs;
 const captureFrames = [];
 let navigationSequence = 0;
 
@@ -675,8 +686,19 @@ async function measureLightbox(cdp, cuadernosId, prefix) {
     document.querySelector('.lightbox-content').scrollTop = 0;
     return true;
   });
+  const focus = await callPage(cdp, function focusLightboxContent() {
+    const close = document.querySelector('#lightbox-close');
+    const content = document.querySelector('.lightbox-content');
+    close.focus();
+    const closeFocusedBeforeContent = document.activeElement === close;
+    content.focus();
+    return {
+      closeFocusedBeforeContent,
+      contentFocused: document.activeElement === content,
+    };
+  });
   await settleLayout(cdp);
-  const result = await callPage(cdp, function lightboxState(backgroundSectionId) {
+  const result = await callPage(cdp, function lightboxState(backgroundSectionId, focusState) {
     const image = document.querySelector('#lightbox-img');
     const caption = document.querySelector('#lightbox-caption');
     const content = document.querySelector('.lightbox-content');
@@ -722,7 +744,9 @@ async function measureLightbox(cdp, cuadernosId, prefix) {
       caption: rect(caption),
       captionContrast: (light + 0.05) / (dark + 0.05),
       captionText: caption.textContent.trim(),
+      closeFocusedBeforeContent: focusState.closeFocusedBeforeContent,
       contentFocusable: content.tabIndex >= 0,
+      contentFocused: focusState.contentFocused,
       contentIsScrollOwner: ['auto', 'scroll'].includes(getComputedStyle(content).overflowY),
       hidden: lightbox.hidden,
       image: rect(image),
@@ -731,7 +755,7 @@ async function measureLightbox(cdp, cuadernosId, prefix) {
       imageNaturalWidth: image.naturalWidth,
       viewport: { height: innerHeight, width: innerWidth },
     };
-  }, cuadernosId);
+  }, cuadernosId, focus);
   await screenshot(cdp, prefix + '-lightbox-cuadernos');
   await callPage(cdp, function closeLightbox() {
     document.querySelector('#lightbox-close').click();
@@ -922,11 +946,11 @@ async function terminateBrowser(browser, profile) {
   };
   if (!cleanup.browserExited) {
     cleanup.termSent = signalBrowser(browser, 'SIGTERM');
-    cleanup.browserExited = await waitForChildExit(browser, 3000);
+    cleanup.browserExited = await waitForChildExit(browser, PROBE_TIMING.cleanupTermWaitMs);
   }
   if (!cleanup.browserExited) {
     cleanup.killSent = signalBrowser(browser, 'SIGKILL');
-    cleanup.browserExited = await waitForChildExit(browser, 5000);
+    cleanup.browserExited = await waitForChildExit(browser, PROBE_TIMING.cleanupKillWaitMs);
   }
 
   let residuals = profile ? await processIdsUsingProfile(profile) : [];
@@ -937,7 +961,7 @@ async function terminateBrowser(browser, profile) {
       if (error.code !== 'ESRCH') throw error;
     }
   }
-  const deadline = Date.now() + 3000;
+  const deadline = Date.now() + PROBE_TIMING.cleanupResidualWaitMs;
   while (profile && residuals.length && Date.now() < deadline) {
     await wait(50);
     residuals = await processIdsUsingProfile(profile);
@@ -985,7 +1009,11 @@ async function main() {
       if (browserStderr.length < 8000) browserStderr += chunk.toString();
     });
     try {
-      cdp = await withTimeout(connectToPage(browser), 15_000, 'Chromium CDP startup timed out');
+      cdp = await withTimeout(
+        connectToPage(browser),
+        PROBE_TIMING.startupMs,
+        'Chromium CDP startup timed out'
+      );
     } catch (error) {
       const diagnostic = browserStderr.trim();
       throw new Error(error.message + (diagnostic ? '\nChromium stderr:\n' + diagnostic : ''));
