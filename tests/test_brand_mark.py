@@ -109,6 +109,11 @@ class BrandMarkStylesTests(unittest.TestCase):
         self.assertIn('href="favicon-32.png"', pt)
         self.assertIn('href="../favicon-32.png"', es)
 
+    def test_favicon_uses_the_available_square(self):
+        svg = (ROOT / "favicon.svg").read_text(encoding="utf-8")
+        self.assertIn('<circle cx="16" cy="16" r="15.75"', svg)
+        self.assertIn('font-size="16"', svg)
+
 
 if __name__ == "__main__":
     unittest.main()
