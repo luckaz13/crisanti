@@ -93,14 +93,43 @@ class PtBrAuditTests(unittest.TestCase):
                 encoding="utf-8",
             )
 
-            report = audit_pt_br_html(page)
+            report = audit_pt_br_html(page, scope_selector="body")
 
             self.assertEqual(2, len(report.findings))
+            self.assertEqual([], report.outside_scope_findings)
 
-    def test_portuguese_index_has_no_unintended_spanish(self):
+    def test_separates_required_scope_from_preexisting_residuals(self):
+        with tempfile.TemporaryDirectory() as directory:
+            page = Path(directory) / "index.html"
+            page.write_text(
+                '<main><section id="critica"><p>Vista general</p></section>'
+                '<section><img alt="Boceto para obra"></section></main>',
+                encoding="utf-8",
+            )
+
+            report = audit_pt_br_html(page, scope_selector="#critica")
+
+            self.assertEqual(["Vista general"], [item.text for item in report.findings])
+            self.assertEqual(
+                ["Boceto para obra"],
+                [item.text for item in report.outside_scope_findings],
+            )
+
+    def test_portuguese_critica_has_no_unintended_spanish(self):
         report = audit_pt_br_html(ROOT / "index.html")
 
         self.assertEqual([], report.findings)
+        self.assertEqual(
+            [
+                "2022Colagem, papel de seda, acrílicos, corcho, yute.",
+                "Gráficos descritivos de elementos del universo del cuento.",
+                "Cuaderno 3 — 2022Colagem, papel de seda, acrílicos, corcho, "
+                "yute. — Fabio Crisanti",
+                "Gráficos descritivos de elementos del universo del cuento. "
+                "— Fabio Crisanti",
+            ],
+            [item.text for item in report.outside_scope_findings],
+        )
 
 
 if __name__ == "__main__":

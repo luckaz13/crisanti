@@ -108,6 +108,21 @@ class ReferenceAuditTests(unittest.TestCase):
             self.assertEqual([], report.legacy_references)
             self.assertEqual([], report.missing_assets)
 
+    def test_ignores_dynamic_template_references_in_a_directory(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            scripts = root / "js"
+            scripts.mkdir()
+            (scripts / "gallery.js").write_text(
+                'panel.innerHTML = `<img src="${basePath}/current.jpg">`;',
+                encoding="utf-8",
+            )
+
+            report = audit_files(root, [scripts])
+
+            self.assertEqual([], report.legacy_references)
+            self.assertEqual([], report.missing_assets)
+
 
 if __name__ == "__main__":
     unittest.main()

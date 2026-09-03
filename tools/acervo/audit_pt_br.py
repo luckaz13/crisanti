@@ -54,6 +54,8 @@ class Finding:
 @dataclass
 class AuditReport:
     findings: list[Finding] = field(default_factory=list)
+    outside_scope_findings: list[Finding] = field(default_factory=list)
+    scope_selector: str = "#critica"
 
 
 def _is_allowed_title(text: str) -> bool:
@@ -78,28 +80,50 @@ def find_spanish_residuals(texts: list[str]) -> list[Finding]:
     return findings
 
 
-def audit_pt_br_html(path: Path) -> AuditReport:
-    soup = BeautifulSoup(path.read_text(encoding="utf-8"), "html.parser")
-    for element in soup(["script", "style"]):
-        element.decompose()
+def _editorial_texts(root: BeautifulSoup) -> list[str]:
     texts = [
         str(node)
-        for node in soup.find_all(string=True)
+        for node in root.find_all(string=True)
         if not isinstance(node, Comment) and str(node).strip()
     ]
-    for element in soup.find_all(True):
+    elements = root.find_all(True)
+    if getattr(root, "name", None):
+        elements.insert(0, root)
+    for element in elements:
         for attribute in ("alt", "aria-label", "title"):
             value = element.get(attribute)
             if isinstance(value, str) and value.strip():
                 texts.append(value)
-    return AuditReport(findings=find_spanish_residuals(texts))
+    return texts
+
+
+def audit_pt_br_html(path: Path, *, scope_selector: str = "#critica") -> AuditReport:
+    soup = BeautifulSoup(path.read_text(encoding="utf-8"), "html.parser")
+    for element in soup(["script", "style"]):
+        element.decompose()
+    scope_elements = soup.select(scope_selector)
+    if not scope_elements:
+        raise ValueError(f"PT-BR audit scope not found: {scope_selector}")
+
+    scoped_texts: list[str] = []
+    for element in scope_elements:
+        scoped_texts.extend(_editorial_texts(element))
+    for element in reversed(scope_elements):
+        element.decompose()
+
+    return AuditReport(
+        findings=find_spanish_residuals(scoped_texts),
+        outside_scope_findings=find_spanish_residuals(_editorial_texts(soup)),
+        scope_selector=scope_selector,
+    )
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("path", type=Path)
+    parser.add_argument("--scope", default="#critica")
     args = parser.parse_args()
-    report = audit_pt_br_html(args.path)
+    report = audit_pt_br_html(args.path, scope_selector=args.scope)
     print(json.dumps(asdict(report), ensure_ascii=False, indent=2))
     raise SystemExit(1 if report.findings else 0)
 
