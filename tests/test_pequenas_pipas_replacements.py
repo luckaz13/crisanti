@@ -15,6 +15,21 @@ EXPECTED = ["10.jpg", "03.jpg", "04.jpg", "pequenas-pipas-4.jpeg", "01.jpg", "02
 
 
 class PequenasPipasReplacementTests(unittest.TestCase):
+    def test_replacement_four_is_shared_by_both_language_galleries(self):
+        expected_hash = hashlib.sha256((ROOT / "04.jpg").read_bytes()).hexdigest()
+        for page, reference in (
+            ("index.html", 'src="img/images/Pequeñas Pipas/04.jpg"'),
+            ("es/index.html", 'src="../img/images/Pequeñas Pipas/04.jpg"'),
+        ):
+            with self.subTest(page=page):
+                html = (ROOT / page).read_text(encoding="utf-8")
+                self.assertEqual(1, html.count(reference))
+        for path in (
+            ROOT / "img/Pequeñas Pipas/04.jpg",
+            ROOT / "img/images/Pequeñas Pipas/04.jpg",
+        ):
+            self.assertEqual(expected_hash, hashlib.sha256(path.read_bytes()).hexdigest())
+
     def test_portada_uses_five_replacements_and_preserves_fourth_legacy_composition(self):
         for page in ("index.html", "es/index.html"):
             with self.subTest(page=page):
