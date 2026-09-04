@@ -119,6 +119,13 @@ console.log(JSON.stringify({{
         self.assertIn("border-color: rgba(255, 255, 255, 0.65)", consult)
         self.assertIn("color: rgba(255,255,255,0.55)", css_rule(self.css, ".footer-copy"))
 
+    def test_soies_sauvages_lightbox_fills_mobile_width(self):
+        self.assertIn("lightbox--soies-sauvages", self.script)
+        self.assertIn(
+            ".lightbox--soies-sauvages .lightbox-img {\n    width: 100%;",
+            self.css,
+        )
+
     def test_lightbox_scroll_region_is_keyboard_reachable_in_both_locales(self):
         self.assertIn(
             '<div aria-label="Detalhes da obra" class="lightbox-content" role="region" tabindex="0">',

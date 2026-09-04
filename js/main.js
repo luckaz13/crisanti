@@ -94,17 +94,25 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
   let currentIndex = 0;
   let currentItems = [];
+  let currentGallery = '';
 
   const close = () => {
     lightbox.hidden = true;
     document.body.style.overflow = '';
     lbImg.src = '';
     currentItems = [];
+    currentGallery = '';
+    lightbox.classList.remove('lightbox--soies-sauvages');
     lbImg.classList.remove('zoomed');
   };
 
-  const open = (index) => {
+  const open = (index, galleryId = currentGallery) => {
     if (!currentItems.length) return;
+    currentGallery = galleryId;
+    lightbox.classList.toggle(
+      'lightbox--soies-sauvages',
+      currentGallery === 'gallery-carousel-la-escultura-soies-sauvages',
+    );
     const len = currentItems.length;
     currentIndex = ((index % len) + len) % len;
     const item = currentItems[currentIndex];
@@ -188,7 +196,7 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
       const slide = galleryImg.closest('.gallery-slide');
       const idx = slides.indexOf(slide);
       currentItems = getCarouselItems(carousel);
-      open(idx >= 0 ? idx : 0);
+      open(idx >= 0 ? idx : 0, carousel.id);
       return;
     }
 

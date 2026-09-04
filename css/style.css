@@ -2125,6 +2125,15 @@ ul, ol { list-style: none; }
   transition: transform 0.3s ease;
 }
 
+/* Soies Sauvages includes several small archival scans. Give them the
+   same useful reading width as the other galleries on mobile, without
+   changing their desktop presentation or source files. */
+@media (max-width: 768px) {
+  .lightbox--soies-sauvages .lightbox-img {
+    width: 100%;
+  }
+}
+
 .lightbox-consult {
   position: absolute;
   bottom: 1.2rem;
