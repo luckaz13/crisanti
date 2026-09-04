@@ -198,6 +198,16 @@ console.log(JSON.stringify({{
         self.assertEqual("1rem", overview.get("margin-top"))
         self.assertEqual("1.5rem", subsection.get("margin-bottom"))
 
+    def test_ficcao_tabs_keep_inactive_flores_visible_on_light_surface(self):
+        css = (ROOT / "css/style.css").read_text(encoding="utf-8")
+        tabs = css_declarations(css, "#ficcao .gallery-tab")
+        active = css_declarations(css, "#ficcao .gallery-tab.active")
+
+        self.assertEqual("#1A1714", tabs.get("color"))
+        self.assertEqual("rgba(26, 23, 20, 0.08)", tabs.get("background"))
+        self.assertEqual("#1A1714", active.get("background"))
+        self.assertEqual("#F9F7F4", active.get("color"))
+
 
 if __name__ == "__main__":
     unittest.main()
