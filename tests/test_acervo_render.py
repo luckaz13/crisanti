@@ -100,6 +100,13 @@ class GalleryRenderingTests(unittest.TestCase):
         self.assertIn('src="img/images/Seda/SEDA/02.jpg"', html)
         self.assertIn("Técnica mista", html)
 
+    def test_removes_verde_subsection_from_bilingual_pages(self):
+        for language in ("pt", "es"):
+            with self.subTest(language=language):
+                html = self.render(language)
+                self.assertNotIn('data-target="la-escultura-verde"', html)
+                self.assertNotIn("gallery-carousel-la-escultura-verde", html)
+
     def test_renders_spaces_between_joined_ficha_words(self):
         malformed = asset("img/Vlak/01.jpg", "MaqueteFichas")
         malformed["caption"]["pt"] = {

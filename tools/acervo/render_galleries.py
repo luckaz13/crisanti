@@ -371,6 +371,14 @@ def render_page(
     pt_editorial: dict[str, Any] | None = None,
 ) -> str:
     soup = BeautifulSoup(page, "html.parser")
+    # The artist requested removal of the former Verde subsection. Remove
+    # both its tab and panel so it cannot remain as an orphaned hidden gallery
+    # in previously rendered PT/ES pages.
+    for tab in soup.select('.gallery-tab[data-target="la-escultura-verde"]'):
+        tab.decompose()
+    verde_panel = soup.find(id="gallery-carousel-la-escultura-verde")
+    if verde_panel is not None:
+        verde_panel.decompose()
     series_content = manifest.get("series_content", {})
     grouped: dict[str, list[dict[str, Any]]] = {}
     for asset in manifest["assets"]:

@@ -9,7 +9,7 @@ from unittest.mock import patch
 ROOT = Path(__file__).resolve().parents[1]
 PROBE = ROOT / "tools/visual/gallery_layout_probe.mjs"
 EPSILON = 2.0
-EXPECTED_INITIALLY_HIDDEN_GALLERIES = 26
+EXPECTED_INITIALLY_HIDDEN_GALLERIES = 25
 CHROMIUM_STARTUP_TIMEOUT_SECONDS = 15
 CAPTURED_PROBE_TIMEOUT_SECONDS = 105
 CLEANUP_RESERVE_SECONDS = 11
@@ -33,7 +33,6 @@ COMMON_GALLERY_IDS = {
     "gallery-carousel-la-escultura-pez-iii",
     "gallery-carousel-la-escultura-pez-iv",
     "gallery-carousel-la-escultura-soies-sauvages",
-    "gallery-carousel-la-escultura-verde",
     "gallery-carousel-la-fotografia-cotidiano",
     "gallery-carousel-la-fotografia-exilio",
     "gallery-carousel-la-fotografia-luz-liquida",
