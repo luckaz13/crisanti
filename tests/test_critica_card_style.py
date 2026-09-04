@@ -27,7 +27,7 @@ class CriticaCardStyleTests(unittest.TestCase):
         self.assertIn("background: #201E1C;", css_rule(css, ".literatura-card"))
         self.assertIn("color: #FFFFFF", css_rule(css, ".literatura-card h4,\n.literatura-card h3"))
         self.assertIn(
-            "color: #EAE6DF",
+            "color: #F7F4EE",
             css_rule(css, ".literatura-card p,\n.literatura-excerpt,\n.literatura-full p"),
         )
 
@@ -37,7 +37,7 @@ class CriticaCardStyleTests(unittest.TestCase):
             linear = [c / 12.92 if c <= 0.04045 else ((c + 0.055) / 1.055) ** 2.4 for c in channels]
             return 0.2126 * linear[0] + 0.7152 * linear[1] + 0.0722 * linear[2]
 
-        foreground = relative_luminance("#EAE6DF")
+        foreground = relative_luminance("#F7F4EE")
         background = relative_luminance("#201E1C")
         contrast = (foreground + 0.05) / (background + 0.05)
 

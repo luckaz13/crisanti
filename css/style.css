@@ -1280,7 +1280,7 @@ ul, ol { list-style: none; }
 
 .footer-copy {
   font-size: 0.6875rem;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.55);
   margin-top: 0.5rem;
 }
 
@@ -2008,7 +2008,10 @@ ul, ol { list-style: none; }
 .literatura-full p {
   font-size: 0.95rem;
   line-height: 1.65;
-  color: #EAE6DF !important;
+  /* The cards use a near-black surface: keep body copy bright and
+     comfortably weighted so it remains legible on dim or calibrated displays. */
+  color: #F7F4EE !important;
+  font-weight: 400;
   text-align: center;
   margin-bottom: 1.35rem;
   overflow-wrap: break-word;
@@ -2132,6 +2135,8 @@ ul, ol { list-style: none; }
   padding: 0.5rem 1.2rem;
   white-space: nowrap;
   background: rgba(0,0,0,0.6);
+  color: #F7F4EE;
+  border-color: rgba(255, 255, 255, 0.65);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }

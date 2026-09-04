@@ -113,6 +113,12 @@ console.log(JSON.stringify({{
         self.assertIn("overflow-y: auto;", css_rule(self.css, ".lightbox-content"))
         self.assertIn("flex: 0 0 auto;", css_rule(self.css, ".lightbox-caption"))
 
+    def test_dark_surface_copy_uses_light_foreground(self):
+        consult = css_rule(self.css, ".lightbox-consult")
+        self.assertIn("color: #F7F4EE", consult)
+        self.assertIn("border-color: rgba(255, 255, 255, 0.65)", consult)
+        self.assertIn("color: rgba(255,255,255,0.55)", css_rule(self.css, ".footer-copy"))
+
     def test_lightbox_scroll_region_is_keyboard_reachable_in_both_locales(self):
         self.assertIn(
             '<div aria-label="Detalhes da obra" class="lightbox-content" role="region" tabindex="0">',
