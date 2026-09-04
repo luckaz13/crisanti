@@ -100,6 +100,19 @@ class GalleryRenderingTests(unittest.TestCase):
         self.assertIn('src="img/images/Seda/SEDA/02.jpg"', html)
         self.assertIn("Técnica mista", html)
 
+    def test_renders_spaces_between_joined_ficha_words(self):
+        malformed = asset("img/Vlak/01.jpg", "MaqueteFichas")
+        malformed["caption"]["pt"] = {
+            "title": "MaqueteFichas",
+            "year": None,
+            "details": "Materiais:MDFCartónAcrílicosImpressão digital",
+        }
+
+        html = render_slides([malformed], "pt", visible_captions=True)
+
+        self.assertIn("Maquete Fichas", html)
+        self.assertIn("Materiais: MDF Cartón. Acrílicos Impressão digital", html)
+
     def test_omits_visible_captions_for_fish(self):
         html = render_slides([asset("img/Peces/01.jpg", "Peixe 1")], "pt", visible_captions=False)
 

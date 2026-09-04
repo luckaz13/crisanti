@@ -28,6 +28,13 @@ def _readable_details(text: str) -> str:
         ". ",
         text,
     )
+    # DOCX ficha extraction can concatenate adjacent runs. Restore only
+    # unambiguous word boundaries; punctuation and intentional casing remain.
+    text = re.sub(r"(?<=:)(?=\S)", " ", text)
+    text = re.sub(r"(?<=\d{4})(?=[A-Za-zÁÉÍÓÚÀÂÃÊÔÕÇáéíóúàâãêôõç])", " ", text)
+    text = re.sub(r"(?<=[a-záéíóúàâãêôõç])(?=[A-ZÁÉÍÓÚÀÂÃÊÔÕÇ])", " ", text)
+    text = re.sub(r"(?<=[A-ZÁÉÍÓÚÀÂÃÊÔÕÇ]{2})(?=[A-ZÁÉÍÓÚÀÂÃÊÔÕÇ][a-záéíóúàâãêôõç])", " ", text)
+    text = re.sub(r"(?<=[A-Za-zÁÉÍÓÚÀÂÃÊÔÕÇáéíóúàâãêôõç])(?=\d)", " ", text)
     return " ".join(text.split()).strip()
 
 

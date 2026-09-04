@@ -121,9 +121,9 @@ class PtBrAuditTests(unittest.TestCase):
         self.assertEqual([], report.findings)
         self.assertEqual(
             [
-                "2022Colagem, papel de seda, acrílicos, corcho, yute.",
+                "2022 Colagem, papel de seda, acrílicos, corcho, yute.",
                 "Gráficos descritivos de elementos del universo del cuento.",
-                "Cuaderno 3 — 2022Colagem, papel de seda, acrílicos, corcho, "
+                "Cuaderno 3 — 2022 Colagem, papel de seda, acrílicos, corcho, "
                 "yute. — Fabio Crisanti",
                 "Gráficos descritivos de elementos del universo del cuento. "
                 "— Fabio Crisanti",

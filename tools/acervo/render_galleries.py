@@ -13,10 +13,10 @@ from typing import Any
 from bs4 import BeautifulSoup, NavigableString
 
 if __package__:
-    from .curate import localize_caption
+    from .curate import _readable_details, localize_caption
     from .localize_manifest_pt import localize_manifest_pt
 else:
-    from curate import localize_caption
+    from curate import _readable_details, localize_caption
     from localize_manifest_pt import localize_manifest_pt
 
 
@@ -82,7 +82,8 @@ def render_slides(
 ) -> str:
     slides = []
     for index, asset in enumerate(assets):
-        alt = html.escape(asset.get("alt", {}).get(language) or asset["filename"], quote=True)
+        alt_text = asset.get("alt", {}).get(language) or asset["filename"]
+        alt = html.escape(_readable_details(alt_text), quote=True)
         source_path = published_path(asset["path"])
         if language == "es":
             source_path = f"../{source_path}"
@@ -90,9 +91,9 @@ def render_slides(
         caption = asset.get("caption", {}).get(language)
         caption_html = ""
         if visible_captions and caption:
-            title = html.escape(caption.get("title") or "")
+            title = html.escape(_readable_details(caption.get("title") or ""))
             meta = " · ".join(
-                html.escape(value)
+                html.escape(_readable_details(value))
                 for value in (caption.get("year"), caption.get("details"))
                 if value
             )
