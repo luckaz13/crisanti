@@ -126,6 +126,13 @@ console.log(JSON.stringify({{
             self.css,
         )
 
+    def test_legacy_luz_liquida_does_not_duplicate_mobile_controls(self):
+        self.assertIn("legacy-luz-liquida", self.script)
+        self.assertIn(
+            ".lightbox--legacy-luz-liquida .lightbox-nav {\n    display: none;",
+            self.css,
+        )
+
     def test_lightbox_scroll_region_is_keyboard_reachable_in_both_locales(self):
         self.assertIn(
             '<div aria-label="Detalhes da obra" class="lightbox-content" role="region" tabindex="0">',

@@ -2132,6 +2132,13 @@ ul, ol { list-style: none; }
   .lightbox--soies-sauvages .lightbox-img {
     width: 100%;
   }
+
+  /* These legacy Luz Líquida composites already contain navigation arrows.
+     Hide only the overlay controls on mobile to avoid a doubled pair; swipe
+     and keyboard navigation remain available. */
+  .lightbox--legacy-luz-liquida .lightbox-nav {
+    display: none;
+  }
 }
 
 .lightbox-consult {

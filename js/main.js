@@ -103,6 +103,7 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
     currentItems = [];
     currentGallery = '';
     lightbox.classList.remove('lightbox--soies-sauvages');
+    lightbox.classList.remove('lightbox--legacy-luz-liquida');
     lbImg.classList.remove('zoomed');
   };
 
@@ -112,6 +113,10 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
     lightbox.classList.toggle(
       'lightbox--soies-sauvages',
       currentGallery === 'gallery-carousel-la-escultura-soies-sauvages',
+    );
+    lightbox.classList.toggle(
+      'lightbox--legacy-luz-liquida',
+      currentGallery === 'legacy-luz-liquida',
     );
     const len = currentItems.length;
     currentIndex = ((index % len) + len) % len;
@@ -132,6 +137,16 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
   const navigate = (dir) => {
     open(currentIndex + dir);
+  };
+
+  const galleryForSource = (source) => {
+    try {
+      return decodeURIComponent(source).includes('/3 Luz Líquida/')
+        ? 'legacy-luz-liquida'
+        : '';
+    } catch {
+      return source.includes('3 Luz') ? 'legacy-luz-liquida' : '';
+    }
   };
 
   const getObraItems = () =>
@@ -172,7 +187,7 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
       const src = card?.querySelector('.obra-img')?.src;
       const idx = items.findIndex(i => i.src === src);
       currentItems = items;
-      open(idx >= 0 ? idx : 0);
+      open(idx >= 0 ? idx : 0, galleryForSource(src || ''));
       return;
     }
 
@@ -182,7 +197,7 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
       const items = getObraItems();
       const idx = items.findIndex(i => i.src === obraImg.src);
       currentItems = items;
-      open(idx >= 0 ? idx : 0);
+      open(idx >= 0 ? idx : 0, galleryForSource(obraImg.src));
       return;
     }
 
