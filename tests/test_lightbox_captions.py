@@ -125,6 +125,10 @@ console.log(JSON.stringify({{
             ".lightbox--soies-sauvages .lightbox-img {\n    width: 100%;",
             self.css,
         )
+        self.assertIn(
+            ".lightbox--soies-sauvages .lightbox-img {\n    width: 100%;\n    max-width: 100%;\n    max-height: none;",
+            self.css,
+        )
 
     def test_legacy_luz_liquida_does_not_duplicate_mobile_controls(self):
         self.assertIn("legacy-luz-liquida", self.script)
