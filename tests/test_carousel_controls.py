@@ -22,11 +22,11 @@ class StableCarouselControlsTests(unittest.TestCase):
 
         self.assertIn("const anchorTarget = anchorImage || anchorFigure || anchorSlide", script)
 
-    def test_viewport_height_uses_intrinsic_ratio_not_clipped_figure_rect(self):
+    def test_viewport_height_respects_image_layout_not_hover_transform(self):
         script = (ROOT / "js/gallery.js").read_text(encoding="utf-8")
 
-        self.assertIn("function measureSlideHeight(slide, availableWidth)", script)
-        self.assertIn("img.naturalHeight / img.naturalWidth", script)
+        self.assertIn("function measureSlideHeight(slide)", script)
+        self.assertIn("const imageHeight = img.offsetHeight", script)
         self.assertNotIn("const height = target.getBoundingClientRect().height", script)
 
     def test_viewport_remeasures_after_decode_load_and_resize(self):

@@ -570,6 +570,8 @@ async function measureFiction(cdp, prefix) {
       Boolean(first.compareDocumentPosition(second) & Node.DOCUMENT_POSITION_FOLLOWING);
     return {
       copyTextLength: copy.textContent.trim().length,
+      overviewGap: section.querySelector('.literatura-fiction-overview').getBoundingClientRect().top -
+        gallery.querySelector('.gallery-figure').getBoundingClientRect().bottom,
       panelVisible: !gallery.hidden,
       title: title.textContent.trim(),
       titleGalleryCopyOrder: follows(title, gallery) && follows(gallery, copy),

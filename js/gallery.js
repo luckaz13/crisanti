@@ -184,14 +184,14 @@
             }, autoplayDelay);
         }
 
-        function measureSlideHeight(slide, availableWidth) {
+        function measureSlideHeight(slide) {
             const img = slide.querySelector('.gallery-img');
             const caption = slide.querySelector('.gallery-caption');
             const captionHeight = caption ? caption.getBoundingClientRect().height : 0;
 
             if (img && img.naturalWidth > 0 && img.naturalHeight > 0) {
-                const renderedWidth = Math.min(availableWidth, img.naturalWidth);
-                const imageHeight = renderedWidth * (img.naturalHeight / img.naturalWidth);
+                // Respect CSS size limits without including the hover transform.
+                const imageHeight = img.offsetHeight;
                 return imageHeight + captionHeight + captionClearance;
             }
 
@@ -209,8 +209,8 @@
                     Number.parseFloat(slideStyles.paddingRight);
                 const availableWidth = Math.max(0, activeSlide.clientWidth - horizontalPadding);
                 const measuredHeights = isCrossfade
-                    ? [...slides].map(slide => measureSlideHeight(slide, availableWidth)).filter(height => height > 0)
-                    : [measureSlideHeight(activeSlide, availableWidth)];
+                    ? [...slides].map(slide => measureSlideHeight(slide)).filter(height => height > 0)
+                    : [measureSlideHeight(activeSlide)];
                 const stableAspectRatio = Number.parseFloat(carouselEl.dataset.stableAspectRatio || '');
                 const reservedHeight = Number.isFinite(stableAspectRatio) && stableAspectRatio > 0
                     ? availableWidth * stableAspectRatio + captionClearance

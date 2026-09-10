@@ -175,6 +175,13 @@ class RenderedGalleryLayoutTests(unittest.TestCase):
             combinations,
         )
 
+    def test_el_nombre_overview_stays_close_to_cover_caption(self):
+        for result in self.results:
+            with self.subTest(language=result['language'], viewport=result['viewport']):
+                gap = result['fiction']['elNombre']['overviewGap']
+                self.assertGreaterEqual(gap, 0)
+                self.assertLessEqual(gap, 32)
+
     def test_every_gallery_is_measured_and_fits_without_overflow_masking(self):
         for result in self.results:
             viewport = result["viewport"]
@@ -182,7 +189,7 @@ class RenderedGalleryLayoutTests(unittest.TestCase):
             galleries = result["galleries"]
             label = f'{language} {viewport["width"]}px'
             with self.subTest(label=label):
-                self.assertEqual(40, len(galleries), label)
+                self.assertEqual(len(EXPECTED_GALLERY_IDS[language]), len(galleries), label)
                 self.assertEqual(
                     EXPECTED_GALLERY_IDS[language],
                     {gallery["carouselId"] for gallery in galleries},
