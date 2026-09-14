@@ -112,7 +112,6 @@ Após atualizar o conteúdo na branch publicada, o Pages regenera o site automat
 - Instagram: [@fabio.crisanti.artes.plasticas](https://www.instagram.com/fabio.crisanti.artes.plasticas/)
 - Blog / catálogo: [fabiocrisanti.blogspot.com](https://fabiocrisanti.blogspot.com/)
 - Galeria 33: [galeria33.com/fabiocrisanti](https://www.galeria33.com/fabiocrisanti)
-- Saatchi Art: [saatchiart.com/account/profile/2168629](https://www.saatchiart.com/account/profile/2168629)
 
 ---
 
