@@ -325,7 +325,15 @@ def _apply_section_leads(soup: BeautifulSoup, series_content: dict[str, Any], la
         lead = section.select_one(".series-lead, .literatura-intro") if section else None
         if lead is None:
             raise ValueError(f"section lead not found: {section_id}")
-        lead.string = value
+        if isinstance(value, list):
+            lead.clear()
+            for paragraph in value:
+                paragraph_node = soup.new_tag("p", attrs={"class": "series-lead"})
+                paragraph_node.string = paragraph
+                lead.insert_before(paragraph_node)
+            lead.decompose()
+        else:
+            lead.string = value
 
 
 def _replace_track(panel: Any, assets: list[dict[str, Any]], language: str, captions: bool) -> None:
