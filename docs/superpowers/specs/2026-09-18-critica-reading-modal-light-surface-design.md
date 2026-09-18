@@ -9,8 +9,9 @@ Adaptar a janela que abre ao selecionar um texto da subseção “Crítica”, n
 - Manter o backdrop, o cabeçalho e o rodapé da janela em tons escuros.
 - Aplicar fundo branco exclusivamente à área de leitura (`.lit-modal-body`).
 - Usar texto e título em quase preto sobre o fundo branco.
-- Remover o uso de dourado em toda a janela de leitura, inclusive badge, subtítulo, divisor, capitular, indicador de tamanho, foco, hover e scrollbar.
-- Substituir o dourado por uma escala neutra de cinzas, preservando hierarquia e estados interativos.
+- Remover ou substituir o dourado apenas nos elementos que ficam sobre o fundo branco da área de leitura, como divisor, capitular e scrollbar.
+- Preservar o dourado nos elementos que permanecem sobre fundos escuros, como badge, subtítulo, indicador de tamanho e estados do cabeçalho/rodapé.
+- Usar uma escala neutra nos elementos sobre o branco, preservando hierarquia e estados interativos.
 - Manter a capitular inicial, o controle de tamanho de fonte, a rolagem interna e os botões existentes.
 
 ## Escopo técnico
@@ -23,7 +24,7 @@ Adaptar a janela que abre ao selecionar um texto da subseção “Crítica”, n
 
 1. O texto da leitura aparece sobre fundo branco.
 2. O corpo do texto, o título e a capitular têm contraste adequado sobre branco.
-3. Nenhum elemento da janela depende do dourado para comunicar estado ou hierarquia.
+3. Nenhum elemento sobre o fundo branco depende do dourado para comunicar estado ou hierarquia.
 4. Cabeçalho e rodapé permanecem escuros e legíveis.
 5. A rolagem e os controles de tamanho continuam utilizáveis em desktop e mobile.
 6. Os testes existentes e o detector visual não reportam regressões relevantes.
