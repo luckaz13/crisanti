@@ -310,6 +310,26 @@ class GalleryRenderingTests(unittest.TestCase):
                 with self.subTest(language=language, section=section_id):
                     self.assertEqual(copy, soup.find(id=section_id).select_one(".series-lead").get_text(strip=True))
 
+    def test_escultura_lead_is_rendered_as_four_paragraphs_in_both_languages(self):
+        expected = {
+            "pt": [
+                "A arte de fabricar pipas situa-se, no universo das artes plásticas, em um registro intermediário entre a escultura e a pintura, ora transitando entre ambas, ora integrando-as.",
+                "O design de uma pipa é condicionado por um elemento da natureza de comportamento singular, com o qual ela deve estabelecer relações funcionais: o vento. Essa particularidade, como veremos adiante, aproxima o ofício de outra disciplina aparentemente alheia a ele.",
+                "Uma pipa precisa se mover em uma realidade que escapa às leis próprias da abstração plástica, o que representa um desafio e uma riqueza específicos.",
+                "Podemos considerar as pipas seres ou criaturas dotados de personalidade. De fato, a fabricação de pipas e a indústria da moda compartilham alguns desafios. Presença, expressividade, personalidade, funcionalidade e as tensões recíprocas entre esses elementos são noções que aproximam as duas disciplinas.",
+            ],
+            "es": [
+                "El arte de fabricar barriletes se sitúa, en el universo de las artes plásticas, en un registro intermedio entre la escultura y la pintura, transitando entre ambas o integrándolas.",
+                "El diseño de un barrilete está condicionado por un elemento de la naturaleza de comportamiento singular, con el que debe establecer relaciones funcionales: el viento. Esta particularidad, como veremos más adelante, aproxima el oficio a otra disciplina aparentemente ajena a él.",
+                "Un barrilete necesita moverse en una realidad que escapa a las leyes propias de la abstracción plástica, lo que representa un desafío y una riqueza específicos.",
+                "Podemos considerar los barriletes seres o criaturas dotados de personalidad. De hecho, la fabricación de barriletes y la industria de la moda comparten algunos desafíos. Presencia, expresividad, personalidad, funcionalidad y las tensiones recíprocas entre estos elementos son nociones que aproximan ambas disciplinas.",
+            ],
+        }
+        for language, paragraphs in expected.items():
+            with self.subTest(language=language):
+                section = BeautifulSoup(self.render(language), "html.parser").find(id="la-escultura")
+                self.assertEqual(paragraphs, [node.get_text() for node in section.select(".series-lead")])
+
     def test_approved_addis_and_spanish_criticism_corrections_are_rendered(self):
         for language in ("pt", "es"):
             with self.subTest(language=language):

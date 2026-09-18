@@ -322,18 +322,22 @@ def _apply_section_leads(soup: BeautifulSoup, series_content: dict[str, Any], la
         if not value:
             continue
         section = soup.find(id=section_id)
-        lead = section.select_one(".series-lead, .literatura-intro") if section else None
-        if lead is None:
+        leads = section.select(".series-lead, .literatura-intro") if section else []
+        if not leads:
             raise ValueError(f"section lead not found: {section_id}")
         if isinstance(value, list):
-            lead.clear()
+            lead = leads[0]
             for paragraph in value:
                 paragraph_node = soup.new_tag("p", attrs={"class": "series-lead"})
                 paragraph_node.string = paragraph
                 lead.insert_before(paragraph_node)
+            for duplicate in leads[1:]:
+                duplicate.decompose()
             lead.decompose()
         else:
-            lead.string = value
+            leads[0].string = value
+            for duplicate in leads[1:]:
+                duplicate.decompose()
 
 
 def _replace_track(panel: Any, assets: list[dict[str, Any]], language: str, captions: bool) -> None:
