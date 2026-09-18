@@ -43,6 +43,17 @@ class CriticaCardStyleTests(unittest.TestCase):
 
         self.assertGreaterEqual(contrast, 4.5)
 
+    def test_reading_modal_uses_light_body_with_neutral_reading_accents(self):
+        css = (ROOT / "css/style.css").read_text(encoding="utf-8")
+
+        self.assertIn("background: #FFFFFF", css_rule(css, ".lit-modal-body"))
+        self.assertIn("color: #1E1B18", css_rule(css, ".lit-modal-title"))
+        self.assertIn("color: #1E1B18", css_rule(css, ".lit-modal-text"))
+        self.assertIn("border-bottom: 2px solid #8A8178", css_rule(css, ".lit-modal-title"))
+        self.assertIn("color: #5A514A", css_rule(css, ".lit-modal-text p:first-of-type::first-letter"))
+        self.assertIn("background: #171513", css_rule(css, ".lit-modal-header"))
+        self.assertIn("color: #D4B38A", css_rule(css, ".lit-modal-subtitle"))
+
     def test_every_critica_article_has_pt_editorial_copy(self):
         data = json.loads(
             (ROOT / "data/acervo/editorial-literatura-critica.json").read_text(

@@ -2485,20 +2485,22 @@ ul, ol { list-style: none; }
   overflow-y: auto;
   flex: 1;
   scroll-behavior: smooth;
+  background: #FFFFFF;
+  color: #1E1B18;
 }
 
 .lit-modal-body::-webkit-scrollbar {
   width: 7px;
 }
 .lit-modal-body::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.2);
+  background: #E6E2D8;
 }
 .lit-modal-body::-webkit-scrollbar-thumb {
-  background: rgba(212, 179, 138, 0.4);
+  background: #A0988E;
   border-radius: 4px;
 }
 .lit-modal-body::-webkit-scrollbar-thumb:hover {
-  background: rgba(212, 179, 138, 0.7);
+  background: #6F665E;
 }
 
 .lit-modal-title {
@@ -2506,10 +2508,10 @@ ul, ol { list-style: none; }
   font-size: clamp(2.4rem, 4.5vw, 3.4rem);
   font-weight: 400;
   line-height: 1.15;
-  color: #FFFFFF;
+  color: #1E1B18;
   margin-bottom: 2rem;
   padding-bottom: 1.25rem;
-  border-bottom: 2px solid var(--c-accent, #9B7D5A);
+  border-bottom: 2px solid #8A8178;
 }
 
 .lit-modal-text {
@@ -2517,7 +2519,7 @@ ul, ol { list-style: none; }
   font-family: var(--f-serif);
   font-size: var(--lit-font-size);
   line-height: 1.9;
-  color: #E6E2D8;
+  color: #1E1B18;
   max-width: 65ch;
   margin: 0 auto;
   transition: font-size 0.2s ease;
@@ -2535,7 +2537,7 @@ ul, ol { list-style: none; }
   line-height: 0.8;
   margin-right: 0.15em;
   margin-top: 0.05em;
-  color: #D4B38A;
+  color: #5A514A;
   font-family: var(--f-serif);
 }
 
